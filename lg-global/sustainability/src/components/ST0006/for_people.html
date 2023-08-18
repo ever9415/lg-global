@@ -1560,13 +1560,8 @@
                 display: block;
                 width: 48px;
                 height: 48px;
-                background: url(../../mocks/ST0006/btn-accessibility-more.svg) no-repeat center center;
+                background: url(../../mocks/ST0006/btn-convenient-living-more.svg) no-repeat center center;
                 background-size: cover;
-                transform: rotate(0deg);
-                transition: 0.3s ease transform;
-            }
-            .convenient-living__solutions__slide__anchor:hover:after {
-                transform: rotate(180deg);
             }
             .convenient-living__solutions__slide__anchor1 {
                 background-image: url(../../mocks/ST0006/photo-convenient-living-solutions1.png);
@@ -1616,7 +1611,7 @@
                 gap: 0px 8px;
             }
             .convenient-living__solutions__btn-set__btn {
-                width: 48px;
+                width: 49px;
                 height: 48px;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -1706,6 +1701,10 @@
                 background-color: rgba(16, 16, 16, 0.20);
                 backdrop-filter: blur(50px);
             }
+            .sustainability-efforts__card__navi__item__anchor:hover,
+            .sustainability-efforts__card__navi__item__anchor:focus {
+                text-decoration: none;
+            }
             .sustainability-efforts__card {
                 position: absolute;
                 top: 50%;
@@ -1730,7 +1729,7 @@
                 left: 0px;
                 width: 100%;
                 height: 114vh;
-                padding-top: 19.2222vh;
+                padding-top: 13.6667vh;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
@@ -1758,7 +1757,20 @@
                 margin: 0px auto;
             }
             .sustainability-efforts__card__tit {
-                display: none;
+                font-size: 4.0741vh;
+                font-weight: 550;
+                line-height: 4.4444vh;
+                letter-spacing: -0.44px;
+                text-align: center;
+                color: white;
+                margin-bottom: 18.8889vh;
+                transform: translateY(4.0741vh);
+                opacity: 0;
+                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__tit {
+                transform: translateY(0px);
+                opacity: 1;
             }
             .sustainability-efforts__card__summary {
                 font-size: 56px;
@@ -2189,10 +2201,10 @@
             }
             .popup-discription--intro-detail__item__add-explan {
                 margin-top: 24px;
-                font-size: 15px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 21px;
+                line-height: 16px;
                 color: #7E7C77;
             }
             .popup-discription__cont1 {
@@ -2856,7 +2868,7 @@
             <div class="for-people-visual visual__top">
                 <h2 class="for-people-visual__tit">
                     <span class="for-people-visual__tit__txt">
-                        From people, <br class="for-people-visual__tit__txt__br" />For people
+                        From people, <br class="for-people-visual__tit__txt__br" />for community
                     </span>
                 </h2>
                 <video src="../../mocks/ST0006/video-for-people-visual.mp4" class="for-people-visual__video" autoplay loop muted></video>
@@ -3076,7 +3088,7 @@
                                 </div>
                                 <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
                                     <h5 class="popup-discription--intro-detail__item__tit">
-                                        <div class="popup-discription--intro-detail__item__tit__category">Senior care program</div>
+                                        <div class="popup-discription--intro-detail__item__tit__category">Senior citizen's program</div>
                                         <div class="popup-discription--intro-detail__item__tit__subject">Easier for the elderly</div>
                                     </h5>
                                     <p class="popup-discription--intro-detail__item__major-desc">As technology progresses, seniors might feel left behind, which is why it's important to include accessibility options for seniors, too. To better support our senior users, we offer various services beyond traditional approaches, such as the dedicated counseling service or the "visible ARS" and "slow talk ARS" options. These options display information in large letters to cater to customers aged 60 or above who are registered with our customer center. For customers over 70, we have a special team available on request. Additionally, we introduced the "Senior Customer Family Feedback Program." This program ensures that families and caretakers of senior customers can receive updates on complaint resolutions to keep them informed throughout the entire process.</p>
@@ -3151,7 +3163,7 @@
                     <ul class="sustainability-efforts__card">
                         <li class="sustainability-efforts__card__item sustainability-efforts__card__item--active" id="enhancing-workplace-safety">
                             <div class="sustainability-efforts__card__inner">
-                                <h3 class="sustainability-efforts__card__tit">Delightful workplace</h3>
+                                <h3 class="sustainability-efforts__card__tit">Decent workplace</h3>
                                 <div class="sustainability-efforts__card__cont">
                                     <p class="sustainability-efforts__card__summary">
                                         Enhancing <br />
@@ -3257,7 +3269,7 @@
                     <div class="popup-discription__wrap">
                         <dl class="popup-discription__inner">
                             <dt class="popup-discription__tit">
-                                Disabled Advisory Board
+                                Disabled advisory board
                             </dt>
                             <dd class="popup-discription__video">
                                 <iframe width="800" height="454" src="https://www.youtube.com/embed/9EB5kLWSZVA?version=3&amp;enablejsapi=1" id="youtube_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
