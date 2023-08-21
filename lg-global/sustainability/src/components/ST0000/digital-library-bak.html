@@ -72,13 +72,12 @@
 
             /* Digital library */
             .digital-library {
-                padding: 240px 0px 120px;
+                padding: 200px 0px 120px;
                 text-align: center;
             }
             .digital-library__tit {
                 font-family: 'LG_EI_Headline';
                 font-size: 80px;
-                font-weight: 400;
                 line-height: 76px;
                 font-weight: 550;
                 letter-spacing: -0.4px;
@@ -416,31 +415,282 @@
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
                 background-color: rgba(0,0,0,1);
             }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Digital library */
+                .digital-library {
+                    padding: 60px 0px 40px;
+                }
+                .digital-library__tit {
+                    font-size: 44px;
+                    line-height: 48px;
+                }
+                .digital-library__intro {
+                    font-size: 24px;
+                    font-weight: 300;
+                    line-height: 32px;
+                    letter-spacing: -0.12px;
+                    padding: 0px 16px;
+                }
+                .digital-library__intro__br {
+                    display: none;
+                }
+                .digital-library__visual {
+                    margin-top: 40px;
+                    height: 375px;
+                }
+                .digital-library__data {
+                    width: auto;
+                    margin: 80px 16px 0px;
+                }
+                .digital-library__data__tit {
+                    margin-top: 60px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .digital-library__data__tit:first-child {
+                    margin-top: 0px;
+                }
+                .digital-library__data__txt {
+                    margin-top: 16px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .digital-library__data__txt__br {
+                    display: none;
+                }
+                .digital-library__data__stit {
+                    margin-top: 80px;
+                    font-size: 24px;
+                    font-weight: 250;
+                    line-height: 28px;
+                    letter-spacing: -0.12px;
+                }
+                .digital-library__data__list__wrap {
+                    margin: 40px -16px 0px;
+                }
+                .digital-library__data__stit + .digital-library__data__list__wrap {
+                    margin-top: 20px;
+                }
+                .digital-library__data__list {
+                    display: block;
+                }
+                .digital-library__data__list__colgroup,
+                .digital-library__data__list__head {
+                    display: none;
+                }
+                .digital-library__data__list__body,
+                .digital-library__data__list__item {
+                    display: block;
+                    width: 100%;
+                }
+                .digital-library__data__list__item__subject,
+                .digital-library__data__list__item__cont {
+                    display: block;
+                    width: 100%;
+                    padding: 10px 16px;
+                }
+                .digital-library__data__list__item__subject {
+                    padding: 24px 16px 0px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.09px;
+                }
+                .digital-library__data__list__item__subject__desc {
+                    padding: 0px;
+                }
+                .digital-library__data__subject__list__item__desc__tit {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                .digital-library__data__subject__list__item__desc__cont {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .digital-library__data__list__item__cont {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    border-top-width: 0px;
+                }
+                .digital-library__data__list__item__cont:last-child {
+                    padding-bottom: 24px;
+                }
+                .digital-library__data__list__item__subject + .digital-library__data__list__item__cont__download-type__wrap {
+                    margin-top: 10px;
+                }
+                .digital-library__data__list__item__cont__download-type__wrap {
+                    position: relative;
+                    padding-right: 76px;
+                }
+                .digital-library__data__list__item__cont__download-type {
+                    display: block;
+                    width: 100%;
+                }
+                .digital-library__data__list__item__cont__btn-download {
+                    position: absolute;
+                    top: 10px;
+                    right: 16px;
+                    margin-left: 0px;
+                }
+                
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 30px 16px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
             <div class="digital-library">
                 <h2 class="digital-library__tit">Digital library</h2>
                 <p class="digital-library__intro">
-                    We accurately asses and transparently share our <br />
-                    performance. This is crucial for sustainability, and we <br />
-                    recognize that we leave traces of our journey through <br />
+                    We accurately asses and transparently share our <br class="digital-library__intro__br" />
+                    performance. This is crucial for sustainability, and we <br class="digital-library__intro__br" />
+                    recognize that we leave traces of our journey through <br class="digital-library__intro__br" />
                     our actions and achievements.
                 </p>
                 <div class="digital-library__visual"></div>
                 <div class="digital-library__data">
                     <h3 class="digital-library__data__tit">Sustainability reports</h3>
                     <p class="digital-library__data__txt">
-                        In 2023, we published our 17th sustainability management report, containing our ESG story book <br />
+                        In 2023, we published our 17th sustainability management report, containing our ESG story book <br class="digital-library__data__txt__br" />
                         and fact book. We will keep sharing our activity and performance reports transparently.
                     </p>
                     <div class="digital-library__data__list__wrap">
                         <table class="digital-library__data__list">
-                            <colgroup>
+                            <colgroup class="digital-library__data__list__colgroup">
                                 <col />
                                 <col style="width:228px" />
                             </colgroup>
-                            <tbody>
+                            <tbody class="digital-library__data__list__body">
                                 <tr class="digital-library__data__list__item">
                                     <th scope="row" class="digital-library__data__list__item__subject">
                                         <dl class="digital-library__data__list__item__subject__desc">
@@ -448,7 +698,7 @@
                                             <dd class="digital-library__data__subject__list__item__desc__cont">Our ESG goals and performance, written as a sincere story.</dd>
                                         </dl>
                                     </th>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -466,7 +716,7 @@
                                             <dd class="digital-library__data__subject__list__item__desc__cont">Read about our ESG performance and activities.</dd>
                                         </dl>
                                     </th>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -483,7 +733,7 @@
                     <h4 class="digital-library__data__stit">Archive</h4>
                     <div class="digital-library__data__list__wrap">
                         <table class="digital-library__data__list">
-                            <colgroup>
+                            <colgroup class="digital-library__data__list__colgroup">
                                 <col />
                                 <col style="width:184px" />
                                 <col style="width:228px" />
@@ -495,12 +745,12 @@
                                     <th scope="col" class="digital-library__data__list__head__category digital-library__data__list__head__category__select">Language</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="digital-library__data__list__body">
                                 <tr class="digital-library__data__list__item">
                                     <th scope="row" class="digital-library__data__list__item__subject">
                                         Sustainability report
                                     </th>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -524,7 +774,7 @@
                                             </select>
                                         </span>
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -539,7 +789,7 @@
                                     <th scope="row" class="digital-library__data__list__item__subject">
                                         Environmental report
                                     </th>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -551,7 +801,7 @@
                                             </select>
                                         </span>
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -573,19 +823,19 @@
                     <h4 class="digital-library__data__stit">Environmental policy</h4>
                     <div class="digital-library__data__list__wrap">
                         <table class="digital-library__data__list">
-                            <colgroup>
+                            <colgroup class="digital-library__data__list__colgroup">
                                 <col />
                                 <col style="width:269px" />
                                 <col style="width:228px" />
                             </colgroup>
-                            <thead>
-                                <tr class="digital-library__data__list__head">
+                            <thead class="digital-library__data__list__head">
+                                <tr>
                                     <th scope="col" class="digital-library__data__list__head__category">Title</th>
                                     <th scope="col" class="digital-library__data__list__head__category">Category</th>
                                     <th scope="col" class="digital-library__data__list__head__category digital-library__data__list__head__category__select">Language</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="digital-library__data__list__body">
                                 <tr class="digital-library__data__list__item">
                                     <th scope="row" class="digital-library__data__list__item__subject">
                                         Environmental product policy
@@ -593,7 +843,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Environmental product policy
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -611,7 +861,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Global take-back guidance
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -629,7 +879,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Global take-back guidance
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -647,7 +897,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         SHEE policy
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -664,19 +914,19 @@
                     <h4 class="digital-library__data__stit">Social policy</h4>
                     <div class="digital-library__data__list__wrap">
                         <table class="digital-library__data__list">
-                            <colgroup>
+                            <colgroup class="digital-library__data__list__colgroup">
                                 <col />
                                 <col style="width:269px" />
                                 <col style="width:228px" />
                             </colgroup>
-                            <thead>
-                                <tr class="digital-library__data__list__head">
+                            <thead class="digital-library__data__list__head">
+                                <tr>
                                     <th scope="col" class="digital-library__data__list__head__category">Title</th>
                                     <th scope="col" class="digital-library__data__list__head__category">Category</th>
                                     <th scope="col" class="digital-library__data__list__head__category digital-library__data__list__head__category__select">Language</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="digital-library__data__list__body">
                                 <tr class="digital-library__data__list__item">
                                     <th scope="row" class="digital-library__data__list__item__subject">
                                         LG code of ethics
@@ -684,7 +934,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Code of ethics
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -702,7 +952,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Diversity&Inclusion policy
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -720,7 +970,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         LGE supplier code of conduct
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -738,7 +988,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         LGE supplier code of conduct guideline
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -756,7 +1006,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Global labor policy
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -774,7 +1024,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Global labor policy guidelines
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -792,7 +1042,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         code of conduct
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -810,7 +1060,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Conflict minerals due diligence report
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -828,7 +1078,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Guidelines for harzardous substance management in products
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -845,19 +1095,19 @@
                     <h4 class="digital-library__data__stit">Governance policy</h4>
                     <div class="digital-library__data__list__wrap">
                         <table class="digital-library__data__list">
-                            <colgroup>
+                            <colgroup class="digital-library__data__list__colgroup">
                                 <col />
                                 <col style="width:269px" />
                                 <col style="width:228px" />
                             </colgroup>
-                            <thead>
-                                <tr class="digital-library__data__list__head">
+                            <thead class="digital-library__data__list__head">
+                                <tr>
                                     <th scope="col" class="digital-library__data__list__head__category">Title</th>
                                     <th scope="col" class="digital-library__data__list__head__category">Category</th>
                                     <th scope="col" class="digital-library__data__list__head__category digital-library__data__list__head__category__select">Language</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="digital-library__data__list__body">
                                 <tr class="digital-library__data__list__item">
                                     <th scope="row" class="digital-library__data__list__item__subject">
                                         LG Electronics tax policy
@@ -865,7 +1115,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Tax policy
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -883,7 +1133,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Board guidelines
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -901,7 +1151,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         Guidelines on independent directors
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -919,7 +1169,7 @@
                                     <td class="digital-library__data__list__item__cont">
                                         LG corporate governance charter
                                     </td>
-                                    <td class="digital-library__data__list__item__cont">
+                                    <td class="digital-library__data__list__item__cont digital-library__data__list__item__cont__download-type__wrap">
                                         <span class="digital-library__data__list__item__cont__download-type">
                                             <label class="digital-library__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="digital-library__data__list__item__cont__download-type__select">
@@ -1026,7 +1276,14 @@
                 },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
-                        slidesPerView: 3,
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
                         pagination: {
                             el: ".whats-next__menu__pagination",
                             type: "progressbar",

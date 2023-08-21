@@ -1624,6 +1624,7 @@
             }
             .core-value__pagination {
                 position: relative;
+                bottom: 0px !important;
                 display: flex;
                 margin-top: 45px;
                 justify-content: center;
@@ -2039,6 +2040,8 @@
                 background-color: #EA1917;
             }
             .latest-stories__go-to__link__bullet {
+                position: relative;
+                top: 1px;
                 width: 12px;
                 height: 12px;
             }
@@ -2277,10 +2280,7 @@
             @media (max-width: 768px) {
                 /* Landing Visual */
                 .landing-visual__tit {
-                    position: absolute;
-                    bottom: 26.75vh;
-                    left: 0px;
-                    width: 100%;
+                    bottom: 40.1307vh;
                 }
                 .landing-visual__tit__img--pc {
                     display: none;
@@ -2291,13 +2291,9 @@
                     height: 25.25vh;
                 }
                 .landing-visual__txt {
-                    position: absolute;
-                    bottom: 19.5vh;
-                    left: 0px;
-                    width: 100%;
-                    color: white;
+                    bottom: 32.549vh;
                     font-size: 2.5vh;
-                    font-weight: 550;
+                    font-weight: 400;
                     line-height: 3.5vh;
                     letter-spacing: -0.1px;
                 }
@@ -2318,23 +2314,19 @@
                     padding: 96px 16px;
                     height: auto;
                 }
-                .landing-introduce__desc {
-                    font-size: 28px;
-                    line-height: 38px;
-                    letter-spacing: -0.42px;
-                }
-                .landing-introduce__desc__br {
-                    display: none;
-                }
-                .landing-introduce__goals {
-                    margin-top: 40px;
-                    line-height: 1;
-                    text-align: center;
-                }
                 .landing-introduce__goals__txt {
                     font-size: 36px;
                     line-height: 40px;
                     letter-spacing: -0.54px;
+                }
+                .landing-introduce__desc {
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                    margin-top: 40px;
+                }
+                .landing-introduce__desc__br {
+                    display: none;
                 }
 
                 /* Core Value */
@@ -2434,16 +2426,29 @@
                 /* Menu Introduce */
                 .menu-introduce__wrap {
                     position: relative;
-                    padding: 40px 0px;
                 }
+                .menu-introduce__slider,
                 .menu-introduce__inner {
                     height: auto;
+                }
+                .menu-introduce__slider {
+                    padding-bottom: 40px;
+                }
+                .menu-introduce__tit {
+                    top: 30px;
+                    left: 16px;
+                    right: 16px;
+                    width: auto;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
                 }
                 .menu-introduce {
                     flex-direction: column-reverse;
                     width: 100%;
                     box-sizing: border-box;
-                    padding: 0px;
+                    padding: 117px 0px 0px 0px;
                     height: auto;
                 }
                 .menu-introduce__cont {
@@ -2468,8 +2473,8 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
-                .menu-introduce__cont__learn-more {
-                    margin-top: 30px;
+                .menu-introduce__cont__detail__br {
+                    display: none;
                 }
                 .menu-introduce__cont__learn-more__link {
                     padding: 9px 29px;
@@ -2914,7 +2919,7 @@
                                     Minor carbons.
                                 </p>
                                 <p class="menu-introduce__cont__detail">
-                                    Nature always had our attention. But its message is urgent: <br />
+                                    Nature always had our attention. But its message is urgent: <br class="menu-introduce__cont__detail__br" />
                                     to reduce carbon emissions. We are committed to an aggressive schedule toward carbon neutrality and using 100% renewable energy. The sooner we minimize our impact, there will be fewer "natural" hazards, and more nature to appreciate.
                                 </p>
                                 <div class="menu-introduce__cont__learn-more">
@@ -2985,7 +2990,7 @@
                                     For people
                                 </p>
                                 <p class="menu-introduce__cont__detail">
-                                    We are committed to upholding human rights, fostering diversity, and creating a supportive work environment. <br />
+                                    We are committed to upholding human rights, fostering diversity, and creating a supportive work environment. <br class="menu-introduce__cont__detail__br" />
                                     We aim to create a sense of belonging, enabling individuals to reach their full potential. With a focus on exceptional experiences, we bring smiles to people's faces through human-centered innovation.
                                 </p>
                                 <div class="menu-introduce__cont__learn-more">

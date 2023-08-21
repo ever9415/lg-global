@@ -147,12 +147,12 @@
 
             /* Living Sustainably About */
             .living-st-about {
-                width: 1440px;
-                margin: 0px auto;
                 text-align: center;
             }
             .living-st-about__cont {
+                width: 1440px;
                 padding: 105px 0px;
+                margin: 0px auto;
                 font-weight: 300;
                 font-size: 46px;
                 line-height: 60px;
@@ -304,7 +304,7 @@
             .sustainable-materials__product {
                 position: relative;
                 overflow: visible;
-                margin-top: 288px;
+                padding-top: 288px;
             }
             .sustainable-materials__product__slide-wrap {
                 overflow: visible;
@@ -440,6 +440,9 @@
                 font-weight: 550;
                 line-height: 4.4444vh; /* 133.333% */
                 letter-spacing: 0.6667vh;
+            }
+            sustainability-efforts__bg__tit__br {
+                display: none;
             }
             .sustainability-efforts__bg__txt {
                 margin-top: 11.1111vh;
@@ -1008,27 +1011,6 @@
 
             /* Full HD */
             @media (min-width: 1920px) {
-                /* Sustainability Efforts */
-                .sustainability-efforts__bg__tit {
-                    font-size: 36px;
-                    color: #F6F3EB;
-                    font-weight: 550;
-                    line-height: 48px; /* 133.333% */
-                    letter-spacing: 7.2px;
-                }
-                .sustainability-efforts__bg__txt {
-                    margin-top: 120px;
-                }
-                .sustainability-efforts__bg__txt__item {
-                    font-size: 80px;
-                    font-weight: 550;
-                    line-height: 76px;
-                    letter-spacing: 16px;
-                    color: white;
-                }
-                .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
-                    margin-top: 120px;
-                }
             }
 
             /* Mobile */
@@ -1049,10 +1031,34 @@
                     height: 70px;
                 }
 
+                /* Living Sustainably About */
+                .living-st-about {
+                    text-align: center;
+                }
+                .living-st-about__cont {
+                    width: 328px;
+                    padding: 96px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+                .living-st-about__cont__br {
+                    display: none;
+                }
+
                 /* How to enjoy more sustainable living */
                 .enjoy-st-living {
                     width: auto;
+                    padding: 24px 0px 0px;
                     margin: 0px 16px;
+                }
+                .enjoy-st-living__tit {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-bottom: 70px;
                 }
                 .enjoy-st-living__saving__item {
                     display: flex;
@@ -1101,12 +1107,7 @@
                     display: none;
                 }
                 .enjoy-st-living__saving__item__cont__disclaimer {
-                    margin-top: 24px;
-                }
-                .enjoy-st-living__saving__item__cont__disclaimer__item {
-                    color: #7E7C77;
-                    font-size: 12px;
-                    line-height: 16px;
+                    margin-top: 20px;
                 }
                 .enjoy-st-living__saving__item__more {
                     margin-top: 20px;
@@ -1116,10 +1117,14 @@
                 .sustainable-materials {
                     overflow: hidden;
                     position: relative;
-                    padding: 60px 16px;
+                    padding: 60px 16px 0px;
                     max-height: none;
-                    height: 960px;
-                    background: url(../../mocks/ST0002/visual-sustainable-materials.png) no-repeat 70% top;
+                    height: auto;
+                    background: #262626;
+                }
+                .sustainable-materials__wrap {
+                    width: auto;
+                    margin: 0px;
                 }
                 .sustainable-materials__tit {
                     font-size: 24px;
@@ -1143,9 +1148,13 @@
                     display: none;
                 }
                 .sustainable-materials__product {
-                    bottom: 40px;
-                    left: 30px;
-                    right: 30px;
+                    padding: 408px 30px 20px;
+                    margin: 20px -16px 0px;
+                    background: #262626 url(../../mocks/ST0002/visual-sustainable-materials.png) no-repeat 70% top;
+                    background-size: auto 800px;
+                }
+                .sustainable-materials__product__slide {
+                    margin-right: 16px;
                 }
                 .sustainable-materials__product__btn-set {
                     position: static;
@@ -1171,6 +1180,9 @@
                     font-weight: 600;
                     line-height: 21px;
                     letter-spacing: 3.6px;
+                }
+                sustainability-efforts__bg__tit__br {
+                    display: inline-block;
                 }
                 .sustainability-efforts__bg__txt {
                     margin-top: 28px;
@@ -1615,12 +1627,12 @@
             </div>
             <div class="living-st-about">
                 <p class="living-st-about__cont">
-                    <span class="living-st-about__tit__txt">Sunday dinners. Movie nights. Fresh sheets.</span><br class="living-st-about__tit__br" />
-                    <span class="living-st-about__tit__txt">A morning breeze. A home life that restores you.</span><br class="living-st-about__tit__br" />
-                    <span class="living-st-about__tit__txt">Our sustainability journey means we can cherish</span><br class="living-st-about__tit__br" />
-                    <span class="living-st-about__tit__txt">these precious moments for generations to come.</span><br class="living-st-about__tit__br" />
-                    <span class="living-st-about__tit__txt">When we work together to create a more</span><br class="living-st-about__tit__br" />
-                    <span class="living-st-about__tit__txt">sustainable way of life, we all reap the rewards.</span>
+                    <span class="living-st-about__cont__txt">Sunday dinners. Movie nights. Fresh sheets.</span><br class="living-st-about__cont__br" />
+                    <span class="living-st-about__cont__txt">A morning breeze. A home life that restores you.</span><br class="living-st-about__cont__br" />
+                    <span class="living-st-about__cont__txt">Our sustainability journey means we can cherish</span><br class="living-st-about__cont__br" />
+                    <span class="living-st-about__cont__txt">these precious moments for generations to come.</span><br class="living-st-about__cont__br" />
+                    <span class="living-st-about__cont__txt">When we work together to create a more</span><br class="living-st-about__cont__br" />
+                    <span class="living-st-about__cont__txt">sustainable way of life, we all reap the rewards.</span>
                 </p>
             </div>
             <div class="enjoy-st-living">
@@ -1976,7 +1988,7 @@
             <div class="sustainability-efforts">
                 <div class="sustainability-efforts__bg">
                     <div class="sustainability-efforts__bg__inner">
-                        <h3 class="sustainability-efforts__bg__tit">Our commitments to the planet</h3>
+                        <h3 class="sustainability-efforts__bg__tit">Our commitments <br class="sustainability-efforts__bg__tit__br" />to the planet</h3>
                         <ul class="sustainability-efforts__bg__txt">
                             <li class="sustainability-efforts__bg__txt__item">Carbon neutrality</li>
                             <li class="sustainability-efforts__bg__txt__item">Circularity</li>

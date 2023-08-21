@@ -329,7 +329,6 @@
                 grid-template-columns: repeat(4,1fr);
                 width: 100%;
                 padding-top: 80px;
-                height: 554px;
                 visibility: hidden;
                 opacity: 0;
             }
@@ -1177,6 +1176,9 @@
                     line-height: 38px;
                     letter-spacing: -0.42px;
                 }
+                .carbon-nautrality-about__cont__br {
+                    display: none;
+                }
 
                 /* Key progress */
                 .key-progress {
@@ -1204,7 +1206,7 @@
                     display: none;
                 }
                 .key-progress__goals__wrap {
-                    margin-top: 40px;
+                    margin-top: 30px;
                 }
                 .key-progress__goals {
                     overflow: hidden;
@@ -1255,35 +1257,23 @@
                     line-height: 15px;
                 }
                 .key-progress__goals__transition-reduce {
-                    margin-top: 60px;
-                    padding-bottom: 40px;
+                    margin-top: 50px;
                     width: 100%;
-                    overflow-x: auto;
-                    overflow-y: hidden;
-                }
-                .key-progress__goals__transition-reduce::-webkit-scrollbar {
-                    height: 2px;
-                }
-                .key-progress__goals__transition-reduce::-webkit-scrollbar-thumb {
-                    height: 2px;
-                    border-radius: 0px;
-                    background-color: white;
-                }
-                .key-progress__goals__transition-reduce::-webkit-scrollbar-track {
-                    height: 2px;
-                    background-color: rgba(255, 255, 255, 0.30);
                 }
                 .key-progress__goals__transition-reduce__tab {
-                    gap: 0px 24px;
+                    gap: 0px 20px;
+                }
+                .key-progress__goals__transition-reduce__tab__item {
+                    width: 158px;
                 }
                 .key-progress__goals__transition-reduce__tab__item__anchor {
                     position: relative;
                     display: block;
-                    white-space: nowrap;
-                    padding: 2px 0px;
-                    font-size: 20px;
+                    padding: 0px 0px 6px;
+                    font-size: 16px;
                     font-weight: 400;
-                    line-height: 28px; /* 140% */
+                    line-height: 18px;
+                    text-align: left;
                     letter-spacing: -0.1px;
                 }
                 .key-progress__goals__transition-reduce__tab__item__anchor:hover,
@@ -1296,11 +1286,26 @@
                 .key-progress__goals__transition-reduce__graph__wrap {
                     position: relative;
                     margin-top: 40px;
-                    height: 252px;
+                    height: 344px;
+                    padding-bottom: 32px;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap::-webkit-scrollbar {
+                    height: 2px;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap::-webkit-scrollbar-thumb {
+                    height: 2px;
+                    border-radius: 0px;
+                    background-color: white;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap::-webkit-scrollbar-track {
+                    height: 2px;
+                    background-color: rgba(255, 255, 255, 0.30);
                 }
                 .key-progress__goals__transition-reduce__graph {
                     width: 100%;
-                    height: 252px;
+                    padding-top: 60px;
                     visibility: hidden;
                     opacity: 0;
                 }
@@ -1317,6 +1322,7 @@
                     padding: 0px 10px;
                 }
                 .key-progress__goals__transition-reduce__graph__percentage__txt {
+                    top: -59px;
                     font-size: 36px;
                     line-height: 38px;
                     letter-spacing: -0.18px;
@@ -1728,11 +1734,11 @@
             </div>
             <div class="carbon-nautrality-about">
                 <p class="carbon-nautrality-about__cont">
-                    <span class="carbon-nautrality-about__cont__txt">Nature has always had our attention. But its message is urgent: </span><br />
-                    <span class="carbon-nautrality-about__cont__txt">reduce carbon emissions. We are committed to an aggressive </span><br />
-                    <span class="carbon-nautrality-about__cont__txt">plan toward carbon neutrality and using 100% renewable </span><br />
-                    <span class="carbon-nautrality-about__cont__txt">energy. The sooner we minimize our environmental impact, </span><br />
-                    <span class="carbon-nautrality-about__cont__txt">the fewer natural hazards there will be, plus more nature to </span><br />
+                    <span class="carbon-nautrality-about__cont__txt">Nature has always had our attention. But its message is urgent: </span><br class="carbon-nautrality-about__cont__br" />
+                    <span class="carbon-nautrality-about__cont__txt">reduce carbon emissions. We are committed to an aggressive </span><br class="carbon-nautrality-about__cont__br" />
+                    <span class="carbon-nautrality-about__cont__txt">plan toward carbon neutrality and using 100% renewable </span><br class="carbon-nautrality-about__cont__br" />
+                    <span class="carbon-nautrality-about__cont__txt">energy. The sooner we minimize our environmental impact, </span><br class="carbon-nautrality-about__cont__br" />
+                    <span class="carbon-nautrality-about__cont__txt">the fewer natural hazards there will be, plus more nature to </span><br class="carbon-nautrality-about__cont__br" />
                     <span class="carbon-nautrality-about__cont__txt">appreciate.</span>
                 </p>
             </div>
