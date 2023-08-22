@@ -932,20 +932,10 @@
                 }
                 .popup-discription__btn-close:before,
                 .popup-discription__btn-close:after {
-                    position: absolute;
                     top: 16px;
                     left: 10px;
-                    content: '';
-                    display: block;
                     width: 14px;
                     height: 2px;
-                    background-color: #262626;
-                }
-                .popup-discription__btn-close:before {
-                    transform: rotate(45deg);
-                }
-                .popup-discription__btn-close:after {
-                    transform: rotate(-45deg);
                 }
             }
         </style>
@@ -1326,7 +1316,7 @@
                     if(window.innerWidth > 1024) {
                         return 40
                     } else {
-                        return 0
+                        return 20
                     }
                 }
 

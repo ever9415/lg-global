@@ -1719,6 +1719,130 @@
                 .whats-next__menu__pagination {
                     margin-top: 16px;
                 }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 20px 40px;
+                    border-radius: 0px;
+                }
+                .popup-discription__tit {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    text-align: center;
+                }
+                .popup-discription__tit__br {
+                    display: none;
+                }
+                .popup-discription__tit--left {
+                    text-align: center;
+                }
+                .popup-discription__tit__preface {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: -0.09px;
+                }
+                .popup-discription__tit__subject {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__visual {
+                    margin: 40px -20px;
+                }
+                .popup-discription__visual__img--pc {
+                    display: none;
+                }
+                .popup-discription__visual__img--mo {
+                    display: block;
+                }
+                .popup-discription--intro-summary {
+                    padding-left: 0px;
+                    margin-top: 40px;
+                }
+                .popup-discription__photo {
+                    margin-top: 40px;
+                }
+                .popup-discription__photo__figure {
+                    margin: 0px;
+                    text-align: center;
+                }
+                .popup-discription__photo__figure__figcaption {
+                    margin-top: 16px;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+                .popup-discription__photo__figure__figcaption__strong {
+                    font-weight: 600;
+                }
+                .popup-discription__video {
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__video__player {
+                    height: 187px;
+                }
+                .popup-discription__cont1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont3 {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .popup-discription__cont__grid2 {
+                    display: block;
+                }
+                .popup-discription__cont1--grid2--item + .popup-discription__cont1--grid2--item {
+                    margin-top: 20px;
+                }
+                .popup-discription__80000tons {
+                    display: block;
+                    padding-top: 32px;
+                    margin-top: 32px;
+                    border-top: 1px solid #D0CBC1;
+                }
+                .popup-discription__80000tons__tit {
+                    font-size: 44px;
+                    line-height: 48px;
+                    letter-spacing: -0.28px;
+                    margin-bottom: 14px;
+                }
+                .popup-discription__read-more {
+                    margin-top: 32px;
+                    text-align: center;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:hover {
+                    transform: rotate(180deg);
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    top: 16px;
+                    left: 10px;
+                    width: 14px;
+                    height: 2px;
+                }
             }
         </style>
         <!-- html code -->
@@ -2500,7 +2624,7 @@
                     if(window.innerWidth > 1024) {
                         return 40
                     } else {
-                        return 0
+                        return 20
                     }
                 }
 

@@ -591,6 +591,9 @@
             .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
                 transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
             }
+            .sustainability-efforts__card__discover {
+                display: none;
+            }
             .sustainability-efforts__card__video-visual {
                 position: absolute;
                 top: 0px;
@@ -1262,6 +1265,26 @@
                     line-height: 24px;
                     transform: translateY(0px);
                     opacity: 1;
+                }    
+                .sustainability-efforts__card__discover {
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 36px;
+                    left: 16px;
+                    right: 16px;
+                }
+                .sustainability-efforts__card__discover__btn {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: white;
+                    letter-spacing: -0.1px;
+                    padding: 18px 0px 19px;
+                    border-radius: 20px;
+                    border: 1px solid rgba(255, 255, 255, 0.60);
+                    background: rgba(16, 16, 16, 0.20);
+                    backdrop-filter: blur(50px);
                 }
 
                 /* Summary */
@@ -1497,8 +1520,8 @@
                 .popup-discription__detail__txt:first-child {
                     margin-top: 0px;
                 }
-                .popup-discription__detail__photo {
-                    margin: 20px 0px;
+                .popup-discription__detail__photo + .popup-discription__detail__txt {
+                    margin-top: 40px;
                 }
                 .popup-discription__detail__photo:first-child {
                     margin-top: 0px;
@@ -1556,8 +1579,7 @@
                 }
                 .popup-discription__detail__photo__figure__img__energy-saving4 {
                     width: 312px;
-                    height: 189px;
-                    border-radius: 50px;
+                    height: auto;
                 }
                 .popup-discription__detail__photo__figure__img__energy-saving5 {
                     width: 312px;
@@ -1568,6 +1590,12 @@
                     margin-top: 16px;
                     font-size: 12px;
                     line-height: 16px;
+                }
+                .popup-discription__detail__disclaimer {
+                    margin-top: 20px;
+                }
+                .popup-discription__detail__disclaimer__list {
+                    width: auto;
                 }
                 .popup-discription__energy-star {
                     position: relative;
@@ -1591,25 +1619,12 @@
                     width: 36px;
                     height: 36px;
                 }
-                .popup-discription__btn-close:hover {
-                    transform: rotate(180deg);
-                }
                 .popup-discription__btn-close:before,
                 .popup-discription__btn-close:after {
-                    position: absolute;
                     top: 16px;
                     left: 10px;
-                    content: '';
-                    display: block;
                     width: 14px;
                     height: 2px;
-                    background-color: #262626;
-                }
-                .popup-discription__btn-close:before {
-                    transform: rotate(45deg);
-                }
-                .popup-discription__btn-close:after {
-                    transform: rotate(-45deg);
                 }
             }
         </style>
@@ -2015,6 +2030,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="sustainability-efforts__card__discover">
+                                <a href="../ST0003/carbon_neutrality-bak.html" class="sustainability-efforts__card__discover__btn">Discover carbon neutrality</a>
+                            </div>
                         </li>
                         <li class="sustainability-efforts__card__item" id="valuing-diversity-inclusion">
                             <div class="sustainability-efforts__card__inner">
@@ -2028,6 +2046,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="sustainability-efforts__card__discover">
+                                <a href="../ST0004/circularity-bak.html" class="sustainability-efforts__card__discover__btn">Discover circularity</a>
+                            </div>
                         </li>
                         <li class="sustainability-efforts__card__item" id="clean-technology">
                             <div class="sustainability-efforts__card__inner">
@@ -2040,6 +2061,9 @@
                                         Leading the way towards a cleaner tomorrow
                                     </p>
                                 </div>
+                            </div>
+                            <div class="sustainability-efforts__card__discover">
+                                <a href="../ST0005/clean_technology-bak.html" class="sustainability-efforts__card__discover__btn">Discover clean technology</a>
                             </div>
                         </li>
                     </ul>

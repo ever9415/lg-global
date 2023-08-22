@@ -44,6 +44,7 @@ function initCommonHeader() {
     }
     var oldScrTop = 0;
     var newScrTop = 0;
+    var gnbDeps2Bg = document.querySelector(".gnb__deps2__bg");
     
     window.onresize = window.onorientationchange = function() {
         cfwOffsetTop = cFooterWrap.offsetTop;
@@ -81,6 +82,7 @@ function initCommonHeader() {
     btnGnb.onclick = function() {
         btnGnbBar.forEach(function(item) {
             if(item.className.indexOf("c-header__btn-gnb__bar--close") < 0) {
+                gnbDeps2Bg.style.display = "block"
                 item.className = item.className.replace("c-header__btn-gnb__bar","c-header__btn-gnb__bar c-header__btn-gnb__bar--close")
                 gnb.style.display = "block"
                 setTimeout(function() {
@@ -91,6 +93,7 @@ function initCommonHeader() {
                 gnb.style.transform = "translateY(100vh)";
                 setTimeout(function() {
                     gnb.removeAttribute("style")
+                    gnbDeps2Bg.style.display = "none"
                 },300)
             }
         })
