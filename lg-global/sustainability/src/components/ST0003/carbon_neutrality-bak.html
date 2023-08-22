@@ -927,7 +927,6 @@
             .popup-discription__tit {
                 font-family: 'LG_EI_Headline';
                 font-size: 52px;
-                font-style: normal;
                 font-weight: 550;
                 line-height: 58px;
                 letter-spacing: -0.26px;
@@ -1569,20 +1568,18 @@
                     background: none;
                 }
                 .summary__cont__txt {
-                    position: relative;
-                    z-index: 1;
-                    display: flex;
-                    align-items: center;
                     padding: 0px;
-                    color: #262626;
                     font-size: 16px;
                     line-height: 24px;
+                    letter-spacing: -0.5px;
+                    color: #4A4946;
                 }
                 .summary__cont__txt--active {
                     padding-top: 40px;
                     font-size: 36px;
                     line-height: 40px;
                     letter-spacing: -0.54px;
+                    color: #262626;
                 }
                 .summary__visual {
                     width: 328px;
@@ -1728,7 +1725,7 @@
                     width: 100%;
                     min-height: 100vh;
                     margin: 0px;
-                    padding: 80px 20px 40px;
+                    padding: 80px 40px 40px;
                     border-radius: 0px;
                 }
                 .popup-discription__tit {
@@ -1757,8 +1754,11 @@
                     line-height: 34px;
                     letter-spacing: -0.14px;
                 }
+                .popup-discription__tit__subject__br {
+                    display: none;
+                }
                 .popup-discription__visual {
-                    margin: 40px -20px;
+                    margin: 40px -40px;
                 }
                 .popup-discription__visual__img--pc {
                     display: none;
@@ -1805,6 +1805,9 @@
                     font-size: 12px;
                     line-height: 16px;
                 }
+                .popup-discription__tit + .popup-discription__cont3 {
+                    text-align: center;
+                }
                 .popup-discription__cont__grid2 {
                     display: block;
                 }
@@ -1833,15 +1836,103 @@
                     width: 36px;
                     height: 36px;
                 }
-                .popup-discription__btn-close:hover {
-                    transform: rotate(180deg);
-                }
                 .popup-discription__btn-close:before,
                 .popup-discription__btn-close:after {
                     top: 16px;
                     left: 10px;
                     width: 14px;
                     height: 2px;
+                }
+
+                /* Popup Discription - B2B activity */
+                .popup-discription__b2b-activity__intro {
+                    height: auto;
+                    margin: 0px;
+                    padding: 0px;
+                    text-align: center;
+                    background: none;
+                }
+                .popup-discription__b2b-activity__intro * {
+                    color: #262626;
+                }
+                .popup-discription__b2b-activity__intro__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__b2b-activity__intro__summary {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px; /* 121.429% */
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__b2b-activity__intro__detail {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 16px;
+                    color: #4A4946;
+                }
+                .popup-discription__b2b-activity__intro:after {
+                    content: '';
+                    display: block;
+                    height: 400px;
+                    margin: 40px -40px 0px;
+                    background: url(../../mocks/ST0003/visual-pdm-net-zero-house-mo.png) no-repeat center top;
+                    background-size: cover;
+                }
+                .popup-discription__b2b-activity__desc {
+                    padding-top: 40px;
+                }
+                .popup-discription__b2b-activity__desc__tit {
+                    margin-top: 80px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                }
+                .popup-discription__b2b-activity__desc__tit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__b2b-activity__desc__tit__br {
+                    display: none;
+                }
+                .popup-discription__b2b-activity__desc__stit {
+                    margin-top: 20px;
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .popup-discription__b2b-activity__desc__stit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__b2b-activity__desc__cont {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__b2b-activity__desc__photo {
+                    text-align: center;
+                    margin: 40px -40px 0px;
+                }
+                .popup-discription__b2b-activity__desc__photo + .popup-discription__b2b-activity__desc__photo {
+                    margin-top: 40px;
+                }
+                .popup-discription__b2b-activity__desc__photo__img1,
+                .popup-discription__b2b-activity__desc__photo__img2,
+                .popup-discription__b2b-activity__desc__photo__img4 {
+                    width: 312px;
+                    height: auto;
+                }
+                .popup-discription__b2b-activity__desc__photo__img3 {
+                    width: 220px;
+                    height: auto;
+                }
+                .popup-discription__b2b-activity__btn-close {
+                    border-color: #F0ECE4;
+                    background-color: white;
+                }
+                .popup-discription__b2b-activity__btn-close:before,
+                .popup-discription__b2b-activity__btn-close:after {
+                    background-color: #262626;
                 }
             }
         </style>
@@ -2113,14 +2204,15 @@
                             <dt class="popup-discription__tit">
                                 <div class="popup-discription__tit__preface">Carbon emission reduction</div>
                                 <div class="popup-discription__tit__subject">
-                                    First Home <br />
+                                    First Home <br class="popup-discription__tit__subject__br" />
                                     appliances lighthouse factory  <br />
-                                    LG Smart Park  <br />
+                                    LG Smart Park
                                 </div>
                             </dt>
                             <dd class="popup-discription__cont3">Changwon, Korea</dd>
                             <dd class="popup-discription__visual">
-                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-changwon.png" alt="" class="popup-discription__visual__img">
+                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-changwon.png" alt="" class="popup-discription__visual__img popup-discription__visual__img--pc">
+                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-changwon-mo.png" alt="" class="popup-discription__visual__img popup-discription__visual__img--mo">
                             </dd>
                             <dd class="popup-discription__cont1">Changwon LG Smart Park garnered international acclaim in 2022 as the first 'lighthouse factory' in the Korean home appliance industry. The facility places a strong emphasis on eco-conscious manufacturing and has implemented a range of measures to reduce its environmental impact. These include reducing greenhouse gas emissions, utilizing eco-friendly production technology, and recycling waste heat, leading to an impressive 30% reduction in energy consumption.</dd>
                             <dd class="popup-discription__photo">
@@ -2140,12 +2232,14 @@
                             <dt class="popup-discription__tit">
                                 <div class="popup-discription__tit__preface">Carbon emission reduction</div>
                                 <div class="popup-discription__tit__subject">
-                                    First US Lighthouse Factory <br />
+                                    First US Lighthouse Factory <br class="popup-discription__tit__subject__br" />
                                     LG Tennessee factory
                                 </div>
                             </dt>
+                            <dd class="popup-discription__cont3">Tennessee, USA</dd>
                             <dd class="popup-discription__visual">
-                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-tennessee.png" alt="" class="popup-discription__visual__img">
+                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-tennessee.png" alt="" class="popup-discription__visual__img popup-discription__visual__img--pc">
+                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-tennessee-mo.png" alt="" class="popup-discription__visual__img popup-discription__visual__img--mo">
                             </dd>
                             <dd class="popup-discription__cont1">LG Tennessee factory has earned the prestigious "lighthouse factory" designation from the World Economic Forum. It is the first consumer electronics factory in the US to receive this recognition. The factory incorporates advanced technology and automation, producing home appliances like washers and dryers. With cutting-edge digital systems, including AI, big data, IoT, and robots, it meets market demand with local production.</dd>
                             <dd class="popup-discription__photo">
@@ -2197,27 +2291,27 @@
                                 <dt class="popup-discription__b2b-activity__desc__stit">Energy storage system (ESS)</dt>
                                 <dd class="popup-discription__b2b-activity__desc__cont">An Energy Storage System (ESS) stores electricity generated from renewable energy sources and efficiently dispenses it at optimum times to help reduce electricity costs.</dd>
                                 <dd class="popup-discription__b2b-activity__desc__photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house1.png" alt="" class="popup-discription__b2b-activity__desc__photo__img">
+                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house1.png" alt="" class="popup-discription__b2b-activity__desc__photo__img popup-discription__b2b-activity__desc__photo__img1">
                                 </dd>
                                 <dt class="popup-discription__b2b-activity__desc__tit">Energy package by space : bath &amp; room</dt>
                                 <dd class="popup-discription__b2b-activity__desc__cont">The energy package for bath and room features high-efficiency system boilers that use air heat instead of gas for home and water heating, as well as premium ventilation that recovers energy by reducing heat loss, while preserving high air quality.</dd>
                                 <dt class="popup-discription__b2b-activity__desc__stit">Eco system boiler</dt>
                                 <dd class="popup-discription__b2b-activity__desc__cont">Absorbs heat in the air to produce hot water that can also be used for home heating. Reduced energy consumption lowers carbon emissions.</dd>
                                 <dd class="popup-discription__b2b-activity__desc__photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house2.png" alt="" class="popup-discription__b2b-activity__desc__photo__img">
+                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house2.png" alt="" class="popup-discription__b2b-activity__desc__photo__img popup-discription__b2b-activity__desc__photo__img2">
                                 </dd>
                                 <dd class="popup-discription__b2b-activity__desc__photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house3.png" alt="" class="popup-discription__b2b-activity__desc__photo__img">
+                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house3.png" alt="" class="popup-discription__b2b-activity__desc__photo__img popup-discription__b2b-activity__desc__photo__img3">
                                 </dd>
                                 <dt class="popup-discription__b2b-activity__desc__stit">Premium ventilation system</dt>
                                 <dd class="popup-discription__b2b-activity__desc__cont">Premium window ventilation lets out polluted air, while also generating heating or cooling energy. By expelling only polluted air 60% of cooling energy and 74% of heating energy is recovered, resulting in significant energy savings.</dd>
                                 <dt class="popup-discription__b2b-activity__desc__tit">
-                                    Energy package by space: <br />
+                                    Energy package by space: <br class="popup-discription__b2b-activity__desc__tit__br" />
                                      city / commercial facility
                                 </dt>
                                 <dd class="popup-discription__b2b-activity__desc__cont">Explore LG's vision for a smart city in this space. Energy-efficient AC systems can efficiently store and utilize power as needed for large-scale facilities, battery materials, products, and other related services.</dd>
                                 <dd class="popup-discription__b2b-activity__desc__photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house4.png" alt="" class="popup-discription__b2b-activity__desc__photo__img">
+                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house4.png" alt="" class="popup-discription__b2b-activity__desc__photo__img popup-discription__b2b-activity__desc__photo__img4">
                                 </dd>
                                 <dt class="popup-discription__b2b-activity__desc__stit">AI temperature system</dt>
                                 <dd class="popup-discription__b2b-activity__desc__cont">The AI temperature system optimizes air conditioning and saves energy by learning about the usage environment. It predicts power consumption before use for energy-saving customized control, and adjusts to the most efficient setting based on automatic external weather updates.</dd>

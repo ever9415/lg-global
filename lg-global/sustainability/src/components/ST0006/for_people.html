@@ -1589,6 +1589,7 @@
                 color: white;
             }
             .convenient-living__solutions__pagination {
+                bottom: 0px !important;
                 opacity: 0.5;
                 line-height: 1;
             }
@@ -1813,7 +1814,7 @@
             .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
                 transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
             }
-            .sustainability-efforts__card__go-to {
+            .sustainability-efforts__card__discover {
                 display: none;
             }
 
@@ -2390,6 +2391,9 @@
                     line-height: 34px;
                     letter-spacing: -0.14px;
                 }
+                .convenient-living__solutions__slide__anchor__subject__br {
+                    display: none;
+                }
                 .convenient-living__solutions__btn-set {
                     position: absolute;
                     top: 0px;
@@ -2477,7 +2481,13 @@
                     margin: 0px auto;
                 }
                 .sustainability-efforts__card__tit {
-                    display: none;
+                    font-size: 22px;
+                    font-weight: 550;
+                    line-height: 1;
+                    letter-spacing: -0.11px;
+                    transform: translateY(0);
+                    opacity: 1;
+                    margin-bottom: 20px;
                 }
                 .sustainability-efforts__card__summary {
                     font-size: 36px;
@@ -2498,7 +2508,7 @@
                 .sustainability-efforts__card__detail__br {
                     display: none;
                 }
-                .sustainability-efforts__card__go-to {
+                .sustainability-efforts__card__discover {
                     position: absolute;
                     z-index: 2;
                     bottom: 36px;
@@ -2506,7 +2516,7 @@
                     right: 16px;
                     display: block;
                 }
-                .sustainability-efforts__card__go-to__btn {
+                .sustainability-efforts__card__discover__btn {
                     display: block;
                     padding: 22px 0px 23px;
                     font-size: 18px;
@@ -2686,7 +2696,7 @@
                     width: 100%;
                     min-height: 100vh;
                     margin: 0px;
-                    padding: 80px 20px 40px;
+                    padding: 80px 40px 40px;
                     border-radius: 0px;
                 }
                 .popup-discription__tit {
@@ -2719,7 +2729,7 @@
                     letter-spacing: -0.14px;
                 }
                 .popup-discription__visual {
-                    margin: 32px -20px 0px;
+                    margin: 32px -40px 0px;
                 }
                 .popup-discription__visual__img--pc {
                     display: none;
@@ -2754,11 +2764,11 @@
                 }
                 .popup-discription--stit {
                     margin-top: 40px;
-                    font-size: 24px;
+                    font-size: 28px;
                     font-weight: 550;
-                    line-height: 30px;
-                    letter-spacing: -0.12px;
-                    text-align: center;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    text-align: left;
                 }
                 .popup-discription--intro-detail {
                     display: block;
@@ -2772,7 +2782,7 @@
                     height: auto;
                 }
                 .popup-discription--intro-detail__item__tit {
-                    font-size: 16px;
+                    font-size: 18px;
                     font-weight: 600;
                     line-height: 24px;
                     letter-spacing: -0.08px;
@@ -2790,8 +2800,7 @@
                     margin-top: 10px;
                 }
                 .popup-discription--intro-detail__guestbook {
-                    margin-top: 56px;
-                    text-align: center;
+                    margin-top: 36px;
                 }
                 .popup-discription--intro-detail__guestbook__blockquote {
                     font-size: 24px;
@@ -2800,7 +2809,7 @@
                     letter-spacing: -0.12px;
                 }
                 .popup-discription--intro-detail__guestbook__figcaption {
-                    padding: 0px 19px 40px;
+                    padding: 0px 0px 36px;
                 }
                 .popup-discription--intro-detail__item__major-desc {
                     margin-top: 0px;
@@ -2828,12 +2837,14 @@
                     display: block;
                 }
                 .popup-discription__cont__grid2__tit {
-                    text-align: center;
                     font-size: 24px;
                     font-weight: 550;
                     line-height: 30px;
                     letter-spacing: -0.12px;
                     margin-top: 40px;
+                }
+                .popup-discription__cont__grid2__tit + .popup-discription__cont1 {
+                    margin-top: 16px;
                 }
                 .popup-discription__btn-close {
                     top: 20px;
@@ -2913,7 +2924,7 @@
                         <div class="swiper-slide convenient-living__solutions__slide">
                             <a href="#refrigerator-convenience" onclick="popupDiscription(this.href); return false" class="convenient-living__solutions__slide__anchor convenient-living__solutions__slide__anchor2">
                                 <p class="convenient-living__solutions__slide__anchor__subject">
-                                    Convenience, that overcomes <br />
+                                    Convenience, that overcomes <br class="convenient-living__solutions__slide__anchor__subject__br" />
                                     challenging situations
                                 </p>
                             </a>
@@ -3178,6 +3189,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="sustainability-efforts__card__discover">
+                                <a href="javascript:popupDiscription('#production-site-future-value')" class="sustainability-efforts__card__discover__btn">Discover decent workplace</a>
+                            </div>
                         </li>
                         <li class="sustainability-efforts__card__item" id="valuing-diversity-inclusion">
                             <div class="sustainability-efforts__card__inner">
@@ -3196,6 +3210,9 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="sustainability-efforts__card__discover">
+                                <a href="javascript:popupDiscription('#diversity-engagement')" class="sustainability-efforts__card__discover__btn">Discover diversity &amp; inclusion</a>
+                            </div>
                         </li>
                         <li class="sustainability-efforts__card__item" id="design-for-all">
                             <div class="sustainability-efforts__card__inner">
@@ -3213,6 +3230,9 @@
                                         wider audience.
                                     </p>
                                 </div>
+                            </div>
+                            <div class="sustainability-efforts__card__discover">
+                                <a href="javascript:popupDiscription('#disabled-advisory-board')" class="sustainability-efforts__card__discover__btn">Design for all</a>
                             </div>
                         </li>
                     </ul>
