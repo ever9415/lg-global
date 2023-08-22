@@ -47,17 +47,17 @@ function initCommonHeader() {
     var gnbDeps2Bg = document.querySelector(".gnb__deps2__bg");
     
     window.onresize = window.onorientationchange = function() {
+        gnbDeps2Bg.style.display = "none"
         cfwOffsetTop = cFooterWrap.offsetTop;
         chPosTop = cHeader.offsetTop - (document.documentElement.scrollTop || window.scrollY)
-
+        cHeader.removeAttribute("style")
+        gnb.removeAttribute("style");
+        btnGnbBar.forEach(function(item) {
+            item.classList.remove("c-header__btn-gnb__bar--close")
+        })
         if(window.innerWidth <= 768) {
             deviceWidth = "mobile";
         } else if(window.innerWidth > 768) {
-            cHeader.removeAttribute("style")
-            gnb.removeAttribute("style");
-            btnGnbBar.forEach(function(item) {
-                item.className = item.className.replace("c-header__btn-gnb__bar c-header__btn-gnb__bar--close","c-header__btn-gnb__bar")
-            })
             deviceWidth = "pc";
         }
     }
@@ -103,6 +103,7 @@ function initGnbDeps2(tAnchor) {
     var tAnchor = tAnchor;
     var tItem = tAnchor.parentNode;
     var tList = tItem.parentNode;
+    var gnb = tList.parentNode;
     var gdItem = tList.getElementsByTagName("li");
     var gOrgIndex = getElementIndex(document.querySelector(".c-header__gnb__list__item__anchor--active").parentNode);
     var tDeps2 = tItem.querySelector(".c-header__gnb__list__item__deps2");
@@ -135,8 +136,8 @@ function initGnbDeps2(tAnchor) {
                 tItem.removeAttribute("style")
                 tItem.removeAttribute("style")
                 tAnchor.removeAttribute("style")
-                gnbDeps2Bg.style.display = "block"
                 tDeps2MenuBtnBack.removeAttribute("style")
+            } else if(tAnchor.className.indexOf("--on") <= -1) {
             }
         } else if(deviceMode() == "mo") {
             tList.style.display = "block"
@@ -150,7 +151,7 @@ function initGnbDeps2(tAnchor) {
                 tItem.style.display = "block"
                 tItem.style.marginTop = "0px"
                 tAnchor.style.display = "none"
-                gnbDeps2Bg.removeAttribute("style")
+                gnbDeps2Bg.style.display = "block"
                 setTimeout(function() {
                     tDeps2MenuBtnBack.style.opacity = 1
                 },300)
@@ -214,11 +215,13 @@ function initGnbDeps2(tAnchor) {
     }
 
     tDeps2.onmouseleave = function() {
-        tAnchor.classList.remove("c-header__gnb__list__item__anchor--active")
-        tList.querySelectorAll(".c-header__gnb__list__item")[gOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
-        gnbDeps2Bg.style.display = "none"
+        if(deviceMode() == "pc") {
+            tAnchor.classList.remove("c-header__gnb__list__item__anchor--active")
+            tList.querySelectorAll(".c-header__gnb__list__item")[gOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
+            gnbDeps2Bg.style.display = "none"
+            tAnchor.classList.remove("c-header__gnb__list__item__anchor--on")
+        }
 
-        tAnchor.classList.remove("c-header__gnb__list__item__anchor--on")
     }
 
     tDeps2MenuBtnBack.onclick = function() {
