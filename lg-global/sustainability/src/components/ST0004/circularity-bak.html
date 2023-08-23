@@ -340,17 +340,18 @@
             }
 
             /* E-waste program */
+            .e-waste-program__tit {
+                font-family: 'LG_EI_Headline';
+                font-size: 56px;
+                font-weight: 550;
+                line-height: 60px;
+                letter-spacing: -0.28px;
+            }
             .e-waste-program__cont {
                 max-width: 1440px;
                 padding: 120px 0px 100px;
                 margin: 0px auto;
                 text-align: center;
-            }
-            .e-waste-program__tit {
-                font-size: 56px;
-                font-weight: 550;
-                line-height: 60px;
-                letter-spacing: -0.28px;
             }
             .e-waste-program__stit {
                 margin-top: 120px;
@@ -801,6 +802,9 @@
                 width: 100%;
                 height: auto;
             }
+            .popup-discription__visual__img--mo {
+                display: none;
+            }
             .popup-discription__cont {
                 font-size: 20px;
                 line-height: 28px;
@@ -978,6 +982,10 @@
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: -0.08px;
+                    margin-top: 14px;
+                }
+                .st-cycle__intro__txt__br {
+                    display: none;
                 }
                 .st-cycle__inner {
                     margin: 88px auto 0px;
@@ -1014,7 +1022,7 @@
                 .st-cycle__inner__cont__list--active {
                     visibility: visible;
                     height: 102px;
-                    margin-top: 20px;
+                    margin-top: -28px;
                 }
                 .st-cycle__inner__cont__list__item {
                     position: absolute;
@@ -1032,6 +1040,9 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
+                .st-cycle__inner__cont__list__item__txt__br {
+                    display: none;
+                }
                 .st-cycle__inner__menu__item {
                     position: absolute;
                     width: 66px;
@@ -1044,28 +1055,40 @@
                     opacity: 0.3;
                 }
                 .st-cycle__inner__menu__item:nth-child(1) {
-                    top: -28px;
-                    left: 50px;
+                    top: -27px;
+                    left: 48px;
+                    width: 66px;
+                    height: 76px;
                 }
                 .st-cycle__inner__menu__item:nth-child(2) {
                     top: -28px;
                     right: 141px;
+                    width: 77px;
+                    height: 63px;
                 }
                 .st-cycle__inner__menu__item:nth-child(3) {
                     top: -28px;
-                    right: 50px;
+                    right: 51px;
+                    width: 66px;
+                    height: 68px;
                 }
                 .st-cycle__inner__menu__item:nth-child(4) {
                     bottom: -38px;
                     right: 50px;
+                    width: 66px;
+                    height: 69px;
                 }
                 .st-cycle__inner__menu__item:nth-child(5) {
                     bottom: -38px;
                     right: 141px;
+                    width: 67px;
+                    height: 69px;
                 }
                 .st-cycle__inner__menu__item:nth-child(6) {
                     bottom: -38px;
                     left: 50px;
+                    width: 67px;
+                    height: 68px;
                 }
                 .st-cycle__inner__menu__item__ico--pc {
                     display: none;
@@ -1098,47 +1121,41 @@
                 }
 
                 /* E-waste program */
+                .e-waste-program__tit {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
                 .e-waste-program__cont {
                     width: 100%;
                     padding: 60px 16px 40px;
                 }
-                .e-waste-program__tit {
+                .e-waste-program__stit {
                     font-size: 19px;
                     line-height: 26px;
+                    margin-top: 60px;
                 }
                 .e-waste-program__intro1 {
                     font-size: 36px;
                     font-weight: 400;
                     line-height: 40px;
+                    margin-top: 10px;
                 }
                 .e-waste-program__intro2 {
                     font-size: 16px;
                     line-height: 24px;
                     margin-top: 40px;
                 }
+                .e-waste-program__intro2__br {
+                    display: none;
+                }
                 .e-waste-program__visual__wrap {
                     position: relative;
                     height: 200vh;
                 }
                 .e-waste-program__visual {
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    width: 100%;
-                    height: 100vh;
-                }
-                .e-waste-program__visual__inner {
-                    position: absolute;
-                    z-index: 2;
-                    left: 50%;
-                    top: 50%;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 0px;
-                    background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
-                    background-size: cover;
-                    background-attachment: fixed;
-                    transform: translate(-50%,-50%);
+                    margin-top: 40px;
                 }
                 .e-waste-program__more {
                     margin-top: 20px;
@@ -1175,6 +1192,7 @@
                     font-size: 36px;
                     font-weight: 400;
                     line-height: 40px;
+                    letter-spacing: -1px;
                 }
                 .st-recycling-solutions__cont__intro__txt:last-child {
                     font-size: 16px;
@@ -1184,6 +1202,40 @@
                     display: none;
                 }
 
+
+                /* Explore more resources */
+                .explore-resources {
+                    padding: 32px 16px;
+                }
+                .explore-resources__inner {
+                    width: auto;
+                }
+                .explore-resources__tit {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                }
+                .explore-resources__list {
+                    display: block;
+                    margin-top: 24px;
+                }
+                .explore-resources__list__item + .explore-resources__list__item {
+                    margin-top: 16px;
+                }
+                .explore-resources__list__item__anchor {
+                    height: 169px;
+                    padding: 21px;
+                }
+                .explore-resources__list__item__anchor__txt {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    letter-spacing: -0.24px;
+                }
+                .explore-resources__list__item__anchor:after {
+                    width: 36px;
+                    height: 36px;
+                }
 
                 /* Summary */
                 .summary {
@@ -1223,7 +1275,7 @@
                     background-size: cover;
                 }
 
-                /* What's Next *//* What's Next */
+                /* What's Next */
                 .whats-next__wrap {
                     padding: 30px 16px;
                 }
@@ -1349,6 +1401,102 @@
                 .whats-next__menu__pagination {
                     margin-top: 16px;
                 }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 20px 40px;
+                    border-radius: 0px;
+                }
+                .popup-discription__tit {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__tit__br {
+                    display: none;
+                }
+                .popup-discription__tit--left {
+                    text-align: center;
+                }
+                .popup-discription__tit__preface {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: -0.09px;
+                }
+                .popup-discription__tit__subject {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__intro {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 16px 0px 0px;
+                    text-align: center;
+                }
+                .popup-discription__visual {
+                    margin: 40px -20px 0px;
+                }
+                .popup-discription__visual__img--pc {
+                    display: none;
+                }
+                .popup-discription__visual__img--mo {
+                    display: block;
+                }
+                .popup-discription__cont {
+                    padding: 40px 0px;
+                }
+                .popup-discription__cont:last-child {
+                    padding-bottom: 20px;
+                }
+                .popup-discription__cont__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    letter-spacing: -0.5px;
+                    white-space: normal;
+                }
+                .popup-discription__cont__photo {
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont__txt {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__cont__stit {
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #262626;
+                    font-weight: 600;
+                }
+                .popup-discription__cont__stit__strong {
+                    color: #262626;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    top: 16px;
+                    left: 10px;
+                    width: 14px;
+                    height: 2px;
+                }
             }
         </style>
         <!-- html code -->
@@ -1376,7 +1524,7 @@
                 <div class="st-cycle__intro">
                     <p class="st-cycle__intro__txt">Green goes full circle</p>
                     <p class="st-cycle__intro__txt">
-                        The sustainable cycle focuses on environmental factors throughout the <br />
+                        The sustainable cycle focuses on environmental factors throughout the <br class="st-cycle__intro__txt__br" />
                         entire product lifecycle, ensuring sustainable and responsible practices.
                     </p>
                 </div>
@@ -1388,8 +1536,8 @@
                                 <div class="st-cycle__inner__cont__list__item__wrap">
                                     <h5 class="st-cycle__inner__cont__list__item__tit">Source materials</h5>
                                     <p class="st-cycle__inner__cont__list__item__txt">
-                                        Use materials with lower environmental <br />
-                                        impact such as eco-certified steel and <br />
+                                        Use materials with lower environmental <br class="st-cycle__inner__cont__list__item__txt__br" />
+                                        impact such as eco-certified steel and <br class="st-cycle__inner__cont__list__item__txt__br" />
                                         recycled plastic
                                     </p>
                                 </div>
@@ -1407,8 +1555,8 @@
                                 <div class="st-cycle__inner__cont__list__item__wrap">
                                     <h5 class="st-cycle__inner__cont__list__item__tit">Production</h5>
                                     <p class="st-cycle__inner__cont__list__item__txt">
-                                        Reduce greenhouse gas emissions in manufacturing, <br />
-                                        expand usage of renewable energy and minimize <br />
+                                        Reduce greenhouse gas emissions in manufacturing, <br class="st-cycle__inner__cont__list__item__txt__br" />
+                                        expand usage of renewable energy and minimize <br class="st-cycle__inner__cont__list__item__txt__br" />
                                         waste to landfill
                                     </p>
                                 </div>
@@ -1417,8 +1565,8 @@
                                 <div class="st-cycle__inner__cont__list__item__wrap">
                                     <h5 class="st-cycle__inner__cont__list__item__tit">Package</h5>
                                     <p class="st-cycle__inner__cont__list__item__txt">
-                                        Use eco-conscious materials like recycled <br />
-                                        paper and reused Expanded Polystyrene <br />
+                                        Use eco-conscious materials like recycled <br class="st-cycle__inner__cont__list__item__txt__br" />
+                                        paper and reused Expanded Polystyrene <br class="st-cycle__inner__cont__list__item__txt__br" />
                                         (EPS)
                                     </p>
                                 </div>
@@ -1427,7 +1575,7 @@
                                 <div class="st-cycle__inner__cont__list__item__wrap">
                                     <h5 class="st-cycle__inner__cont__list__item__tit">Use</h5>
                                     <p class="st-cycle__inner__cont__list__item__txt">
-                                        Reduce indirect greenhouse gas <br />
+                                        Reduce indirect greenhouse gas <br class="st-cycle__inner__cont__list__item__txt__br" />
                                         emissions with energy-efficient products
                                     </p>
                                 </div>
@@ -1436,7 +1584,7 @@
                                 <div class="st-cycle__inner__cont__list__item__wrap">
                                     <h5 class="st-cycle__inner__cont__list__item__tit">Recycling</h5>
                                     <p class="st-cycle__inner__cont__list__item__txt">
-                                        Expand e-waste collection amount and <br />
+                                        Expand e-waste collection amount and <br class="st-cycle__inner__cont__list__item__txt__br" />
                                         resource recycling by material from e-waste
                                     </p>
                                 </div>
@@ -1489,8 +1637,8 @@
                         management program
                     </p>
                     <p class="e-waste-program__intro2">
-                        Help reduce the amount of e-waste that ends up in landfills and minimize your <br />
-                        impact on the environment, by recycling your old electronics responsibly through our <br />
+                        Help reduce the amount of e-waste that ends up in landfills and minimize your <br class="e-waste-program__intro2__br" />
+                        impact on the environment, by recycling your old electronics responsibly through our <br class="e-waste-program__intro2__br" />
                         e-waste program.
                     </p>        
                     <div class="e-waste-program__more">
@@ -1509,7 +1657,8 @@
                                 LG is committed to collecting e-waste to promote circularity. Through our easy, convenient e-waste program, you can help us make a positive impact on the environment, inspire others, and create a better future for all.
                             </dd>
                             <dd class="popup-discription__visual">
-                                <img src="../../mocks/ST0004/visual-pdm-e-waste-program.png" alt=""  class="popup-discription__visual__img" />
+                                <img src="../../mocks/ST0004/visual-pdm-e-waste-program.png" alt=""  class="popup-discription__visual__img popup-discription__visual__img--pc" />
+                                <img src="../../mocks/ST0004/visual-pdm-e-waste-program-mo.png" alt=""  class="popup-discription__visual__img popup-discription__visual__img--mo" />
                             </dd>
                             <dd class="popup-discription__cont">
                                 <h3 class="popup-discription__cont__tit">E-waste program (Global)</h3>
@@ -1559,7 +1708,8 @@
                                     <div class="popup-discription__tit__subject">Sustainable <br />recycling solutions <br />LG recycling center</div>
                                 </dt>
                                 <dd class="popup-discription__visual">
-                                    <img src="../../mocks/ST0004/visual-pdm-chilseo-recycling-center.png" alt=""  class="popup-discription__visual__img" />
+                                    <img src="../../mocks/ST0004/visual-pdm-chilseo-recycling-center.png" alt=""  class="popup-discription__visual__img popup-discription__visual__img--pc" />
+                                    <img src="../../mocks/ST0004/visual-pdm-chilseo-recycling-center-mo.png" alt=""  class="popup-discription__visual__img popup-discription__visual__img--mo" />
                                 </dd>
                                 <dd class="popup-discription__cont">
                                     <p class="popup-discription__cont__txt">
@@ -1567,9 +1717,6 @@
                                     </p>
                                 </dd>
                                 <dd class="popup-discription__cont">
-                                    <div class="popup-discription__cont__photo">
-                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center1.png" alt=""  class="popup-discription__cont__photo__img" />
-                                    </div>
                                     <h3 class="popup-discription__cont__tit">Process of recycling</h3>
                                     <div class="popup-discription__cont__inner">
                                         <h4 class="popup-discription__cont__stit">
@@ -1579,6 +1726,9 @@
                                         <p class="popup-discription__cont__txt">
                                             The Chilseo recycling center removes mechanical and plastic parts from appliances. Materials are then sorted for recycling. A patented system automates the process, increasing efficiency and safety.
                                         </p>
+                                        <div class="popup-discription__cont__photo">
+                                            <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center1.png" alt=""  class="popup-discription__cont__photo__img" />
+                                        </div>
                                     </div>
                                 </dd>
                                 <dd class="popup-discription__cont">
@@ -1938,7 +2088,7 @@
                     if(window.innerWidth > 1024) {
                         return 40
                     } else {
-                        return 0
+                        return 20
                     }
                 }
 

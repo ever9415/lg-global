@@ -62,7 +62,7 @@ function initCommonHeader() {
         }
     }
 
-    window.onscroll = function() {
+    window.onscroll = function(e) {
         var winScrollTop = document.documentElement.scrollTop || window.scrollY
 
         oldScrTop = winScrollTop
@@ -77,6 +77,8 @@ function initCommonHeader() {
                 newScrTop = oldScrTop
             }
         }
+
+        e.stopPropagation();
     }
 
     btnGnb.onclick = function() {
