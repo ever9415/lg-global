@@ -1507,16 +1507,10 @@
             }
             .eco-conscious-technology__intro__txt {
                 margin-top: 16px;
-            }
-            .eco-conscious-technology__intro__txt:nth-child(1) {
                 font-family: 'LG_EI_Headline';
                 font-weight: 600;
                 font-size: 56px;
                 line-height: 60px;
-            }
-            .eco-conscious-technology__intro__txt:nth-child(2) {
-                font-size: 20px;
-                line-height: 28px;
             }
             .eco-conscious-technology__kind {
                 position: relative;
@@ -1740,7 +1734,7 @@
             /* Explore more resources */
             .explore-resources {
                 padding: 60px 0px;
-                background: url(../../mocks/ST0005/bg-explore-resources.png) no-repeat center center;
+                background: url(../../mocks/ST0005/bg-explore-resources.png) no-repeat center top;
                 background-size: cover;
             }
             .explore-resources__inner {
@@ -2202,11 +2196,7 @@
 
             /* 4K */
             @media (min-width: 2560px) {
-                /* Sustainable Recycling Solutions */
-                .st-recycling-solutions {
-                    max-width: 2560px;
-                    margin: 0px auto;
-                }
+                
             }
 
             /* PC Normal */
@@ -2215,7 +2205,7 @@
             }
 
             /* Tablet */
-            @media (min-width: 1024px) {
+            @media(min-width: 769px) and (max-width:1499px) {
             
             }
 
@@ -2269,18 +2259,10 @@
                 }
                 .eco-conscious-technology__intro__txt {
                     margin-top: 10px;
-                }
-                .eco-conscious-technology__intro__txt:first-child {
                     font-weight: 400;
                     font-size: 36px;
                     line-height: 40px;
                     letter-spacing: -0.54px;
-                }
-                .eco-conscious-technology__intro__txt:last-child {
-                    font-size: 16px;
-                    line-height: 24px;
-                    letter-spacing: -0.08px;
-                    margin-top: 16px;
                 }
                 .eco-conscious-technology__intro__txt__br {
                     display: none;
@@ -2403,6 +2385,40 @@
                 .recreation-of-product__type__item__more {
                     bottom: 20px;
                     right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Explore more resources */
+                .explore-resources {
+                    padding: 32px 16px;
+                }
+                .explore-resources__inner {
+                    width: auto;
+                }
+                .explore-resources__tit {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                }
+                .explore-resources__list {
+                    display: block;
+                    margin-top: 24px;
+                }
+                .explore-resources__list__item + .explore-resources__list__item {
+                    margin-top: 16px;
+                }
+                .explore-resources__list__item__anchor {
+                    height: 169px;
+                    padding: 21px;
+                }
+                .explore-resources__list__item__anchor__txt {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    letter-spacing: -0.24px;
+                }
+                .explore-resources__list__item__anchor:after {
                     width: 36px;
                     height: 36px;
                 }

@@ -2346,8 +2346,14 @@
                 
             }
 
-            /* Full HD */
-            @media (min-width: 1920px) {
+            /* PC Normal */
+            @media (min-width: 1500px) {
+            
+            }
+
+            /* Tablet */
+            @media(min-width: 769px) and (max-width:1499px) {
+            
             }
 
             /* Mobile */
@@ -2645,6 +2651,9 @@
                     line-height: 40px;
                     letter-spacing: -0.54px;
                     color: #262626;
+                }
+                .summary__cont__txt__br {
+                    display: none;
                 }
                 .summary__visual {
                     border-radius: 20px;
@@ -3408,7 +3417,7 @@
                 <div class="summary__cont">
                     <p class="summary__cont__txt">
                         Your sustainable living journey truly inspires us. <br />
-                        We're committed to both promoting sustainable living <br />
+                        We're committed to both promoting sustainable living <br class="summary__cont__txt__br" />
                         and empowering you along the way.
                     </p>
                     <p class="summary__cont__txt summary__cont__txt--active">
