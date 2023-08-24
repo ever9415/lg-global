@@ -1691,13 +1691,10 @@
                 left: 0px;
                 width: 100%;
                 font-size: 56px;
-                
+                color: #75C66B;
                 font-weight: 550;
                 line-height: 60px;
                 letter-spacing: -0.28px;
-            }
-            .key-progress__goals__transition-reduce__graph__percentage__txt[data-txt-percentage="100"] {
-                color: #75C66B;
             }
             .key-progress__goals__transition-reduce__graph__percentage__bar {
                 position: absolute;
@@ -3288,7 +3285,7 @@
                 <h2 class="carbon-nautrality-visual__tit">
                     <span class="carbon-nautrality-visual__tit__txt">Major action. <br class="carbon-nautrality-visual__tit__txt__br" />Minor carbon.</span>
                 </h2>
-                <video src="../../mocks/ST0003/video-carbon-nautrality-visual.mp4" class="carbon-nautrality-visual__video" autoplay loop muted playsinline></video>
+                <video src="../../mocks/ST0003/video-carbon-nautrality-visual.mp4" class="carbon-nautrality-visual__video" autoplay loop muted></video>
                 <div class="carbon-nautrality-visual__scrolldown">
                     <button type="button" class="carbon-nautrality-visual__scrolldown__btn">Scroll Down</button>
                 </div>
@@ -3343,7 +3340,7 @@
                                 <div class="key-progress__goals__carbon-zero__txt">
                                     <div class="key-progress__goals__carbon-zero__txt__zero">
                                         Carbon <br />
-                                        zero
+                                        neutrality
                                     </div>
                                     <div class="key-progress__goals__carbon-zero__txt__year">2030</div>
                                 </div>
@@ -3926,7 +3923,12 @@
                         setInterval(function() {
                             if(currentNum > finalNum) {
                                 currentNum = currentNum - 10;
-                                circleBox.style.strokeDashoffset = currentNum+"px"
+
+                                if(currentNum  >= 0) {
+                                    circleBox.style.strokeDashoffset = currentNum+"px"
+                                } else if(currentNum < 0) {
+                                    circleBox.style.strokeDashoffset = "0px"
+                                }
                             }
                         },10)
                     }
