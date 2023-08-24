@@ -1586,6 +1586,10 @@
                 height: 100%;
                 object-fit: cover;
             }
+            .core-value__media__item__video--mo,
+            .core-value__media__item__img--mo {
+                display: none;
+            }
             .core-value__txt {
                 position: relative;
                 height: 48px;
@@ -2273,7 +2277,7 @@
                     margin-bottom: 20px;
                 }
                 .core-value__start {
-                    top: 88px;
+                    top: 56px;
                     width: 300px;
                     height: 300px;
                     border-radius: 300px;
@@ -2294,6 +2298,14 @@
                 .core-value__media--active {
                     width: 300px;
                     height: calc(62.5vh - 30px);
+                }
+                .core-value__media__item__video--mo,
+                .core-value__media__item__img--mo {
+                    display: block;
+                }
+                .core-value__media__item__video--pc,
+                .core-value__media__item__img--pc {
+                    display: none;
                 }
                 .core-value__txt {
                     position: relative;
@@ -2698,22 +2710,28 @@
                         <div class="swiper core-value__media">
                             <ul class="swiper-wrapper core-value__media__wrapper">
                                 <li class="swiper-slide core-value__media__item">
-                                    <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video core-value__media__item__video--pc" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value1-mo.mp4" class="core-value__media__item__video core-value__media__item__video--mo" autoplay loop muted playsinline></video>
                                 </li>
                                 <li class="swiper-slide core-value__media__item">
-                                    <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video core-value__media__item__video--pc" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value2-mo.mp4" class="core-value__media__item__video core-value__media__item__video--mo" autoplay loop muted playsinline></video>
                                 </li>
                                 <li class="swiper-slide core-value__media__item">
-                                    <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video core-value__media__item__video--pc" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value3-mo.mp4" class="core-value__media__item__video core-value__media__item__video--mo" autoplay loop muted playsinline></video>
                                 </li>
                                 <li class="swiper-slide core-value__media__item">
-                                    <video src="../../mocks/ST0001/video-core-value4.mp4" class="core-value__media__item__video" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value4.mp4" class="core-value__media__item__video core-value__media__item__video--pc" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value4-mo.mp4" class="core-value__media__item__video core-value__media__item__video--mo" autoplay loop muted playsinline></video>
                                 </li>
                                 <li class="swiper-slide core-value__media__item">
-                                    <video src="../../mocks/ST0001/video-core-value5.mp4" class="core-value__media__item__video" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value5.mp4" class="core-value__media__item__video core-value__media__item__video--pc" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value5-mo.mp4" class="core-value__media__item__video core-value__media__item__video--mo" autoplay loop muted playsinline></video>
                                 </li>
                                 <li class="swiper-slide core-value__media__item">
-                                    <video src="../../mocks/ST0001/video-core-value6.mp4" class="core-value__media__item__video" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value6.mp4" class="core-value__media__item__video core-value__media__item__video--pc" autoplay loop muted playsinline></video>
+                                    <video src="../../mocks/ST0001/video-core-value6-mo.mp4" class="core-value__media__item__video core-value__media__item__video--mo" autoplay loop muted playsinline></video>
                                 </li>
                             </ul>
                         </div> 
@@ -3056,8 +3074,9 @@
                                 })
                                 coreValueTxtItem[this.realIndex].classList.add("core-value__txt__item--on")
 
-                                if(coreValueMediaItem[this.realIndex].querySelector("video")) {
-                                    coreValueMediaItem[this.realIndex].querySelector("video").currentTime = 0;
+                                if(coreValueMediaItem[this.realIndex].querySelector(".core-value__media__item__video--mo") || coreValueMediaItem[this.realIndex].querySelector(".core-value__media__item__video--pc")) {
+                                    coreValueMediaItem[this.realIndex].querySelector(".core-value__media__item__video--mo").currentTime = 0;
+                                    coreValueMediaItem[this.realIndex].querySelector(".core-value__media__item__video--pc").currentTime = 0;
                                 }
                             }
                         }
