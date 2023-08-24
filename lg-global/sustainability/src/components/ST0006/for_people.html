@@ -1745,61 +1745,42 @@
                 opacity: 1;
             }
             .sustainability-efforts__card__item:nth-child(1) {
-                background-image: url(../../mocks/ST0006/photo-se-card1.jpg);
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0006/photo-se-card1.jpg);
             }
             .sustainability-efforts__card__item:nth-child(2) {
-                background-image: url(../../mocks/ST0006/photo-se-card2.jpg);
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0006/photo-se-card2.jpg);
             }
             .sustainability-efforts__card__item:nth-child(3) {
-                background-image: url(../../mocks/ST0006/photo-se-card3.png);
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0006/photo-se-card3.png);
             }
             .sustainability-efforts__card__inner {
+                position: relative;
+                z-index: 2;
                 width: 1440px;
                 margin: 0px auto;
             }
             .sustainability-efforts__card__tit {
-                font-size: 4.0741vh;
-                font-weight: 550;
-                line-height: 4.4444vh;
-                letter-spacing: -0.44px;
-                text-align: center;
-                color: white;
-                margin-bottom: 18.8889vh;
-                transform: translateY(4.0741vh);
-                opacity: 0;
-                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
-            }
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__tit {
-                transform: translateY(0px);
-                opacity: 1;
+                display: none;
             }
             .sustainability-efforts__card__summary {
-                font-size: 56px;
+                font-size: 80px;
                 font-style: normal;
                 font-weight: 550;
-                line-height: 60px; /* 107.143% */
+                line-height: 76px;
                 letter-spacing: -0.28px;
                 color: white;
-                transform: translateY(56px);
+                transform: translateY(80px);
                 opacity: 0;
                 transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
             }
             .sustainability-efforts__card__detail {
                 margin-top: 16px;
-                font-size: 20px;
-                font-style: normal;
+                font-size: 24px;
                 font-weight: 400;
                 line-height: 28px;
                 letter-spacing: -0.1px;
                 color: white;
-                transform: translateY(20px);
-                opacity: 0;
-                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
-            }
-            .sustainability-efforts__card__discover-more {
-                display: none;
-                margin-top: 36px;
-                transform: translateY(47px);
+                transform: translateY(24px);
                 opacity: 0;
                 transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
             }
@@ -1809,13 +1790,25 @@
                 opacity: 1;
             }
             .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary {
-                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
+                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
             }
             .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
-                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
+                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
             }
             .sustainability-efforts__card__discover {
                 display: none;
+            }
+            .sustainability-efforts__card__video-visual {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            .sustainability-efforts__card__video-visual__video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             /* Summary */
@@ -2476,15 +2469,6 @@
                     width: auto;
                     margin: 0px auto;
                 }
-                .sustainability-efforts__card__tit {
-                    font-size: 22px;
-                    font-weight: 550;
-                    line-height: 1;
-                    letter-spacing: -0.11px;
-                    transform: translateY(0);
-                    opacity: 1;
-                    margin-bottom: 20px;
-                }
                 .sustainability-efforts__card__summary {
                     font-size: 36px;
                     font-weight: 400;
@@ -2500,29 +2484,25 @@
                     line-height: 24px;
                     transform: translateY(0px);
                     opacity: 1;
-                }
-                .sustainability-efforts__card__detail__br {
-                    display: none;
-                }
+                }    
                 .sustainability-efforts__card__discover {
+                    display: block;
                     position: absolute;
                     z-index: 2;
                     bottom: 36px;
                     left: 16px;
                     right: 16px;
-                    display: block;
                 }
                 .sustainability-efforts__card__discover__btn {
                     display: block;
-                    padding: 22px 0px 23px;
                     font-size: 18px;
-                    line-height: 21px;
                     font-weight: 600;
                     color: white;
-                    letter-spacing: -0.09px;
+                    letter-spacing: -0.1px;
+                    padding: 18px 0px 19px;
                     border-radius: 20px;
                     border: 1px solid rgba(255, 255, 255, 0.60);
-                    background-color: rgba(16, 16, 16, 0.20);
+                    background: rgba(16, 16, 16, 0.20);
                     backdrop-filter: blur(50px);
                 }
 
@@ -3182,15 +3162,10 @@
                                 <h3 class="sustainability-efforts__card__tit">Decent workplace</h3>
                                 <div class="sustainability-efforts__card__cont">
                                     <p class="sustainability-efforts__card__summary">
-                                        Enhancing <br />
-                                        workplace safety
+                                        Decent workplace
                                     </p>
                                     <p class="sustainability-efforts__card__detail">
-                                        We are constantly working to eliminate supply <br class="sustainability-efforts__card__detail__br" />
-                                        chain risks on a global scale. Our goal is to <br class="sustainability-efforts__card__detail__br" />
-                                        create a safe working environment for our <br class="sustainability-efforts__card__detail__br" />
-                                        partners, and create a collaborative <br class="sustainability-efforts__card__detail__br" />
-                                        atmosphere for all.
+                                        Enhancing workplace safety
                                     </p>
                                 </div>
                             </div>
@@ -3203,15 +3178,10 @@
                                 <h3 class="sustainability-efforts__card__tit">Diversity &amp; Inclusion</h3>
                                 <div class="sustainability-efforts__card__cont">
                                     <p class="sustainability-efforts__card__summary">
-                                        Valuing diversity <br />
-                                        and inclusion
+                                        Diversity &amp; Inclusion
                                     </p>
                                     <p class="sustainability-efforts__card__detail">
-                                        We respect everyone's diverse perspectives, to <br class="sustainability-efforts__card__detail__br" />
-                                        create an environment where people feel <br class="sustainability-efforts__card__detail__br" />
-                                        comfortable to be themselves. We encourage <br class="sustainability-efforts__card__detail__br" />
-                                        creativity and innovation while ensuring equal <br class="sustainability-efforts__card__detail__br" />
-                                        opportunities for success.
+                                        Valuing diversity and inclusion
                                     </p>
                                 </div>
                             </div>
@@ -3224,15 +3194,10 @@
                                 <h3 class="sustainability-efforts__card__tit">Design for all</h3>
                                 <div class="sustainability-efforts__card__cont">
                                     <p class="sustainability-efforts__card__summary">
-                                        Sustainable effort to <br />
-                                        tackle discomfort
+                                        Design for all
                                     </p>
                                     <p class="sustainability-efforts__card__detail">
-                                        We are open to diverse perspectives when creating <br class="sustainability-efforts__card__detail__br" />
-                                        our products and designs. This enables us to <br class="sustainability-efforts__card__detail__br" />
-                                        develop innovative technologies with user-friendly <br class="sustainability-efforts__card__detail__br" />
-                                        features, bringing products with great benefits to a <br class="sustainability-efforts__card__detail__br" />
-                                        wider audience.
+                                        Sustainable effort to tackle discomfort
                                     </p>
                                 </div>
                             </div>
