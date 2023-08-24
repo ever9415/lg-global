@@ -2182,7 +2182,23 @@
 
             /* Tablet */
             @media(min-width: 769px) and (max-width:1499px) {
-            
+                /* Core Value */
+                .core-value__start--hidden {
+                    width: calc(100% - 48px);
+                }
+                .core-value__media--active {
+                    width: calc(100% - 48px);
+                }
+
+                /* Summary */
+                .summary__cont {
+                    width: calc(100% - 48px);
+                }
+
+                /* What's Next */
+                .whats-next {
+                    width: calc(100% - 48px);
+                }
             }
 
 
@@ -2243,7 +2259,7 @@
                 .core-value__wrap {
                     position: relative;
                     width: 100%;
-                    height: 120vh;
+                    height: 100vh;
                 }
                 .core-value {
                     position: relative;
@@ -2344,10 +2360,11 @@
                 /* Menu Introduce */
                 .menu-introduce__wrap {
                     position: relative;
+                    height: 130vh;
                 }
                 .menu-introduce__slider,
                 .menu-introduce__inner {
-                    height: auto;
+                    height: 130vh;
                 }
                 .menu-introduce__slider {
                     padding-bottom: 40px;
@@ -3083,37 +3100,61 @@
                     });
                     cvSwiper.autoplay.stop()
 
-                    gsap.to(coreValueWrap, {
-                        scrollTrigger: {
-                            trigger: ".core-value__wrap",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                coreValue.classList.add("core-value--fixed")
+                    ScrollTrigger.matchMedia({
+                        "(min-width: 1500px)": function() {
+                            gsap.to(coreValueWrap, {
+                                scrollTrigger: {
+                                    trigger: ".core-value__wrap",
+                                    start: "top top",
+                                    end: "bottom bottom",
+                                    onEnter: function() {
+                                        coreValue.classList.add("core-value--fixed")
+                                        coreValueMedia.classList.add("core-value__media--active")
+                                        coreValueStart.classList.add("core-value__start--hidden")
+                                        coreValueTxt.classList.add("core-value__txt--active")
+                                        coreValuePagination.classList.add("core-value__pagination--active")
+                                        cvSwiper.autoplay.start()
+                                    },
+                                    onLeaveBack: function() {
+                                        coreValue.classList.remove("core-value--fixed")
+                                        coreValueMedia.classList.remove("core-value__media--active")
+                                        coreValueStart.classList.remove("core-value__start--hidden")
+                                        coreValueTxt.classList.remove("core-value__txt--active")
+                                        coreValuePagination.classList.remove("core-value__pagination--active")
+                                        cvSwiper.autoplay.stop()
+                                    },
+                                    onLeave: function() {
+                                        coreValue.classList.remove("core-value--fixed")
+                                        coreValue.classList.add("core-value--end")
+                                    },
+                                    onEnterBack: function() {
+                                        coreValue.classList.add("core-value--fixed")
+                                        coreValue.classList.remove("core-value--end")
+                                    }
+                                }
+                            });
+                        }
+                    })
+
+                    window.onload = window.onscroll = function() {
+                        console.log(document.documentElement.scrollTop)
+                        if(window.innerWidth <= 1499) {
+                            if(document.documentElement.scrollTop >= coreValueWrap.offsetTop - (window.innerHeight/4)) {
                                 coreValueMedia.classList.add("core-value__media--active")
                                 coreValueStart.classList.add("core-value__start--hidden")
                                 coreValueTxt.classList.add("core-value__txt--active")
                                 coreValuePagination.classList.add("core-value__pagination--active")
                                 cvSwiper.autoplay.start()
-                            },
-                            onLeaveBack: function() {
-                                coreValue.classList.remove("core-value--fixed")
+                            } else if(document.documentElement.scrollTop < coreValueWrap.offsetTop - (window.innerHeight/4)) {
                                 coreValueMedia.classList.remove("core-value__media--active")
                                 coreValueStart.classList.remove("core-value__start--hidden")
                                 coreValueTxt.classList.remove("core-value__txt--active")
                                 coreValuePagination.classList.remove("core-value__pagination--active")
                                 cvSwiper.autoplay.stop()
-                            },
-                            onLeave: function() {
-                                coreValue.classList.remove("core-value--fixed")
-                                coreValue.classList.add("core-value--end")
-                            },
-                            onEnterBack: function() {
-                                coreValue.classList.add("core-value--fixed")
-                                coreValue.classList.remove("core-value--end")
                             }
                         }
-                    });
+                    }
+                        
                 },
                 menuIntroduce: function() {
                     let menuIntroduceWrap = document.querySelector(".menu-introduce__wrap");
@@ -3143,31 +3184,35 @@
                     });
                     miSwiper.autoplay.stop()
 
-                    gsap.to(menuIntroduceSlider, {
-                        scrollTrigger: {
-                            trigger: ".menu-introduce__wrap",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
-                                menuIntroducePagination.classList.add("menu-introduce__pagination--active")
-                                miSwiper.autoplay.start()
-                            },
-                            onLeaveBack: function() {
-                                menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
-                                menuIntroducePagination.classList.remove("menu-introduce__pagination--active")
-                                miSwiper.autoplay.stop()
-                            },
-                            onLeave: function() {
-                                menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
-                                menuIntroduceSlider.classList.add("menu-introduce__slider--end")
-                            },
-                            onEnterBack: function() {
-                                menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
-                                menuIntroduceSlider.classList.remove("menu-introduce__slider--end")
-                            }
+                    ScrollTrigger.matchMedia({
+                        "(min-width: 1500px)": function() {
+                            gsap.to(menuIntroduceSlider, {
+                                scrollTrigger: {
+                                    trigger: ".menu-introduce__wrap",
+                                    start: "top top",
+                                    end: "bottom bottom",
+                                    onEnter: function() {
+                                        menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
+                                        menuIntroducePagination.classList.add("menu-introduce__pagination--active")
+                                        miSwiper.autoplay.start()
+                                    },
+                                    onLeaveBack: function() {
+                                        menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
+                                        menuIntroducePagination.classList.remove("menu-introduce__pagination--active")
+                                        miSwiper.autoplay.stop()
+                                    },
+                                    onLeave: function() {
+                                        menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
+                                        menuIntroduceSlider.classList.add("menu-introduce__slider--end")
+                                    },
+                                    onEnterBack: function() {
+                                        menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
+                                        menuIntroduceSlider.classList.remove("menu-introduce__slider--end")
+                                    }
+                                }
+                            });
                         }
-                    });
+                    })
                 },
                 latestStories: function() {
                     let latestStories = document.querySelector(".latest-stories")
