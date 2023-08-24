@@ -1448,6 +1448,9 @@
                 height: 100vh;
                 object-fit: cover;
             }
+            .for-people-visual__video--mo {
+                display: none;
+            }
             .for-people-visual__scrolldown {
                 position: absolute;
                 z-index: 4;
@@ -2284,6 +2287,12 @@
                 .for-people-visual__tit__txt__br {
                     display: inline-block;
                 }
+                .for-people-visual__video--pc {
+                    display: none;
+                }
+                .for-people-visual__video--mo {
+                    display: block;
+                }
                 .for-people-visual__scrolldown {
                     position: absolute;
                     bottom: 40px;
@@ -2856,7 +2865,8 @@
                         From people, <br class="for-people-visual__tit__txt__br" />for community
                     </span>
                 </h2>
-                <video src="../../mocks/ST0006/video-for-people-visual.mp4" class="for-people-visual__video" autoplay loop muted playsinline></video>
+                <video src="../../mocks/ST0006/video-for-people-visual.mp4" class="for-people-visual__video for-people-visual__video--pc" autoplay loop muted playsinline></video>
+                <video src="../../mocks/ST0006/video-for-people-visual-mo.mp4" class="for-people-visual__video for-people-visual__video--mo" autoplay loop muted playsinline></video>
                 <div class="for-people-visual__scrolldown">
                     <button type="button" class="for-people-visual__scrolldown__btn">Scroll Down</button>
                 </div>
