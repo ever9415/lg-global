@@ -1425,7 +1425,7 @@
             .clean-technology-visual__tit {
                 position: absolute;
                 z-index: 3;
-                top: 50%;
+                top: calc(50% - 80px);
                 left: 0px;
                 width: 100%;
                 text-align: center;
@@ -1448,7 +1448,7 @@
             .clean-technology-visual__scrolldown {
                 position: absolute;
                 z-index: 4;
-                bottom: 40px;
+                bottom: 140px;
                 left: 0px;
                 width: 100%;
                 text-align: center;
@@ -1463,8 +1463,6 @@
                 background: url(../../mocks/ST0005/clean-technology-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
                 transform: translateY(0px);
-            }
-            .clean-technology-visual__scrolldown__btn:hover {
                 animation-duration: 1s;
                 animation-name: sd-dounce;
                 animation-iteration-count: infinite;
@@ -2213,6 +2211,7 @@
             @media (max-width: 768px) {
                 /* Clean Technology Visual */
                 .clean-technology-visual__tit {
+                    top: calc(50% - 100px);
                     font-size: 44px;
                     line-height: 48px;
                     letter-spacing: -0.44px;
@@ -2222,7 +2221,7 @@
                 }
                 .clean-technology-visual__scrolldown {
                     position: absolute;
-                    bottom: 40px;
+                    bottom: 140px;
                     left: 0px;
                     width: 100%;
                 }
