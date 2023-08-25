@@ -1425,7 +1425,7 @@
             .circularity-visual__tit {
                 position: absolute;
                 z-index: 3;
-                top: 50%;
+                top: calc(50% - 80px);
                 left: 0px;
                 width: 100%;
                 text-align: center;
@@ -1451,7 +1451,7 @@
             .circularity-visual__scrolldown {
                 position: absolute;
                 z-index: 4;
-                bottom: 40px;
+                bottom: 120px;
                 left: 0px;
                 width: 100%;
                 text-align: center;
@@ -1466,8 +1466,6 @@
                 background: url(../../mocks/ST0004/circularity-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
                 transform: translateY(0px);
-            }
-            .circularity-visual__scrolldown__btn:hover {
                 animation-duration: 1s;
                 animation-name: sd-dounce;
                 animation-iteration-count: infinite;
@@ -2267,6 +2265,7 @@
             @media (max-width: 768px) {
                 /* Circularity Visual */
                 .circularity-visual__tit {
+                    top: calc(50% - 100px);
                     line-height: 48px;
                     font-size: 44px;
                     letter-spacing: -0.44px;
@@ -2275,7 +2274,7 @@
                     display: inline-block;
                 }
                 .circularity-visual__scrolldown {
-                    bottom: 16px;
+                    bottom: 140px;
                 }
                 .circularity-visual__scrolldown__btn {
                     width: 51px;

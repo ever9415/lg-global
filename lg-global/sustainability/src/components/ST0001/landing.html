@@ -1414,7 +1414,7 @@
             }
             .landing-visual__tit {
                 position: absolute;
-                bottom: 41.7593vh;
+                bottom: calc(41.7593vh + 80px);
                 left: 0px;
                 width: 100%;
             }
@@ -1427,7 +1427,7 @@
             }
             .landing-visual__txt {
                 position: absolute;
-                bottom: 35.8333vh;
+                bottom: calc(35.8333vh + 80px);
                 left: 0px;
                 width: 100%;
                 color: white;
@@ -1438,7 +1438,7 @@
             }
             .landing-visual__scrolldown {
                 position: absolute;
-                bottom: 40px;
+                bottom: 120px;
                 left: 0px;
                 width: 100%;
             }
@@ -1452,8 +1452,6 @@
                 background: url(../../mocks/ST0001/landing-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
                 transform: translateY(0px);
-            }
-            .landing-visual__scrolldown__btn:hover {
                 animation-duration: 1s;
                 animation-name: sd-dounce;
                 animation-iteration-count: infinite;
@@ -2205,7 +2203,7 @@
             @media (max-width: 768px) {
                 /* Landing Visual */
                 .landing-visual__tit {
-                    bottom: 40.1307vh;
+                    bottom: calc(40.1307vh + 100px);
                 }
                 .landing-visual__tit__img--pc {
                     display: none;
@@ -2216,7 +2214,7 @@
                     height: 25.25vh;
                 }
                 .landing-visual__txt {
-                    bottom: 32.549vh;
+                    bottom: calc(32.549vh + 100px);
                     font-size: 2.5vh;
                     font-weight: 400;
                     line-height: 3.5vh;
@@ -2224,7 +2222,7 @@
                 }
                 .landing-visual__scrolldown {
                     position: absolute;
-                    bottom: 40px;
+                    bottom: 140px;
                     left: 0px;
                     width: 100%;
                 }
