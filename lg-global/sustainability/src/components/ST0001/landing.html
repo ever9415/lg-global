@@ -2357,11 +2357,11 @@
                 /* Menu Introduce */
                 .menu-introduce__wrap {
                     position: relative;
-                    height: 130vh;
+                    height: auto;
                 }
                 .menu-introduce__slider,
                 .menu-introduce__inner {
-                    height: 130vh;
+                    height: auto;
                 }
                 .menu-introduce__slider {
                     padding-bottom: 40px;
@@ -3133,8 +3133,8 @@
                         }
                     })
 
-                    window.onload = window.onscroll = function() {
-                        console.log(document.documentElement.scrollTop)
+                    function scrollInit() {
+                        //console.log(document.documentElement.scrollTop)
                         if(window.innerWidth <= 1499) {
                             if(document.documentElement.scrollTop >= coreValueWrap.offsetTop - (window.innerHeight/4)) {
                                 coreValueMedia.classList.add("core-value__media--active")
@@ -3151,7 +3151,9 @@
                             }
                         }
                     }
-                        
+                     
+                    window.addEventListener('load', scrollInit);
+                    window.addEventListener('scroll', scrollInit);
                 },
                 menuIntroduce: function() {
                     let menuIntroduceWrap = document.querySelector(".menu-introduce__wrap");
@@ -3210,6 +3212,22 @@
                             });
                         }
                     })
+
+                    function scrollInit() {
+                        //console.log(document.documentElement.scrollTop)
+                        if(window.innerWidth <= 1499) {
+                            if(document.documentElement.scrollTop >= menuIntroduceWrap.offsetTop - (window.innerHeight/4)) {
+                                menuIntroducePagination.classList.add("menu-introduce__pagination--active")
+                                miSwiper.autoplay.start()
+                            } else if(document.documentElement.scrollTop < menuIntroduceWrap.offsetTop - (window.innerHeight/4)) {
+                                menuIntroducePagination.classList.remove("menu-introduce__pagination--active")
+                                miSwiper.autoplay.stop()
+                            }
+                        }
+                    }
+
+                    window.addEventListener('load', scrollInit);
+                    window.addEventListener('scroll', scrollInit);
                 },
                 latestStories: function() {
                     let latestStories = document.querySelector(".latest-stories")
