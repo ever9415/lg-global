@@ -1970,8 +1970,7 @@
             .whats-next__tit {
                 font-size: 44px;
                 line-height: 52px;
-                
-                font-weight: 100;
+                font-weight: 550;
             }
             .whats-next__tit__strong {
                 
@@ -2264,6 +2263,9 @@
                 font-weight: 400;
                 line-height: 16px;
                 color: #7E7C77;
+            }
+            .popup-discription__detail__disclaimer__list__item--left {
+                text-align: left;
             }
             .popup-discription__energy-star {
                 position: relative;
@@ -2888,6 +2890,9 @@
                     position: static;
                     width: auto;
                 }
+                .popup-discription__energy-star__tit__category__br {
+                    display: none;
+                }
                 .popup-discription__energy-star__txt {
                     margin-top: 16px;
                 }
@@ -3476,6 +3481,9 @@
                     position: static;
                     width: auto;
                 }
+                .popup-discription__energy-star__tit__category__br {
+                    display: none;
+                }
                 .popup-discription__energy-star__txt {
                     margin-top: 16px;
                 }
@@ -3718,13 +3726,25 @@
                                     </figure>
                                 </dd>
                                 <dd class="popup-discription__detail__txt">
-                                    This not only means that it will keep your food fresh for longer (up to 41% less cold air loss), but is also energy efficient (up to 32% less energy consumption).
+                                    This not only means that it will keep your food fresh for longer (up to 41%* less cold air loss), but is also energy efficient (up to 32%** less energy consumption).
+                                </dd>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item popup-discription__detail__disclaimer__list__item--left">
+                                            *41% <br />
+                                            Based on Intertek testing of models SX5534WB, GR-S632GLRC, and LFX31945ST/02 in accordance with LG internal testing methodology measuring percentage reduction in exchange rate of air when opening Door-in-Door™ compared to the refrigerator door for 10 seconds. Results may vary by models and duration of door opening.
+                                        </li>
+                                        <li class="popup-discription__detail__disclaimer__list__item popup-discription__detail__disclaimer__list__item--left">
+                                            **32% <br />
+                                            Compared to the refrigerator with LG conventional reciprocating compressor. Based on VDE testing comparing energy consumption between LG model GBB530NSCXE and GBB530NSQWB. Energy consumption test based on ISO 15502 standard.
+                                        </li>
+                                    </ul>
                                 </dd>
                             </div>
                             <div class="popup-discription__detail popup-discription__energy-star">
                                 <dt class="popup-discription__detail__tit popup-discription__energy-star__tit">
                                     <div class="popup-discription__detail__tit__category popup-discription__energy-star__tit__category">
-                                        ENERGY STAR <br />
+                                        ENERGY STAR <br class="popup-discription__energy-star__tit__category__br" />
                                         certification
                                     </div>
                                     <div class="popup-discription__detail__tit__topic popup-discription__energy-star__tit__topic">
@@ -3959,10 +3979,7 @@
             </div>
             <div class="whats-next__wrap">
                 <div class="whats-next">
-                    <h3 class="whats-next__tit">
-                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore sustainability
-                    </h3>
+                    <h3 class="whats-next__tit">Explore more</h3>
                     <div class="swiper whats-next__menu">
                         <div class="swiper-wrapper whats-next__menu__slide-wrap">
                             <div class="swiper-slide whats-next__menu__slide">
