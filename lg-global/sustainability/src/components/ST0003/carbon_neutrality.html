@@ -3377,14 +3377,14 @@
                                     </li>
                                     <li class="key-progress__goals__transition-reduce__graph__item">
                                         <div class="key-progress__goals__transition-reduce__graph__percentage">
-                                            <div class="key-progress__goals__transition-reduce__graph__percentage__txt key-progress__goals__transition-reduce__graph__percentage__txt__future" data-txt-percentage="60"><span class="key-progress__goals__transition-reduce__graph__percentage__txt__integer">0</span><b class="key-progress__goals__transition-reduce__graph__percentage__txt__dot">.</b><span class="key-progress__goals__transition-reduce__graph__percentage__txt__decimal">0</span>%</div>
+                                            <div class="key-progress__goals__transition-reduce__graph__percentage__txt key-progress__goals__transition-reduce__graph__percentage__txt__future" data-txt-percentage="60"><span class="key-progress__goals__transition-reduce__graph__percentage__txt__integer">0</span>%</div>
                                             <div class="key-progress__goals__transition-reduce__graph__percentage__bar" data-gauge-percentage="60"></div>
                                         </div>
                                         <div class="key-progress__goals__transition-reduce__graph__years">2030</div>
                                     </li>
                                     <li class="key-progress__goals__transition-reduce__graph__item">
                                         <div class="key-progress__goals__transition-reduce__graph__percentage">
-                                            <div class="key-progress__goals__transition-reduce__graph__percentage__txt key-progress__goals__transition-reduce__graph__percentage__txt__future" data-txt-percentage="100"><span class="key-progress__goals__transition-reduce__graph__percentage__txt__integer">0</span><b class="key-progress__goals__transition-reduce__graph__percentage__txt__dot">.</b><span class="key-progress__goals__transition-reduce__graph__percentage__txt__decimal">0</span>%</div>
+                                            <div class="key-progress__goals__transition-reduce__graph__percentage__txt key-progress__goals__transition-reduce__graph__percentage__txt__future" data-txt-percentage="100"><span class="key-progress__goals__transition-reduce__graph__percentage__txt__integer">0</span>%</div>
                                             <div class="key-progress__goals__transition-reduce__graph__percentage__bar" data-gauge-percentage="100"></div>
                                         </div>
                                         <div class="key-progress__goals__transition-reduce__graph__years">2050</div>
@@ -3407,7 +3407,7 @@
                                     </li>
                                     <li class="key-progress__goals__transition-reduce__graph__item">
                                         <div class="key-progress__goals__transition-reduce__graph__percentage">
-                                            <div class="key-progress__goals__transition-reduce__graph__percentage__txt key-progress__goals__transition-reduce__graph__percentage__txt__future" data-txt-percentage="20"><span class="key-progress__goals__transition-reduce__graph__percentage__txt__integer">0</span><b class="key-progress__goals__transition-reduce__graph__percentage__txt__dot">.</b><span class="key-progress__goals__transition-reduce__graph__percentage__txt__decimal">0</span>%</div>
+                                            <div class="key-progress__goals__transition-reduce__graph__percentage__txt key-progress__goals__transition-reduce__graph__percentage__txt__future" data-txt-percentage="20"><span class="key-progress__goals__transition-reduce__graph__percentage__txt__integer">0</span>%</div>
                                             <div class="key-progress__goals__transition-reduce__graph__percentage__bar" data-gauge-percentage="100"></div>
                                         </div>
                                         <div class="key-progress__goals__transition-reduce__graph__years">2030</div>
@@ -3824,7 +3824,9 @@
 
                             for(var w=0; w < kpgtrGraphPercentageTxt.length; w++) {
                                 kpgtrGraphPercentageTxt[w].querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__integer").innerHTML = "0"
-                                kpgtrGraphPercentageTxt[w].querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal").innerHTML = "0"
+                                if(kpgtrGraphPercentageTxt[w].querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal")) {
+                                    kpgtrGraphPercentageTxt[w].querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal").innerHTML = "0"
+                                }
                             }
                             for(var x=0; x < kpgtrGraphPercentageBar.length; x++) {
                                 kpgtrGraphPercentageBar[x].style.height = "0%"
@@ -3933,7 +3935,9 @@
                         setInterval(function() {
                             if(currentDecimalNum < finalDecimalNum) {
                                 currentDecimalNum++;
-                                txtBox.querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal").innerHTML = currentDecimalNum
+                                if(txtBox.querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal")) {
+                                    txtBox.querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal").innerHTML = currentDecimalNum
+                                }
                             }
                         },1000/finalDecimalNum)
                     }
@@ -3955,7 +3959,9 @@
                         setInterval(function() {
                             if(currentDecimalNum > finalDecimalNum) {
                                 currentDecimalNum--;
-                                txtBox.querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal").innerHTML = currentDecimalNum+"%"
+                                if(txtBox.querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal")) {
+                                    txtBox.querySelector(".key-progress__goals__transition-reduce__graph__percentage__txt__decimal").innerHTML = currentDecimalNum+"%"
+                                }
                             }
                         },1000/currentDecimalNum)
                     }
