@@ -2486,7 +2486,758 @@
 
             /* Tablet */
             @media(min-width: 769px) and (max-width:1499px) {
-            
+                /* Climate Action Visual */
+                .carbon-nautrality-visual {
+                    height: 56.25vw;
+                }
+                .carbon-nautrality-visual__tit {
+                    top: calc(50% - 20px);
+                    font-size: 44px;
+                    line-height: 48px;
+                }
+                .carbon-nautrality-visual__video {
+                    height: 56.25vw;
+                }
+                .carbon-nautrality-visual__scrolldown {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .carbon-nautrality-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
+                }
+
+                /* Climate Action About */
+                .carbon-nautrality-about__cont {
+                    width: 640px;
+                    padding: 90px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+                .carbon-nautrality-about__cont__br {
+                    display: none;
+                }
+
+                /* Key progress */
+                .key-progress {
+                    padding-top: 60px;
+                }
+                .key-progress__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .key-progress__intro {
+                    padding: 0px 24px;
+                }
+                .key-progress__intro__txt:first-child {
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .key-progress__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .key-progress__intro__txt__br {
+                    display: none;
+                }
+                .key-progress__goals__wrap {
+                    margin-top: 30px;
+                    background-attachment: local;
+                }
+                .key-progress__goals {
+                    width: auto;
+                    margin: 0px auto;
+                    padding: 120px 24px 80px;
+                }
+                .key-progress__goals__tit {
+                    font-size: 36px;
+                    font-weight: 550;
+                    line-height: 40px;
+                }
+                .key-progress__goals__tit__br {
+                    display: none;
+                }
+                .key-progress__goals__carbon-zero {
+                    width: 662px;
+                    margin: 46px auto 0px;
+                    justify-content: space-between;
+                }
+                .key-progress__goals__carbon-zero__item {
+                    width: 194px;
+                    height: 194px;
+                }
+                .key-progress__goals__carbon-zero__txt {
+                    position: absolute;
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                .key-progress__goals__carbon-zero__txt__percentage {
+                    font-size: 40px;
+                    line-height: 42px;
+                }
+                .key-progress__goals__carbon-zero__txt__zero {
+                    font-size: 36px;
+                    font-weight: 550;
+                    line-height: 30px;
+                }
+                .key-progress__goals__carbon-zero__txt__year {
+                    margin-top: 10px;
+                    font-size: 20px;
+                    line-height: 23px;
+                }
+                .key-progress__goals__transition-reduce {
+                    margin-top: 114px;
+                }
+                .key-progress__goals__transition-reduce__tab {
+                    justify-content: center;
+                    gap: 0px 20px;
+                }
+                .key-progress__goals__transition-reduce__tab__item__anchor {
+                    font-size: 22px;
+                    line-height: 34px;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap {
+                    margin-top: 46px;
+                    height: 430px;
+                    padding-bottom: 72px;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap::-webkit-scrollbar {
+                    height: 2px;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap::-webkit-scrollbar-thumb {
+                    height: 2px;
+                    border-radius: 0px;
+                    background-color: white;
+                }
+                .key-progress__goals__transition-reduce__graph__wrap::-webkit-scrollbar-track {
+                    height: 2px;
+                    background-color: rgba(255, 255, 255, 0.30);
+                }
+                .key-progress__goals__transition-reduce__graph {
+                    padding-top: 58px;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .key-progress__goals__transition-reduce__graph--active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .key-progress__goals__transition-reduce__graph__item * {
+                    color: white;
+                }
+                .key-progress__goals__transition-reduce__graph__percentage {
+                    min-width: 230px;
+                    height: 280px;
+                }
+                .key-progress__goals__transition-reduce__graph__percentage:first-child {
+                    border-left: 1px solid rgba(255, 255, 255, 0.70);
+                }
+                .key-progress__goals__transition-reduce__graph__percentage__txt {
+                    position: absolute;
+                    z-index: 2;
+                    top: -58px;
+                    left: 0px;
+                    width: 100%;
+                    font-size: 40px;
+                    font-weight: 550;
+                    line-height: 44px;
+                    letter-spacing: -0.28px;
+                }
+                .key-progress__goals__transition-reduce__graph__percentage__txt__future,
+                .key-progress__goals__transition-reduce__graph__percentage__txt__future * {
+                    color: #75C66B;
+                }
+                .key-progress__goals__transition-reduce__graph__percentage__bar {
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 0px;
+                    left: 10px;
+                    right: 10px;
+                    border-radius: 10px;
+                    background: linear-gradient(0deg, #75C66B 0%, #75C66B 100%), rgba(255, 255, 255, 0.20);
+                    backdrop-filter: blur(100px);
+                }
+                .key-progress__goals__transition-reduce__graph__years {
+                    margin-top: 20px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .key-progress__goals__disclaimer {
+                    margin-top: 40px;
+                }
+                .key-progress__goals__disclaimer__item {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+
+                /* Carbon Emission Reduction */
+                .achieve-carbon-neutrality {
+                    width: 640px;
+                }
+                .achieve-carbon-neutrality__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .achieve-carbon-neutrality__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 550;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .achieve-carbon-neutrality__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .achieve-carbon-neutrality__intro__txt__br {
+                    display: none;
+                }
+                .achieve-carbon-neutrality__plan {
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    grid-template-rows: repeat(2,1fr);
+                    gap: 60px 40px;
+                    align-items: center;
+                    width: 640px;
+                    margin: 56px auto 0px;
+                    padding: 0px;
+                }
+                .achieve-carbon-neutrality__plan__item {
+                    width: 300px;
+                    height: 503px;
+                    opacity: 1;
+                }
+                .achieve-carbon-neutrality__plan__item:first-child {
+                    grid-row: auto / span 2
+                }
+                .achieve-carbon-neutrality__plan__item + .achieve-carbon-neutrality__plan__item {
+                    margin-top: 0px;
+                }
+                .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step1,
+                .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step2,
+                .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step3 {
+                    transform: translateY(0px);
+                }
+                .achieve-carbon-neutrality__plan__item__btn {
+                    padding: 96px 0px;
+                    color: white;
+                    font-size: 20px;
+                    letter-spacing: -0.1px;
+                    background-position: 22% center;
+                }
+                .achieve-carbon-neutrality__plan__item__btn:after {
+                    bottom: 30px;
+                    left: calc(50% - 21px);
+                    width: 42px;
+                    height: 42px;
+                }
+
+                /* Home appliances manufacturing factory */
+                .home-appliances-manufacturing-factory {
+                    padding: 60px 24px 447px;
+                    text-align: center;
+                }
+                .home-appliances-manufacturing-factory__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .home-appliances-manufacturing-factory__intro {
+                    width: 640px;
+                    margin: 0px auto;
+                }
+                .home-appliances-manufacturing-factory__intro__txt:first-child {
+                    font-size: 36px;
+                    line-height: 40px;
+                    margin-top: 10px;
+                }
+                .home-appliances-manufacturing-factory__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .home-appliances-manufacturing-factory__intro__txt__br {
+                    display: none;
+                }
+                .home-appliances-manufacturing-factory__photos-navi {
+                    margin-top: 38px;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list {
+                    width: 328px;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item {
+                    width: calc(50% - 8px);
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a {
+                    padding: 8px 0px 9px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    border-radius: 48px;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a:hover,
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a:focus {
+                    text-decoration: none;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a--active {
+                    font-weight: 600;
+                    text-align: center;
+                    color: #262626;
+                    background-color: white;
+                }
+                .home-appliances-manufacturing-factory__photos-cont {
+                    width: 100%;
+                    height: 447px;
+                    padding: 40px 110px 60px;
+                }
+                .home-appliances-manufacturing-factory__photos-cont--active {
+                    visibility: visible;
+                    z-index: 2;
+                    opacity: 1;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure {
+                    width: 100%;
+                    height: 347px;
+                    border-radius: 10px;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background: linear-gradient(360deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 38.36%);
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__figcaption {
+                    bottom: 20px;
+                    left: 16px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 400;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__discover-more {
+                    z-index: 4;
+                    bottom: 14px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                    text-indent: -9999px;
+                    overflow: hidden;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:after {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 0px;
+                }
+
+                /* B2B activity */
+                .b2b-activity__inner {
+                    width: auto;
+                    height: 768px;
+                    padding: 40px 24px 16px;
+                }
+                .b2b-activity__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .b2b-activity__cont__txt {
+                    margin-top: 10px;
+                }
+                .b2b-activity__cont__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                }
+                .b2b-activity__cont__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .b2b-activity__discover-more {
+                    bottom: 16px;
+                    right: 24px;;
+                    font-size: 16px;
+                }
+                .b2b-activity__discover-more:after {
+                    width: 36px;
+                    height: 36px;
+                    margin-left: 12px;
+                }
+
+                /* Summary */
+                .summary {
+                    padding: 60px 24px;
+                }
+                .summary__cont {
+                    width: auto;
+                    height: auto;
+                    border-radius: 0px;
+                    background-image: none;
+                }
+                .summary__cont__txt {
+                    padding: 40px 0px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    letter-spacing: -0.5px;
+                    color: #4A4946;
+                }
+                .summary__cont__txt--active {
+                    padding: 0px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    color: #262626;
+                }
+                .summary__cont__txt__br {
+                    display: none;
+                }
+                .summary__visual {
+                    border-radius: 20px;
+                    height: 384px;
+                    background: linear-gradient(161deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0003/photo-summary-visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 32px 24px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 110px;
+                    border-radius: 0px;
+                }
+                .popup-discription__tit {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    text-align: center;
+                }
+                .popup-discription__tit__br {
+                    display: none;
+                }
+                .popup-discription__tit--left {
+                    text-align: center;
+                }
+                .popup-discription__tit__preface {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: -0.09px;
+                }
+                .popup-discription__tit__subject {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__tit__subject__br {
+                    display: none;
+                }
+                .popup-discription__visual {
+                    margin: 40px -110px;
+                }
+                .popup-discription--intro-summary {
+                    padding-left: 0px;
+                    margin-top: 40px;
+                }
+                .popup-discription__photo {
+                    margin-top: 40px;
+                }
+                .popup-discription__photo__figure {
+                    margin: 0px;
+                    text-align: center;
+                }
+                .popup-discription__photo__figure__figcaption {
+                    margin-top: 16px;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+                .popup-discription__photo__figure__figcaption__strong {
+                    font-weight: 600;
+                }
+                .popup-discription__video {
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__video__player {
+                    height: 187px;
+                }
+                .popup-discription__cont1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont3 {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .popup-discription__tit + .popup-discription__cont3 {
+                    text-align: center;
+                }
+                .popup-discription__cont__grid2 {
+                    display: block;
+                }
+                .popup-discription__cont1--grid2--item + .popup-discription__cont1--grid2--item {
+                    margin-top: 20px;
+                }
+                .popup-discription__80000tons {
+                    display: block;
+                    padding-top: 32px;
+                    margin-top: 32px;
+                    border-top: 1px solid #D0CBC1;
+                }
+                .popup-discription__80000tons__tit {
+                    font-size: 44px;
+                    line-height: 48px;
+                    letter-spacing: -0.28px;
+                    margin-bottom: 14px;
+                }
+                .popup-discription__read-more {
+                    margin-top: 32px;
+                    text-align: center;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    top: 16px;
+                    left: 10px;
+                    width: 14px;
+                    height: 2px;
+                }
+
+                /* Popup Discription - B2B activity */
+                .popup-discription__b2b-activity__intro {
+                    height: 786px;
+                    margin: -94px -118px 0px;
+                    padding: 94px 118px;
+                    background-position: right 40%;
+                }
+                .popup-discription__b2b-activity__intro__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__b2b-activity__intro__summary {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__b2b-activity__intro__detail {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__b2b-activity__desc {
+                    padding-top: 60px;
+                }
+                .popup-discription__b2b-activity__desc__tit {
+                    margin-top: 120px;
+                    
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .popup-discription__b2b-activity__desc__tit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__b2b-activity__desc__stit {
+                    margin-top: 60px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    letter-spacing: -0.12px;
+                }
+                .popup-discription__b2b-activity__desc__stit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__b2b-activity__desc__cont {
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    letter-spacing: -0.1px;
+                    margin-top: 26px;
+                }
+                .popup-discription__b2b-activity__desc__photo {
+                    text-align: center;
+                    margin-top: 40px;
+                }
+                .popup-discription__b2b-activity__desc__photo + .popup-discription__b2b-activity__desc__photo {
+                    margin-top: 120px;
+                }
+                .popup-discription__b2b-activity__btn-close {
+                    border-color: #B7BDC6;
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+                .popup-discription__b2b-activity__btn-close:before,
+                .popup-discription__b2b-activity__btn-close:after {
+                    background-color: white;
+                }
             }
 
             /* Mobile */
@@ -2587,7 +3338,6 @@
                 .key-progress__goals__carbon-zero__txt__percentage {
                     font-size: 29px;
                     line-height: 25px;
-                    
                     font-weight: 550;
                     letter-spacing: -0.28px;
                 }
@@ -2651,7 +3401,8 @@
                 }
                 .key-progress__goals__transition-reduce__graph {
                     width: 100%;
-                    padding-top: 60px;
+                    padding: 60px 16px 0px;
+                    margin: 0px -16px;
                     visibility: hidden;
                     opacity: 0;
                 }
@@ -2660,7 +3411,7 @@
                     opacity: 1;
                 }
                 .key-progress__goals__transition-reduce__graph__percentage {
-                    width: 167px;
+                    min-width: 167px;
                     height: 220px;
                     padding: 0px 10px;
                 }
@@ -3216,6 +3967,9 @@
                     margin-top: 16px;
                     color: #4A4946;
                 }
+                .popup-discription__b2b-activity__intro__detail__br {
+                    display: none;
+                }
                 .popup-discription__b2b-activity__intro:after {
                     content: '';
                     display: block;
@@ -3624,8 +4378,11 @@
                                     Net Zero House?
                                 </dd>
                                 <dd class="popup-discription__b2b-activity__intro__detail">
-                                    Net Zero houses are built with sustainability in mind, producing and storing renewable energy, using energy-efficient appliances and ACs, and limiting environmental impact with eco-conscious materials. <br /> 
-                                    You can also monitor your energy use and lead a sustainable lifestyle through ThinQ technology.
+                                    Net Zero houses are built with sustainability in mind, producing and storing <br class="popup-discription__b2b-activity__intro__detail__br" />
+                                    renewable energy, using energy-efficient appliances and ACs, and limiting <br class="popup-discription__b2b-activity__intro__detail__br" />
+                                    environmental impact with eco-conscious materials. <br /> 
+                                    You can also monitor your energy use and lead a sustainable lifestyle <br class="popup-discription__b2b-activity__intro__detail__br" />
+                                    through ThinQ technology.
                                 </dd>
                             </div>
                             <div class="popup-discription__b2b-activity__desc">
@@ -4071,7 +4828,7 @@
                             0: {
                                 slidesPerView: "auto"
                             },
-                            1024: {
+                            1499: {
                                 slidesPerView: 3
                             }
                         },
@@ -4113,7 +4870,7 @@
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
-                    if(window.innerWidth > 1024) {
+                    if(window.innerWidth > 1499) {
                         return 40
                     } else {
                         return 20
