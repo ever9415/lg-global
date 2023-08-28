@@ -2341,29 +2341,636 @@
             /* Tablet */
             @media(min-width: 769px) and (max-width:1499px) {
 
+                /* Living Sustainably Visual */
+                .living-st-visual__tit {
+                    top: calc(50% - 100px);
+                    font-size: 44px;
+                    line-height: 48px;
+                }
+                .living-st-visual__scrolldown {
+                    position: absolute;
+                    bottom: 140px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .living-st-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
+                }
+
                 /* Living Sustainably About */
+                .living-st-about {
+                    text-align: center;
+                }
                 .living-st-about__cont {
-                    width: calc(100% - 48px);
+                    width: 640px;
+                    padding: 90px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+                .living-st-about__cont__br {
+                    display: none;
                 }
 
                 /* How to enjoy more sustainable living */
                 .enjoy-st-living {
-                    width: calc(100% - 48px);
+                    width: 720px;
+                    padding: 45px 0px 100px;
+                    margin: 0px auto;
+                    text-align: center;
+                }
+                .enjoy-st-living__tit {
+                    margin-bottom: 60px;
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .enjoy-st-living__tit__br {
+                    display: none;
+                }
+                .enjoy-st-living__saving__item1 {
+                    gap: 0px 38px;
+                    grid-template-columns: auto 332px;
+                }
+                .enjoy-st-living__saving__item2 {
+                    gap: 0px 50px;
+                    grid-template-columns: 288px auto;
+                }
+                .enjoy-st-living__saving__item__photo {
+                    width: 620px;
+                }
+                .enjoy-st-living__saving__item1__photo {
+                    height: 526px;
+                }
+                .enjoy-st-living__saving__item2__photo {
+                    height: 620px;
+                }
+                .enjoy-st-living__saving__item__cont__tit {
+                    font-size: 24px;
+                    line-height: 28px;
+                    font-weight: 600;
+                    letter-spacing: -0.12px;
+                }
+                .enjoy-st-living__saving__item__cont__desc1 {
+                    
+                    font-size: 56px;
+                    font-style: normal;
+                    font-weight: 550;
+                    line-height: 60px;
+                    letter-spacing: -0.28px;
+                    margin-top: 16px;
+                }
+                .enjoy-st-living__saving__item__cont__desc2 {
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-top: 16px;
+                }
+                .enjoy-st-living__saving__item__cont__disclaimer {
+                    margin-top: 24px;
+                }
+                .enjoy-st-living__saving__item__cont__disclaimer__item {
+                    color: #7E7C77;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .enjoy-st-living__saving__item__cont__disclaimer__item__anchor {
+                    color: #7E7C77;
+                    text-decoration-line: underline;
+                }
+                .enjoy-st-living__saving__item__more {
+                    margin-top: 24px;
+                }
+                .enjoy-st-living__saving__item__more__btn {
+                    display: inline-block;
+                    padding: 13px 19px;
+                    border-radius: 99px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    letter-spacing: -0.24px;
+                    border: 1px solid #4A4946;
+                    background-color: white;
+                    transition: 0.3s ease all
+                }
+                .enjoy-st-living__saving__item__more__btn:hover,
+                .enjoy-st-living__saving__item__more__btn:focus {
+                    text-decoration: none;
+                    color: white;
+                    border-color: #EA1917;
+                    background-color: #EA1917;
                 }
 
                 /* Sustainable materials */
+                .sustainable-materials {
+                    overflow: hidden;
+                    position: relative;
+                    padding: 60px 24px 0px;
+                    max-height: none;
+                    height: auto;
+                    background: #262626;
+                }
                 .sustainable-materials__wrap {
-                    width: calc(100% - 48px);
+                    width: auto;
+                    margin: 0px;
+                }
+                .sustainable-materials__tit {
+                    font-size: 24px;
+                    letter-spacing: -0.12px;
+                }
+                .sustainable-materials__intro {
+                    margin-top: 10px;
+                }
+                .sustainable-materials__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .sustainable-materials__intro__txt:last-child {
+                    margin-top: 11px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .sustainable-materials__intro__txt__br {
+                    display: none;
+                }
+                .sustainable-materials__product {
+                    padding: 408px 30px 20px;
+                    margin: 20px -16px 0px;
+                    background: #262626 url(../../mocks/ST0002/visual-sustainable-materials.png) no-repeat 70% top;
+                    background-size: auto 800px;
+                }
+                .sustainable-materials__product__slide {
+                    margin-right: 16px;
+                }
+                .sustainable-materials__product__btn-set {
+                    position: static;
+                    gap: 0px 16px;
+                    justify-content: center;
+                    margin-top: 14px;
+                }
+                .sustainable-materials__product__btn-set__btn {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Sustainability Efforts */
+                .sustainability-efforts__bg {
+                    height: 100vh;
+                }
+                .sustainability-efforts__bg__inner {
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    width: 100%;
+                    transform: translateY(-50%);
+                }
+                .sustainability-efforts__bg__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: 3.6px;
+                }
+                sustainability-efforts__bg__tit__br {
+                    display: inline-block;
+                }
+                .sustainability-efforts__bg__txt {
+                    margin-top: 28px;
+                }
+                .sustainability-efforts__bg__txt__item {
+                    font-size: 24px;
+                    line-height: 48px;
+                    letter-spacing: 4.8px;
+                }
+                .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
+                    margin-top: 28px;
+                }
+                .sustainability-efforts__card__wrap {
+                    height: auto;
+                }
+                .sustainability-efforts__card__navi {
+                    display: none;
+                }
+                .sustainability-efforts__card {
+                    position: relative;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 1;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0px;
+                    overflow: hidden;
+                    transform: translate(0%,0%);
+                }
+                .sustainability-efforts__card--on {
+                    width: 100%;
+                    height: auto;
+                }
+                .sustainability-efforts__card__item {
+                    position: relative;
+                    z-index: 2;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 480px;
+                    padding: 36px 16px;
+                    text-align: center;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__item:after {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 57.29%);
+                }
+                .sustainability-efforts__card__inner {
+                    position: relative;
+                    z-index: 2;
+                    width: auto;
+                    margin: 0px auto;
+                }
+                .sustainability-efforts__card__summary {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.28px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__detail {
+                    margin-top: 16px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }    
+                .sustainability-efforts__card__discover {
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 36px;
+                    left: 16px;
+                    right: 16px;
+                }
+                .sustainability-efforts__card__discover__btn {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: white;
+                    letter-spacing: -0.1px;
+                    padding: 18px 0px 19px;
+                    border-radius: 20px;
+                    border: 1px solid rgba(255, 255, 255, 0.60);
+                    background: rgba(16, 16, 16, 0.20);
+                    backdrop-filter: blur(50px);
                 }
 
                 /* Summary */
+                .summary {
+                    padding: 60px 24px;
+                }
                 .summary__cont {
-                    width: calc(100% - 48px);
+                    width: auto;
+                    height: auto;
+                    border-radius: 0px;
+                    background-image: none;
+                }
+                .summary__cont__txt {
+                    padding: 30px 0px 60px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    letter-spacing: -0.5px;
+                    color: #4A4946;
+                }
+                .summary__cont__txt--active {
+                    padding: 0px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    color: #262626;
+                }
+                .summary__cont__txt__br {
+                    display: none;
+                }
+                .summary__visual {
+                    border-radius: 20px;
+                    height: 384px;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0002/photo-summary-visual.png) no-repeat center center;
+                    background-size: cover;
+                }
+                
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 32px 24px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
                 }
 
-                /* What's Next */
-                .whats-next {
-                    width: calc(100% - 48px);
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 24px 40px;
+                    border-radius: 0px;
+                    text-align: center;
+                }
+                .popup-discription__visual {
+                    display: block;
+                    position: relative;
+                    height: auto;
+                    padding: 0;
+                    margin: -80px -24px 0px;
+                    padding-top: 80px;
+                }
+                .popup-discription__visual__tit__category {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__visual__tit__topic {
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__visual__tit__topic__br {
+                    display: none;
+                }
+                .popup-discription__visual__photo {
+                    position: static;
+                    width: 100%;
+                    height: 400px;
+                    margin-top: 40px;
+                }
+                .popup-discription__summary {
+                    padding: 40px 0px;
+                }
+                .popup-discription__summary__txt {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .popup-discription__detail {
+                    padding: 40px 0px;
+                }
+                .popup-discription__detail__tit__category {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__detail__tit__topic {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__detail__tit__topic:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__txt {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__detail__txt:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__photo + .popup-discription__detail__txt {
+                    margin-top: 40px;
+                }
+                .popup-discription__detail__photo:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__photo:last-child {
+                    margin-bottom: 0px;
+                }
+                .popup-discription__detail__photo__figure__img {
+                    object-fit: cover;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving1 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 195px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving2 {
+                    width: 190px;
+                    height: 183px;
+                    border-radius: 30px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving3 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 100px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving4 {
+                    width: 312px;
+                    height: 189px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving5 {
+                    width: 310px;
+                    height: 166px;
+                    border-radius: 162px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving6 {
+                    width: 312px;
+                    height: 196px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving1 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 195px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving2 {
+                    width: 312px;
+                    height: 204px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving3 {
+                    width: 312px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving4 {
+                    width: 312px;
+                    height: auto;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving5 {
+                    width: 312px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .popup-discription__detail__photo__figure__figcaption {
+                    margin-top: 16px;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .popup-discription__detail__disclaimer {
+                    margin-top: 20px;
+                }
+                .popup-discription__detail__disclaimer__list {
+                    width: auto;
+                }
+                .popup-discription__energy-star {
+                    position: relative;
+                    margin: 0px -24px;
+                    padding: 40px 24px;
+                    text-align: center;
+                }
+                .popup-discription__energy-star__tit {
+                    position: static;
+                    width: auto;
+                }
+                .popup-discription__energy-star__txt {
+                    margin-top: 16px;
+                }
+                .popup-discription__energy-star__photo__figure__figcaption {
+                    color: #7E7C77;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    top: 16px;
+                    left: 10px;
+                    width: 14px;
+                    height: 2px;
                 }
             }
 
@@ -2668,7 +3275,7 @@
                 .summary__visual {
                     border-radius: 20px;
                     height: 384px;
-                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0002/photo-summary-visual.png) no-repeat center center;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0002/photo-summary-visual-m.png) no-repeat center center;
                     background-size: cover;
                 }
                 
