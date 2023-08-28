@@ -1434,7 +1434,6 @@
                 transform: translate(0,-50%);
             }
             .living-st-visual__tit__txt {
-                
                 font-weight: 550;
                 color: white;
             }
@@ -1519,14 +1518,10 @@
             .enjoy-st-living__saving__item2 {
                 grid-template-columns: 620px auto;
             }
-            .enjoy-st-living__saving__item__photo {
-                width: 620px;
-            }
-            .enjoy-st-living__saving__item1__photo {
-                height: 526px;
-            }
-            .enjoy-st-living__saving__item2__photo {
-                height: 620px;
+            .enjoy-st-living__saving__item__photo,
+            .enjoy-st-living__saving__item__photo__img {
+                width: 100%;
+                height: auto;
             }
             .enjoy-st-living__saving__item__cont__tit {
                 font-size: 24px;
@@ -2342,14 +2337,20 @@
             @media(min-width: 769px) and (max-width:1499px) {
 
                 /* Living Sustainably Visual */
+                .living-st-visual {
+                    height: 56.25vw;
+                }
                 .living-st-visual__tit {
-                    top: calc(50% - 100px);
+                    top: calc(50% - 20px);
                     font-size: 44px;
                     line-height: 48px;
                 }
+                .living-st-visual__video {
+                    height: 56.25vw;
+                }
                 .living-st-visual__scrolldown {
                     position: absolute;
-                    bottom: 140px;
+                    bottom: 30px;
                     left: 0px;
                     width: 100%;
                 }
@@ -2382,7 +2383,7 @@
                     text-align: center;
                 }
                 .enjoy-st-living__tit {
-                    margin-bottom: 60px;
+                    margin-bottom: 0px;
                     font-size: 36px;
                     line-height: 40px;
                     letter-spacing: -0.54px;
@@ -2398,78 +2399,43 @@
                     gap: 0px 50px;
                     grid-template-columns: 288px auto;
                 }
-                .enjoy-st-living__saving__item__photo {
-                    width: 620px;
-                }
                 .enjoy-st-living__saving__item1__photo {
-                    height: 526px;
+                    width: 332px;
                 }
                 .enjoy-st-living__saving__item2__photo {
-                    height: 620px;
+                    width: 288px;
                 }
                 .enjoy-st-living__saving__item__cont__tit {
-                    font-size: 24px;
-                    line-height: 28px;
-                    font-weight: 600;
-                    letter-spacing: -0.12px;
+                    font-size: 18px;
+                    line-height: 21px;
                 }
                 .enjoy-st-living__saving__item__cont__desc1 {
-                    
-                    font-size: 56px;
-                    font-style: normal;
-                    font-weight: 550;
-                    line-height: 60px;
-                    letter-spacing: -0.28px;
-                    margin-top: 16px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
                 }
                 .enjoy-st-living__saving__item__cont__desc2 {
-                    font-size: 20px;
-                    line-height: 28px;
-                    margin-top: 16px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .enjoy-st-living__saving__item__cont__desc2__br {
+                    display: none;
                 }
                 .enjoy-st-living__saving__item__cont__disclaimer {
-                    margin-top: 24px;
-                }
-                .enjoy-st-living__saving__item__cont__disclaimer__item {
-                    color: #7E7C77;
-                    font-size: 12px;
-                    line-height: 16px;
-                }
-                .enjoy-st-living__saving__item__cont__disclaimer__item__anchor {
-                    color: #7E7C77;
-                    text-decoration-line: underline;
+                    margin-top: 16px;
                 }
                 .enjoy-st-living__saving__item__more {
-                    margin-top: 24px;
-                }
-                .enjoy-st-living__saving__item__more__btn {
-                    display: inline-block;
-                    padding: 13px 19px;
-                    border-radius: 99px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 16px;
-                    letter-spacing: -0.24px;
-                    border: 1px solid #4A4946;
-                    background-color: white;
-                    transition: 0.3s ease all
-                }
-                .enjoy-st-living__saving__item__more__btn:hover,
-                .enjoy-st-living__saving__item__more__btn:focus {
-                    text-decoration: none;
-                    color: white;
-                    border-color: #EA1917;
-                    background-color: #EA1917;
+                    margin-top: 16px;
                 }
 
                 /* Sustainable materials */
                 .sustainable-materials {
                     overflow: hidden;
-                    position: relative;
-                    padding: 60px 24px 0px;
-                    max-height: none;
+                    padding: 60px 24px;
                     height: auto;
-                    background: #262626;
+                    background-image: url(../../mocks/ST0002/visual-sustainable-materials-t.png);
                 }
                 .sustainable-materials__wrap {
                     width: auto;
@@ -2493,14 +2459,9 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
-                .sustainable-materials__intro__txt__br {
-                    display: none;
-                }
                 .sustainable-materials__product {
-                    padding: 408px 30px 20px;
-                    margin: 20px -16px 0px;
-                    background: #262626 url(../../mocks/ST0002/visual-sustainable-materials.png) no-repeat 70% top;
-                    background-size: auto 800px;
+                    padding: 0px 24px;
+                    margin: 291px -24px 0px;
                 }
                 .sustainable-materials__product__slide {
                     margin-right: 16px;
@@ -2537,15 +2498,15 @@
                     display: inline-block;
                 }
                 .sustainability-efforts__bg__txt {
-                    margin-top: 28px;
+                    margin-top: 60px;
                 }
                 .sustainability-efforts__bg__txt__item {
-                    font-size: 24px;
+                    font-size: 36px;
                     line-height: 48px;
-                    letter-spacing: 4.8px;
+                    letter-spacing: 7.2px;
                 }
                 .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
-                    margin-top: 28px;
+                    margin-top: 60px;
                 }
                 .sustainability-efforts__card__wrap {
                     height: auto;
@@ -2574,8 +2535,8 @@
                     top: 0px;
                     left: 0px;
                     width: 100%;
-                    height: 480px;
-                    padding: 36px 16px;
+                    height: 460px;
+                    padding: 36px 24px;
                     text-align: center;
                     visibility: visible;
                     opacity: 1;
@@ -2617,8 +2578,8 @@
                     position: absolute;
                     z-index: 2;
                     bottom: 36px;
-                    left: 16px;
-                    right: 16px;
+                    left: calc(50% - 164px);
+                    width: 328px;
                 }
                 .sustainability-efforts__card__discover__btn {
                     display: block;
@@ -2644,7 +2605,7 @@
                     background-image: none;
                 }
                 .summary__cont__txt {
-                    padding: 30px 0px 60px;
+                    padding: 40px 0px;
                     font-size: 16px;
                     line-height: 28px;
                     letter-spacing: -0.5px;
@@ -2657,9 +2618,6 @@
                     line-height: 40px;
                     letter-spacing: -0.54px;
                     color: #262626;
-                }
-                .summary__cont__txt__br {
-                    display: none;
                 }
                 .summary__visual {
                     border-radius: 20px;
@@ -2799,7 +2757,7 @@
                     width: 100%;
                     min-height: 100vh;
                     margin: 0px;
-                    padding: 80px 24px 40px;
+                    padding: 80px 110px;
                     border-radius: 0px;
                     text-align: center;
                 }
@@ -2808,8 +2766,8 @@
                     position: relative;
                     height: auto;
                     padding: 0;
-                    margin: -80px -24px 0px;
-                    padding-top: 80px;
+                    margin: -80px -110px 0px;
+                    padding: 80px 0px 40px;
                 }
                 .popup-discription__visual__tit__category {
                     font-size: 18px;
@@ -2827,9 +2785,9 @@
                 }
                 .popup-discription__visual__photo {
                     position: static;
-                    width: 100%;
+                    width: 360px;
                     height: 400px;
-                    margin-top: 40px;
+                    margin: 40px auto 0px;
                 }
                 .popup-discription__summary {
                     padding: 40px 0px;
@@ -2879,58 +2837,35 @@
                     object-fit: cover;
                 }
                 .popup-discription__detail__photo__figure__img__water-saving1 {
-                    width: 312px;
-                    height: 200px;
-                    border-radius: 195px;
+                    width: 420px;
+                    height: 269px;
+                    border-radius: 263px;
                 }
                 .popup-discription__detail__photo__figure__img__water-saving2 {
-                    width: 190px;
-                    height: 183px;
+                    width: 260px;
+                    height: 250px;
                     border-radius: 30px;
                 }
                 .popup-discription__detail__photo__figure__img__water-saving3 {
-                    width: 312px;
-                    height: 200px;
-                    border-radius: 100px;
+                    width: 420px;
+                    height: 269px;
+                    border-radius: 135px;
                 }
                 .popup-discription__detail__photo__figure__img__water-saving4 {
-                    width: 312px;
-                    height: 189px;
-                    border-radius: 50px;
+                    width: 420px;
+                    height: 254px;
+                    border-radius: 30px;
                 }
                 .popup-discription__detail__photo__figure__img__water-saving5 {
-                    width: 310px;
-                    height: 166px;
-                    border-radius: 162px;
+                    width: 420px;
+                    height: 264px;
+                    border-radius: 30px;
                 }
-                .popup-discription__detail__photo__figure__img__water-saving6 {
-                    width: 312px;
-                    height: 196px;
-                    border-radius: 50px;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving1 {
-                    width: 312px;
-                    height: 200px;
-                    border-radius: 195px;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving2 {
-                    width: 312px;
-                    height: 204px;
-                    border-radius: 50px;
-                }
+                .popup-discription__detail__photo__figure__img__energy-saving1,
+                .popup-discription__detail__photo__figure__img__energy-saving2,
                 .popup-discription__detail__photo__figure__img__energy-saving3 {
-                    width: 312px;
+                    width: 420px;
                     height: auto;
-                    object-fit: contain;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving4 {
-                    width: 312px;
-                    height: auto;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving5 {
-                    width: 312px;
-                    height: auto;
-                    object-fit: contain;
                 }
                 .popup-discription__detail__photo__figure__figcaption {
                     margin-top: 16px;
@@ -2945,8 +2880,8 @@
                 }
                 .popup-discription__energy-star {
                     position: relative;
-                    margin: 0px -24px;
-                    padding: 40px 24px;
+                    margin: 0px -110px;
+                    padding: 40px 110px;
                     text-align: center;
                 }
                 .popup-discription__energy-star__tit {
@@ -3035,10 +2970,6 @@
                 }
                 .enjoy-st-living__saving__item__photo {
                     width: auto;
-                }
-                .enjoy-st-living__saving__item1__photo,
-                .enjoy-st-living__saving__item2__photo {
-                    height: auto;
                 }
                 .enjoy-st-living__saving__item1__photo__img {
                     width: 322px;
@@ -3185,7 +3116,7 @@
                     top: 0px;
                     left: 0px;
                     width: 100%;
-                    height: 480px;
+                    height: 460px;
                     padding: 36px 16px;
                     text-align: center;
                     visibility: visible;
@@ -3516,36 +3447,13 @@
                 .popup-discription__detail__photo__figure__img__water-saving5 {
                     width: 310px;
                     height: 166px;
-                    border-radius: 162px;
-                }
-                .popup-discription__detail__photo__figure__img__water-saving6 {
-                    width: 312px;
-                    height: 196px;
                     border-radius: 50px;
                 }
-                .popup-discription__detail__photo__figure__img__energy-saving1 {
-                    width: 312px;
-                    height: 200px;
-                    border-radius: 195px;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving2 {
-                    width: 312px;
-                    height: 204px;
-                    border-radius: 50px;
-                }
+                .popup-discription__detail__photo__figure__img__energy-saving1,
+                .popup-discription__detail__photo__figure__img__energy-saving2,
                 .popup-discription__detail__photo__figure__img__energy-saving3 {
                     width: 312px;
                     height: auto;
-                    object-fit: contain;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving4 {
-                    width: 312px;
-                    height: auto;
-                }
-                .popup-discription__detail__photo__figure__img__energy-saving5 {
-                    width: 312px;
-                    height: auto;
-                    object-fit: contain;
                 }
                 .popup-discription__detail__photo__figure__figcaption {
                     margin-top: 16px;
@@ -3755,7 +3663,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving6" />
+                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving5" />
                                     </figure>
                                 </dd>
                                 <dd class="popup-discription__detail__disclaimer">
@@ -3806,7 +3714,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving3" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving1" />
                                     </figure>
                                 </dd>
                                 <dd class="popup-discription__detail__txt">
@@ -3829,7 +3737,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo popup-discription__energy-star__photo">
                                     <figure class="popup-discription__detail__photo__figure popup-discription__energy-star__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving4" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving2" />
                                     </figure>
                                 </dd>
                             </div>
@@ -3845,7 +3753,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving5" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving3" />
                                     </figure>
                                 </dd>
                                 <dd class="popup-discription__detail__disclaimer">
@@ -4201,7 +4109,7 @@
                             0: {
                                 slidesPerView: "auto"
                             },
-                            1024: {
+                            1500: {
                                 slidesPerView: 3
                             }
                         },
@@ -4242,7 +4150,7 @@
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
-                    if(window.innerWidth > 1024) {
+                    if(window.innerWidth > 1449) {
                         return 40
                     } else {
                         return 20

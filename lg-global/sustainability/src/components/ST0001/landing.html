@@ -2180,24 +2180,32 @@
             /* Tablet */
             @media(min-width: 769px) and (max-width:1499px) {
                 /* Landing Visual */
+                .landing-visual {
+                    height: 56.25vw;
+                }
                 .landing-visual__tit {
-                    position: absolute;
-                    bottom: calc(50% + 40px);
-                    left: 0px;
-                    width: 100%;
+                    bottom: calc(50% - 4px);
                 }
                 .landing-visual__tit__img--pc {
                     width: 614px;
                     height: 100px;
                 }
                 .landing-visual__txt {
-                    bottom: calc(50% - 17px);
-                    left: 0px;
-                    width: 100%;
+                    bottom: calc(50% - 50px);
                     font-size: 24px;
                     font-weight: 400;
                     line-height: 28px;
                     letter-spacing: -0.14px;
+                }
+                .landing-visual__scrolldown {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .landing-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
                 }
 
                 /* Landing Introduce */
@@ -3660,7 +3668,7 @@
                             0: {
                                 slidesPerView: "auto"
                             },
-                            1024: {
+                            1500: {
                                 slidesPerView: 3
                             }
                         },

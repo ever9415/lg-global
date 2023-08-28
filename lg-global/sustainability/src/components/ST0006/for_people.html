@@ -2110,7 +2110,7 @@
             }
             .popup-discription--intro-summary {
                 padding-left: 140px;
-                margin-top: 60px;
+                margin-top: 40px;
             }
             .popup-discription__photo {
                 margin: 60px 0px 0px;
@@ -2282,6 +2282,591 @@
             /* Tablet */
             @media(min-width: 769px) and (max-width:1499px) {
             
+                /* For people Visual */
+                .for-people-visual {
+                    height: 56.25vw;
+                }
+                .for-people-visual__tit {
+                    top: calc(50% - 20px);
+                    font-size: 44px;
+                    line-height: 48px;
+                }
+                .for-people-visual__video {
+                    height: 56.25vw;
+                }
+                .for-people-visual__scrolldown {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .for-people-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
+                }
+
+                /* For people About */
+                .for-people-about {
+                    text-align: center;
+                }
+                .for-people-about__cont {
+                    width: 640px;
+                    padding: 90px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+                .for-people-about__cont__br {
+                    display: none;
+                }
+
+                /* Accessibility */
+                .convenient-living {
+                    overflow: hidden;
+                    width: auto;
+                    padding: 60px 16px 30px;
+                }
+                .convenient-living__tit {
+                    font-size: 18px;
+                    letter-spacing: -0.09px;
+                }
+                .convenient-living__intro__txt {
+                    margin-top: 10px;
+                }
+                .convenient-living__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .convenient-living__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .convenient-living__photo {
+                    overflow: hidden;
+                    border-radius: 30px;
+                    margin: 40px 0px;
+                }
+                .convenient-living__photo__img {
+                    width: 100%;
+                    height: 361px;
+                    object-fit: cover;
+                }
+                .convenient-living__solutions {
+                    position: relative;
+                    padding: 56px 0px 36px;
+                    overflow: visible;
+                }
+                .convenient-living__solutions__slide {
+                    position: relative;
+                    width: 100%;
+                    margin-right: 10px;
+                }
+                .convenient-living__solutions__slide__anchor {
+                    width: 100%;
+                    height: 410px;
+                    padding: 16px;
+                    border-radius: 20px;
+                }
+                .convenient-living__solutions__slide__anchor:after {
+                    bottom: 16px;
+                    right: 16px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .convenient-living__solutions__slide__anchor__preface {
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: white;
+                }
+                .convenient-living__solutions__slide__anchor__subject {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .convenient-living__solutions__slide__anchor__subject__br {
+                    display: none;
+                }
+                .convenient-living__solutions__btn-set {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    display: flex;
+                    gap: 0px 8px;
+                }
+                .convenient-living__solutions__btn-set__btn {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Sustainability Efforts */
+                .sustainability-efforts__bg {
+                    height: 100vh;
+                }
+                .sustainability-efforts__bg__inner {
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    width: 100%;
+                    transform: translateY(-50%);
+                }
+                .sustainability-efforts__bg__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: 3.6px;
+                }
+                sustainability-efforts__bg__tit__br {
+                    display: inline-block;
+                }
+                .sustainability-efforts__bg__txt {
+                    margin-top: 60px;
+                }
+                .sustainability-efforts__bg__txt__item {
+                    font-size: 36px;
+                    line-height: 48px;
+                    letter-spacing: 7.2px;
+                }
+                .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
+                    margin-top: 60px;
+                }
+                .sustainability-efforts__card__wrap {
+                    height: auto;
+                }
+                .sustainability-efforts__card__navi {
+                    display: none;
+                }
+                .sustainability-efforts__card {
+                    position: relative;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 1;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0px;
+                    overflow: hidden;
+                    transform: translate(0%,0%);
+                }
+                .sustainability-efforts__card--on {
+                    width: 100%;
+                    height: auto;
+                }
+                .sustainability-efforts__card__item {
+                    position: relative;
+                    z-index: 2;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 460px;
+                    padding: 36px 24px;
+                    text-align: center;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__item:after {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 57.29%);
+                }
+                .sustainability-efforts__card__inner {
+                    position: relative;
+                    z-index: 2;
+                    width: auto;
+                    margin: 0px auto;
+                }
+                .sustainability-efforts__card__summary {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.28px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__detail {
+                    margin-top: 16px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }    
+                .sustainability-efforts__card__discover {
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 36px;
+                    left: calc(50% - 164px);
+                    width: 328px;
+                }
+                .sustainability-efforts__card__discover__btn {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: white;
+                    letter-spacing: -0.1px;
+                    padding: 18px 0px 19px;
+                    border-radius: 20px;
+                    border: 1px solid rgba(255, 255, 255, 0.60);
+                    background: rgba(16, 16, 16, 0.20);
+                    backdrop-filter: blur(50px);
+                }
+
+                /* Summary */
+                .summary {
+                    padding: 60px 24px;
+                }
+                .summary__cont {
+                    width: auto;
+                    height: auto;
+                    border-radius: 0px;
+                    background-image: none;
+                }
+                .summary__cont__txt {
+                    padding: 40px 0px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    letter-spacing: -0.5px;
+                    color: #4A4946;
+                }
+                .summary__cont__txt--active {
+                    padding: 0px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    color: #262626;
+                }
+                .summary__visual {
+                    border-radius: 20px;
+                    height: 384px;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0006/photo-summary-visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+                
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 32px 24px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 110px;
+                    border-radius: 0px;
+                }
+                .popup-discription__tit {
+                    margin-top: 80px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__tit__br {
+                    display: none;
+                }
+                .popup-discription__tit--left {
+                    text-align: center;
+                }
+                .popup-discription__tit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__tit__preface {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: -0.09px;
+                }
+                .popup-discription__tit__subject {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__stit {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    text-align: left;
+                    margin-top: 40px;
+                }
+                .popup-discription__visual {
+                    margin: 32px -110px 0px;
+                }
+                .popup-discription--intro-summary {
+                    padding-left: 0px;
+                }
+                .popup-discription__photo {
+                    margin-top: 40px;
+                }
+                .popup-discription__photo__figure {
+                    margin: 0px;
+                    text-align: center;
+                }
+                .popup-discription__photo__figure__figcaption {
+                    font-size: 12px;
+                    margin-top: 16px;
+                    font-weight: 400;
+                }
+                .popup-discription__photo__figure__figcaption__strong {
+                    font-weight: 600;
+                }
+                .popup-discription__video {
+                    margin: 40px -24px 0px;
+                }
+                .popup-discription__video__player {
+                    height: 314px;
+                }
+                .popup-discription--stit {
+                    margin-top: 40px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    text-align: left;
+                }
+                .popup-discription--intro-detail {
+                    display: block;
+                    margin-top: 40px;
+                }
+                .popup-discription--intro-detail__item + .popup-discription--intro-detail__item {
+                    margin-top: 40px;
+                }
+                .popup-discription--intro-detail__item__photo {
+                    text-align: center;
+                }
+                .popup-discription--intro-detail__item__photo__img__photo-service-cares1 {
+                    width: 420px;
+                    height: 269px;
+                }
+                .popup-discription--intro-detail__item__photo__img__photo-service-cares2 {
+                    width: 320px;
+                    height: 320px;
+                }
+                .popup-discription--intro-detail__item__photo__img__photo-service-cares3 {
+                    width: 244px;
+                    height: 321px;
+                }
+                .popup-discription--intro-detail__item__photo__img__photo-service-cares4 {
+                    width: 420px;
+                    height: 290px;
+                }
+                .popup-discription--intro-detail__item__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                    margin-top: 16px;
+                }
+                .popup-discription--intro-detail__item__tit__category {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+                .popup-discription--intro-detail__item__tit__subject {
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: -0.09px;
+                    margin-top: 10px;
+                }
+                .popup-discription--intro-detail__guestbook {
+                    margin-top: 36px;
+                }
+                .popup-discription--intro-detail__guestbook__blockquote {
+                    font-size: 24px;
+                    font-weight: 550;
+                    line-height: 30px; /* 125% */
+                    letter-spacing: -0.12px;
+                }
+                .popup-discription--intro-detail__guestbook__figcaption {
+                    padding: 0px 0px 36px;
+                }
+                .popup-discription--intro-detail__item__major-desc {
+                    margin-top: 20px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .popup-discription--intro-detail__item__add-explan {
+                    margin-top: 20px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    font-weight: 400;
+                }
+                .popup-discription__cont1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont__grid2 {
+                    display: block;
+                }
+                .popup-discription__cont__grid2__tit {
+                    font-size: 24px;
+                    font-weight: 550;
+                    line-height: 30px;
+                    letter-spacing: -0.12px;
+                    margin-top: 40px;
+                }
+                .popup-discription__cont__grid2__tit + .popup-discription__cont1 {
+                    margin-top: 16px;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    position: absolute;
+                    top: 16px;
+                    left: 10px;
+                    content: '';
+                    display: block;
+                    width: 14px;
+                    height: 2px;
+                    background-color: #262626;
+                }
             }
 
             /* Mobile */
@@ -2325,7 +2910,7 @@
                     letter-spacing: -0.5px;
                 }
 
-                 /* Accessibility */
+                /* Accessibility */
                 .convenient-living {
                     overflow: hidden;
                     width: auto;
@@ -2732,7 +3317,7 @@
                     margin-top: 40px;
                 }
                 .popup-discription__visual {
-                    margin: 32px -40px 0px;
+                    margin: 32px -10px 0px;
                 }
                 .popup-discription__visual__img--pc {
                     display: none;
@@ -3085,7 +3670,7 @@
                             <dt class="popup-discription--stit">Visual support</dt>
                             <dd class="popup-discription--intro-detail">
                                 <div class="popup-discription--intro-detail__item__photo">
-                                    <img src="../../mocks/ST0006/photo-visual-support.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                    <img src="../../mocks/ST0006/photo-visual-support.png" alt="" class="popup-discription--intro-detail__item__photo__img popup-discription--intro-detail__item__photo__img__photo-service-cares1" />
                                 </div>
                                 <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
                                     <h5 class="popup-discription--intro-detail__item__tit">
@@ -3099,7 +3684,7 @@
                             <dt class="popup-discription--stit">Elderly support</dt>
                             <dd class="popup-discription--intro-detail">
                                 <div class="popup-discription--intro-detail__item__photo">
-                                    <img src="../../mocks/ST0006/photo-elderly-support.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                    <img src="../../mocks/ST0006/photo-elderly-support.png" alt="" class="popup-discription--intro-detail__item__photo__img popup-discription--intro-detail__item__photo__img__photo-service-cares2" />
                                 </div>
                                 <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
                                     <h5 class="popup-discription--intro-detail__item__tit">
@@ -3114,7 +3699,7 @@
                             <dt class="popup-discription--stit">Communication support</dt>
                             <dd class="popup-discription--intro-detail">
                                 <div class="popup-discription--intro-detail__item__photo">
-                                    <img src="../../mocks/ST0006/photo-communication-support1.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                    <img src="../../mocks/ST0006/photo-communication-support1.png" alt="" class="popup-discription--intro-detail__item__photo__img popup-discription--intro-detail__item__photo__img__photo-service-cares3" />
                                 </div>
                                 <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
                                     <h5 class="popup-discription--intro-detail__item__tit">
@@ -3131,7 +3716,7 @@
                             </dd>
                             <dd class="popup-discription--intro-detail">
                                 <div class="popup-discription--intro-detail__item__photo">
-                                    <img src="../../mocks/ST0006/photo-communication-support2.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                    <img src="../../mocks/ST0006/photo-communication-support2.png" alt="" class="popup-discription--intro-detail__item__photo__img popup-discription--intro-detail__item__photo__img__photo-service-cares4" />
                                 </div>
                                 <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
                                     <h5 class="popup-discription--intro-detail__item__tit">
@@ -3410,7 +3995,11 @@
                                 slidesPerView: 1,
                                 spaceBetween: 10,
                             },
-                            1024: {
+                            749: {
+                                slidesPerView: 2,
+                                spaceBetween: 10,
+                            },
+                            1500: {
                                 slidesPerView: 2,
                                 spaceBetween: 24,
                             }
@@ -3477,7 +4066,7 @@
                             0: {
                                 slidesPerView: "auto"
                             },
-                            1024: {
+                            1500: {
                                 slidesPerView: 3
                             }
                         },
@@ -3518,7 +4107,7 @@
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
-                    if(window.innerWidth > 1024) {
+                    if(window.innerWidth > 1499) {
                         return 40
                     } else {
                         return 20
