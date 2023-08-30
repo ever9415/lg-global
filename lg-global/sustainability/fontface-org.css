@@ -1,0 +1,82 @@
+@font-face{
+    font-display:swap;
+    font-family:LGEI Headline;
+    font-style:normal;
+    font-weight:700;
+    src:local("LGEI Headline Bold"),local("LGEIHeadline-Bold"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Bold.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Bold.woff) format("woff")
+}
+@font-face{
+    font-display:swap;
+    font-family:LGEI Headline;
+    font-style:normal;
+    font-weight:300;
+    src:local("LGEI Headline Light"),local("LGEIHeadline-Light"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Light.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Light.woff) format("woff")
+}
+@font-face{
+    font-display:swap;
+    font-family:LGEI Headline;
+    font-style:normal;
+    font-weight:400;
+    src:local("LGEI Headline Regular"),local("LGEIHeadline-Regular"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Regular.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Regular.woff) format("woff")
+}
+@font-face{
+    font-display:swap;
+    font-family:LGEI Headline;
+    font-style:normal;
+    font-weight:600;
+    src:local("LGEI Headline Semibold"),local("LGEIHeadline-Semibold"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Semibold.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Semibold.woff) format("woff")
+}
+@font-face{
+    font-display:swap;
+    font-family:LGEI Headline;
+    font-style:normal;
+    font-weight:100;
+    src:local("LGEI Headline Thin"),local("LGEIHeadline-Thin"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Thin.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIHeadline-Thin.woff) format("woff")
+}
+
+@font-face{
+    font-display:swap;
+    font-family:LGEI Text;
+    font-style:normal;
+    font-weight:700;
+    src:local("LGEI Text Bold"),local("LGEIText-Bold"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-Bold.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-Bold.woff) format("woff")
+}
+@font-face{
+    font-display:swap;
+    font-family:LGEI Text;
+    font-style:normal;
+    font-weight:300;
+    src:local("LGEI Text Light"),local("LGEIText-Light"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-Light.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-Light.woff) format("woff")
+}
+@font-face{
+    font-display:swap;
+    font-family:LGEI Text;
+    font-style:normal;
+    font-weight:400;
+    src:local("LGEI Text Regular"),local("LGEIText-Regular"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-Regular.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-Regular.woff) format("woff")
+    }
+@font-face{
+    font-display:swap;
+    font-family:LGEI Text;
+    font-style:normal;
+    font-weight:600;
+    src:local("LGEI Text Semibold"),local("LGEIText-Semibold"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-SemiBold.woff2) format("woff2"),
+        url(https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site/resources/fonts/LGEIText-SemiBold.woff) format("woff")
+}
