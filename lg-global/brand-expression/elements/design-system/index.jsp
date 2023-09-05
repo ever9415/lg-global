@@ -112,7 +112,8 @@
 				<script>
 					var gnbDep1 = 1; //GNB 1depth
 				</script>
-			    <link href="../../css/video-js.css" rel="stylesheet" />
+				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/default.min.css" />
+			    <link rel="stylesheet" href="/global/our-brand/brand-expression/css/video-js.css"  />
 		        <link rel="stylesheet" href="/global/our-brand/brand-expression/css/swiper-bundle.min.css"/>
 				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/common.css" />
 				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/design-system.css" />
@@ -231,28 +232,23 @@
 						<div class="tab-container" data-tab="lens">
 							<div id="intelligent" class="tab-container__content tab-container__content--active">
 								<div class="design-system__imagebox design-system__imagebox--intelligent percent-view">
-									<video muted playsinline autoplay loop class="resolutionVideo percent-view__img">
-										<source 
-											src="../../img/elements/design-system/the_ei_lens_circle_intelligent_d.mp4" 
-											type="video/mp4"
-											data-urlpc="../../img/elements/design-system/the_ei_lens_circle_intelligent_d.mp4"
-											data-urlmo="../../img/elements/design-system/the_ei_lens_circle_intelligent_m.mp4"
-										>
-										</source>
+									<video muted playsinline autoplay loop class="resolutionVideo percent-view__img" 
+										type="video/mp4"
+										data-urlpc="/global/our-brand/brand-expression/img/elements/design-system/the_ei_lens_circle_intelligent_d.mp4"
+										data-urlmo="/global/our-brand/brand-expression/img/elements/design-system/the_ei_lens_circle_intelligent_m.mp4"
+									>
 									</video>
 								</div>
 							</div>
 							<div id="respectful" class="tab-container__content">
 								<div class="design-system__imagebox design-system__imagebox--respectful percent-view">
-									<video muted playsinline autoplay loop class="resolutionVideo percent-view__img">
-										<source 
-											src="../../img/elements/design-system/the_el_lens_square_respectful_d.mp4" 
-											type="video/mp4"
-											data-urlpc="../../img/elements/design-system/the_ei_lens_square_respectful_d.mp4"
-											data-urlmo="../../img/elements/design-system/the_ei_lens_square_respectful_m.mp4"
-										>
-										</source>
+									<video muted playsinline autoplay loop class="resolutionVideo percent-view__img" 
+										type="video/mp4"
+										data-urlpc="/global/our-brand/brand-expression/img/elements/design-system/the_ei_lens_square_respectful_d.mp4"
+										data-urlmo="/global/our-brand/brand-expression/img/elements/design-system/the_ei_lens_square_respectful_m.mp4"
+									>
 									</video>
+
 								</div>
 							</div>
 						</div>

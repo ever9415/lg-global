@@ -10,6 +10,9 @@ br.mo {display: none;}
 
 .c-header a:hover {color: #fff;}
 
+.video-only-pc {display: block;}
+.video-only-mo {display: none;}
+
 /* Common Header */
 .c-header__wrap {
     position: fixed;
@@ -37,6 +40,7 @@ br.mo {display: none;}
     top: 19px;
     left: 30px;
     padding: 0;
+    font-size: unset;
 }
 .c-header__tit a {
     width: unset;
@@ -76,13 +80,13 @@ br.mo {display: none;}
     line-height: 1;
     color: #E6E1D6;
     font-size: 15px;
+    font-family: "LG_EI_Headline";
 }
 .c-header__gnb__list__item__anchor:hover,
 .c-header__gnb__list__item__anchor:focus {
     text-decoration: none;
 }
 .c-header__gnb__list__item__anchor--active {
-    font-weight: 600;
     color: white;
 }
 .c-header__gnb__list__item__anchor:after {
@@ -132,6 +136,7 @@ br.mo {display: none;}
     line-height: 52px;
     color: #7E7C77;
     transition: 0.3s ease color;
+    font-family: "LG_EI_Headline";
 }
 .c-header__gnb__list__item__deps2__menu__item__anchor:hover,
 .c-header__gnb__list__item__deps2__menu__item__anchor:focus {
@@ -206,7 +211,6 @@ br.mo {display: none;}
     padding: 19px 31px 20px 30px;
     margin-left: 10px;
     border-radius: 400px;
-    font-weight: 600;
     font-size: 15px;
     line-height: 28px;
     color: white;
@@ -214,6 +218,8 @@ br.mo {display: none;}
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+    font-family: "LG_EI_Headline";
+    margin-bottom: unset;
 }
 
 
@@ -318,6 +324,9 @@ br.mo {display: none;}
 /* Mobile */
 @media (max-width: 768px) {
     br.mo {display: block;}
+
+    .video-only-pc {display: none;}
+    .video-only-mo {display: block;}
     
     /* Common Header */
     .c-header__wrap {

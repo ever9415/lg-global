@@ -112,7 +112,8 @@
 				<script>
 					var gnbDep1 = 1; //GNB 1depth
 				</script>
-			    <link href="/global/our-brand/brand-expression/css/video-js.css" rel="stylesheet" />
+			    <link rel="stylesheet" href="/global/our-brand/brand-expression/css/default.min.css"/>
+			    <link rel="stylesheet" href="/global/our-brand/brand-expression/css/video-js.css" />
 		        <link rel="stylesheet" href="/global/our-brand/brand-expression/css/swiper-bundle.min.css"/>
 				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/fontface.css" />
 				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/layout.css" />
@@ -121,19 +122,11 @@
 				<div id="contents">
 					<div id="brand-container">
 						<div class="brand-visual-film visual__top">
-							<!-- <picture class="brand-visual-film__video">
-								<source media="(min-width: 769px)" srcset="/global/our-brand/brand-expression/img/philosophy/Expressive_symbol_wink_d.png">
-								<source media="(max-width: 768px)" srcset="/global/our-brand/brand-expression/img/philosophy/Expressive_symbol_wink_m.png">
-								<img src="/global/our-brand/brand-expression/img/philosophy/Expressive_symbol_wink_d.png" alt="">
-							</picture> -->
-							<video muted playsinline autoplay loop class="resolutionVideo">
-								<source 
-									src="/global/our-brand/brand-expression/img/philosophy/lifes-good-lg-video.mp4" 
-									type="video/mp4"
-									data-urlpc="/global/our-brand/brand-expression/img/philosophy/lifes-good-lg-video.mp4"
-									data-urlmo="/global/our-brand/brand-expression/img/philosophy/lifes-good-lg-video-m.mp4"
-								>
-								</source>
+							<video muted playsinline autoplay loop class="video-only-pc">
+								<source src="/global/our-brand/brand-expression/img/philosophy/lifes-good-lg-video.mp4" type="video/mp4">
+							</video>
+							<video muted playsinline autoplay loop class="video-only-mo">
+								<source src="/global/our-brand/brand-expression/img/philosophy/lifes-good-lg-video-m.mp4" type="video/mp4">
 							</video>
 			
 							<button class="btn-play"></button>
@@ -172,6 +165,9 @@
 								<ul class="imotionally-design__imgwrap">
 									<li class="imotionally-design__item">
 										<video muted playsinline loop autoplay><source src="/global/our-brand/brand-expression/img/philosophy/emotionally_intelligent_item_01.mp4" type="video/mp4"/></video>
+									</li>
+									<li class="imotionally-design__item">
+										<video muted playsinline loop autoplay><source src="/global/our-brand/brand-expression/img/philosophy/emotionally_intelligent_item_07.mp4" type="video/mp4"/></video>
 									</li>
 									<li class="imotionally-design__item">
 										<video muted playsinline loop autoplay><source src="/global/our-brand/brand-expression/img/philosophy/emotionally_intelligent_item_02.mp4" type="video/mp4"/></video>

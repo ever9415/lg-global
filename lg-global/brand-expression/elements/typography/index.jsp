@@ -112,7 +112,8 @@
 				<script>
 					var gnbDep1 = 1; //GNB 1depth
 				</script>
-			    <link href="../../css/video-js.css" rel="stylesheet" />
+				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/default.min.css" />
+			    <link rel="stylesheet" href="/global/our-brand/brand-expression/css/video-js.css"  />
 		        <link rel="stylesheet" href="/global/our-brand/brand-expression/css/swiper-bundle.min.css"/>
 				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/common.css" />
 				<link rel="stylesheet" href="/global/our-brand/brand-expression/css/typography.css" />

@@ -176,7 +176,7 @@
 /*tab*/
 .brand-contents .tab-menu__container {
     text-align: center;
-    margin-top: calc(120px + 0.9375vw);
+    margin-top: calc(50px + 0.9375vw);
 }
 .brand-contents .brand__header + .brand-contents .tab-menu__container {
     margin-top: -3px;
@@ -465,7 +465,7 @@
     /*tab*/
     .brand-contents .tab-menu__container {
         text-align: center;
-        margin-top: calc(80px + 9px);
+        margin-top: calc(48px + 9px);
     }
     .brand-contents .brand__header + .brand-contents .tab-menu__container {
         margin-top: -3px;
@@ -486,7 +486,9 @@
     .brand-contents .tab-menu__bg {
         width: 200px;
     }
-
+    .brand-contents .tab-container {
+        margin-top: 72px;
+    }
 
 
     /*brand elements 슬라이드*/
@@ -575,6 +577,10 @@
     .brand-contents .tab-menu__bg {
         width: 162px;
     }
+    .brand-contents .tab-container {
+        margin-top: 48px;
+    }
+
 
 
     /*Common container*/
@@ -722,11 +728,9 @@
     }
 
     /*tab*/
-
-    /*tab*/
     .brand-contents .tab-menu__container {
         text-align: center;
-        margin-top: calc(80px + 8px);
+        margin-top: calc(68px + 8px);
     }
     .brand-contents .brand__header + .brand-contents .tab-menu__container {
         margin-top: 56px;
@@ -744,7 +748,7 @@
         font-size: 14px;
     }
     .brand-contents .tab-container {
-        margin-top: 32px;
+        margin-top: 24px;
     }
 
 }
@@ -780,7 +784,7 @@
     /*tab*/
     .brand-contents .tab-menu__container {
         text-align: center;
-        margin-top: 129px;
+        margin-top: 59px;
     }
     .brand-contents .tab-menu__list {
         height: 48px;
