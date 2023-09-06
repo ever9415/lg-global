@@ -1425,7 +1425,7 @@
             /*download assets*/
             .brand-contents .visual-innner {
                 height: 100%;
-                max-width: 1760px;
+                max-width: 1440px;
                 margin: 0 auto;
                 position: relative;
                 z-index: 3;
@@ -1470,14 +1470,14 @@
                 right: 9px;
                 top: 50%;
                 transform: translateY(-50%);
-                background: no-repeat center url(../../src/mocks/layout/elements/logo/icon_download_btn.svg);
+                background: no-repeat center url(../../src/mocks/layout/icon_download_btn.svg);
                 background-size: 17px auto;
             }
 
             /*랜딩비주얼 스크롤다운 버튼*/
             .brand-contents .landing-visual__scrolldown {
                 position: absolute;
-                bottom: 3.7037vh;
+                bottom: 64px;
                 left: 0px;
                 width: 100%;
                 z-index: 2;
@@ -1511,30 +1511,29 @@
 
             /*Common title*/
             .brand-contents .brand__header {
-                margin-bottom: 3.5417vw;
+                margin-bottom: 48px;
             }
             .brand-contents .brand__header-title {
                 text-align: center;
                 color: #262626;
-                font-family: "LG_EI_Headline";
-                font-weight: 400;
-                font-size: 3.65vw;
-                line-height: 4.06vw;
-                letter-spacing: 0.7px;
-                margin: 6.25vw 0 2.5vw;
+                font-weight: 700;
+                font-size: 56px;
+                line-height: 1.25;
+                letter-spacing: 0.5px;
+                margin: 96px 0 24px;
             }
 
             .brand-contents .brand__header-title + .brand__header-description {
                 text-align: center;
                 color: #4a4946;
-                font-size: 1.15vw;
-                line-height: 1.56vw;
-                letter-spacing: 0.088px;
+                font-size: 20px;
+                line-height: 1.4;
+                letter-spacing: 0.08px;
             }
             .brand-contents .brand__content-inner {
                 box-sizing: border-box;
-                margin: 0 auto;
-                padding: 0 6.25vw 6.25vw;
+                margin: 0 auto 96px;
+                max-width: 1440px;
                 background-color: #f6f3eb;
             }
 
@@ -1559,7 +1558,7 @@
 
             .brand-contents .v-box-bottom {
                 position: absolute;
-                bottom: 55px;
+                bottom: 38px;
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
@@ -1571,31 +1570,31 @@
             }
             .brand-contents .v-box-bottom p.tit {
                 color: inherit;
-                font-size: 1.4583vw;
-                line-height: 1.7708vw;
-                margin-bottom: 0.4688vw;
+                font-size: 24px;
+                line-height: 1.5;
+                margin-bottom: 10px;
             }
             .brand-contents .v-box-bottom span.desc {
                 color: inherit;
-                font-size: 0.93vw;
-                line-height: 1.0938vw;
+                font-size: 16px;
+                line-height: 1.6;
             }
 
 
             /*tab*/
             .brand-contents .tab-menu__container {
                 text-align: center;
-                margin-top: calc(50px + 0.9375vw);
+                margin-top: calc(96px + 8px);
             }
             .brand-contents .brand__header + .brand-contents .tab-menu__container {
-                margin-top: -3px;
+                margin-top: calc(48px + 9px);
             }
             .brand-contents .tab-menu__list {
                 position: relative;
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                height: 2.6042vw;
+                height: 49px;
             }
             .brand-contents .tab-menu__list::before {
                 content: "";
@@ -1603,21 +1602,21 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: calc(100% + 0.9375vw);
-                height: calc(100% + 0.9375vw);
+                width: calc(100% + 16px);
+                height: calc(100% + 16px);
                 background-color: #f0ece4;
-                border-radius: 20.8333vw;
+                border-radius: 60px;
             }
 
             .brand-contents .tab-menu__btn {
                 z-index: 2;
-                width: 10.4167vw;
+                width: 200px;
                 height: 100%;
                 background-color: transparent;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 0.7813vw;
+                font-size: 16px;
                 text-decoration: none;
                 color: #262626;
             }
@@ -1628,15 +1627,15 @@
                 z-index: 1;
                 display: block;
                 position: absolute;
-                width: 10.4167vw;
+                width: 200px;
                 height: 100%;
-                border-radius: 20.8333vw;
+                border-radius: 60px;
                 left: 0;
                 background-color: #fff;
                 transition: left 0.5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .brand-contents .tab-container {
-                margin-top: 4.2188vw;
+                margin-top: calc(48px + 8px);
             }
             .brand-contents .tab-container__content {
                 display: none;
@@ -1646,22 +1645,24 @@
             }
 
 
+
+
             /*brand elements 슬라이드*/
             .brand-contents .brand-elements {
                 background-color: #e6e1d6;
-                padding: 3.6458vw 6.25vw 4.5833vw;
+                padding: 78px 0;
                 overflow: hidden;
             }
             .brand-contents .brand-element__inner {
                 position: relative;
-                width: 87.5vw;
                 margin: 0px auto;
-                max-width: 1680px;
+                max-width: 1440px;
             }
             .brand-contents .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 2.2917vw;
-                line-height: 2.7083vw;
+                font-size: 48px;
+                line-height: 1.16;
+                font-weight: 700;
             }
             .brand-contents .brand-elements__header-title__sub {
                 display: block;
@@ -1670,7 +1671,7 @@
             .brand-contents .brand-elements__controller {
                 position: absolute;
                 right: 0;
-                top: 2.7083vw;
+                top: 60px;
                 display: flex;
                 gap: 7px;
             }
@@ -1681,8 +1682,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 2.5vw;
-                height: 2.5vw;
+                width: 52px;
+                height: 52px;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -1697,8 +1698,8 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 1.1458vw;
-                height: 1.1458vw;
+                width: 24px;
+                height: 24px;
                 background: no-repeat center url(../../src/mocks/layout/icon-swiper-button-arrow.svg);
                 background-position: center;
                 background-size: 100% auto;
@@ -1711,8 +1712,8 @@
             }
             .brand-contents .our-identity__slide {
                 position: relative;
-                width: 830px;
-                height: 503px;
+                width: 590px;
+                height: 360px;
                 border-radius: 30px;
                 overflow: hidden;
                 box-sizing: border-box;
@@ -1720,7 +1721,7 @@
                 background-color: #f6f3eb;
             }
             .brand-contents .our-identity__slide a {
-                padding: 40px;
+                padding: 24px;
                 display: block;
                 width: 100%;
                 height: 100%;
@@ -1809,8 +1810,8 @@
             }
 
             .brand-contents .our-identity__item-title {
-                font-size: 1.875vw;
-                line-height: 2.1875vw;
+                font-size: 24px;
+                line-height: 1.3;
                 color: #222;
                 transition: color 0.5s cubic-bezier(0.56, 0, 0.28, 1);
             }
@@ -1819,7 +1820,7 @@
                 color: #fff;
             }
             .brand-contents .our-identity__progressbar {
-                margin-top: 64px;
+                margin-top: 48px;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
@@ -1829,25 +1830,31 @@
             }
             .brand-contents .our-identity__move-btn {
                 position: absolute;
-                left: 40px;
-                bottom: 40px;
+                left: 26px;
+                bottom: 26px;
                 display: block;
-                width: 64px;
-                height: 64px;
+                width: 48px;
+                height: 48px;
                 backdrop-filter: blur(33px);
                 background: no-repeat center;
                 border: 1px solid #ffffffb2;
                 border-radius: 50%;
                 background-image: url(../../src/mocks/layout/btn_move_to_arrow_wt.svg);
-                background-size: 30px auto;
+                background-size: 22px auto;
                 background-color: #fff;
                 transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+                opacity: 0;
+                visibility: hidden;
             }
             .brand-contents .our-identity__slide:hover .our-identity__move-btn {
                 background-color: #00000099;
                 border-color: #cbc8c24d;
                 background-image: url(../../src/mocks/layout/btn_move_to_arrow.svg);
+                display: block;
+                opacity: 1;
+                visibility: visible;
             }
+
             /*contents - color ------*/
             /*top visual*/
             #visual-tagline.visual__top {
@@ -2020,161 +2027,20 @@
                 border-radius: 0.5208vw;
             }
 
-            @media (max-width: 1500px) {
-                /*공통*/
-                .brand-contents .brand__header {
-                    margin-bottom: 72px;
-                }
-                .brand-contents .brand__header-title {
-                    font-size: 60px;
-                    line-height: 64px;
-                    letter-spacing: 0.6px;
-                    margin: 120px 0 24px;
-                }
-
-                .brand-contents .brand__header-title + .brand__header-description {
-                    font-size: 18px;
-                    line-height: 26px;
-                }
-                .brand-contents .brand__content-inner {
-                    margin-top: 0;
-                    padding: 0 120px 80px;
-                }
-
-
-                /*tab*/
-                .brand-contents .tab-menu__container {
-                    text-align: center;
-                    margin-top: calc(48px + 9px);
-                }
-                .brand-contents .brand__header + .brand-contents .tab-menu__container {
-                    margin-top: -3px;
-                }
-                .brand-contents .tab-menu__list {
-                    height: 49px;
-                }
-                .brand-contents .tab-menu__list::before {
-                    width: calc(100% + 16px);
-                    height: calc(100% + 16px);
-                    border-radius: 20.8333vw;
-                }
-
-                .brand-contents .tab-menu__btn {
-                    width: 200px;
-                    font-size: 15px;
-                }
-                .brand-contents .tab-menu__bg {
-                    width: 200px;
-                }
-                .brand-contents .tab-container {
-                    margin-top: 72px;
-                }
-
-
-                /*brand elements 슬라이드*/
-                .brand-contents .brand-elements {
-                    padding: 72px 120px 80px;
-                }
-                .brand-contents .brand-elements__header-title {
-                    font-size: 42px;
-                    line-height: 46px;
-                }
-                .brand-contents .brand-element__inner {
-                    width: 100%;
-                }
-                .brand-contents .brand-elements__item-title {
-                    padding: 18px 28px;
-                    font-size: 24px;
-                    line-height: 32px;
-                }
-                .brand-contents .our-identity__progressbar {
-                    margin-top: 48px;
-                }
-                .brand-contents .our-identity__slide {
-                    width: 590px;
-                    height: 360px;
-                    border-radius: 20px;
-                }
-                .brand-contents .our-identity__slide a {
-                    padding: 28px;
-                }
-
-                .brand-contents .our-identity__item-title {
-                    font-size: 24px;
-                    line-height: 1.3;
-                }
-
-                .brand-contents .logo__bottom-cont {
-                    bottom: 30px;
-                }
-                .brand-contents .logo__bottom-cont__title {
-                    font-size: 18px;
-                    line-height: 28px;
-                    margin-bottom: 4px;
-                }
-                .brand-contents .logo__bottom-cont__desc {
-                    font-size: 17px;
-                    line-height: 26px;
-                }
-                .brand-contents .our-identity__move-btn {
-                    left: 28px;
-                    bottom: 28px;
-                }
-
-                /*contents - color ------*/
-                /*btmdot-slide*/
-                .btmdot-slide__btm-container {
-                    bottom: 26px;
-                }
-                .btmdot-slide__pagination {
-                    gap: 7px;
-                }
-                .btmdot-slide__pagination__btn {
-                    width: 22px;
-                    height: 22px;
-                }
-                .btmdot-slide__pagination__btn--active::before {
-                    width: 30px;
-                    height: 30px;
-                }
-
-
-                /*tagline slide*/
-                .taglien__content {
-                    border-radius: 20px;
-                }
-
-                /*tagline grid*/
-                .tagline-grid {
-                    gap: 15px;
-                }
-                .tagline-grid__item {
-                    border-radius: 15px;
-                    padding: 30px;
-                }
-                .tagline-grid__text-info {
-                    font-size: 17px;
-                    margin-bottom: 23px;
-                }
-                .tagline-grid__text-info b {
-                    font-size: 27px;
-                }
-            }
 
             /* Tablet */
-            @media (max-width: 1024px) {
+            @media (max-width: 1500px) {
                 /*공통*/
                 .brand-contents .brand__header {
                     margin-bottom: 46px;
                 }
                 .brand-contents .brand__header-title {
-                    font-size: 32px;
-                    line-height: 36px;
-                    margin: 64px 0 24px;
+                    font-size: 36px;
+                    margin: 64px 0 16px;
                 }
                 .brand-contents .brand__header-title + .brand__header-description {
-                    font-size: 15px;
-                    line-height: 20px;
+                    font-size: 16px;
+                    line-height: 1.3;
                 }
                 .brand-contents .brand__content-inner {
                     margin-top: 0;
@@ -2195,8 +2061,16 @@
                 .brand-contents .tab-menu__bg {
                     width: 162px;
                 }
-                .brand-contents .tab-container {
-                    margin-top: 48px;
+
+                .brand-contents .tab-menu__container {
+                    margin-top: calc(32px + 8px);
+                }
+                .brand-contents .tab-menu__container {
+                    text-align: center;
+                    margin-top: calc(64px + 8px);
+                }
+                .brand-contents .brand__header + .brand-contents .tab-menu__container {
+                    margin-top: calc(40px + 8px);
                 }
 
 
@@ -2207,12 +2081,12 @@
                 }
                 .brand-contents .v-box-bottom p.tit {
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 1.6;
                     margin-bottom: 0;
                 }
                 .brand-contents .v-box-bottom span.desc {
-                    font-size: 15px;
-                    line-height: 21px;
+                    font-size: 14px;
+                    line-height: 1.4;
                 }
 
 
@@ -2233,11 +2107,9 @@
                 .brand-contents .our-identity__slide {
                     width: 291px;
                     height: 291px;
-                    border-radius: 10px;
+                    border-radius: 20px;
                 }
-                .brand-contents .our-identity__slide a {
-                    padding: 16px;
-                }
+
                 .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
                     display: none;
                 }
@@ -2296,6 +2168,7 @@
                     transform: translate(-50%, -50%) scale(2.2);
                 }
 
+
                 /*contents - color ------*/
                 /*tagline grid*/
                 .tagline-grid {
@@ -2348,6 +2221,10 @@
                 .brand-contents .visual__top {
                     height: 117.33vw;
                 }
+                /*top visual*/
+                #visual-tagline.visual__top {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-m.png);
+                }
 
                 /*download assets*/
                 .brand-contents .download_assets {
@@ -2362,16 +2239,18 @@
 
                 /*공통*/
                 .brand-contents .brand__header {
-                    margin-bottom: 48px;
+                    margin-bottom: 32px;
                 }
                 .brand-contents .brand__header-title {
-                    margin: 80px 0 24px;
+                    margin: 64px 0 16px;
                     text-align: center;
                 }
                 .brand-contents .brand__header-title + .brand__header-description {
                     font-size: 16px;
                     line-height: 1.3;
-                    text-align: center;
+                }
+                .brand-contents .brand__content-inner {
+                    padding: 0 19px;
                 }
                 .brand-contents .brand__header-description br:not(.mo) {
                     display: none;
@@ -2391,10 +2270,6 @@
                 /*tab*/
                 .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(68px + 8px);
-                }
-                .brand-contents .brand__header + .brand-contents .tab-menu__container {
-                    margin-top: 56px;
                 }
                 .brand-contents .tab-menu__list {
                     width: 100%;
@@ -2409,107 +2284,101 @@
                     font-size: 14px;
                 }
                 .brand-contents .tab-container {
-                    margin-top: 24px;
+                    margin-top: calc(32px + 8px);
                 }
 
-                /*contents - color ------*/
-
-            }
-
-            /* 4K */
-            @media (min-width: 2560px) {
-                /*랜딩비주얼 스크롤다운 버튼*/
-                .brand-contents .landing-visual__scrolldown {
-                    bottom: 60px;
-                }
-
-                /*공통*/
-                .brand-contents .brand__header {
-                    margin-bottom: 68px;
-                }
-                .brand-contents .brand__header-title {
-                    font-size: 72px;
-                    line-height: 76px;
-                    margin: 120px 0 48px;
-                }
-                .brand-contents .brand__header-title + .brand__header-description {
-                    font-size: 20px;
-                    line-height: 28px;
-                }
-
-
-                .brand-contents .brand__content-inner {
-                    max-width: 1680px;
-                    margin: 0px auto;
-                    padding: 0 0 120px;
-                }
-
-                /*tab*/
                 .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: 59px;
+                    margin-top: calc(64px + 8px);
                 }
-                .brand-contents .tab-menu__list {
-                    height: 48px;
+                .brand-contents .brand__header + .brand-contents .tab-menu__container {
+                    margin-top: calc(32px + 8px);
                 }
-                .brand-contents .tab-menu__list::before {
-                    width: calc(100% + 9px);
-                    height: calc(100% + 9px);
-                    border-radius: 400px;
+
+
+
+
+                /*contents - color ------*/
+                /*tagline slide*/
+                .taglien__content {
+                    flex-direction: column;
+                    height: auto;
+                    max-height: unset;
+                    border-radius: 10px;
                 }
-                .brand-contents .tab-menu__btn {
-                    width: 200px;
+                .taglien__item.taglien__item.taglien__item--text {
+                    height: 89.33vw;
+                }
+                .taglien__item.taglien__item--product {
+                    height: 103.73vw;
+                    background-image: url(../../src/mocks/BS0004/brand-our-slogan-product-product-m.png);
+                }
+                /*tagline grid*/
+                .tagline-grid {
+                    flex-direction: column;
+                    gap: 16px;
+                }
+                .tagline-grid__item {
+                    border-radius: 10px;
+                    padding: 16px;
+                }
+                .tagline-grid__text-info {
+                    font-size: 12px;
+                    margin-bottom: 16px;
+                }
+                .tagline-grid__text-info b {
                     font-size: 15px;
                 }
-                .brand-contents .tab-container {
-                    margin-top: 80px;
-                }
-                
-                /*brand elements 슬라이드*/
-                .brand-contents .brand-elements {
-                    padding: 70px 120px 88px;
-                }
-                .brand-contents .brand-elements__header-title {
-                    font-size: 44px;
-                    line-height: 52px;
-                }
-                .brand-contents .brand-elements__slider {
-                    margin: 76px 0 0;
-                }
-                .brand-contents .brand-elements__controller {
-                    top: 52px;
-                }
-                .brand-contents .brand-elements__controller__btn {
-                    width: 48px;
-                    height: 48px;
+                .tagline-grid__item img {
+                    border-radius: 8px;
                 }
 
-                .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
-                .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
-                    width: 22px;
-                    height: 22px;
+                /*btmdot-slide*/
+                .btmdot-slide__slide__inner {
+                    height: 90vw;
+                }
+                .btmdot-slide__slide {
+                    border-radius: 10px;
+                }
+                .btmdot-slide__slide--dark {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-m.png);
+                }
+                .btmdot-slide__slide--light {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-m.png);
+                }
+                .btmdot-slide__slide--light-gra {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-m.png);
+                }
+                .btmdot-slide__slide--dark-gra {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-m.png);
+                }
+                .btmdot-slide__slide--light-img {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-m.png);
+                }
+                .btmdot-slide__slide--dark-img {
+                    background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-m.png);
                 }
 
-                .brand-contents .our-identity__item-title {
-                    font-size: 24px;
-                    line-height: 32px;
+                .btmdot-slide__btm-container {
+                    bottom: 16px;
                 }
-                .brand-contents .our-identity__progressbar {
-                    margin-top: 48px;
+                .btmdot-slide__pagination {
+                    gap: 8px;
                 }
-
-
-                .brand-contents .v-box-bottom p.tit {
-                    font-size: 22px;
-                    line-height: 1.3;
-                    margin-bottom: 10px;
+                .btmdot-slide__pagination__btn {
+                    width: 24px;
+                    height: 24px;
                 }
-                .brand-contents .v-box-bottom span.desc {
-                    font-size: 18px;
-                    line-height: 1.4;
+                .btmdot-slide__pagination__btn--active::before {
+                    width: 32px;
+                    height: 32px;
                 }
-                /*contents - color ------*/
+                .btmdot__tag {
+                    margin-top: 14px;
+                    font-size: 12px;
+                }
             }
+
         </style>
         <!-- html code -->
         <div class="brand-contents">
