@@ -1,0 +1,1653 @@
+<!-- [code component area start] -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../../../video-js.css" />
+<style>
+    /* Common */
+    body {
+        overflow-x: hidden;
+    }
+    ul,ol {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    li {
+        padding: 0px;
+        margin: 0px;
+    }
+    dl,dt,dd {
+        margin: 0px;
+    }
+    figure,figcaption {
+        padding: 0px;
+        margin: 0px;
+    }
+    .brand-contents,
+    .brand-contents * {
+        font-family: LGEI Text;
+        color: #262626;
+    }
+    .brand-contents button {
+        cursor: pointer;
+        padding: 0px
+    }
+    .brand-contents a,
+    .brand-contents a:hover {text-decoration: none;}
+
+    .video-only-pc {display: block;}
+    .video-only-mo {display: none;}
+
+
+    /*content*/
+    .brand-contents {background-color: #262626;}
+    br.mo {display: none;}
+
+    /*visual video*/
+    .brand-visual-film {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .brand-visual-film::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        left: 0;
+        top: 0;
+        background: no-repeat center;
+        background-size: contain;
+        background-image: url(../../src/mocks/BS0001/lifes-good-lg-video-cover-m.svg);
+        display: none;
+    }
+    .brand-visual-film__video {width: 100%; height: 100%; border-radius: unset;}
+    .brand-visual-film video,
+    .brand-visual-film__video img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .btn-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #ffffff66;
+        backdrop-filter: blur(45px);
+        -webkit-backdrop-filter: blur(45px);
+        border: 1px solid #CBC8C280;
+        cursor: pointer;
+        transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+        z-index: 3;
+    }
+    .btn-play::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25%;
+        height: 25%;
+        background: url(../../src/mocks/layout/btn-video-play.svg) no-repeat center;
+        background-size: contain;
+    }
+
+
+    /*랜딩비주얼 스크롤다운 버튼*/
+    .landing-visual__scrolldown {
+        position: absolute;
+        bottom: 3.7037vh;
+        left: 0px;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+    .landing-visual__scrolldown__btn {
+        width: 68px;
+        height: 96px;
+        text-indent: -9999px;
+        overflow: hidden;
+        border-width: 0px;
+        cursor: pointer;
+        background: url(../../src/mocks/layout/main_visual_scroll_down.svg) no-repeat center center;
+        background-size: cover;
+        transform: translateY(0vh);
+        animation-duration: 1s;
+        animation-name: sd-dounce;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes sd-dounce {
+        from {
+            transform: translateY(-0.5vh);
+        }
+        to {
+            transform: translateY(1.5vh);
+        }
+    }
+    .brand-story-content {
+        margin: 200px 0 220px;
+        padding: 0 120px;
+    }
+    /*info text*/
+    .intro-text {
+        font-family: "LG_EI_Headline";
+        margin: 120px 0 200px;
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+        line-height: 1.35;
+        letter-spacing: .4px;
+    }
+
+    /*imotionally-design*/
+    .imotionally-design {
+        overflow: hidden;
+        position: relative;
+        margin: 0 -120px;
+        height: 61.22vw;
+    }
+    .imotionally-design__headline {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 56.25vw;
+        max-height: 1080px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .imotionally-design__headline ul {
+        display: flex;
+        gap: 16px;
+    }
+    .imotionally-design__headline li {
+        position: relative;
+        font-size: 90px;
+        letter-spacing: 0.1;
+        line-height: 1;
+        color: #7E7C77;
+        padding-bottom: 136px;
+        transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
+        font-family: "LG_EI_Headline";
+    }
+    .imotionally-design__headline li p {
+        position: absolute;
+        bottom: 0;
+        font-size: 36px;
+        line-height: 1.2;
+        white-space: nowrap;
+        font-family: "LG_EI_Headline";
+    }
+    .imotionally-design__headline li p::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 48px;
+        left: 50%;
+        top: -6px;
+        transform: translate(-50%, 0);
+        background-color: #F6F3EB;
+        opacity: 0;
+        transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+    .imotionally-design__headline li span {
+        display: block;
+        transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
+        opacity: 0;
+        transform: translateY(50px);
+        color: #F6F3EB;
+    }
+    .imotionally-design__headline li:nth-child(1) p {right: 40px;}
+    .imotionally-design__headline li:nth-child(2) p {left: 20px;}
+    .imotionally-design__headline li:nth-child(3) p {left: 50%; transform: translateX(-50%);}
+    .imotionally-design__headline li.active {
+        color: #F6F3EB;
+    }
+    .imotionally-design__headline li.active span {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .imotionally-design__headline li.active p::before {
+        transform: translate(-50%, -100%);
+        opacity: 1;
+    }
+    .imotionally-design__headline p.for-mobile {
+        display: none;
+        color: #F6F3EB;
+        font-size: 20px;
+        line-height: 1.4;
+
+    }
+    .imotionally-design__imgwrap {
+        position: relative;
+        height: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .imotionally-design__item {
+        border-radius: 20px;
+        position: absolute;
+        overflow: hidden;
+        transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+    .addMotion .imotionally-design__item {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    .addMotion .imotionally-design__item.animated {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .imotionally-design__item:nth-child(1) {
+        width: 21.88vw;
+        height: 11.98vw;
+        top: 3.57%;
+        left: 6.40%;
+    }
+
+    .imotionally-design__item:nth-child(2) {
+        width: 16.67vw;
+        height: 9.375vw;
+        top: 13.33%;
+        left: 37.03%;
+    }
+
+    .imotionally-design__item:nth-child(3) {
+        width: 17.86vw;
+        height: 10.62vw;
+        top: 2.89%;
+        left: 65.49%;
+    }
+
+    .imotionally-design__item:nth-child(4) {
+        width: 17.71vw;
+        height: 11.56vw;
+        top: 33.47%;
+        left: 82.66%;
+    }
+
+    .imotionally-design__item:nth-child(5) {
+        width: 13.854vw;
+        height: 13.854vw;
+        top: 50.64%;
+        left: 1.46%;
+    }
+
+    .imotionally-design__item:nth-child(6) {
+        width: 25.21vw;
+        height: 13.65vw;
+        top: 72.81%;
+        left: 23.07%;
+    }
+
+    .imotionally-design__item:nth-child(7) {
+        width: 33.28vw;
+        height: 21.35vw;
+        top: 65.08%;
+        left: 55.47%;
+    }
+
+
+    .imotionally-design__item img, 
+    .imotionally-design__item video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /*looping video*/
+    .looping-video-content {
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 49.4%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .looping-video-content video {
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .looping-video-multi {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1680px;
+        margin: 0 auto;
+    }
+    .looping-video-multi li {
+        position: relative;
+        border-radius: 20px;
+        width: calc((100% / 40px) / 3);
+        padding-bottom: 100%;
+        overflow: hidden;
+    }
+    .looping-video-multi li video,
+    .looping-video-multi li img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .looping-video-multi li:nth-child(1) video {
+        transform: scale(1.3);
+    }
+
+    .brand-element__title {
+        text-align: center;
+    }
+    .brand-element__title__desc {
+        display: block;
+        font-size: 28px;
+        color: #D0CBC1;
+        line-height: 1.3;
+        margin-bottom: 32px;
+    }
+    .brand-element__title__text {
+        color: #F6F3EB;
+        font-size: 70px;
+        letter-spacing: 0.7px;
+        line-height: 1.1;
+        font-family: "LG_EI_Headline";
+    }
+
+
+    /*brand elements 슬라이드*/
+    .brand-elements {
+        padding: 200px 6.25vw 4.5833vw;
+        overflow: hidden;
+    }
+    .brand-element__inner {
+        position: relative;
+        width: 87.5vw;
+        margin: 0px auto;
+        max-width: 1680px;
+    }
+    .our-identity__slider { margin-top: 48px;}
+    .our-identity__slides {height: auto;}
+    .our-identity__slide {
+        position: relative;
+        width: 830px;
+        height: 503px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    .our-identity__slide a {
+        display: block;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+    }
+    .our-identity__slide::before,
+    .our-identity__slide::after {
+        content: '';
+        background: no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+    .our-identity__slide::before {z-index: -1; opacity: 1;}
+    .our-identity__slide::after {z-index: -2; opacity: 0;}
+    .our-identity__slide:hover::before {opacity: 0;}
+    .our-identity__slide:hover::after {opacity: 1;}
+
+    .our-identity__slide--photography {background-color: #F6F3EB;}
+    .our-identity__slide--photography::before {
+        width: 52%;
+        height: 62%;
+        border-radius: 30px;
+    }
+    .our-identity__slide--photography:hover:before {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    .our-identity__slide--photography::after {display: none;}
+    .our-identity__slide--logo::before {background-image: url(../../src/mocks/layout/brand_slide_logo.png);}
+    .our-identity__slide--logo::after {background-image: url(../../src/mocks/layout/brand_slide_logo-hover.png);}
+    .our-identity__slide--color::before {background-image: url(../../src/mocks/layout/brand_slide_color.png);}
+    .our-identity__slide--color::after {background-image: url(../../src/mocks/layout/brand_slide_color-hover.png);}
+    .our-identity__slide--photography::before {background-image: url(../../src/mocks/layout/brand_slide_photo.png);}
+    .our-identity__slide--design::before {background-image: url(../../src/mocks/layout/brand_slide_design.png);}
+    .our-identity__slide--design::after {background-image: url(../../src/mocks/layout/brand_slide_design-hover.png);}
+    .our-identity__slide--tagline::before {background-image: url(../../src/mocks/layout/brand_slide_slogan.png);}
+    .our-identity__slide--tagline::after {background-image: url(../../src/mocks/layout/brand_slide_slogan-hover.png);}
+    .our-identity__slide--typo::before {background-image: url(../../src/mocks/layout/brand_slide_typo.png);}
+    .our-identity__slide--typo::after {background-image: url(../../src/mocks/layout/brand_slide_typo-hover.png);}
+    .our-identity__slide--voice::before {background-image: url(../../src/mocks/layout/brand_slide_voice.png);}
+    .our-identity__slide--voice::after {background-image: url(../../src/mocks/layout/brand_slide_voice_hover.png);}
+
+    .our-identity__item-title {
+        font-size: 1.875vw;
+        line-height: 2.1875vw;
+        color: #222;
+        transition: color .5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+    .our-identity__slide:hover .our-identity__item-title {color: #fff;}
+    .our-identity__progressbar {
+        margin-top: 64px;
+        width: 100%;
+        height: 2px;
+        background-color: #7E7C77;
+    }
+    .our-identity__progressbar .swiper-scrollbar-drag {
+        background: #F6F3EB;
+    }
+    .our-identity__move-btn {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        display: block;
+        width: 64px;
+        height: 64px;
+        backdrop-filter: blur(33px);
+        background: no-repeat center;
+        border: 1px solid #FFFFFFB2;
+        border-radius: 50%;
+        background-image: url(../../src/mocks/layout/btn_move_to_arrow_wt.svg);
+        background-size: 30px auto;
+        background-color: #fff;
+        transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+    .our-identity__slide:hover .our-identity__move-btn {
+        background-color: #00000099;
+        border-color: #CBC8C24D;
+        background-image: url(../../src/mocks/layout/btn_move_to_arrow.svg);
+    }
+
+    /*팝업*/
+    .isPopupOpen {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .btn-circle--close {
+        width: 48px;
+        height: 48px;
+        top: 69px;
+        right: 20px;
+        background-size: 24px auto;
+    }
+    .popup-in-action {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        display: none;
+    }
+    .pop-inner {
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .video-wrapper > div {
+        width: inherit;
+        height: inherit;
+    }
+    .video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*video controller style*/
+    /*controll bar*/
+    .vjs-has-started .vjs-control-bar, 
+    .vjs-audio-only-mode .vjs-control-bar {
+        background-color: transparent;
+        margin: 54px;
+        width: auto;
+        height: auto;
+        align-items: center;
+        gap: 2px;
+    }
+
+    /*controll btn*/
+    .video-wrapper .video-js button,
+    .btn-circle--close {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 1px solid #f0ece44d;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background: no-repeat center;
+        background-size: 30px auto;
+        background-color: #000000b3;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .btn-circle--close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background-image: url(../../src/mocks/layout/ico-btn-close.svg);
+    }
+
+    .video-wrapper .video-js .vjs-button > .vjs-icon-placeholder:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: no-repeat center;
+        background-size: 30px auto;
+    }
+    .video-wrapper .video-js .vjs-button.vjs-mute-control > .vjs-icon-placeholder:before {
+        background-image: url(../../src/mocks/layout/ico-btn-sound-on.svg);
+    }
+    .video-wrapper .video-js .vjs-button.vjs-play-control > .vjs-icon-placeholder:before {
+        background-image: url(../../src/mocks/layout/ico-btn-play.svg);
+    }
+    .video-wrapper .video-js .vjs-button.vjs-mute-control.vjs-vol-0 > .vjs-icon-placeholder:before {
+        background-image: url(../../src/mocks/layout/ico-btn-sound-off.svg);
+    }
+    .video-wrapper .video-js .vjs-button.vjs-play-control.vjs-paused > .vjs-icon-placeholder:before {
+        background-image: url(../../src/mocks/layout/ico-btn-pause.svg);
+    }
+
+    /*progress bar*/
+    .video-wrapper .vjs-progress-control {
+        order: 1;
+        width: auto;
+        flex: 1;
+        height: 6px;
+        margin-left: 35px;
+        min-width: unset;
+    }
+    .video-wrapper .video-js .vjs-play-progress {
+        background-color: #FD312E;
+    }
+    .video-wrapper .video-js .vjs-play-progress:before {
+        display: none;
+    }
+    .video-wrapper .video-js .vjs-progress-control .vjs-progress-holder {
+        margin: 0;
+        background-color: #F6F3EB4D;
+        height: inherit;
+    }
+    .video-wrapper .video-js .vjs-slider .vjs-icon-placeholder {
+        height: inherit;
+    }
+    .video-wrapper .video-js .vjs-load-progress,
+    .video-wrapper .video-js .vjs-load-progress div {
+        background-color: #F6F3EB4D;
+    }
+
+    /*volume panel*/
+    .video-wrapper .video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+        height: auto;
+        width: unset;
+    }
+    .video-wrapper .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+        position: absolute !important;
+        left: 50% !important;
+        top: -74px;
+        transform: translateX(-50%);
+        margin: 0;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+    }
+    .video-wrapper .vjs-slider-vertical .vjs-volume-level {
+        width: 100%;
+        background-color: #FD312E;
+    }
+    .video-wrapper .vjs-slider-vertical .vjs-volume-level:before {
+        display: none;
+    }
+    .video-wrapper .video-wrapper .vjs-volume-bar.vjs-slider-vertical {
+        margin: 0;
+        width: 6px;
+        height: 60px;
+        background-color: #F6F3EB4D;
+    }
+
+    /*tooltip*/
+    .video-wrapper .video-js .vjs-time-tooltip ,
+    .video-wrapper .video-js .vjs-progress-control .vjs-mouse-display {
+        display: none !important;
+    }
+
+
+    @media (max-width: 1500px) {
+        .btn-play {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+
+
+        .brand-story-content {
+            margin: 150px 0 0;
+        }
+        /*info text*/
+        .intro-text {
+            margin: 130px 0 120px;
+            font-size: 30px;
+        }
+
+
+        /*imotionally-design*/
+        .imotionally-design__headline {
+            
+        }
+        .imotionally-design__headline li {
+            font-size: 70px;
+            padding-bottom: 100px;
+        }
+        .imotionally-design__headline li p {
+            font-size: 27px;
+        }
+
+        /*brand elements 슬라이드*/
+        .brand-elements {
+            padding: 200px 120px 80px;
+        }
+        .brand-element__inner {
+            width: 100%;
+        }
+        .brand-element__title__desc {
+            font-size: 20px;   
+            margin-bottom: 23px;                 
+        }
+        .brand-element__title__text {
+            font-size: 52px;
+        }
+        .brand-elements__item-title {
+            padding: 18px 28px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .our-identity__progressbar {
+            margin-top: 48px;
+        }
+        .our-identity__slide {
+            width: 590px;
+            height: 360px;
+            border-radius: 20px;
+        }
+        .our-identity__slide a {
+            padding: 28px;
+        }
+        .our-identity__item-title {
+            font-size: 24px;
+            line-height: 1.3;
+        }
+
+        .logo__bottom-cont {
+            bottom: 30px;
+        }
+        .logo__bottom-cont__title {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 4px;
+        }
+        .logo__bottom-cont__desc {
+            font-size: 17px;
+            line-height: 26px;
+        }
+        .our-identity__move-btn {
+            left: 28px;
+            bottom: 28px;
+        }
+
+
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+
+        /*랜딩비주얼 스크롤다운 버튼*/
+        .landing-visual__scrolldown {
+            display: none;
+        }
+
+        .brand-story-content {
+            margin: 120px 0 0;
+            padding: 0 24px;
+        }
+
+        .intro-text {
+            margin: 80px 0px;
+            font-size: 24px;
+        }
+
+        .intro-text br {display: none;}
+
+        /*imotionally-design*/
+        .imotionally-design {
+            height: 108.7vw;
+        }
+        .imotionally-design__headline {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 32.72vw;
+            height: auto;
+        }
+        .imotionally-design__headline ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .imotionally-design__headline p.for-mobile{display: block; margin-top: 20px;}
+
+        .imotionally-design__headline li {font-size: 48px;}
+        .imotionally-design__headline li,
+        .imotionally-design__headline li.active {
+            padding-bottom: 0;
+            text-align: center;
+            color: #fff;
+        }
+        .imotionally-design__headline li:nth-child(1) {width: 100%;}
+        .imotionally-design__headline li p {
+            display: none;
+        }
+        .imotionally-design{margin: 0 -24px;}
+        .imotionally-design__imgwrap {
+            max-width: 100%;
+        }
+        .imotionally-design__item {
+            border-radius: 10px;
+        }
+
+        .imotionally-design__item:nth-child(1) {
+            width: 31.17vw;
+            height: 17.53vw;
+            top: 1.43%;
+            left: 2.47%;
+        }
+        .imotionally-design__item:nth-child(2) {
+            width: 22.08vw;
+            height: 12.60vw;
+            top: 12.78%;
+            left: 38.96%;
+        }
+        .imotionally-design__item:nth-child(3) {
+            width: 27.27vw;
+            height: 16.23vw;
+            top: 9.56%;
+            left: 69.48%;
+        }
+        .imotionally-design__item:nth-child(4) {
+            width: 30.78vw;
+            height: 20.78vw;
+            top: 46.71%;
+            left: 75.58%;
+        }
+        .imotionally-design__item:nth-child(5) {
+            width: 16.88vw;
+            height: 16.88vw;
+            top: 82.20%;
+            left: 27.92%;
+        }
+        .imotionally-design__item:nth-child(6) {
+            width: 37.27vw;
+            height: 20.91vw;
+            top: 57.00%;
+            left: -3.64%;
+        }
+        .imotionally-design__item:nth-child(7) {
+            width: 40.39vw;
+            height: 28.18vw;
+            top: 75.15%;
+            left: 51.56%;
+        }
+        
+
+        .looping-video-multi {
+            gap: 8px;
+        }
+
+
+        
+        /*brand elements 슬라이드*/
+        .brand-elements {
+            padding: 100px 24px 80px;
+        }
+        .brand-elements__slider {
+            margin: 24px 0 0;
+        }
+        .brand-element__title__desc {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .brand-element__title__text {
+            font-size: 42px;
+            margin-bottom: 60px;
+        }
+        .brand-element__title__text br {display: block;}
+
+        .our-identity__slide {
+            width: 291px;
+            height: 291px;
+            border-radius: 10px;
+        }
+        .our-identity__slide a {
+            padding: 16px;
+        }
+        .our-identity__slide:not(.our-identity__slide--photography)::after {display: none;}
+        .our-identity__slide:hover::before {opacity: 1;}
+        .our-identity__slide:hover .our-identity__item-title {color: #262626;}
+        .our-identity__slide:hover::before {opacity: 1;}
+
+        .our-identity__slide--logo::before {background-image: url(../../src/mocks/layout/brand_slide_logo-m.png);}
+        .our-identity__slide--color::before {background-image: url(../../src/mocks/layout/brand_slide_color-m.png);}
+        .our-identity__slide--design::before {background-image: url(../../src/mocks/layout/brand_slide_design-m.png);}
+        .our-identity__slide--tagline::before {background-image: url(../../src/mocks/layout/brand_slide_slogan-m.png);}
+        .our-identity__slide--typo::before {background-image: url(../../src/mocks/layout/brand_slide_typo-m.png);}
+        .our-identity__slide--voice::before {background-image: url(../../src/mocks/layout/brand_slide_voice-m.png);}
+        .our-identity__item-title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .our-identity__progressbar {
+            margin-top: 24px;
+            height: 1px;
+        }
+        .our-identity__move-btn {
+            width: 48px;
+            height: 48px;
+            background-size: 24px auto;
+            left: 16px;
+            bottom: 16px;
+        }
+        .our-identity__slider {
+            margin-top: 32px;
+        }
+        .our-identity__slide--photography::before {
+            width: 68%;
+            height: 48%;
+            border-radius: 14px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        br.mo {display: block;}
+
+        /*visual video*/
+        .btn-play {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+        }
+        .brand-visual-film::after {
+            display: block;
+        }
+        .video-only-pc {
+            display: none;
+        }
+
+        .video-only-mo {
+            display: block;
+        }
+        .brand-story-content {
+            margin: 120px 0 0;
+            padding: 0 24px;
+        }
+        /*info text*/
+        .intro-text {
+            margin: 80px 0;
+            font-size: 24px;
+        }
+        .intro-text br:not(.mo) {display: none;}
+
+        /*imotionally-design*/
+        .imotionally-design {
+            height: 254.67vw;
+        }
+        .imotionally-design__headline {
+            margin-top: 82.56vw;
+        }
+
+        .imotionally-design__headline li {
+            font-size: 40px;
+        }
+        .imotionally-design__headline li p {
+            display: none;
+        }
+        .imotionally-design__headline p.for-mobile {
+            font-size: 18px;
+            margin-top: 24px;
+        }
+
+        .imotionally-design__item:nth-child(1) {
+            width: 53.07vw;
+            height: 29.87vw;
+            top: 0%;
+            left: 50.67%;
+        }
+        .imotionally-design__item:nth-child(2) {
+            width: 37.33vw;
+            height: 21.33vw;
+            top: 19.68%;
+            left: 54.40%;
+        }
+        .imotionally-design__item:nth-child(3) {
+            width: 42.93vw;
+            height: 30.40vw;
+            top: 9.74%;
+            left: -10.13%;
+        }
+        .imotionally-design__item:nth-child(4) {
+            width: 33.87vw;
+            height: 27.73vw;
+            top: 73.72%;
+            left: 66.93%;
+        }
+        .imotionally-design__item:nth-child(5) {
+            width: 24.00vw;
+            height: 24.00vw;
+            top: 56.23%;
+            left: 69.33%;
+        }
+        .imotionally-design__item:nth-child(6) {
+            width: 53.33vw;
+            height: 29.87vw;
+            top: 88.27%;
+            left: 10.67%;
+        }
+        .imotionally-design__item:nth-child(7) {
+            width: 65.07vw;
+            height: 41.87vw;
+            top: 60.21%;
+            left: -6.13%;
+        }
+
+        /*looping video*/
+        .looping-video-content {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        .looping-video-multi {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .looping-video-multi li {
+            width: 100%;
+            padding-bottom: 74.63%;
+        }
+
+        .brand-element__title__desc {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        .brand-element__title__text {
+            font-size: 36px;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+
+        
+        /*brand elements 슬라이드*/
+        .brand-elements {
+            padding: 100px 24px 40px;
+        }
+        .brand-elements__slider {
+            margin: 24px -20px 0;
+        }
+        .brand-elements__controller {
+            display: none;
+        }
+        .our-identity__slide {
+            border-radius: 10px;
+            padding: 16px;
+        }
+        .our-identity__item-title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .our-identity__progressbar {
+            margin-top: 24px;
+            height: 1px;
+        }
+        .our-identity__move-btn {
+            width: 48px;
+            height: 48px;
+            background-size: 24px auto;
+            left: 16px;
+            bottom: 16px;
+        }
+        .our-identity__slider {
+            margin-top: 72px;
+        }
+        .our-identity__slide--photography::before {
+            width: 72%;
+            height: 52%;
+            border-radius: 14px;
+        }
+
+
+        /*팝업*/
+        .btn-circle--close {
+            width: 48px;
+            height: 48px;
+            top: 24px;
+            right: 20px;
+            background-size: 24px auto;
+        }
+
+        .video-wrapper video {
+            background-color: #000;
+            object-fit: contain;
+        }
+
+        /*video controller style*/
+        /*controll bar*/
+        .vjs-has-started .vjs-control-bar, 
+        .vjs-audio-only-mode .vjs-control-bar {
+            margin: 0;
+        }
+        .video-wrapper .video-js button {
+            display: none;
+        }
+        /*progress bar*/
+        .video-wrapper .vjs-progress-control {
+            margin-left: 0;
+        }
+
+
+
+        @media (orientation: landscape) {
+            .video-wrapper video {
+                /* object-fit: cover; */
+            }
+        }
+    }
+
+    /* 4K */
+    @media (min-width: 2560px) {
+        
+        .brand-story-content {
+            margin: 200px 0 220px;
+            padding: 0 120px;
+        }
+        /*info text*/
+        .intro-text {
+            margin: 120px 0 200px;
+            font-size: 40px;
+        }
+
+        .brand-story-content {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        
+
+        /*imotionally-design*/
+        .imotionally-design {
+            margin: 0 -120px;
+            height: 1105px;
+        }
+        .imotionally-design__headline {
+            height: 1178px;
+        }
+        .imotionally-design__headline li {
+            font-size: 90px;
+            letter-spacing: .9px;
+            line-height: 1;
+            padding-bottom: 136px;
+        }
+        .imotionally-design__headline li p {
+            font-size: 36px;
+            line-height: 1.2;
+        }
+        .imotionally-design__headline li p::before {
+            height: 48px;
+            top: -6px;
+        }
+        .imotionally-design__headline li span {
+            transform: translateY(50px);
+        }
+        .imotionally-design__headline li:nth-child(1) p {right: 40px;}
+        .imotionally-design__headline li:nth-child(2) p {left: 20px;}
+        
+
+        .imotionally-design__imgwrap {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        .imotionally-design__item {
+            border-radius: 20px;
+        }
+
+        .imotionally-design__item:nth-child(1) {
+            width: 420px;
+            height: 230px;
+            top: 42px;
+            left: 123px;
+        }
+        .imotionally-design__item:nth-child(2) {
+            width: 320px;
+            height: 184px;
+            top: 157px;
+            left: 711px;
+        }
+        
+        .imotionally-design__item:nth-child(3) {
+            width: 343px;
+            height: 204px;
+            top: 34px;
+            left: 1257px;
+        }
+        
+        .imotionally-design__item:nth-child(4) {
+            width: 340px;
+            height: 222px;
+            top: 394px;
+            left: 1587px;
+        }
+        
+        .imotionally-design__item:nth-child(5) {
+            width: 275px;
+            height: 266px;
+            top: 596px;
+            left: 28px;
+        }
+        
+        .imotionally-design__item:nth-child(6) {
+            width: 484px;
+            height: 262px;
+            top: 857px;
+            left: 443px;
+        }
+        
+        .imotionally-design__item:nth-child(7) {
+            width: 639px;
+            height: 410px;
+            top: 766px;
+            left: 1065px;
+        }
+
+        .looping-video-content {
+            width: 1114px;
+            height: 621px;
+            padding-bottom: unset;
+        }
+
+
+        /*brand elements 슬라이드*/
+        .brand-elements {
+            padding: 70px 120px 88px;
+        }
+        .brand-elements__header-title {
+            font-size: 44px;
+            line-height: 52px;
+        }
+        .brand-elements__slider {
+            margin: 76px 0 0;
+        }
+        .brand-elements__controller {
+            top: 52px;
+        }
+        .brand-elements__controller__btn {
+            width: 48px;
+            height: 48px;
+        }
+
+        .brand-elements__controller__btn.swiper-button-prev::after,
+        .brand-elements__controller__btn.swiper-button-next::after {
+            width: 22px;
+            height: 22px;
+        }
+
+        .our-identity__item-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .our-identity__progressbar {
+            margin-top: 48px;
+        }
+    }
+</style>
+<!-- html code -->
+<div class="brand-contents">
+    <div id="contents">
+        <div id="brand-contents">
+            <div class="brand-visual-film visual__top">
+                <video muted playsinline autoplay loop class="video-only-pc">
+                    <source src="../../../../src/mocks/BS0001/lifes-good-lg-video.mp4" type="video/mp4">
+                </video>
+                <video muted playsinline autoplay loop class="video-only-mo">
+                    <source src="../../../../src/mocks/BS0001/lifes-good-lg-video-m.mp4" type="video/mp4">
+                </video>
+
+                <button class="btn-play"></button>
+                <div class="landing-visual__scrolldown">
+                    <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
+                </div>
+            </div>
+            <div class="brand-story-content">
+                <p class="intro-text">
+                    LG Electronics has been designing every side of life for generations.<br>
+                    Bringing a smile to technology. Balancing warmth and innovations.<br>
+                    Everything we design is guided by our Design Philosophy.
+                </p>
+
+                <div class="imotionally-design addMotion">
+                    <div class="imotionally-design__headline">
+                        <ul>
+                            <li class="active">
+                                Emotionally
+                                <p><span>We bring warmth</span></p>
+                            </li>
+                            <li>
+                                Intelligent
+                                <p><span>and innovation</span></p>
+                            </li>
+                            <li>
+                                Design
+                                <p><span>to all we design</span></p>
+                            </li>
+                        </ul>
+                        <p class="for-mobile">
+                            We bring warmth and innovation to<br>
+                            everything we design.
+                        </p>
+                    </div>
+                    <ul class="imotionally-design__imgwrap">
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source src="../../../../src/mocks/BS0001/emotionally_intelligent_item_01.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source src="../../../../src/mocks/BS0001/emotionally_intelligent_item_07.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source src="../../../../src/mocks/BS0001/emotionally_intelligent_item_02.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <img src="../../../../src/mocks/BS0001/emotionally_intelligent_item_03.png" alt="">
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source src="../../../../src/mocks/BS0001/emotionally_intelligent_item_04.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source src="../../../../src/mocks/BS0001/emotionally_intelligent_item_05.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source src="../../../../src/mocks/BS0001/emotionally_intelligent_item_06.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                    </ul>
+                </div>
+                <p class="intro-text">
+                    Moving forward, we want to ensure that our approach to design blends logic and magic.<br>
+                    That our identity is guided by a clear philosophy.<br>
+                    And ultimately, that our execution delivers on our mission and core values.
+                </p>
+                <div class="looping-video-content">
+                    <video muted playsinline loop autoplay>
+                        <source src="../../../../src/mocks/BS0001/looping-video-content.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="intro-text">
+                    So we’ve developed a design philosophy that guides all our design decisions. <br>
+                    It means every experience we create can help people feel Life’s Good.
+                </p>
+                <ul class="looping-video-multi">
+                    <li><video muted playsinline loop autoplay>
+                            <source src="../../../../src/mocks/BS0001/looping-video-multi-01.mp4" type="video/mp4">
+                            </source>
+                        </video></li>
+                    <li><img src="../../../../src/mocks/BS0001/looping-video-multi-02.png" alt=""></li>
+                    <li><video muted playsinline loop autoplay>
+                            <source src="../../../../src/mocks/BS0001/looping-video-multi-03.mp4" type="video/mp4">
+                            </source>
+                        </video></li>
+                </ul>
+            </div>
+            <div class="brand-elements">
+                <div class="brand-element__inner">
+                    <div class="brand-element__title">
+                        <span class="brand-element__title__desc">Our core elements</span>
+                        <h1 class="brand-element__title__text">Coming to life <br class="mo"> through our identity</h1>
+                    </div>
+                    <div class="our-identity__slider">
+                        <ul class="our-identity__slides swiper-wrapper">
+                            <li class="our-identity__slide our-identity__slide--logo swiper-slide">
+                                <a href="../elements/logo/index.html">
+                                    <h3 class="our-identity__item-title">Logo</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--color swiper-slide">
+                                <a href="../elements/color/index.html">
+                                    <h3 class="our-identity__item-title">Color & Gradients</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--photography swiper-slide">
+                                <a href="../elements/photography/index.html">
+                                    <h3 class="our-identity__item-title">Photography</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--design swiper-slide">
+                                <a href="../elements/design-system/index.html">
+                                    <h3 class="our-identity__item-title">Design System</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
+                                <a href="../elements/slogan/index.html">
+                                    <h3 class="our-identity__item-title">Slogan</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--typo swiper-slide">
+                                <a href="../elements/typography/index.html">
+                                    <h3 class="our-identity__item-title">Typography</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--voice swiper-slide">
+                                <a href="../elements/voice/index.html">
+                                    <h3 class="our-identity__item-title">Voice</h3>
+                                    <span class="our-identity__move-btn"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="our-identity__progress-container">
+                        <div class="our-identity__progressbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-in-action">
+        <button class="btn-circle btn-circle--close"></button>
+        <div class="pop-inner">
+            <div class="video-wrapper">
+                <video id="video-item" controls class="vjs-matrix video-js" preload="auto">
+                    <source src="../../../../src/mocks/BS0001/lg_brandfilmmaster.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- //html code -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../../../../vjs.zencdn.net_8.3.0_video.min.js"></script>
+<script>
+    function getElementIndex(element) {
+        return [].indexOf.call(element.parentNode.children, element);
+    }
+    function getSiblingsByClass(element, className) {
+        const siblings = Array.from(element.parentElement.getElementsByClassName(className));
+        const index = siblings.indexOf(element);
+        if (index !== -1) {
+            siblings.splice(index, 1);
+        }
+        return siblings;
+    }
+
+    let winWid = window.innerWidth
+    window.addEventListener('resize', function () { winWid = window.innerWidth })
+
+    const siblings = (el) => { return [...el.parentNode.children].filter((child) => child !== el) }
+    function setClass(el, currentClass) {
+        let element = el
+
+        const getFirstClass = (element) => { return element.classList[0] }
+        const getSibs = siblings(el, getFirstClass(el))
+
+        el.classList.add(currentClass)
+        getSibs.forEach(sib => {
+            sib.classList.remove(currentClass)
+        })
+    }
+
+    /*change video*/
+    function resolutionVideo() {
+        const changeVideo = document.querySelectorAll('.resolutionVideo')
+        if (changeVideo == undefined || null) return
+
+        let winSize = window.innerWidth
+        let isMobile = winSize > 768 ? false : true
+        let lastSize = ''
+
+        function setVideo() {
+            if (isMobile !== lastSize) {
+                changeVideo.forEach(video => {
+                    let currentUrl = winSize > 768 ? video.dataset.urlpc : video.dataset.urlmo
+                    video.setAttribute('src', currentUrl)
+                })
+
+                lastSize = isMobile
+            }
+        }
+
+        window.addEventListener('resize', function () {
+            winSize = window.innerWidth
+            winSize > 768 ? isMobile = false : isMobile = true
+            setVideo()
+        })
+
+        setVideo()
+    }
+
+    function brandElememtsSlider() {
+        const brandElements = document.querySelector('.our-identity__slider')
+        const swiper = new Swiper(brandElements, {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+            navigation: {
+                nextEl: '.brand-elements__controller .swiper-button-next',
+                prevEl: '.brand-elements__controller .swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.our-identity__progressbar',
+                draggable: true
+            },
+            breakpoints: {
+                1279: {
+                    slidesOffsetBefore: 0,
+                    slidesOffsetAfter: 0,
+                },
+
+            }
+        });
+    }
+    /*change video*/
+    function resolutionVideo() {
+        const changeVideo = document.querySelectorAll('.resolutionVideo')
+        if (changeVideo == undefined || null) return
+
+        let winSize = window.innerWidth
+        let isMobile = winSize > 768 ? false : true
+        let lastSize = ''
+
+        function setVideo() {
+            if (isMobile !== lastSize) {
+                changeVideo.forEach(video => {
+                    let currentUrl = winSize > 768 ? video.dataset.urlpc : video.dataset.urlmo
+                    video.setAttribute('src', currentUrl)
+                })
+
+                lastSize = isMobile
+            }
+        }
+
+        window.addEventListener('resize', function () {
+            winSize = window.innerWidth
+            winSize > 768 ? isMobile = false : isMobile = true
+            setVideo()
+        })
+
+        setVideo()
+    }
+
+    /*메인 화면 비디오*/
+    function visualVideo() {
+        let player = videojs('video-item', {
+            sources: [
+                { src: '../../src/mocks/BS0001/lg_brandfilmmaster.mp4', type: 'video/mp4' }
+            ],
+            controls: true,
+            playsinline: true,
+            muted: false,
+            preload: "metadata",
+            controlBar: {
+                remainingTimeDisplay: false,
+                pictureInPictureToggle: false,
+                fullscreenToggle: false,
+                volumePanel: false,
+                muteToggle: true
+            },
+            userActions: {
+                timeTooltip: false
+            }
+        })
+
+        const video = document.querySelector('#video-item')
+        const videoPlayBtn = document.querySelector('.btn-play')
+
+        // 볼륨 버튼을 클릭하여 볼륨 끄고 켜기 기능 추가
+        let volumeMuted = false
+        let volumeBeforeMuted
+        function popupShow(toggle) {
+            const body = document.querySelector('body')
+            const popup = document.querySelector('.popup-in-action')
+
+
+            if (toggle) {
+                popup.style.display = "block"
+                body.classList.add('isPopupOpen')
+                player.play(); // 일시 정지된 경우 재생
+            } else {
+                popup.style.display = 'none'
+                body.classList.remove('isPopupOpen')
+                video.currentTime = 0;
+                player.pause(); // 재생 중인 경우 일시 정지
+            }
+        }
+
+        function videoMobileTouch() {
+            player.on('touchstart', function () {
+                if (player.paused()) {
+                    player.play(); // 일시 정지된 경우 재생
+                } else {
+                    player.pause(); // 재생 중인 경우 일시 정지
+                }
+            });
+        }
+
+
+        videoPlayBtn.addEventListener('click', () => {
+            popupShow(true) //팝업 열림
+        })
+
+        function popupInit() {
+            const btnClose = document.querySelector('.btn-circle--close')
+            btnClose.addEventListener('click', () => popupShow(false))
+        }
+
+        popupInit()
+        videoMobileTouch()
+
+    }
+
+    function emotionallyDesign() {
+        const headlines = document.querySelectorAll('.imotionally-design__headline li')
+
+        headlines.forEach((item, idx) => {
+            item.addEventListener('mouseenter', function () {
+                setClass(item, 'active')
+                item.classList.add('active')
+            })
+        })
+    }
+
+    const handleScroll = (element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop <= windowHeight * 0.7) {
+            element.classList.add('animated');
+        } else {
+            element.classList.remove('animated');
+        }
+    };
+
+    function slideUpAni() {
+        const targets = document.querySelectorAll('.addMotion .imotionally-design__imgwrap li')
+
+        window.addEventListener('scroll', function () {
+
+            targets.forEach(el => {
+                handleScroll(el)
+            })
+
+        })
+
+    }
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+        resolutionVideo()
+
+        visualVideo()
+        emotionallyDesign()
+        brandElememtsSlider()
+        slideUpAni()
+    })
+
+</script>
+<!-- [//code component area end] -->

@@ -1406,7 +1406,9 @@
                 cursor: pointer;
                 padding: 0px
             }
+            .brand-contents a,
             .brand-contents a:hover {text-decoration: none;}
+
             .video-only-pc {display: block;}
             .video-only-mo {display: none;}
 
@@ -1758,6 +1760,7 @@
                 max-width: 1680px;
             }
             .our-identity__slider { margin-top: 48px;}
+            .our-identity__slides {height: auto;}
             .our-identity__slide {
                 position: relative;
                 width: 830px;
@@ -2281,6 +2284,13 @@
                     height: 64px;
                 }
                 .brand-visual-film::after {
+                    display: block;
+                }
+                .video-only-pc {
+                    display: none;
+                }
+
+                .video-only-mo {
                     display: block;
                 }
                 .brand-story-content {
