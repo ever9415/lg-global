@@ -1,0 +1,1514 @@
+<!-- [code component area start] -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<style>
+    /* Common */
+    body {
+        overflow-x: hidden;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    li {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    dl,
+    dt,
+    dd {
+        margin: 0px;
+    }
+
+    figure,
+    figcaption {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .brand-container,
+    .brand-container * {
+        font-family: LGEI Text;
+        color: #262626;
+    }
+
+    .brand-container button {
+        cursor: pointer;
+        padding: 0px
+    }
+
+    .brand-contents a,
+    .brand-contents a:hover {
+        text-decoration: none;
+    }
+
+
+    picture img {
+        display: block;
+        width: 100%;
+        height: auto;
+        font-size: 0;
+    }
+
+    /*Common visual*/
+    .brand-contents .visual__top {
+        height: 100vh;
+        background-size: cover;
+        position: relative;
+        background: no-repeat center;
+        background-size: cover;
+    }
+
+    .brand-contents #visual-photography.visual__top {
+        background-image: url(../../../../../src/mocks/BS0005/brand-elements-photography-d.png);
+    }
+
+
+    /*download assets*/
+    .brand-contents .visual-innner {
+        height: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
+    }
+
+    .brand-contents .download_assets {
+        position: absolute;
+        bottom: 50px;
+        left: 40px;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        padding: 9px 45px 9px 9px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .brand-contents .download_assets__thumb {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+
+    .brand-contents .download_assets__title {
+        color: #fff;
+        font-size: 15px;
+        padding-left: 21px;
+        box-sizing: border-box;
+        width: 180px;
+    }
+
+    .brand-contents .download_assets__title b {
+        display: block;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .brand-contents .download_assets__btn {
+        position: absolute;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid #cbc8c24d;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: no-repeat center url(../../../../../src/mocks/layout/icon_download_btn.svg);
+        background-size: 17px auto;
+    }
+
+    /*랜딩비주얼 스크롤다운 버튼*/
+    .brand-contents .landing-visual__scrolldown {
+        position: absolute;
+        bottom: 64px;
+        left: 0px;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .brand-contents .landing-visual__scrolldown__btn {
+        width: 68px;
+        height: 96px;
+        text-indent: -9999px;
+        overflow: hidden;
+        border-width: 0px;
+        cursor: pointer;
+        background: url(../../../../../src/mocks/layout/main_visual_scroll_down.svg) no-repeat center center;
+        background-size: cover;
+        transform: translateY(0vh);
+        animation-duration: 1s;
+        animation-name: sd-dounce;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes sd-dounce {
+        from {
+            transform: translateY(-0.5vh);
+        }
+
+        to {
+            transform: translateY(1.5vh);
+        }
+    }
+
+    /*Common title*/
+    .brand-contents .brand__header {
+        margin-bottom: 48px;
+    }
+
+    .brand-contents .brand__header-title {
+        text-align: center;
+        color: #262626;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.25;
+        letter-spacing: 0.5px;
+        margin: 96px 0 24px;
+    }
+
+    .brand-contents .brand__header-title+.brand__header-description {
+        text-align: center;
+        color: #4a4946;
+        font-size: 20px;
+        line-height: 1.4;
+        letter-spacing: 0.08px;
+    }
+
+    .brand-contents .brand__content-inner {
+        box-sizing: border-box;
+        margin: 0 auto 96px;
+        max-width: 1440px;
+        background-color: #f6f3eb;
+    }
+
+    /*Common container*/
+    .brand-contents #contents {
+        background-color: #f6f3eb;
+    }
+
+    .brand-contents .percent-v-box {
+        position: relative;
+        width: 100%;
+        border-radius: 1.56vw;
+        padding-bottom: 49.4%;
+        overflow: hidden;
+    }
+
+    .brand-contents .percent-v-box img,
+    .brand-contents .percent-v-box picture,
+    .brand-contents .percent-v-box video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+
+    .brand-contents .v-box-bottom {
+        position: absolute;
+        bottom: 38px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        color: #262626;
+    }
+
+    .brand-contents .v-box-bottom.wt {
+        color: #fff;
+    }
+
+    .brand-contents .v-box-bottom p.tit {
+        color: inherit;
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .brand-contents .v-box-bottom span.desc {
+        color: inherit;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /*tab*/
+    .brand-contents .tab-menu__container {
+        text-align: center;
+        margin-top: calc(96px + 8px);
+    }
+
+    .brand-contents .brand__header+.brand-contents .tab-menu__container {
+        margin-top: calc(48px + 9px);
+    }
+
+    .brand-contents .tab-menu__list {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 49px;
+    }
+
+    .brand-contents .tab-menu__list::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        background-color: #f0ece4;
+        border-radius: 60px;
+    }
+
+    .brand-contents .tab-menu__btn {
+        z-index: 2;
+        width: 200px;
+        height: 100%;
+        background-color: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        text-decoration: none;
+        color: #262626;
+    }
+
+    .brand-contents .tab-menu__btn--active {
+        font-weight: 600;
+    }
+
+    .brand-contents .tab-menu__bg {
+        z-index: 1;
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        border-radius: 60px;
+        left: 0;
+        background-color: #fff;
+        transition: left 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .brand-contents .tab-container {
+        margin-top: calc(48px + 8px);
+    }
+
+    .brand-contents .tab-container__content {
+        display: none;
+    }
+
+    .brand-contents .tab-container__content--active {
+        display: block;
+    }
+
+
+
+    /*brand elements 슬라이드*/
+    .brand-contents .brand-elements {
+        background-color: #e6e1d6;
+        padding: 78px 0;
+        overflow: hidden;
+    }
+
+    .brand-contents .brand-element__inner {
+        position: relative;
+        margin: 0px auto;
+        max-width: 1440px;
+    }
+
+    .brand-contents .brand-elements__header-title {
+        margin: 0 auto;
+        font-size: 48px;
+        line-height: 1.16;
+        font-weight: 700;
+    }
+
+    .brand-contents .brand-elements__header-title__sub {
+        display: block;
+        font-weight: inherit;
+    }
+
+    .brand-contents .brand-elements__controller {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        display: flex;
+        gap: 7px;
+    }
+
+    .brand-contents .brand-elements__controller__btn {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        margin: 0;
+        display: block;
+        width: 52px;
+        height: 52px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1.2px solid rgba(74, 73, 70, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 50%;
+        opacity: 1;
+    }
+
+    .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
+    .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        background: no-repeat center url(../../../../../src/mocks/layout/icon-swiper-button-arrow.svg);
+        background-position: center;
+        background-size: 100% auto;
+    }
+
+    .brand-contents .brand-elements__controller__btn.swiper-button-prev::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .brand-contents .our-identity__slider {
+        margin-top: 48px;
+    }
+
+    .brand-contents .our-identity__slide {
+        position: relative;
+        width: 590px;
+        height: 360px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+        z-index: 1;
+        background-color: #f6f3eb;
+    }
+
+    .brand-contents .our-identity__slide a {
+        padding: 24px;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .brand-contents .our-identity__slide::before,
+    .brand-contents .our-identity__slide::after {
+        content: "";
+        background: no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .brand-contents .our-identity__slide::before {
+        z-index: -1;
+    }
+
+    .brand-contents .our-identity__slide::after {
+        z-index: -2;
+        opacity: 0;
+    }
+
+    .brand-contents .our-identity__slide:hover::before {
+        opacity: 0;
+    }
+
+    .brand-contents .our-identity__slide:hover::after {
+        opacity: 1;
+    }
+
+    .brand-contents .our-identity__slide--photography::before {
+        width: 52%;
+        height: 62%;
+        border-radius: 30px;
+        transform-origin: center center;
+        /* 변환 중심을 가운데로 설정 */
+        transition-property: transform;
+    }
+
+    .brand-contents .our-identity__slide--photography:hover:before {
+        /* width: 100%;
+                height: 100%; */
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    .brand-contents .our-identity__slide--photography::after {
+        display: none;
+    }
+
+    .brand-contents .our-identity__slide--logo::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_logo.png);
+    }
+
+    .brand-contents .our-identity__slide--logo::after {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_logo-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--color::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_color.png);
+    }
+
+    .brand-contents .our-identity__slide--color::after {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_color-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--photography::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_photo.png);
+    }
+
+    .brand-contents .our-identity__slide--design::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_design.png);
+    }
+
+    .brand-contents .our-identity__slide--design::after {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_design-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--tagline::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_slogan.png);
+    }
+
+    .brand-contents .our-identity__slide--tagline::after {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_slogan-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--typo::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_typo.png);
+    }
+
+    .brand-contents .our-identity__slide--typo::after {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_typo-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--voice::before {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_voice.png);
+    }
+
+    .brand-contents .our-identity__slide--voice::after {
+        background-image: url(../../../../../src/mocks/layout/brand_slide_voice_hover.png);
+    }
+
+    .brand-contents .our-identity__item-title {
+        font-size: 24px;
+        line-height: 1.3;
+        color: #222;
+        transition: color 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .brand-contents .our-identity__slide:hover .our-identity__item-title {
+        color: #fff;
+    }
+
+    .brand-contents .our-identity__progressbar {
+        margin-top: 48px;
+        width: 100%;
+        height: 2px;
+        background-color: #00000033;
+    }
+
+    .brand-contents .our-identity__progressbar .swiper-scrollbar-drag {
+        background: #000;
+    }
+
+    .brand-contents .our-identity__move-btn {
+        position: absolute;
+        left: 26px;
+        bottom: 26px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        backdrop-filter: blur(33px);
+        background: no-repeat center;
+        border: 1px solid #ffffffb2;
+        border-radius: 50%;
+        background-image: url(../../../../../src/mocks/layout/btn_move_to_arrow_wt.svg);
+        background-size: 22px auto;
+        background-color: #fff;
+        transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .brand-contents .our-identity__slide:hover .our-identity__move-btn {
+        background-color: #00000099;
+        border-color: #cbc8c24d;
+        background-image: url(../../../../../src/mocks/layout/btn_move_to_arrow.svg);
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /*contents -photo ------*/
+
+    /*photography index list*/
+    .photography__list {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3,
+                1fr);
+        /* Create three equal-width columns */
+        gap: 20px;
+    }
+
+    .photography__item {
+        position: relative;
+        border-radius: 20px;
+        padding-bottom: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        background: no-repeat center;
+        background-size: cover;
+    }
+
+    .photography__item.photography__item--everyday {
+        background-image: url(../../../../../src/mocks/BS0005/brand-elements-photography-everyday-life-01-d.png);
+    }
+
+    .photography__item.photography__item--energy {
+        background-image: url(../../../../../src/mocks/BS0005/brand-elements-photography-energy-passion-and-interest-02-d.png);
+    }
+
+    .photography__item.photography__item--products {
+        background-image: url(../../../../../src/mocks/BS0005/brand-elements-photography-products-03-d.png);
+    }
+
+    .photography__item dl {
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 32px;
+        background: #0000001a;
+        backdrop-filter: blur(67px);
+        -webkit-backdrop-filter: blur(67px);
+        color: #fff;
+        border-radius: 0 0 20px 20px;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .photography__item dl dt {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 28px;
+        line-height: 1.3;
+        color: inherit;
+    }
+
+    .photography__item__mobtn {
+        position: relative;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        width: 16px;
+        height: 16px;
+        display: none;
+    }
+
+    .photography__item__mobtn::before,
+    .photography__item__mobtn::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 12px;
+        background-color: #fff;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .photography__item__mobtn::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+        transition: 0.4s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .photography__item.photography__item--hover .photography__item__mobtn::before {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .photography__item.photography__item--hover .photography__item__mobtn::after {
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+
+    .photography__item dl dd {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.4;
+        /* height: 90px; */
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.3s cubic-bezier(0.56, 0, 0.28, 1);
+        color: inherit;
+    }
+
+    .photography__item.photography__item--hover dd {
+        margin-top: 48px;
+        height: 90px;
+        opacity: 1;
+    }
+
+    /*photography grid*/
+    .photography__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .photography__grid__item {
+        max-height: 405px;
+        height: 21.09vw;
+        background: no-repeat center;
+        background-size: cover;
+    }
+
+    .photography__grid__item:nth-child(1) {
+        width: calc(20% - 15px);
+    }
+
+    .photography__grid__item:nth-child(2) {
+        width: calc(40% - 15px);
+    }
+
+    .photography__grid__item:nth-child(3) {
+        width: calc(20% - 15px);
+    }
+
+    .photography__grid__item:nth-child(4) {
+        width: calc(20% - 15px);
+    }
+
+    .photography__grid__item:nth-child(5) {
+        width: calc(12% - 15px);
+    }
+
+    .photography__grid__item:nth-child(6) {
+        width: calc(35% - 15px);
+    }
+
+    .photography__grid__item:nth-child(7) {
+        width: calc(27% - 15px);
+    }
+
+    .photography__grid__item:nth-child(8) {
+        width: calc(26% - 15px);
+    }
+
+    .photography__grid__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Tablet */
+    @media (max-width: 1500px) {
+
+        /*공통*/
+        .brand-contents .brand__header {
+            margin-bottom: 46px;
+        }
+
+        .brand-contents .brand__header-title {
+            font-size: 36px;
+            margin: 64px 0 16px;
+        }
+
+        .brand-contents .brand__header-title+.brand__header-description {
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        .brand-contents .brand__content-inner {
+            margin-top: 0;
+            padding: 0 24px 40px;
+        }
+
+        .brand-contents .download_assets {
+            display: none;
+        }
+
+        /*tab*/
+        .brand-contents .tab-menu__list {
+            height: 40px;
+        }
+
+        .brand-contents .tab-menu__btn {
+            width: 162px;
+            font-size: 14px;
+        }
+
+        .brand-contents .tab-menu__bg {
+            width: 162px;
+        }
+
+        .brand-contents .tab-menu__container {
+            margin-top: calc(32px + 8px);
+        }
+
+        .brand-contents .tab-menu__container {
+            text-align: center;
+            margin-top: calc(64px + 8px);
+        }
+
+        .brand-contents .brand__header+.brand-contents .tab-menu__container {
+            margin-top: calc(40px + 8px);
+        }
+
+
+
+        /*Common container*/
+        .brand-contents .v-box-bottom {
+            bottom: 20px;
+        }
+
+        .brand-contents .v-box-bottom p.tit {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .brand-contents .v-box-bottom span.desc {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+
+        /*brand elements 슬라이드*/
+        .brand-contents .brand-elements {
+            padding: 32px 24px 40px;
+        }
+
+        .brand-contents .brand-elements__header-title {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        .brand-contents .brand-elements__slider {
+            margin: 24px -20px 0;
+        }
+
+        .brand-contents .brand-elements__controller {
+            display: none;
+        }
+
+        .brand-contents .our-identity__slide {
+            width: 291px;
+            height: 291px;
+            border-radius: 20px;
+        }
+
+        .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
+            display: none;
+        }
+
+        .brand-contents .our-identity__slide:hover::before {
+            opacity: 1;
+        }
+
+        .brand-contents .our-identity__slide:hover .our-identity__item-title {
+            color: #262626;
+        }
+
+        .brand-contents .our-identity__slide:hover::before {
+            opacity: 1;
+        }
+
+        .brand-contents .our-identity__slide--logo::before {
+            background-image: url(../../../../../src/mocks/layout/brand_slide_logo-m.png);
+        }
+
+        .brand-contents .our-identity__slide--color::before {
+            background-image: url(../../../../../src/mocks/layout/brand_slide_color-m.png);
+        }
+
+        .brand-contents .our-identity__slide--design::before {
+            background-image: url(../../../../../src/mocks/layout/brand_slide_design-m.png);
+        }
+
+        .brand-contents .our-identity__slide--tagline::before {
+            background-image: url(../../../../../src/mocks/layout/brand_slide_slogan-m.png);
+        }
+
+        .brand-contents .our-identity__slide--typo::before {
+            background-image: url(../../../../../src/mocks/layout/brand_slide_typo-m.png);
+        }
+
+        .brand-contents .our-identity__slide--voice::before {
+            background-image: url(../../../../../src/mocks/layout/brand_slide_voice-m.png);
+        }
+
+        .brand-contents .our-identity__item-title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .brand-contents .our-identity__progressbar {
+            margin-top: 24px;
+            height: 1px;
+        }
+
+        .brand-contents .our-identity__move-btn {
+            width: 48px;
+            height: 48px;
+            background-size: 24px auto;
+            left: 16px;
+            bottom: 16px;
+        }
+
+        .brand-contents .our-identity__slider {
+            margin-top: 32px;
+        }
+
+        .brand-contents .our-identity__slide--photography::before {
+            width: 68%;
+            height: 48%;
+            border-radius: 14px;
+        }
+
+        .brand-contents .our-identity__slide--photography:hover:before {
+            transform: translate(-50%, -50%) scale(2.2);
+        }
+
+
+        /*contents -photo ------*/
+        /*photography index list*/
+        .photography__list {
+            gap: 9px;
+        }
+
+        .photography__item {
+            border-radius: 9px;
+            position: relative;
+        }
+
+        .photography__item dl {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            padding: 0;
+            border-radius: 0 0 9px 9px;
+            bottom: 0;
+            left: 0;
+            transition: height 0.3s cubic-bezier(0.56, 0, 0.28, 1);
+        }
+
+        .photography__item dl dt {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            padding: 14px;
+            font-size: 14px;
+        }
+
+        .photography__item__mobtn {
+            display: block;
+        }
+
+        .photography__item dl dd {
+            margin: 0;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            font-size: 16px;
+            padding: 16px;
+            transition: opacity 0.3s cubic-bezier(0.56, 0, 0.28, 1);
+        }
+
+        .photography__item.photography__item--hover dl {
+            height: 100%;
+        }
+
+        .photography__item.photography__item--hover dl dd {
+            margin-top: 0;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .photography__grid {
+            gap: 6px;
+            border-radius: 13px;
+        }
+
+        .photography__grid__item:nth-child(1) {
+            width: calc(20% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(2) {
+            width: calc(40% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(3) {
+            width: calc(20% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(4) {
+            width: calc(20% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(5) {
+            width: calc(12% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(6) {
+            width: calc(35% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(7) {
+            width: calc(27% - 4.5px);
+        }
+
+        .photography__grid__item:nth-child(8) {
+            width: calc(26% - 4.5px);
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+
+        /*Common visual*/
+        .brand-contents .visual__top {
+            height: 117.33vw;
+        }
+
+        .brand-contents #visual-logo.visual__top {
+            background-image: url(../../../../../src/mocks/BS0002/lg_electronics_logo_visual_background-m.png);
+        }
+
+        /*download assets*/
+        .brand-contents .download_assets {
+            display: none;
+        }
+
+        /*랜딩비주얼 스크롤다운 버튼*/
+        .brand-contents .landing-visual__scrolldown {
+            display: none;
+        }
+
+
+        /*공통*/
+        .brand-contents .brand__header {
+            margin-bottom: 32px;
+        }
+
+        .brand-contents .brand__header-title {
+            margin: 64px 0 16px;
+            text-align: center;
+        }
+
+        .brand-contents .brand__header-title+.brand__header-description {
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        .brand-contents .brand__content-inner {
+            padding: 0 19px;
+        }
+
+        .brand-contents .brand__header-description br:not(.mo) {
+            display: none;
+        }
+
+        /*contents ------*/
+        .brand-contents .percent-v-box {
+            border-radius: 10px;
+            padding-bottom: 100%;
+        }
+
+        /*Common container*/
+        .brand-contents .v-box-bottom {
+            bottom: 16px;
+        }
+
+        /*tab*/
+        .brand-contents .tab-menu__container {
+            text-align: center;
+        }
+
+        .brand-contents .tab-menu__list {
+            width: 100%;
+            height: 40px;
+        }
+
+        .brand-contents .tab-menu__list::before {
+            width: calc(100% + 16px);
+            height: calc(100% + 16px);
+        }
+
+        .brand-contents .tab-menu__btn {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .brand-contents .tab-container {
+            margin-top: calc(32px + 8px);
+        }
+
+        .brand-contents .tab-menu__container {
+            text-align: center;
+            margin-top: calc(64px + 8px);
+        }
+
+        .brand-contents .brand__header+.brand-contents .tab-menu__container {
+            margin-top: calc(32px + 8px);
+        }
+
+
+        /*contents -photo ------*/
+        /*photography index list*/
+        .photography__list {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+        }
+
+        .photography__item {
+            border-radius: 10px;
+        }
+
+        .photography__item dl {
+            height: 60px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .photography__item dl dt {
+            font-size: 16px;
+            height: 60px;
+        }
+
+        .photography__item dl dd {
+            font-size: 16px;
+        }
+
+        .photography__item__mobtn {
+            width: 24px;
+            height: 24px;
+        }
+
+        .photography__item__mobtn::before,
+        .photography__item__mobtn::after {
+            width: 1px;
+            height: 18px;
+        }
+
+        /*photography grid*/
+        .photography__grid {
+            gap: 6px;
+            border-radius: 10px;
+        }
+
+        .photography__grid__item {
+            height: 44vw;
+        }
+
+        .photography__grid__item:nth-child(1) {
+            width: calc(45% - 3px);
+            order: 1;
+        }
+
+        .photography__grid__item:nth-child(2) {
+            width: calc(55% - 3px);
+            order: 2;
+        }
+
+        .photography__grid__item:nth-child(3) {
+            width: calc(30% - 3px);
+            order: 3;
+        }
+
+        .photography__grid__item:nth-child(6) {
+            width: calc(70% - 3px);
+            order: 4;
+        }
+
+        .photography__grid__item:nth-child(4) {
+            width: calc(45% - 3px);
+            order: 5;
+        }
+
+        .photography__grid__item:nth-child(7) {
+            width: calc(55% - 3px);
+            order: 6;
+        }
+
+        .photography__grid__item:nth-child(5),
+        .photography__grid__item:nth-child(8) {
+            display: none;
+        }
+    }
+</style>
+<!-- html code -->
+<div class="brand-contents">
+    <div id="contents">
+        <div id="visual-photography" class="visual__top">
+            <div class="landing-visual__scrolldown">
+                <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
+            </div>
+        </div>
+        <div class="brand__content-inner">
+            <div class="brand__header">
+                <h2 class="brand__header-title">Photography</h2>
+                <p class="brand__header-description">
+                    We have three different types of photography, each with their own clear role to play. <br>
+                    All of our photography is unified by clear principles:<br>
+                    authenticity, positivity, warmth, breathing space, diversity and attention to detail.
+                </p>
+            </div>
+            <ul class="photography__list">
+                <li class="photography__item photography__item--everyday">
+                    <dl>
+                        <dt>
+                            Everyday Life
+                            <button class="photography__item__mobtn"></button>
+                        </dt>
+                        <dd>
+                            Imagery should capture real, <br>
+                            spontaneous moments so it feels <br>
+                            warm, positive and relatable.
+                        </dd>
+                    </dl>
+                </li>
+                <li class="photography__item photography__item--energy">
+                    <dl>
+                        <dt>
+                            Energy, Passion and Interests
+                            <button class="photography__item__mobtn"></button>
+                        </dt>
+                        <dd>
+                            We capture and celebrate the <br>
+                            energy and attitude of people <br>
+                            and their passions.
+                        </dd>
+                    </dl>
+                </li>
+                <li class="photography__item photography__item--products">
+                    <dl>
+                        <dt>
+                            Products
+                            <button class="photography__item__mobtn"></button>
+                        </dt>
+                        <dd>
+                            We capture the craft, detail and the quality <br>
+                            of our products. Always balancing warmth and <br>
+                            innovation in a way that feels uniquely LG.
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="brand__header">
+                <h2 class="brand__header-title">Uniquely LG</h2>
+                <p class="brand__header-description">
+                    Our imagery should feel warm, positive and relatable. <br>
+                    Always balancing warmth and innovation in a way that feels uniquely LG.
+                </p>
+            </div>
+            <ul class="photography__grid photography__grid--everyday">
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_01.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_02.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_03.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_04.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_05.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_06.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_07.png"
+                        alt=""></li>
+                <li class="photography__grid__item"><img src="../../../../../src/mocks/BS0005/photography__grid__item_08.png"
+                        alt=""></li>
+            </ul>
+        </div>
+        <div class="brand-elements">
+            <div class="brand-element__inner">
+                <h2 class="brand-elements__header-title">
+                    What’s next?
+                    <span class="brand-elements__header-title__sub">Explore brand elements</span>
+                </h2>
+                <div class="brand-elements__controller">
+                    <button class="brand-elements__controller__btn swiper-button-prev"></button>
+                    <button class="brand-elements__controller__btn swiper-button-next"></button>
+                </div>
+                <div class="our-identity__slider">
+                    <ul class="our-identity__slides swiper-wrapper">
+                        <li class="our-identity__slide our-identity__slide--logo swiper-slide">
+                            <a href="../logo/index.html">
+                                <h3 class="our-identity__item-title">Logo</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--color swiper-slide">
+                            <a href="../color/index.html">
+                                <h3 class="our-identity__item-title">Color & Gradients</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
+                            <a href="../slogan/index.html">
+                                <h3 class="our-identity__item-title">Slogan</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--photography swiper-slide">
+                            <a href="../photography/index.html">
+                                <h3 class="our-identity__item-title">Photography</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--design swiper-slide">
+                            <a href="../design-system/index.html">
+                                <h3 class="our-identity__item-title">Design System</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+
+                        <li class="our-identity__slide our-identity__slide--typo swiper-slide">
+                            <a href="../typography/index.html">
+                                <h3 class="our-identity__item-title">Typography</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--voice swiper-slide">
+                            <a href="../voice/index.html">
+                                <h3 class="our-identity__item-title">Voice</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="our-identity__progress-container">
+                    <div class="our-identity__progressbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //html code -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    function getElementIndex(element) {
+        return [].indexOf.call(element.parentNode.children, element);
+    }
+    function getSiblingsByClass(element, className) {
+        const siblings = Array.from(element.parentElement.getElementsByClassName(className));
+        const index = siblings.indexOf(element);
+        if (index !== -1) {
+            siblings.splice(index, 1);
+        }
+        return siblings;
+    }
+
+    let winWid = window.innerWidth
+    window.addEventListener('resize', function () { winWid = window.innerWidth })
+
+    const siblings = (el) => { return [...el.parentNode.children].filter((child) => child !== el) }
+    function setClass(el, currentClass) {
+        let element = el
+
+        const getFirstClass = (element) => { return element.classList[0] }
+        const getSibs = siblings(el, getFirstClass(el))
+
+        el.classList.add(currentClass)
+        getSibs.forEach(sib => {
+            sib.classList.remove(currentClass)
+        })
+    }
+
+    /*tab*/
+    function tabFunc() {
+        const tabIndexAll = document.querySelectorAll('.tab-menu__list')
+        const bgAll = document.querySelectorAll('span.tab-menu__bg')
+        const tabCont = document.querySelectorAll('.tab-container')
+
+        let activeVideo = document.querySelectorAll('.tab-container__content--active video')
+
+        tabIndexAll.forEach((tab) => {
+            const buttons = tab.querySelectorAll('.tab-menu__btn')
+
+            buttons.forEach((btn, idx) => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    let targetTag = this.parentElement.dataset.tab
+                    let tabContainer = document.querySelector(`.tab-container[data-tab="${targetTag}"]`)
+
+                    let tabId = this.getAttribute('href')
+                    let tabTarget = document.querySelector(tabId)
+                    let tabBg = this.parentElement.querySelector('span.tab-menu__bg')
+
+                    setClass(tabTarget, 'tab-container__content--active')
+                    setClass(this, 'tab-menu__btn--active')
+
+                    if (tabTarget.querySelector('video') != null) {
+                        toggleVideo(tabTarget.querySelector('video'))
+                    }
+
+
+                    setBgPosX(this, tabBg)
+                })
+            })
+        })
+
+        function toggleVideo(targetVideo) {
+            targetVideo.currentTime = 0;
+
+            const tabContainer = targetVideo.closest('.tab-container');
+            const siblingVideos = tabContainer.querySelectorAll('video:not(.target)');
+
+            siblingVideos.forEach((video) => {
+                video.pause();
+            });
+
+            targetVideo.play();
+        }
+
+        function setBgPosX(btn, target) {
+            let btns = Array.from(btn.parentElement.querySelectorAll('.tab-menu__btn'));
+            let idx = btns.indexOf(btn);
+
+            let previousButtons = btns.slice(0, idx);
+
+            let totalWidth = previousButtons.reduce((total, currentButton) => {
+                return total + currentButton.offsetWidth;
+            }, 0);
+
+            target.style.left = `${totalWidth}px`
+        }
+
+        function setBgWidth() {
+            tabIndexAll.forEach(tab => {
+                const tarWidth = tab.querySelector('.tab-menu__btn--active').offsetWidth
+                const bg = tab.querySelector('.tab-menu__bg')
+
+                bg.style.width = `${tarWidth}px`
+            })
+        }
+
+        setBgWidth()
+        activeVideo.forEach(el => toggleVideo(el))
+
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth < 769 || window.innerWidth > 2559) { setBgWidth() }
+            else { bgAll.forEach(bgs => bgs.style.width = '') }
+
+            tabIndexAll.forEach((tab) => {
+                const tabBg = tab.querySelector('span.tab-menu__bg')
+                const btn = tab.querySelector('.tab-menu__btn--active')
+                setBgPosX(btn, tabBg)
+            })
+        })
+    }
+    function brandElememtsSlider() {
+        const brandElements = document.querySelector('.our-identity__slider')
+        const swiper = new Swiper(brandElements, {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+            navigation: {
+                nextEl: '.brand-elements__controller .swiper-button-next',
+                prevEl: '.brand-elements__controller .swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.our-identity__progressbar',
+                draggable: true
+            },
+            breakpoints: {
+                1279: {
+                    slidesOffsetBefore: 0,
+                    slidesOffsetAfter: 0,
+                },
+
+            }
+        });
+    }
+
+    function photographyEvent() {
+        const hoverTarget = document.querySelectorAll('.photography__item')
+
+        const onEnter = (event) => {
+            event.target.classList.add('photography__item--hover')
+        }
+
+        const onLeave = (event) => {
+            event.target.classList.remove('photography__item--hover')
+        }
+
+        const onClick = (event) => {
+            const eventTarget = event.target.closest('.photography__item')
+
+            if (eventTarget.classList.contains('photography__item--hover')) {
+                eventTarget.classList.remove('photography__item--hover')
+            } else {
+                eventTarget.classList.add('photography__item--hover')
+            }
+        }
+
+        const updateEventBindings = () => {
+            if (window.innerWidth <= 1024) {
+                hoverTarget.forEach(el => {
+                    let btn = el.querySelector('dl')
+
+                    el.classList.remove('photography__item--hover')
+
+                    el.removeEventListener('mouseenter', onEnter)
+                    el.removeEventListener('mouseleave', onLeave)
+                    btn.addEventListener('click', onClick)
+                });
+            } else {
+                hoverTarget.forEach(el => {
+                    let btn = el.querySelector('dl')
+
+                    el.classList.remove('photography__item--hover')
+
+                    btn.removeEventListener('click', onClick)
+                    el.addEventListener('mouseenter', onEnter)
+                    el.addEventListener('mouseleave', onLeave)
+                });
+            }
+        }
+
+        // 초기 로딩 시 이벤트 바인딩 업데이트
+        updateEventBindings()
+
+        // 창 크기가 변경될 때마다 이벤트 바인딩 업데이트
+        window.addEventListener('resize', updateEventBindings)
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        tabFunc() //tab content 
+        brandElememtsSlider() //what's next slide
+        photographyEvent()
+    })
+
+</script>
+<!-- [//code component area end] -->
