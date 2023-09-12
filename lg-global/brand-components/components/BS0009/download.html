@@ -1375,7 +1375,7 @@
             <div class="container responsivegrid">
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="../../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
+        <link rel="stylesheet" href="../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
         <style>
             /* Common */
             :root {
@@ -1479,7 +1479,7 @@
                 backdrop-filter: blur(10px);
                 -webkit-backdrop-filter: blur(10px);
                 border-radius: 50%;
-                opacity: 1;
+                /* opacity: 1; */
             }
             .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
             .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
@@ -1649,9 +1649,20 @@
             /*contents -download ------*/
             .brand-contents .assets-download-tit {
                 font-size: 56px;
+                /* margin-bottom: 64px; */
+                text-align: center;
+                font-weight: 550;
+                font-family: LGEI Headline;
+                line-height: 1.2;
+            }
+            .title-exp {
+                color: #646464;
+                font-size: 20px;
+                line-height: 1.37;
+            }
+            .brand-contents .assets-download-tit + .title-exp {
                 margin-bottom: 64px;
                 text-align: center;
-                font-weight: 600;
             }
 
             .brand-contents .download-itembox {
@@ -1669,7 +1680,6 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                gap: 30px;
             }
             .brand-contents .download-itembox .download-itembox__head .img-wrap {
                 display: block;
@@ -1692,10 +1702,12 @@
             }
             .brand-contents .download-itembox .download-itembox__head h3 {
                 font-size: 48px;
-                font-weight: 600;
+                font-weight: 550;
                 line-height: 1.16;
-                margin: 0;
+                margin: 0 0 10px;
+                font-family: LGEI Headline;
             }
+
 
             .accordion-content {
                 position: relative;
@@ -1722,6 +1734,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
+                margin-top: 30px;
             }
 
             .brand-contents .btn-download {
@@ -1757,13 +1770,18 @@
                 width: 12px;
                 height: 12px;
                 background-image: url(../../src/mocks/BS0009/icon-arrow-bottom.svg);
+                transition: transform .32s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .brand-contents .btn-download.btn-download--accordion.active::before {
+                transform: translateY(-50%) rotate(180deg);
             }
 
             .brand-contents .downlist-wrap {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 32px 20px;
-                margin-left: 350px;
+                gap: 32px 16px;
+                max-width: 848px;
+                margin: 0 auto;
                 padding: 48px 0 58px;
             }
 
@@ -1910,10 +1928,13 @@
                     height: 39vw;
                     border-radius: 16px;
                 }
+                .brand-contents .title-exp {
+                    font-size: 16px;
+                }
                 .brand-contents .download-itembox .download-itembox__head h3 {
-                    margin-top: 16px;
+                    margin-top: 24px;
                     font-size: 28px;
-                    font-weight: 600;
+                    font-weight: 550;
                 }
                 .brand-contents .btn-wrap {
                     margin-top: 24px;
@@ -1944,10 +1965,12 @@
             <div id="contents">
                 <div class="brand__content-inner">
                     <h2 class="assets-download-tit">Brand Resources<br class="mo"> and Guidelines</h2>
+                    <p class="title-exp">Download LG most commonly requested assets here.</p>
                     <div class="download-itembox">
                         <div class="download-itembox__head">
                             <span class="img-wrap add-border"><img src="../../src/mocks/BS0009/download-assets-item-thumb--logo.png" alt=""></span>
-                            <h3>Logo</h3>
+                            <h3>Our Logo</h3>
+                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="logo">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
@@ -2005,6 +2028,7 @@
                         <div class="download-itembox__head">
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--slogan.png" alt=""></span>
                             <h3>Slogan</h3>
+                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="slogan">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
@@ -2056,6 +2080,7 @@
                         <div class="download-itembox__head">
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--colors.png" alt=""></span>
                             <h3>Gradient</h3>
+                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="gradient">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
@@ -2095,6 +2120,7 @@
                         <div class="download-itembox__head">
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--font.png" alt=""></span>
                             <h3>Font</h3>
+                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="font">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
