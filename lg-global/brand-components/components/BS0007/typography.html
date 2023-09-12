@@ -1679,12 +1679,13 @@
                 margin: 0 auto;
                 font-size: 44px;
                 line-height: 1.16;
-                font-weight: 400;
+                font-weight: 550;
                 font-family: LGEI Headline;
             }
             .brand-contents .brand-elements__header-title__sub {
                 display: block;
                 font-weight: inherit;
+                font-family: inherit;
             }
             .brand-contents .brand-elements__controller {
                 position: absolute;
@@ -1880,7 +1881,7 @@
             }
             /*contents ------*/
             .percent-view {
-                border-radius: 1.56vw;
+                border-radius: var(--border-radius-common);
                 position: relative;
                 padding-bottom: 49.4%;
                 overflow: hidden;
@@ -1899,7 +1900,7 @@
 
             .text-element {
                 overflow: hidden;
-                border-radius: 1.5625vw;
+                border-radius: var(--border-radius-common);
             }
             .text-element picture {
                 border-radius: inherit;
@@ -1940,7 +1941,7 @@
 
             .bring-it-to-life__slide {
                 overflow: hidden;
-                border-radius: 1.56vw;
+                border-radius: var(--border-radius-common);
             }
 
             .bring-it-to-life__slide__controller {
@@ -2121,6 +2122,23 @@
 
 
                 /*contents - typography ------*/
+                .bring-it-to-life__slide__controller {
+                    right: 16px;
+                    bottom: 16px;
+                    gap: 4px;
+                }
+                .bring-it-to-life__slide__controller > button {
+                    width: 32px;
+                    height: 32px;
+                    background-size: 14px auto;
+                }
+                .index-text {
+                    left: 16px;
+                    top: 16px;
+                    padding: 0 16px;
+                    height: 32px;
+                    font-size: 12px;
+                }
                 
             }
 
@@ -2212,17 +2230,10 @@
 
                 /*contents ------*/
                 .percent-view {
-                    border-radius: 10px;
                     padding-bottom: 100%;
-                }
-                .text-element {
-                    border-radius: 10px;
                 }
 
                 /*Bringing it to life*/
-                .bring-it-to-life__slide {
-                    border-radius: 10px;
-                }
                 .bring-it-to-life__slide__controller {
                     right: 10px;
                     bottom: 10px;
@@ -2234,11 +2245,9 @@
                 }
 
                 .index-text {
-                    left: 16px;
-                    top: 16px;
                     font-size: 12px;
-                    height: 20px;
                     padding: 0 10px;
+                    height: 30px;
                 }
 
                 .fix-text {
