@@ -1482,7 +1482,7 @@
             /*랜딩비주얼 스크롤다운 버튼*/
             .landing-visual__scrolldown {
                 position: absolute;
-                bottom: 3.7037vh;
+                bottom: 64px;
                 left: 0px;
                 width: 100%;
                 z-index: 2;
@@ -1512,16 +1512,16 @@
                 }
             }
             .brand-story-content {
-                margin: 200px 0 220px;
-                padding: 0 120px;
+                margin: 200px auto 0;
+                max-width: 1440px;
             }
             /*info text*/
             .intro-text {
                 font-family: "LG_EI_Headline";
-                margin: 120px 0 200px;
+                margin: 140px 0 200px;
                 text-align: center;
                 color: #fff;
-                font-size: 40px;
+                font-size: 38px;
                 line-height: 1.35;
                 letter-spacing: .4px;
             }
@@ -1532,6 +1532,7 @@
                 position: relative;
                 margin: 0 -120px;
                 height: 61.22vw;
+                max-height: 1179px;
             }
             .imotionally-design__headline {
                 position: absolute;
@@ -1544,6 +1545,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                max-height: 1080px;
 
             }
             .imotionally-design__headline ul {
@@ -1634,6 +1636,8 @@
                 height: 11.98vw;
                 top: 3.57%;
                 left: 6.40%;
+                max-width: 420px;
+                max-height: 229px;
             }
 
             .imotionally-design__item:nth-child(2) {
@@ -1641,6 +1645,8 @@
                 height: 9.375vw;
                 top: 13.33%;
                 left: 37.03%;
+                max-width: 320px;
+                max-height: 184px;
             }
 
             .imotionally-design__item:nth-child(3) {
@@ -1648,6 +1654,8 @@
                 height: 10.62vw;
                 top: 2.89%;
                 left: 65.49%;
+                max-width: 343px;
+                max-height: 204px;
             }
 
             .imotionally-design__item:nth-child(4) {
@@ -1655,6 +1663,8 @@
                 height: 11.56vw;
                 top: 33.47%;
                 left: 82.66%;
+                max-width: 340px;
+                max-height: 220px;
             }
 
             .imotionally-design__item:nth-child(5) {
@@ -1662,6 +1672,8 @@
                 height: 13.854vw;
                 top: 50.64%;
                 left: 1.46%;
+                max-width: 266px;
+                max-height: 266px;
             }
 
             .imotionally-design__item:nth-child(6) {
@@ -1669,6 +1681,8 @@
                 height: 13.65vw;
                 top: 72.81%;
                 left: 23.07%;
+                max-width: 484px;
+                max-height: 262px;
             }
 
             .imotionally-design__item:nth-child(7) {
@@ -1676,6 +1690,8 @@
                 height: 21.35vw;
                 top: 65.08%;
                 left: 55.47%;
+                max-width: 639px;
+                max-height: 445px;
             }
 
 
@@ -1742,38 +1758,38 @@
             }
             .brand-element__title__text {
                 color: #F6F3EB;
-                font-size: 70px;
+                font-size: 56px;
                 letter-spacing: 0.7px;
                 line-height: 1.1;
                 font-family: "LG_EI_Headline";
+                font-weight: 700;
             }
 
 
             /*brand elements 슬라이드*/
             .brand-elements {
-                padding: 200px 6.25vw 4.5833vw;
+                padding: 270px 0 72px;
                 overflow: hidden;
             }
             .brand-element__inner {
                 position: relative;
-                width: 87.5vw;
                 margin: 0px auto;
-                max-width: 1680px;
+                max-width: 1440px;
             }
-            .our-identity__slider { margin-top: 48px;}
+            .our-identity__slider { margin-top: 64px;}
             .our-identity__slides {height: auto;}
             .our-identity__slide {
                 position: relative;
-                width: 830px;
-                height: 503px;
-                border-radius: 30px;
+                width: 596px;
+                height: 360px;
+                border-radius: 20px;
                 overflow: hidden;
                 box-sizing: border-box;
                 z-index: 1;
             }
             .our-identity__slide a {
                 display: block;
-                padding: 40px;
+                padding: 26px;
                 width: 100%;
                 height: 100%;
             }
@@ -1822,14 +1838,14 @@
             .our-identity__slide--voice::after {background-image: url(../../src/mocks/layout/brand_slide_voice_hover.png);}
 
             .our-identity__item-title {
-                font-size: 1.875vw;
-                line-height: 2.1875vw;
+                font-size: 24px;
+                line-height: 1.3;
                 color: #222;
                 transition: color .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .our-identity__slide:hover .our-identity__item-title {color: #fff;}
             .our-identity__progressbar {
-                margin-top: 64px;
+                margin-top: 32px;
                 width: 100%;
                 height: 2px;
                 background-color: #7E7C77;
@@ -1839,24 +1855,29 @@
             }
             .our-identity__move-btn {
                 position: absolute;
-                left: 40px;
-                bottom: 40px;
+                left: 26px;
+                bottom: 26px;
                 display: block;
-                width: 64px;
-                height: 64px;
+                width: 48px;
+                height: 48px;
                 backdrop-filter: blur(33px);
                 background: no-repeat center;
-                border: 1px solid #FFFFFFB2;
+                border: 1px solid #ffffffb2;
                 border-radius: 50%;
                 background-image: url(../../src/mocks/layout/btn_move_to_arrow_wt.svg);
-                background-size: 30px auto;
+                background-size: 22px auto;
                 background-color: #fff;
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+                transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+                opacity: 0;
+                visibility: hidden;
             }
             .our-identity__slide:hover .our-identity__move-btn {
                 background-color: #00000099;
-                border-color: #CBC8C24D;
+                border-color: #cbc8c24d;
                 background-image: url(../../src/mocks/layout/btn_move_to_arrow.svg);
+                display: block;
+                opacity: 1;
+                visibility: visible;
             }
 
             /*팝업*/
@@ -2021,93 +2042,8 @@
             }
 
 
-            @media (max-width: 1500px) {
-                .btn-play {
-                    position: absolute;
-                    width: 80px;
-                    height: 80px;
-                }
-
-
-                .brand-story-content {
-                    margin: 150px 0 0;
-                }
-                /*info text*/
-                .intro-text {
-                    margin: 130px 0 120px;
-                    font-size: 30px;
-                }
-
-
-                /*imotionally-design*/
-                .imotionally-design__headline {
-                    
-                }
-                .imotionally-design__headline li {
-                    font-size: 70px;
-                    padding-bottom: 100px;
-                }
-                .imotionally-design__headline li p {
-                    font-size: 27px;
-                }
-
-                /*brand elements 슬라이드*/
-                .brand-elements {
-                    padding: 200px 120px 80px;
-                }
-                .brand-element__inner {
-                    width: 100%;
-                }
-                .brand-element__title__desc {
-                    font-size: 20px;   
-                    margin-bottom: 23px;                 
-                }
-                .brand-element__title__text {
-                    font-size: 52px;
-                }
-                .brand-elements__item-title {
-                    padding: 18px 28px;
-                    font-size: 24px;
-                    line-height: 32px;
-                }
-                .our-identity__progressbar {
-                    margin-top: 48px;
-                }
-                .our-identity__slide {
-                    width: 590px;
-                    height: 360px;
-                    border-radius: 20px;
-                }
-                .our-identity__slide a {
-                    padding: 28px;
-                }
-                .our-identity__item-title {
-                    font-size: 24px;
-                    line-height: 1.3;
-                }
-
-                .logo__bottom-cont {
-                    bottom: 30px;
-                }
-                .logo__bottom-cont__title {
-                    font-size: 18px;
-                    line-height: 28px;
-                    margin-bottom: 4px;
-                }
-                .logo__bottom-cont__desc {
-                    font-size: 17px;
-                    line-height: 26px;
-                }
-                .our-identity__move-btn {
-                    left: 28px;
-                    bottom: 28px;
-                }
-
-
-            }
-
             /* Tablet */
-            @media (max-width: 1024px) {
+            @media (max-width: 1500px) {
 
                 /*랜딩비주얼 스크롤다운 버튼*/
                 .landing-visual__scrolldown {
@@ -2117,11 +2053,13 @@
                 .brand-story-content {
                     margin: 120px 0 0;
                     padding: 0 24px;
+                    max-width: unset;
                 }
 
                 .intro-text {
-                    margin: 80px 0px;
+                    margin: 80px auto;
                     font-size: 24px;
+                    max-width: 500px;
                 }
 
                 .intro-text br {display: none;}
@@ -2129,6 +2067,7 @@
                 /*imotionally-design*/
                 .imotionally-design {
                     height: 108.7vw;
+                    max-height: unset;
                 }
                 .imotionally-design__headline {
                     display: flex;
@@ -2160,7 +2099,7 @@
                     max-width: 100%;
                 }
                 .imotionally-design__item {
-                    border-radius: 10px;
+                    border-radius: 16px;
                 }
 
                 .imotionally-design__item:nth-child(1) {
@@ -2171,7 +2110,7 @@
                 }
                 .imotionally-design__item:nth-child(2) {
                     width: 22.08vw;
-                    height: 12.60vw;
+                    height: 12.73vw;
                     top: 12.78%;
                     left: 38.96%;
                 }
@@ -2184,38 +2123,38 @@
                 .imotionally-design__item:nth-child(4) {
                     width: 30.78vw;
                     height: 20.78vw;
-                    top: 46.71%;
+                    top: 46.73%;
                     left: 75.58%;
                 }
                 .imotionally-design__item:nth-child(5) {
                     width: 16.88vw;
                     height: 16.88vw;
-                    top: 82.20%;
-                    left: 27.92%;
+                    top: 51.97%;
+                    left: 2.47%;
                 }
                 .imotionally-design__item:nth-child(6) {
                     width: 37.27vw;
                     height: 20.91vw;
-                    top: 57.00%;
-                    left: -3.64%;
+                    top: 71.68%;
+                    left: 10%;
                 }
                 .imotionally-design__item:nth-child(7) {
                     width: 40.39vw;
-                    height: 28.18vw;
-                    top: 75.15%;
+                    height: 25.97vw;
+                    top: 76.08%;
                     left: 51.56%;
                 }
-                
+
 
                 .looping-video-multi {
-                    gap: 8px;
+                    gap: 16px;
                 }
 
 
                 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 100px 24px 80px;
+                    padding: 128px 24px 72px;
                 }
                 .brand-elements__slider {
                     margin: 24px 0 0;
@@ -2225,7 +2164,7 @@
                     margin-bottom: 16px;
                 }
                 .brand-element__title__text {
-                    font-size: 42px;
+                    font-size: 48px;
                     margin-bottom: 60px;
                 }
                 .brand-element__title__text br {display: block;}
@@ -2296,7 +2235,7 @@
                 }
                 .brand-story-content {
                     margin: 120px 0 0;
-                    padding: 0 24px;
+                    padding: 0 16px;
                 }
                 /*info text*/
                 .intro-text {
@@ -2389,12 +2328,13 @@
                     font-size: 36px;
                     letter-spacing: 0.3px;
                     line-height: 1.2;
+                    margin-bottom: 48px;
                 }
 
                 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 100px 24px 40px;
+                    padding: 144px 16px 40px;
                 }
                 .brand-elements__slider {
                     margin: 24px -20px 0;
@@ -2422,7 +2362,7 @@
                     bottom: 16px;
                 }
                 .our-identity__slider {
-                    margin-top: 72px;
+                    margin-top: 48px;
                 }
                 .our-identity__slide--photography::before {
                     width: 72%;
@@ -2468,150 +2408,7 @@
                 }
             }
 
-            /* 4K */
-            @media (min-width: 2560px) {
-                
-                .brand-story-content {
-                    margin: 200px 0 220px;
-                    padding: 0 120px;
-                }
-                /*info text*/
-                .intro-text {
-                    margin: 120px 0 200px;
-                    font-size: 40px;
-                }
-
-                .brand-story-content {
-                    max-width: 1920px;
-                    margin: 0 auto;
-                }
-                
-
-                /*imotionally-design*/
-                .imotionally-design {
-                    margin: 0 -120px;
-                    height: 1105px;
-                }
-                .imotionally-design__headline {
-                    height: 1178px;
-                }
-                .imotionally-design__headline li {
-                    font-size: 90px;
-                    letter-spacing: .9px;
-                    line-height: 1;
-                    padding-bottom: 136px;
-                }
-                .imotionally-design__headline li p {
-                    font-size: 36px;
-                    line-height: 1.2;
-                }
-                .imotionally-design__headline li p::before {
-                    height: 48px;
-                    top: -6px;
-                }
-                .imotionally-design__headline li span {
-                    transform: translateY(50px);
-                }
-                .imotionally-design__headline li:nth-child(1) p {right: 40px;}
-                .imotionally-design__headline li:nth-child(2) p {left: 20px;}
-                
-
-                .imotionally-design__imgwrap {
-                    max-width: 1920px;
-                    margin: 0 auto;
-                }
-                .imotionally-design__item {
-                    border-radius: 20px;
-                }
-
-                .imotionally-design__item:nth-child(1) {
-                    width: 420px;
-                    height: 230px;
-                    top: 42px;
-                    left: 123px;
-                }
-                .imotionally-design__item:nth-child(2) {
-                    width: 320px;
-                    height: 184px;
-                    top: 157px;
-                    left: 711px;
-                }
-                
-                .imotionally-design__item:nth-child(3) {
-                    width: 343px;
-                    height: 204px;
-                    top: 34px;
-                    left: 1257px;
-                }
-                
-                .imotionally-design__item:nth-child(4) {
-                    width: 340px;
-                    height: 222px;
-                    top: 394px;
-                    left: 1587px;
-                }
-                
-                .imotionally-design__item:nth-child(5) {
-                    width: 275px;
-                    height: 266px;
-                    top: 596px;
-                    left: 28px;
-                }
-                
-                .imotionally-design__item:nth-child(6) {
-                    width: 484px;
-                    height: 262px;
-                    top: 857px;
-                    left: 443px;
-                }
-                
-                .imotionally-design__item:nth-child(7) {
-                    width: 639px;
-                    height: 410px;
-                    top: 766px;
-                    left: 1065px;
-                }
-
-                .looping-video-content {
-                    width: 1114px;
-                    height: 621px;
-                    padding-bottom: unset;
-                }
-
-
-                /*brand elements 슬라이드*/
-                .brand-elements {
-                    padding: 70px 120px 88px;
-                }
-                .brand-elements__header-title {
-                    font-size: 44px;
-                    line-height: 52px;
-                }
-                .brand-elements__slider {
-                    margin: 76px 0 0;
-                }
-                .brand-elements__controller {
-                    top: 52px;
-                }
-                .brand-elements__controller__btn {
-                    width: 48px;
-                    height: 48px;
-                }
-
-                .brand-elements__controller__btn.swiper-button-prev::after,
-                .brand-elements__controller__btn.swiper-button-next::after {
-                    width: 22px;
-                    height: 22px;
-                }
-
-                .our-identity__item-title {
-                    font-size: 24px;
-                    line-height: 32px;
-                }
-                .our-identity__progressbar {
-                    margin-top: 48px;
-                }
-            }
+            
         </style>
         <!-- html code -->
         <div class="brand-contents">
