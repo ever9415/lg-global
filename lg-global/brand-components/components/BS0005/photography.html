@@ -1375,9 +1375,14 @@
             <div class="container responsivegrid">
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="../../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
+        <link rel="stylesheet" href="../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
         <style>
             /* Common */
+            :root {
+                --border-radius-common: 28px;
+                --border-radius-slide: 20px;
+            }
+
             body {
                 overflow-x: hidden;
             }
@@ -1522,19 +1527,20 @@
             .brand-contents .brand__header-title {
                 text-align: center;
                 color: #262626;
-                font-weight: 700;
+                font-weight: 550;
                 font-size: 56px;
                 line-height: 1.25;
                 letter-spacing: 0.5px;
                 margin: 96px 0 24px;
+                font-family: LGEI Headline;
+                letter-spacing: -0.25px;
             }
-
             .brand-contents .brand__header-title + .brand__header-description {
                 text-align: center;
                 color: #4a4946;
                 font-size: 20px;
                 line-height: 1.4;
-                letter-spacing: 0.08px;
+                letter-spacing: -0.08px;
             }
             .brand-contents .brand__content-inner {
                 box-sizing: border-box;
@@ -1589,7 +1595,7 @@
             /*tab*/
             .brand-contents .tab-menu__container {
                 text-align: center;
-                margin-top: calc(96px + 8px);
+                margin-top: calc(48px + 8px);
             }
             .brand-contents .brand__header + .brand-contents .tab-menu__container {
                 margin-top: calc(48px + 9px);
@@ -1664,9 +1670,10 @@
             }
             .brand-contents .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 48px;
+                font-size: 44px;
                 line-height: 1.16;
-                font-weight: 700;
+                font-weight: 400;
+                font-family: LGEI Headline;
             }
             .brand-contents .brand-elements__header-title__sub {
                 display: block;
@@ -1686,8 +1693,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 52px;
-                height: 52px;
+                width: 64px;
+                height: 64px;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -1718,14 +1725,14 @@
                 position: relative;
                 width: 590px;
                 height: 360px;
-                border-radius: 30px;
+                border-radius: var(--border-radius-slide);
                 overflow: hidden;
                 box-sizing: border-box;
                 z-index: 1;
                 background-color: #f6f3eb;
             }
             .brand-contents .our-identity__slide a {
-                padding: 24px;
+                padding: 20px;
                 display: block;
                 width: 100%;
                 height: 100%;
@@ -1873,7 +1880,7 @@
             }
             .photography__item {
                 position: relative;
-                border-radius: 20px;
+                border-radius: var(--border-radius-common);
                 padding-bottom: 100%;
                 border-radius: 20px;
                 overflow: hidden;
@@ -1897,8 +1904,8 @@
                 width: 100%;
                 bottom: 0;
                 left: 0;
-                padding: 32px;
-                background: #0000001a;
+                padding: 27px 24px;
+                background: #0000004d;
                 backdrop-filter: blur(67px);
                 -webkit-backdrop-filter: blur(67px);
                 color: #fff;
@@ -1911,7 +1918,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-size: 28px;
+                font-size: 24px;
                 line-height: 1.3;
                 color: inherit;
             }
@@ -1949,7 +1956,7 @@
 
             .photography__item dl dd {
                 margin: 0;
-                font-size: 22px;
+                font-size: 20px;
                 line-height: 1.4;
                 /* height: 90px; */
                 height: 0;
@@ -1970,7 +1977,7 @@
                 flex-wrap: wrap;
                 gap: 20px;
                 padding: 0;
-                border-radius: 30px;
+                border-radius: var(--border-radius-common);
                 overflow: hidden;
             }
             .photography__grid__item {
@@ -2012,6 +2019,9 @@
 
             /* Tablet */
             @media (max-width: 1500px) {
+                :root {
+                    --border-radius-common: 24px;
+                }
                 /*공통*/
                 .brand-contents .brand__header {
                     margin-bottom: 46px;
@@ -2045,15 +2055,13 @@
                 }
 
                 .brand-contents .tab-menu__container {
-                    margin-top: calc(32px + 8px);
-                }
-                .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(64px + 8px);
+                    margin-top: calc(32px + 8px);
                 }
                 .brand-contents .brand__header + .brand-contents .tab-menu__container {
                     margin-top: calc(40px + 8px);
                 }
+
 
 
 
@@ -2089,7 +2097,6 @@
                 .brand-contents .our-identity__slide {
                     width: 291px;
                     height: 291px;
-                    border-radius: 20px;
                 }
 
                 .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
@@ -2157,7 +2164,6 @@
                     gap: 9px;
                 }
                 .photography__item {
-                    border-radius: 9px;
                     position: relative;
                 }
 
@@ -2203,7 +2209,6 @@
 
                 .photography__grid {
                     gap: 6px;
-                    border-radius: 13px;
                 }
                 .photography__grid__item:nth-child(1) {
                     width: calc(20% - 4.5px);
@@ -2233,11 +2238,14 @@
 
             /* Mobile */
             @media (max-width: 768px) {
+                :root {
+                    --border-radius-common: 20px;
+                }
                 /*Common visual*/
                 .brand-contents .visual__top {
                     height: 117.33vw;
                 }
-                .brand-contents #visual-logo.visual__top {background-image: url(../../src/mocks/BS0002/lg_electronics_logo_visual_background-m.png);}
+                .brand-contents #visual-photography.visual__top {background-image: url(../../src/mocks/BS0005/brand-elements-photography-m.png);}
 
                 /*download assets*/
                 .brand-contents .download_assets {
@@ -2271,7 +2279,7 @@
 
                 /*contents ------*/
                 .brand-contents .percent-v-box {
-                    border-radius: 10px;
+                    border-radius: 20px;
                     padding-bottom: 100%;
                 }
 
@@ -2302,21 +2310,18 @@
 
                 .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(64px + 8px);
+                    margin-top: calc(32px + 8px);
                 }
                 .brand-contents .brand__header + .brand-contents .tab-menu__container {
                     margin-top: calc(32px + 8px);
                 }
 
 
-                /*contents -photo ------*/
+                /*contents - photo ------*/
                 /*photography index list*/
                 .photography__list {
                     grid-template-columns: repeat(1, 1fr);
                     gap: 16px;
-                }
-                .photography__item {
-                    border-radius: 10px;
                 }
 
                 .photography__item dl {
@@ -2343,7 +2348,6 @@
                 /*photography grid*/
                 .photography__grid {
                     gap: 6px;
-                    border-radius: 10px;
                 }
                 .photography__grid__item {
                     height: 44vw;

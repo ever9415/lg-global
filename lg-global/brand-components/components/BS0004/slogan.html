@@ -1375,9 +1375,14 @@
             <div class="container responsivegrid">
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="../../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
+        <link rel="stylesheet" href="../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
         <style>
             /* Common */
+            :root {
+                --border-radius-common: 28px;
+                --border-radius-slide: 20px;
+            }
+
             body {
                 overflow-x: hidden;
             }
@@ -1521,19 +1526,20 @@
             .brand-contents .brand__header-title {
                 text-align: center;
                 color: #262626;
-                font-weight: 700;
+                font-weight: 550;
                 font-size: 56px;
                 line-height: 1.25;
                 letter-spacing: 0.5px;
                 margin: 96px 0 24px;
+                font-family: LGEI Headline;
+                letter-spacing: -0.25px;
             }
-
             .brand-contents .brand__header-title + .brand__header-description {
                 text-align: center;
                 color: #4a4946;
                 font-size: 20px;
                 line-height: 1.4;
-                letter-spacing: 0.08px;
+                letter-spacing: -0.08px;
             }
             .brand-contents .brand__content-inner {
                 box-sizing: border-box;
@@ -1547,7 +1553,7 @@
             .brand-contents .percent-v-box {
                 position: relative;
                 width: 100%;
-                border-radius: 1.56vw;
+                border-radius: var(--border-radius-common);
                 padding-bottom: 49.4%;
                 overflow: hidden;
             }
@@ -1563,7 +1569,7 @@
 
             .brand-contents .v-box-bottom {
                 position: absolute;
-                bottom: 38px;
+                bottom: 41px;
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
@@ -1589,7 +1595,7 @@
             /*tab*/
             .brand-contents .tab-menu__container {
                 text-align: center;
-                margin-top: calc(96px + 8px);
+                margin-top: calc(48px + 8px);
             }
             .brand-contents .brand__header + .brand-contents .tab-menu__container {
                 margin-top: calc(48px + 9px);
@@ -1665,9 +1671,10 @@
             }
             .brand-contents .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 48px;
+                font-size: 44px;
                 line-height: 1.16;
-                font-weight: 700;
+                font-weight: 400;
+                font-family: LGEI Headline;
             }
             .brand-contents .brand-elements__header-title__sub {
                 display: block;
@@ -1687,8 +1694,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 52px;
-                height: 52px;
+                width: 64px;
+                height: 64px;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -1719,14 +1726,14 @@
                 position: relative;
                 width: 590px;
                 height: 360px;
-                border-radius: 30px;
+                border-radius: var(--border-radius-slide);
                 overflow: hidden;
                 box-sizing: border-box;
                 z-index: 1;
                 background-color: #f6f3eb;
             }
             .brand-contents .our-identity__slide a {
-                padding: 24px;
+                padding: 20px;
                 display: block;
                 width: 100%;
                 height: 100%;
@@ -1868,7 +1875,7 @@
 
             /*tagline slide*/
             .taglien__content {
-                border-radius: 1.5625vw;
+                border-radius: var(--border-radius-common);
                 max-height: 830px;
                 height: 43.23vw;
                 overflow: hidden;
@@ -1904,7 +1911,7 @@
             .btmdot-slide__slide {
                 background: no-repeat center;
                 background-size: cover;
-                border-radius: 1.5625vw;
+                border-radius: var(--border-radius-common);
             }
             .btmdot-slide__slide--dark {
                 background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-d.png);
@@ -1990,8 +1997,8 @@
             }
 
             .btmdot__tag {
-                margin-top: 20px;
-                font-size: 16px;
+                margin-top: 25px;
+                font-size: 18px;
                 display: block;
                 color: #fff;
             }
@@ -2008,7 +2015,7 @@
             }
             .tagline-grid__item {
                 background-color: #fff;
-                border-radius: 1.0417vw;
+                border-radius: var(--border-radius-common);
                 box-sizing: border-box;
                 padding: 24px 35px 34px;
                 flex: 1;
@@ -2029,12 +2036,15 @@
             .tagline-grid__item img {
                 width: 100%;
                 height: auto;
-                border-radius: 0.5208vw;
+                border-radius: 12px;
             }
 
 
             /* Tablet */
             @media (max-width: 1500px) {
+                :root {
+                    --border-radius-common: 24px;
+                }
                 /*공통*/
                 .brand-contents .brand__header {
                     margin-bottom: 46px;
@@ -2068,11 +2078,8 @@
                 }
 
                 .brand-contents .tab-menu__container {
-                    margin-top: calc(32px + 8px);
-                }
-                .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(64px + 8px);
+                    margin-top: calc(32px + 8px);
                 }
                 .brand-contents .brand__header + .brand-contents .tab-menu__container {
                     margin-top: calc(40px + 8px);
@@ -2112,7 +2119,6 @@
                 .brand-contents .our-identity__slide {
                     width: 291px;
                     height: 291px;
-                    border-radius: 20px;
                 }
 
                 .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
@@ -2180,7 +2186,6 @@
                     gap: 10px;
                 }
                 .tagline-grid__item {
-                    border-radius: 10px;
                     padding: 14px 17px 18px;
                 }
                 .tagline-grid__text-info {
@@ -2207,7 +2212,8 @@
                     height: 32px;
                 }
                 .btmdot__tag {
-                    margin-top: 14px;
+                    margin-top: 18px;
+                    font-size: 12px;
                 }
                 .btmdot-slide__slide__inner {
                     height: 46.23vw;
@@ -2222,6 +2228,9 @@
 
             /* Mobile */
             @media (max-width: 768px) {
+                :root {
+                    --border-radius-common: 20px;
+                }
                 /*Common visual*/
                 .brand-contents .visual__top {
                     height: 117.33vw;
@@ -2263,7 +2272,6 @@
 
                 /*contents ------*/
                 .brand-contents .percent-v-box {
-                    border-radius: 10px;
                     padding-bottom: 100%;
                 }
 
@@ -2294,13 +2302,11 @@
 
                 .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(64px + 8px);
+                    margin-top: calc(32px + 8px);
                 }
                 .brand-contents .brand__header + .brand-contents .tab-menu__container {
                     margin-top: calc(32px + 8px);
                 }
-
-
 
 
                 /*contents - color ------*/
@@ -2309,7 +2315,6 @@
                     flex-direction: column;
                     height: auto;
                     max-height: unset;
-                    border-radius: 10px;
                 }
                 .taglien__item.taglien__item.taglien__item--text {
                     height: 89.33vw;
@@ -2324,7 +2329,6 @@
                     gap: 16px;
                 }
                 .tagline-grid__item {
-                    border-radius: 10px;
                     padding: 16px;
                 }
                 .tagline-grid__text-info {
@@ -2341,9 +2345,6 @@
                 /*btmdot-slide*/
                 .btmdot-slide__slide__inner {
                     height: 90vw;
-                }
-                .btmdot-slide__slide {
-                    border-radius: 10px;
                 }
                 .btmdot-slide__slide--dark {
                     background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-m.png);
@@ -2364,9 +2365,6 @@
                     background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-m.png);
                 }
 
-                .btmdot-slide__btm-container {
-                    bottom: 16px;
-                }
                 .btmdot-slide__pagination {
                     gap: 8px;
                 }
@@ -2379,8 +2377,7 @@
                     height: 32px;
                 }
                 .btmdot__tag {
-                    margin-top: 9px;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
                 
             }

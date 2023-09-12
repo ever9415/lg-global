@@ -1375,9 +1375,14 @@
             <div class="container responsivegrid">
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="../../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
+        <link rel="stylesheet" href="../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
         <style>
             /* Common */
+            :root {
+                --border-radius-common: 28px;
+                --border-radius-slide: 20px;
+            }
+
             body {
                 overflow-x: hidden;
             }
@@ -1522,19 +1527,20 @@
             .brand-contents .brand__header-title {
                 text-align: center;
                 color: #262626;
-                font-weight: 700;
+                font-weight: 550;
                 font-size: 56px;
                 line-height: 1.25;
                 letter-spacing: 0.5px;
                 margin: 96px 0 24px;
+                font-family: LGEI Headline;
+                letter-spacing: -0.25px;
             }
-
             .brand-contents .brand__header-title + .brand__header-description {
                 text-align: center;
                 color: #4a4946;
                 font-size: 20px;
                 line-height: 1.4;
-                letter-spacing: 0.08px;
+                letter-spacing: -0.08px;
             }
             .brand-contents .brand__content-inner {
                 box-sizing: border-box;
@@ -1564,7 +1570,7 @@
 
             .brand-contents .v-box-bottom {
                 position: absolute;
-                bottom: 38px;
+                bottom: 41px;
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
@@ -1590,7 +1596,7 @@
             /*tab*/
             .brand-contents .tab-menu__container {
                 text-align: center;
-                margin-top: calc(96px + 8px);
+                margin-top: calc(48px + 8px);
             }
             .brand-contents .brand__header + .brand-contents .tab-menu__container {
                 margin-top: calc(48px + 9px);
@@ -1666,9 +1672,10 @@
             }
             .brand-contents .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 48px;
+                font-size: 44px;
                 line-height: 1.16;
-                font-weight: 700;
+                font-weight: 400;
+                font-family: LGEI Headline;
             }
             .brand-contents .brand-elements__header-title__sub {
                 display: block;
@@ -1688,8 +1695,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 52px;
-                height: 52px;
+                width: 64px;
+                height: 64px;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -1720,14 +1727,14 @@
                 position: relative;
                 width: 590px;
                 height: 360px;
-                border-radius: 30px;
+                border-radius: var(--border-radius-slide);
                 overflow: hidden;
                 box-sizing: border-box;
                 z-index: 1;
                 background-color: #f6f3eb;
             }
             .brand-contents .our-identity__slide a {
-                padding: 24px;
+                padding: 20px;
                 display: block;
                 width: 100%;
                 height: 100%;
@@ -1868,11 +1875,11 @@
             .brand-colors__grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 174px);
-                gap: 8px;
+                grid-template-rows: repeat(3, 347px);
+                gap: 20px;
             }
             .brand-colors__item {
-                border-radius: 16px;
+                border-radius: var(--border-radius-common);
                 box-sizing: border-box;
                 padding: 16px;
                 position: relative;
@@ -1936,7 +1943,7 @@
             /*colour-system*/
             .colour-system {
                 background-color: #fff;
-                border-radius: 30px;
+                border-radius: var(--border-radius-common);
                 padding: 34px 35px 39px;
             }
             .colour-system__title {
@@ -1994,8 +2001,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 28.4375vw;
-                margin: 3.3333vw auto 0;
+                width: 466px;
+                margin: 48px auto 0;
                 gap: 3px;
             }
             .color-chip__item {
@@ -2049,13 +2056,13 @@
                 justify-content: flex-end;
                 align-items: center;
                 gap: 7px;
-                margin-top: 0.5729vw;
+                margin-top: 6px;
             }
             .colour-system__slide-controller__btn {
                 position: relative;
                 margin: 0;
-                width: 2.5vw;
-                height: 2.5vw;
+                width: 44px;
+                height: 44px;
                 border-radius: 50%;
                 background: #ffffff80;
                 border: 1px solid #4a49464d;
@@ -2123,7 +2130,7 @@
             .btmdot-slide__slide {
                 background: no-repeat center;
                 background-size: cover;
-                border-radius: 1.5625vw;
+                border-radius: var(--border-radius-common);
             }
             .btmdot-slide__slide.btmdot-slide__slide--light {background-image: url(../../src/mocks/BS0003/brand-elements-gradients-light-mode-usage-only-d.png);}
             .btmdot-slide__slide.btmdot-slide__slide--light-dark {background-image: url(../../src/mocks/BS0003/brand-elements-gradients-light-and-dark-mode-usage-d.png);}
@@ -2181,8 +2188,8 @@
             }
 
             .btmdot__tag {
-                margin-top: 20px;
-                font-size: 24px;
+                margin-top: 25px;
+                font-size: 18px;
                 display: block;
                 color: #fff;
                 line-height: 1.5;
@@ -2193,6 +2200,9 @@
 
             /* Tablet */
             @media (max-width: 1500px) {
+                :root {
+                    --border-radius-common: 24px;
+                }
                 /*공통*/
                 .brand-contents .brand__header {
                     margin-bottom: 46px;
@@ -2226,15 +2236,13 @@
                 }
 
                 .brand-contents .tab-menu__container {
-                    margin-top: calc(32px + 8px);
-                }
-                .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(64px + 8px);
+                    margin-top: calc(32px + 8px);
                 }
                 .brand-contents .brand__header + .brand-contents .tab-menu__container {
                     margin-top: calc(40px + 8px);
                 }
+
 
 
                 /*Common container*/
@@ -2269,7 +2277,6 @@
                 .brand-contents .our-identity__slide {
                     width: 291px;
                     height: 291px;
-                    border-radius: 20px;
                 }
 
                 .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
@@ -2334,14 +2341,11 @@
                 /*contents - color ------*/
                 /*brand-color grid*/
                 .brand-colors__grid {
-                    grid-template-rows: repeat(3, 303px);
+                    grid-template-rows: repeat(3, 220px);
+                    gap: 8px;
                 }
 
                 /*colour-system*/
-                .colour-system {
-                    padding: 20px;
-                    border-radius: 24px;
-                }
                 .colour-system__title {
                     font-size: 14px;
                     height: 32px;
@@ -2387,8 +2391,8 @@
                     height: 32px;
                 }
                 .btmdot__tag {
-                    margin-top: 14px;
-                    font-size: 14px;
+                    margin-top: 18px;
+                    font-size: 12px;
                 }
                 .btmdot-slide__slide__inner {
                     height: 46.23vw;
@@ -2405,6 +2409,9 @@
 
             /* Mobile */
             @media (max-width: 768px) {
+                :root {
+                    --border-radius-common: 20px;
+                }
                 /*Common visual*/
                 .brand-contents .visual__top {
                     height: 117.33vw;
@@ -2443,7 +2450,7 @@
 
                 /*contents ------*/
                 .brand-contents .percent-v-box {
-                    border-radius: 10px;
+                    border-radius: 20px;
                     padding-bottom: 100%;
                 }
 
@@ -2474,7 +2481,7 @@
 
                 .brand-contents .tab-menu__container {
                     text-align: center;
-                    margin-top: calc(64px + 8px);
+                    margin-top: calc(32px + 8px);
                 }
                 .brand-contents .brand__header + .brand-contents .tab-menu__container {
                     margin-top: calc(32px + 8px);
@@ -2490,9 +2497,9 @@
                     gap: 10px;
                 }
                 .brand-colors__item {
-                    border-radius: 10px;
                     padding: 16px;
-                    height: 167px;
+                    height: 164px;
+                    box-sizing: border-box;
                 }
                 .brand-colors__item--active-red {
                     grid-row: unset;
@@ -2503,7 +2510,6 @@
 
                 /*colour-system*/
                 .colour-system {
-                    border-radius: 10px;
                     padding: 20px;
                 }
                 .colour-system__title {
@@ -2526,7 +2532,6 @@
                 .colour-system__slide__item {
                     height: 39.2vw;
                     width: 100%;
-                    border-radius: 10px;
                 }
                 .colour-system__slide__item:nth-child(1) {
                     grid-column: 1 / span 2;
@@ -2565,17 +2570,12 @@
                     padding-left: 4px;
                 }
 
-                .btmdot-slide__slide {
-                    border-radius: 10px;
-                }
                 .btmdot-slide__slide.btmdot-slide__slide--light {background-image: url(../../src/mocks/BS0003/brand-elements-gradients-light-mode-usage-only-m.png);}
                 .btmdot-slide__slide.btmdot-slide__slide--light-dark {background-image: url(../../src/mocks/BS0003/brand-elements-gradients-light-and-dark-mode-usage-m.png);}
                 .btmdot-slide__slide.btmdot-slide__slide--dark-light {background-image: url(../../src/mocks/BS0003/brand-elements-gradients-dark-and-light-mode-usage-m.png);}
                 .btmdot-slide__slide.btmdot-slide__slide--dark {background-image: url(../../src/mocks/BS0003/brand-elements-gradients-dark-mode-usage-only-m.png);}
                 
-                .btmdot-slide__btm-container {
-                    bottom: 16px;
-                }
+
                 .btmdot-slide__pagination {
                     gap: 8px;
                 }
@@ -2588,8 +2588,7 @@
                     height: 32px;
                 }
                 .btmdot__tag {
-                    margin-top: 9px;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
                 
                 

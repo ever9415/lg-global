@@ -1378,6 +1378,10 @@
         <link rel="stylesheet" href="../../../fontface.css"/> <!-- //실제 등록시엔 삭제 해야 함 -->
         <style>
             /* Common */
+            :root {
+                --border-radius-common: 28px;
+                --border-radius-slide: 20px;
+            }
             body {
                 overflow-x: hidden;
             }
@@ -1444,7 +1448,7 @@
             }
             .brand-contents .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 48px;
+                font-size: 44px;
                 line-height: 1.16;
                 font-weight: 700;
             }
@@ -1466,8 +1470,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 52px;
-                height: 52px;
+                width: 64px;
+                height: 64px;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -1498,7 +1502,7 @@
                 position: relative;
                 width: 590px;
                 height: 360px;
-                border-radius: 30px;
+                border-radius: var(--border-radius-slide);
                 overflow: hidden;
                 box-sizing: border-box;
                 z-index: 1;
@@ -1811,7 +1815,6 @@
                 .brand-contents .our-identity__slide {
                     width: 291px;
                     height: 291px;
-                    border-radius: 20px;
                 }
 
                 .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
