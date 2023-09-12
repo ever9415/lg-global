@@ -1416,6 +1416,9 @@
                 height: auto;
                 font-size: 0;
             }
+            br.mo {
+                display: none;
+            }
     
             /*Common title*/
             
@@ -1673,6 +1676,11 @@
                 height: 100%;
                 overflow: hidden;
             }
+            .brand-contents .download-itembox .download-itembox__head .img-wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
             .brand-contents .add-border {
                 border: 1px solid #CBC8C2;
             }
@@ -1700,6 +1708,8 @@
                 height: 18px;
                 background: no-repeat center url(../../src/mocks/BS0009/icon-arrow-bottom.svg);
                 background-size: 100% auto;
+                border: none;
+                cursor: pointer;
             }
 
             .brand-contents .btn-wrap {
@@ -1720,6 +1730,7 @@
                 font-size: 14px;
                 font-weight: 600;
                 margin: 0;
+                background-color: transparent;
             }
             .brand-contents .btn-download::before {
                 content: '';
@@ -1761,6 +1772,11 @@
                 overflow: hidden;
                 box-sizing: border-box;
             }
+            .brand-contents .download-assets-detail li.thumb-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
             .brand-contents .download-assets-detail li + li {
                 margin-top: 10px;
             }
@@ -1774,8 +1790,8 @@
             @media (max-width: 1500px) {
                 /*공통*/
                 .brand-contents .brand__content-inner {
-                    margin-top: 0;
-                    padding: 0 24px 40px;
+                    /* margin-top: 0; */
+                    padding: 64px 24px 40px;
                 }
 
                 /*brand elements 슬라이드*/
@@ -1863,10 +1879,54 @@
 
             /* Mobile */
             @media (max-width: 768px) {
+                br.mo {
+                    display: block;
+                }
 
                 /*공통*/
                 .brand-contents .brand__content-inner {
-                    padding: 0 19px;
+                    padding: 64px 19px;
+                }
+                .brand-contents .assets-download-tit {
+                    font-size: 36px;
+                    margin-bottom: 32px;
+                }
+                .brand-contents .download-itembox {
+                    padding: 32px 24px;
+                    border-radius: 20px;
+                }
+                .brand-contents .download-itembox .download-itembox__head {
+                    padding: 39vw 0 0;
+                    height: auto;
+                    display: block;
+                }
+                .brand-contents .download-itembox .download-itembox__head .img-wrap {
+                    width: 100%;
+                    height: 39vw;
+                    border-radius: 16px;
+                }
+                .brand-contents .download-itembox .download-itembox__head h3 {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+                .brand-contents .btn-wrap {
+                    margin-top: 24px;
+                }
+                .brand-contents .downlist-wrap {
+                    margin-left: 0;
+                }
+                .brand-contents .downlist-wrap {
+                    padding: 40px 0 52px;
+                    gap: 40px;
+                }
+                .brand-contents .download-assets-detail {
+                    width: 100%;
+                }
+                .brand-contents .download-assets-detail li.thumb-box {
+                    height: 39vw;
+                    margin-bottom: 16px;
+                    border-radius: 16px;
                 }
 
 
@@ -1878,13 +1938,13 @@
         <div class="brand-contents">
             <div id="contents">
                 <div class="brand__content-inner">
-                    <h2 class="assets-download-tit">Brand Resources and Guidelines</h2>
+                    <h2 class="assets-download-tit">Brand Resources<br class="mo"> and Guidelines</h2>
                     <div class="download-itembox">
                         <div class="download-itembox__head">
                             <span class="img-wrap add-border"><img src="../../src/mocks/BS0009/download-assets-item-thumb--logo.png" alt=""></span>
                             <h3>Logo</h3>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-download btn-download--accordion" data-tab-id="logo">Assets</a>
+                                <button class="btn-download btn-download--accordion" data-tab-id="logo">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
                             </div>
                         </div>
@@ -1933,7 +1993,7 @@
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="accordion-content-close"></a>
+                            <button class="accordion-content-close"></button>
                         </div>
                     </div>
                     <div class="download-itembox">
@@ -1941,7 +2001,7 @@
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--slogan.png" alt=""></span>
                             <h3>Slogan</h3>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-download btn-download--accordion" data-tab-id="slogan">Assets</a>
+                                <button class="btn-download btn-download--accordion" data-tab-id="slogan">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
                             </div>
                         </div>
@@ -1984,7 +2044,7 @@
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="accordion-content-close"></a>
+                            <button class="accordion-content-close"></button>
                         </div>
                     </div>
                     <div class="download-itembox">
@@ -1992,7 +2052,7 @@
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--colors.png" alt=""></span>
                             <h3>Gradient</h3>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-download btn-download--accordion" data-tab-id="gradient">Assets</a>
+                                <button class="btn-download btn-download--accordion" data-tab-id="gradient">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
                             </div>
                         </div>
@@ -2023,7 +2083,7 @@
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="accordion-content-close"></a>
+                            <button class="accordion-content-close"></button>
                         </div>
                     </div>
                     <div class="download-itembox">
@@ -2031,7 +2091,7 @@
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--font.png" alt=""></span>
                             <h3>Font</h3>
                             <div class="btn-wrap">
-                                <a href="#" class="btn-download btn-download--accordion" data-tab-id="font">Assets</a>
+                                <button class="btn-download btn-download--accordion" data-tab-id="font">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
                             </div>
                         </div>
@@ -2050,7 +2110,7 @@
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="accordion-content-close"></a>
+                            <button class="accordion-content-close"></button>
                         </div>
                     </div>
                 </div>
@@ -2124,6 +2184,7 @@
         <script src="../../gsap.min.js"></script>
 
         <script>
+
             function getElementIndex(element) {
                 return [].indexOf.call(element.parentNode.children, element);
             }
@@ -2160,8 +2221,7 @@
                 btnOpen.forEach(btn => {
                     let isOpend = false
 
-                    btn.addEventListener('click', function(e) {
-                        // e.preventDefault
+                    btn.addEventListener('click', (e) => {
                         e.stopPropagation
 
                         !btn.classList.contains('active') ? isOpend = true : isOpend = false
@@ -2173,16 +2233,13 @@
                 btnClose.forEach(close => {
 
                     close.addEventListener('click', (e) => {
-                        // e.preventDefault
 
                         let parentTab = close.parentElement
                         let id = parentTab.getAttribute('id')
 
-                        let btn = document.querySelector(`a[data-tab-id="${id}"]`)
+                        let btn = document.querySelector(`[data-tab-id="${id}"]`)
                         btn.classList.remove('active')
                         parentTab.style.maxHeight = null
-
-                        return false
                     })
                 })
 
@@ -2203,43 +2260,17 @@
                 }
             }
             
-            // function accordion() {
-            //     let groups = gsap.utils.toArray(".download-itembox");
-            //     let menus = gsap.utils.toArray(".btn-download--accordion");
-            //     let menuToggles = groups.map(createAnimation);
+            function setResize() {
+                window.addEventListener('resize', () => handleResize())
 
-            //     menus.forEach(menu => {
-            //         menu.addEventListener("click", (e) => toggleMenu(menu, e));
-            //     });
+                function handleResize() {
+                    const resizeElements = document.querySelectorAll('.accordion-content[style*="max-height"]');
 
-            //     function toggleMenu(clickedMenu, e) {
-            //         e.preventdefault
-            //         menuToggles.forEach(toggleFn => toggleFn(clickedMenu))
-            //     }
-
-            //     function createAnimation(element) {
-                        
-            //         let menu = element.querySelector(".btn-download--accordion");
-            //         let box  = element.querySelector(".accordion-content");
-                    
-            //         gsap.set(box, { height: "auto"});
-                    
-            //         let animation = gsap.from(box, { 
-            //             height: 0, 
-            //             duration: 0.5, 
-            //             ease: "cubic-bezier(0.56, 0, 0.28, 1)" 
-            //         }).reverse();
-                
-            //         return function(clickedMenu) {
-                        
-            //             if (clickedMenu === menu) {
-            //             animation.reversed(!animation.reversed());
-            //             } else {
-            //             animation.reverse();
-            //             }
-            //         }
-            //     }
-            // }
+                    resizeElements.forEach(element => {
+                        element.style.maxHeight = element.scrollHeight + 'px'; // scrollHeight로 업데이트
+                    });
+                }
+            }
 
             function brandElememtsSlider() {
                 const brandElements = document.querySelector('.our-identity__slider')
@@ -2267,6 +2298,7 @@
 
             window.addEventListener('DOMContentLoaded', function () {
                 accordion()
+                setResize()
                 brandElememtsSlider() //what's next slide
             })
 
