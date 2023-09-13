@@ -1,47 +1,62 @@
 <!-- [code component area start] -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../fontface.css" /> <!-- //실제 등록시엔 삭제 해야 함 -->
 <style>
     /* Common */
+    :root {
+        --border-radius-common: 28px;
+        --border-radius-slide: 20px;
+    }
+
     body {
         overflow-x: hidden;
     }
-    ul,ol {
+
+    ul,
+    ol {
         list-style: none;
         padding: 0px;
         margin: 0px;
     }
+
     li {
         padding: 0px;
         margin: 0px;
     }
-    dl,dt,dd {
+
+    dl,
+    dt,
+    dd {
         margin: 0px;
     }
-    figure,figcaption {
+
+    figure,
+    figcaption {
         padding: 0px;
         margin: 0px;
     }
+
     .brand-container,
     .brand-container * {
         font-family: LGEI Text;
         color: #262626;
     }
+
     .brand-container button {
         cursor: pointer;
         padding: 0px
     }
+
     .brand-contents a,
     .brand-contents a:hover {
         text-decoration: none;
     }
+
     picture img {
         display: block;
         width: 100%;
         height: auto;
         font-size: 0;
-    }
-    .swiper-wrapper {
-        height: auto;
     }
 
 
@@ -62,6 +77,7 @@
         position: relative;
         z-index: 3;
     }
+
     .brand-contents .download_assets {
         position: absolute;
         bottom: 50px;
@@ -74,12 +90,14 @@
         display: flex;
         align-items: center;
     }
+
     .brand-contents .download_assets__thumb {
         display: block;
         width: 60px;
         height: 60px;
         border-radius: 12px;
     }
+
     .brand-contents .download_assets__title {
         color: #fff;
         font-size: 15px;
@@ -87,11 +105,13 @@
         box-sizing: border-box;
         width: 180px;
     }
+
     .brand-contents .download_assets__title b {
         display: block;
         font-weight: 600;
         color: #fff;
     }
+
     .brand-contents .download_assets__btn {
         position: absolute;
         display: block;
@@ -115,6 +135,7 @@
         z-index: 2;
         text-align: center;
     }
+
     .brand-contents .landing-visual__scrolldown__btn {
         width: 68px;
         height: 96px;
@@ -122,8 +143,7 @@
         overflow: hidden;
         border-width: 0px;
         cursor: pointer;
-        background: url(../../src/mocks/layout/main_visual_scroll_down.svg) no-repeat
-            center center;
+        background: url(../../src/mocks/layout/main_visual_scroll_down.svg) no-repeat center center;
         background-size: cover;
         transform: translateY(0vh);
         animation-duration: 1s;
@@ -136,6 +156,7 @@
         from {
             transform: translateY(-0.5vh);
         }
+
         to {
             transform: translateY(1.5vh);
         }
@@ -145,23 +166,27 @@
     .brand-contents .brand__header {
         margin-bottom: 48px;
     }
+
     .brand-contents .brand__header-title {
         text-align: center;
         color: #262626;
-        font-weight: 700;
+        font-weight: 550;
         font-size: 56px;
         line-height: 1.25;
         letter-spacing: 0.5px;
         margin: 96px 0 24px;
+        font-family: LGEI Headline;
+        letter-spacing: -0.25px;
     }
 
-    .brand-contents .brand__header-title + .brand__header-description {
+    .brand-contents .brand__header-title+.brand__header-description {
         text-align: center;
         color: #4a4946;
         font-size: 20px;
         line-height: 1.4;
-        letter-spacing: 0.08px;
+        letter-spacing: -0.08px;
     }
+
     .brand-contents .brand__content-inner {
         box-sizing: border-box;
         margin: 0 auto 96px;
@@ -170,14 +195,18 @@
     }
 
     /*Common container*/
-    .brand-contents #contents {background-color: #f6f3eb;}
+    .brand-contents #contents {
+        background-color: #f6f3eb;
+    }
+
     .brand-contents .percent-v-box {
         position: relative;
         width: 100%;
         border-radius: 1.56vw;
-        padding-bottom: 49.4%;
+        padding-bottom: 49.3%;
         overflow: hidden;
     }
+
     .brand-contents .percent-v-box img,
     .brand-contents .percent-v-box picture,
     .brand-contents .percent-v-box video {
@@ -197,15 +226,18 @@
         width: 100%;
         color: #262626;
     }
+
     .brand-contents .v-box-bottom.wt {
         color: #fff;
     }
+
     .brand-contents .v-box-bottom p.tit {
         color: inherit;
         font-size: 24px;
         line-height: 1.5;
         margin-bottom: 10px;
     }
+
     .brand-contents .v-box-bottom span.desc {
         color: inherit;
         font-size: 16px;
@@ -216,11 +248,13 @@
     /*tab*/
     .brand-contents .tab-menu__container {
         text-align: center;
-        margin-top: calc(96px + 8px);
+        margin-top: calc(48px + 8px);
     }
-    .brand-contents .brand__header + .brand-contents .tab-menu__container {
+
+    .brand-contents .brand__header+.brand-contents .tab-menu__container {
         margin-top: calc(48px + 9px);
     }
+
     .brand-contents .tab-menu__list {
         position: relative;
         display: inline-flex;
@@ -228,6 +262,7 @@
         align-items: center;
         height: 49px;
     }
+
     .brand-contents .tab-menu__list::before {
         content: "";
         position: absolute;
@@ -252,9 +287,11 @@
         text-decoration: none;
         color: #262626;
     }
+
     .brand-contents .tab-menu__btn--active {
         font-weight: 600;
     }
+
     .brand-contents .tab-menu__bg {
         z-index: 1;
         display: block;
@@ -266,12 +303,15 @@
         background-color: #fff;
         transition: left 0.5s cubic-bezier(0.56, 0, 0.28, 1);
     }
+
     .brand-contents .tab-container {
         margin-top: calc(48px + 8px);
     }
+
     .brand-contents .tab-container__content {
         display: none;
     }
+
     .brand-contents .tab-container__content--active {
         display: block;
     }
@@ -283,21 +323,27 @@
         padding: 78px 0;
         overflow: hidden;
     }
+
     .brand-contents .brand-element__inner {
         position: relative;
         margin: 0px auto;
         max-width: 1440px;
     }
+
     .brand-contents .brand-elements__header-title {
         margin: 0 auto;
-        font-size: 48px;
+        font-size: 44px;
         line-height: 1.16;
-        font-weight: 700;
+        font-weight: 550;
+        font-family: LGEI Headline;
     }
+
     .brand-contents .brand-elements__header-title__sub {
         display: block;
         font-weight: inherit;
+        font-family: inherit;
     }
+
     .brand-contents .brand-elements__controller {
         position: absolute;
         right: 0;
@@ -305,6 +351,7 @@
         display: flex;
         gap: 7px;
     }
+
     .brand-contents .brand-elements__controller__btn {
         position: relative;
         top: unset;
@@ -312,15 +359,16 @@
         right: unset;
         margin: 0;
         display: block;
-        width: 52px;
-        height: 52px;
+        width: 64px;
+        height: 64px;
         background: rgba(255, 255, 255, 0.5);
         border: 1.2px solid rgba(74, 73, 70, 0.3);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 50%;
-        opacity: 1;
+        /* opacity: 1; */
     }
+
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
     .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
         content: "";
@@ -334,28 +382,33 @@
         background-position: center;
         background-size: 100% auto;
     }
+
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after {
         transform: translate(-50%, -50%) rotate(180deg);
     }
+
     .brand-contents .our-identity__slider {
         margin-top: 48px;
     }
+
     .brand-contents .our-identity__slide {
         position: relative;
         width: 590px;
         height: 360px;
-        border-radius: 30px;
+        border-radius: var(--border-radius-slide);
         overflow: hidden;
         box-sizing: border-box;
         z-index: 1;
         background-color: #f6f3eb;
     }
+
     .brand-contents .our-identity__slide a {
-        padding: 24px;
+        padding: 20px;
         display: block;
         width: 100%;
         height: 100%;
     }
+
     .brand-contents .our-identity__slide::before,
     .brand-contents .our-identity__slide::after {
         content: "";
@@ -369,16 +422,20 @@
         position: absolute;
         transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
     }
+
     .brand-contents .our-identity__slide::before {
         z-index: -1;
     }
+
     .brand-contents .our-identity__slide::after {
         z-index: -2;
         opacity: 0;
     }
+
     .brand-contents .our-identity__slide:hover::before {
         opacity: 0;
     }
+
     .brand-contents .our-identity__slide:hover::after {
         opacity: 1;
     }
@@ -387,54 +444,70 @@
         width: 52%;
         height: 62%;
         border-radius: 30px;
-        transform-origin: center center; /* 변환 중심을 가운데로 설정 */
+        transform-origin: center center;
+        /* 변환 중심을 가운데로 설정 */
         transition-property: transform;
     }
+
     .brand-contents .our-identity__slide--photography:hover:before {
         /* width: 100%;
-        height: 100%; */
+                height: 100%; */
         opacity: 1;
         transform: translate(-50%, -50%) scale(2);
     }
+
     .brand-contents .our-identity__slide--photography::after {
         display: none;
     }
+
     .brand-contents .our-identity__slide--logo::before {
         background-image: url(../../src/mocks/layout/brand_slide_logo.png);
     }
+
     .brand-contents .our-identity__slide--logo::after {
         background-image: url(../../src/mocks/layout/brand_slide_logo-hover.png);
     }
+
     .brand-contents .our-identity__slide--color::before {
         background-image: url(../../src/mocks/layout/brand_slide_color.png);
     }
+
     .brand-contents .our-identity__slide--color::after {
         background-image: url(../../src/mocks/layout/brand_slide_color-hover.png);
     }
+
     .brand-contents .our-identity__slide--photography::before {
         background-image: url(../../src/mocks/layout/brand_slide_photo.png);
     }
+
     .brand-contents .our-identity__slide--design::before {
         background-image: url(../../src/mocks/layout/brand_slide_design.png);
     }
+
     .brand-contents .our-identity__slide--design::after {
         background-image: url(../../src/mocks/layout/brand_slide_design-hover.png);
     }
+
     .brand-contents .our-identity__slide--tagline::before {
         background-image: url(../../src/mocks/layout/brand_slide_slogan.png);
     }
+
     .brand-contents .our-identity__slide--tagline::after {
         background-image: url(../../src/mocks/layout/brand_slide_slogan-hover.png);
     }
+
     .brand-contents .our-identity__slide--typo::before {
         background-image: url(../../src/mocks/layout/brand_slide_typo.png);
     }
+
     .brand-contents .our-identity__slide--typo::after {
         background-image: url(../../src/mocks/layout/brand_slide_typo-hover.png);
     }
+
     .brand-contents .our-identity__slide--voice::before {
         background-image: url(../../src/mocks/layout/brand_slide_voice.png);
     }
+
     .brand-contents .our-identity__slide--voice::after {
         background-image: url(../../src/mocks/layout/brand_slide_voice_hover.png);
     }
@@ -449,15 +522,18 @@
     .brand-contents .our-identity__slide:hover .our-identity__item-title {
         color: #fff;
     }
+
     .brand-contents .our-identity__progressbar {
         margin-top: 48px;
         width: 100%;
         height: 2px;
         background-color: #00000033;
     }
+
     .brand-contents .our-identity__progressbar .swiper-scrollbar-drag {
         background: #000;
     }
+
     .brand-contents .our-identity__move-btn {
         position: absolute;
         left: 26px;
@@ -476,6 +552,7 @@
         opacity: 0;
         visibility: hidden;
     }
+
     .brand-contents .our-identity__slide:hover .our-identity__move-btn {
         background-color: #00000099;
         border-color: #cbc8c24d;
@@ -495,12 +572,14 @@
     .percent-view {
         border-radius: 1.56vw;
         position: relative;
-        padding-bottom: 49.4%;
+        padding-bottom: 49.3%;
         overflow: hidden;
     }
+
     .percent-view.ms {
         padding-bottom: 40%;
     }
+
     .percent-view .percent-view__img,
     .percent-view img {
         border-radius: inherit;
@@ -513,16 +592,18 @@
     /*our voice -----*/
     .our-voice-slide .slide-wrap {
         overflow: hidden;
-        border-radius: 30px;
+        border-radius: var(--border-radius-common);
     }
-    .our-voice-slide .slide-wrap > ul {
+
+    .our-voice-slide .slide-wrap>ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         background-color: #FFF;
         box-sizing: border-box;
     }
-    .our-voice-slide .slide-wrap > ul > li span {
+
+    .our-voice-slide .slide-wrap>ul>li span {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -534,33 +615,47 @@
         font-weight: 400;
         margin-bottom: 36px;
     }
-    .our-voice-slide .slide-wrap > ul > li.slide-emotionally span {background-color: #FF1C1B;}
-    .our-voice-slide .slide-wrap > ul > li.slide-intelligent span {background-color: #262626;}
-    .our-voice-slide .slide-wrap > ul > li.slide-design span {background-color: #F6F3EB; color: #262626;}
 
-    .our-voice-slide .slide-wrap > ul > li h3 {
+    .our-voice-slide .slide-wrap>ul>li.slide-emotionally span {
+        background-color: #FF1C1B;
+    }
+
+    .our-voice-slide .slide-wrap>ul>li.slide-intelligent span {
+        background-color: #262626;
+    }
+
+    .our-voice-slide .slide-wrap>ul>li.slide-design span {
+        background-color: #F6F3EB;
+        color: #262626;
+    }
+
+    .our-voice-slide .slide-wrap>ul>li h3 {
         font-weight: 400;
         line-height: 1;
         font-family: 'LG_EI_Headline';
     }
-    .our-voice-slide .slide-wrap > ul > li h3 b {
+
+    .our-voice-slide .slide-wrap>ul>li h3 b {
         font-family: inherit;
         color: #FF1C1B;
         font-weight: 500;
     }
-    .our-voice-slide .slide-wrap > ul > li h3 b.exp {
+
+    .our-voice-slide .slide-wrap>ul>li h3 b.exp {
         display: block;
     }
-    .our-voice-slide .slide-wrap > ul > li p {
+
+    .our-voice-slide .slide-wrap>ul>li p {
         color: #4A4946;
         line-height: 1.3;
     }
 
     /*voice*/
-    .our-voice-slide .slide-wrap.voice > ul {
+    .our-voice-slide .slide-wrap.voice>ul {
         padding: 0 71px;
     }
-    .our-voice-slide .slide-wrap.voice > ul > li {
+
+    .our-voice-slide .slide-wrap.voice>ul>li {
         background-color: #FFF;
         display: flex;
         align-items: center;
@@ -570,25 +665,32 @@
         box-sizing: border-box;
         padding: 100px 0;
     }
-    .our-voice-slide .slide-wrap.voice > ul > li h3 {
+
+    .our-voice-slide .slide-wrap.voice>ul>li h3 {
         font-size: 46px;
     }
-    .our-voice-slide .slide-wrap.voice > ul > li p {
+
+    .our-voice-slide .slide-wrap.voice>ul>li p {
         font-size: 20px;
         margin-top: 36px;
     }
 
     /*flexes*/
-    .our-voice-slide .slide-wrap.flexes > ul {
+    .our-voice-slide .slide-wrap.flexes>ul {
         padding: 0 45px;
         gap: 20px;
     }
-    .our-voice-slide .slide-wrap.flexes > ul > li {
+
+    .our-voice-slide .slide-wrap.flexes>ul>li {
         padding: 86px 0;
-        border-radius: 30px;
+        border-radius: var(--border-radius-common);
     }
-    .our-voice-slide .slide-wrap.flexes > ul > li picture {border-radius: inherit;}
-    .our-voice-slide .slide-wrap.flexes > ul > li img {
+
+    .our-voice-slide .slide-wrap.flexes>ul>li picture {
+        border-radius: inherit;
+    }
+
+    .our-voice-slide .slide-wrap.flexes>ul>li img {
         width: 100%;
         max-width: 100%;
     }
@@ -601,6 +703,7 @@
         gap: 6px;
         margin-top: 16px;
     }
+
     .our-voice-slide .slide-contorller button {
         position: relative;
         width: 32px;
@@ -611,6 +714,7 @@
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
+
     .our-voice-slide .slide-contorller button::before {
         content: '';
         position: absolute;
@@ -622,17 +726,22 @@
         background: no-repeat center;
         background-size: contain;
     }
+
     .our-voice-slide .slide-contorller button.prev::before {
         background-image: url(../../src/mocks/layout/icon-swiper-button-arrow.svg);
         transform: translate(-50%, -50%) rotate(180deg);
     }
-    .our-voice-slide .slide-contorller button.next::before {background-image: url(../../src/mocks/layout/icon-swiper-button-arrow.svg);}
+
+    .our-voice-slide .slide-contorller button.next::before {
+        background-image: url(../../src/mocks/layout/icon-swiper-button-arrow.svg);
+    }
 
 
     /*Bringing it to life*/
     .bring-it-to-life {
         position: relative;
     }
+
     .index-text {
         position: absolute;
         display: inline-flex;
@@ -646,6 +755,7 @@
         font-size: 18px;
         color: #fff;
     }
+
     .index-text::before {
         content: '';
         position: absolute;
@@ -664,7 +774,7 @@
 
     .bring-it-to-life__slide {
         overflow: hidden;
-        border-radius: 1.56vw;
+        border-radius: var(--border-radius-common);
     }
 
     .bring-it-to-life__slide__controller {
@@ -675,7 +785,8 @@
         display: flex;
         gap: 6px;
     }
-    .bring-it-to-life__slide__controller > button {
+
+    .bring-it-to-life__slide__controller>button {
         display: block;
         width: 52px;
         height: 52px;
@@ -689,36 +800,46 @@
         padding: 0;
         box-sizing: border-box;
     }
+
     .bring-it-to-life__slide__controller .prev-btn {
         transform: rotate(180deg);
     }
 
     .text-element {
-        border-radius: 30px;
+        border-radius: var(--border-radius-common);
         overflow: hidden;
     }
+
     .text-element picture {
         border-radius: inherit;
     }
 
     /* Tablet */
     @media (max-width: 1500px) {
+        :root {
+            --border-radius-common: 24px;
+        }
+
         /*공통*/
         .brand-contents .brand__header {
             margin-bottom: 46px;
         }
+
         .brand-contents .brand__header-title {
             font-size: 36px;
             margin: 64px 0 16px;
         }
-        .brand-contents .brand__header-title + .brand__header-description {
+
+        .brand-contents .brand__header-title+.brand__header-description {
             font-size: 16px;
             line-height: 1.3;
         }
+
         .brand-contents .brand__content-inner {
             margin-top: 0;
             padding: 0 24px 40px;
         }
+
         .brand-contents .download_assets {
             display: none;
         }
@@ -727,24 +848,25 @@
         .brand-contents .tab-menu__list {
             height: 40px;
         }
+
         .brand-contents .tab-menu__btn {
             width: 162px;
             font-size: 14px;
         }
+
         .brand-contents .tab-menu__bg {
             width: 162px;
         }
 
         .brand-contents .tab-menu__container {
+            text-align: center;
             margin-top: calc(32px + 8px);
         }
-        .brand-contents .tab-menu__container {
-            text-align: center;
-            margin-top: calc(64px + 8px);
-        }
-        .brand-contents .brand__header + .brand-contents .tab-menu__container {
+
+        .brand-contents .brand__header+.brand-contents .tab-menu__container {
             margin-top: calc(40px + 8px);
         }
+
 
 
 
@@ -752,11 +874,13 @@
         .brand-contents .v-box-bottom {
             bottom: 20px;
         }
+
         .brand-contents .v-box-bottom p.tit {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 0;
         }
+
         .brand-contents .v-box-bottom span.desc {
             font-size: 14px;
             line-height: 1.4;
@@ -767,31 +891,37 @@
         .brand-contents .brand-elements {
             padding: 32px 24px 40px;
         }
+
         .brand-contents .brand-elements__header-title {
             font-size: 28px;
             line-height: 36px;
         }
+
         .brand-contents .brand-elements__slider {
             margin: 24px -20px 0;
         }
+
         .brand-contents .brand-elements__controller {
             display: none;
         }
+
         .brand-contents .our-identity__slide {
             width: 291px;
             height: 291px;
-            border-radius: 20px;
         }
 
         .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
             display: none;
         }
+
         .brand-contents .our-identity__slide:hover::before {
             opacity: 1;
         }
+
         .brand-contents .our-identity__slide:hover .our-identity__item-title {
             color: #262626;
         }
+
         .brand-contents .our-identity__slide:hover::before {
             opacity: 1;
         }
@@ -799,29 +929,37 @@
         .brand-contents .our-identity__slide--logo::before {
             background-image: url(../../src/mocks/layout/brand_slide_logo-m.png);
         }
+
         .brand-contents .our-identity__slide--color::before {
             background-image: url(../../src/mocks/layout/brand_slide_color-m.png);
         }
+
         .brand-contents .our-identity__slide--design::before {
             background-image: url(../../src/mocks/layout/brand_slide_design-m.png);
         }
+
         .brand-contents .our-identity__slide--tagline::before {
             background-image: url(../../src/mocks/layout/brand_slide_slogan-m.png);
         }
+
         .brand-contents .our-identity__slide--typo::before {
             background-image: url(../../src/mocks/layout/brand_slide_typo-m.png);
         }
+
         .brand-contents .our-identity__slide--voice::before {
             background-image: url(../../src/mocks/layout/brand_slide_voice-m.png);
         }
+
         .brand-contents .our-identity__item-title {
             font-size: 16px;
             line-height: 24px;
         }
+
         .brand-contents .our-identity__progressbar {
             margin-top: 24px;
             height: 1px;
         }
+
         .brand-contents .our-identity__move-btn {
             width: 48px;
             height: 48px;
@@ -829,28 +967,28 @@
             left: 16px;
             bottom: 16px;
         }
+
         .brand-contents .our-identity__slider {
             margin-top: 32px;
         }
+
         .brand-contents .our-identity__slide--photography::before {
             width: 68%;
             height: 48%;
             border-radius: 14px;
         }
+
         .brand-contents .our-identity__slide--photography:hover:before {
             transform: translate(-50%, -50%) scale(2.2);
         }
 
         /*contents -voice ------*/
         /*our voice -----*/
-        .our-voice-slide .slide-wrap {
-            border-radius: 20px;
-        }
-        .our-voice-slide .slide-wrap > ul > li span {
+        .our-voice-slide .slide-wrap>ul>li span {
             /* width: 129px;
-            height: 34px;
-            font-size: 15px;
-            margin-bottom: 32px; */
+                    height: 34px;
+                    font-size: 15px;
+                    margin-bottom: 32px; */
             width: 16.75vw;
             height: 4.41vw;
             font-size: 1.94vw;
@@ -858,19 +996,22 @@
         }
 
         /*voice*/
-        .our-voice-slide .slide-wrap.voice > ul {
+        .our-voice-slide .slide-wrap.voice>ul {
             /* padding: 0 10px; */
             padding: 0 1.29vw;
         }
-        .our-voice-slide .slide-wrap.voice > ul > li {
+
+        .our-voice-slide .slide-wrap.voice>ul>li {
             /* padding: 56px 0; */
             padding: 7.27vw 0;
         }
-        .our-voice-slide .slide-wrap.voice > ul > li h3 {
+
+        .our-voice-slide .slide-wrap.voice>ul>li h3 {
             /* font-size: 30px; */
             font-size: 3.89vw;
         }
-        .our-voice-slide .slide-wrap.voice > ul > li p {
+
+        .our-voice-slide .slide-wrap.voice>ul>li p {
             /* font-size: 15px; */
             /* margin-top: 24px; */
             font-size: 1.9vw;
@@ -878,33 +1019,37 @@
         }
 
         /*flexes*/
-        .our-voice-slide .slide-wrap.flexes > ul {
+        .our-voice-slide .slide-wrap.flexes>ul {
             padding: 0 14px;
             gap: 5px;
         }
-        .our-voice-slide .slide-wrap.flexes > ul > li {
-            padding: 78px 0 56px;
-        }
 
-        .text-element {
-            border-radius: 20px;
+        .our-voice-slide .slide-wrap.flexes>ul>li {
+            padding: 78px 0 56px;
         }
 
     }
 
     /* Mobile */
     @media (max-width: 768px) {
+        :root {
+            --border-radius-common: 20px;
+        }
+
         /*Common visual*/
         .brand-contents .visual__top {
             height: 117.33vw;
         }
-        .brand-contents #visual-logo.visual__top {background-image: url(../../src/mocks/BS0002/lg_electronics_logo_visual_background-m.png);}
+
+        .brand-contents #visual-logo.visual__top {
+            background-image: url(../../src/mocks/BS0002/lg_electronics_logo_visual_background-m.png);
+        }
 
         /*download assets*/
         .brand-contents .download_assets {
             display: none;
         }
-        
+
         /*랜딩비주얼 스크롤다운 버튼*/
         .brand-contents .landing-visual__scrolldown {
             display: none;
@@ -915,24 +1060,28 @@
         .brand-contents .brand__header {
             margin-bottom: 32px;
         }
+
         .brand-contents .brand__header-title {
             margin: 64px 0 16px;
             text-align: center;
         }
-        .brand-contents .brand__header-title + .brand__header-description {
+
+        .brand-contents .brand__header-title+.brand__header-description {
             font-size: 16px;
             line-height: 1.3;
         }
+
         .brand-contents .brand__content-inner {
             padding: 0 19px;
         }
+
         .brand-contents .brand__header-description br:not(.mo) {
             display: none;
         }
 
         /*contents ------*/
         .brand-contents .percent-v-box {
-            border-radius: 10px;
+            border-radius: 20px;
             padding-bottom: 100%;
         }
 
@@ -945,27 +1094,32 @@
         .brand-contents .tab-menu__container {
             text-align: center;
         }
+
         .brand-contents .tab-menu__list {
             width: 100%;
             height: 40px;
         }
+
         .brand-contents .tab-menu__list::before {
             width: calc(100% + 16px);
             height: calc(100% + 16px);
         }
+
         .brand-contents .tab-menu__btn {
             flex: 1;
             font-size: 14px;
         }
+
         .brand-contents .tab-container {
             margin-top: calc(32px + 8px);
         }
 
         .brand-contents .tab-menu__container {
             text-align: center;
-            margin-top: calc(64px + 8px);
+            margin-top: calc(32px + 8px);
         }
-        .brand-contents .brand__header + .brand-contents .tab-menu__container {
+
+        .brand-contents .brand__header+.brand-contents .tab-menu__container {
             margin-top: calc(32px + 8px);
         }
 
@@ -979,10 +1133,7 @@
 
 
         /*our voice -----*/
-        .our-voice-slide .slide-wrap {
-            border-radius: 10px;
-        }
-        .our-voice-slide .slide-wrap > ul > li span {
+        .our-voice-slide .slide-wrap>ul>li span {
             width: 36.26vw;
             height: 11.2vw;
             border-radius: 11.2vw;
@@ -991,43 +1142,39 @@
         }
 
         /*voice*/
-        .our-voice-slide .slide-wrap.voice > ul {
+        .our-voice-slide .slide-wrap.voice>ul {
             padding: 0;
         }
-        .our-voice-slide .slide-wrap.voice > ul > li {
+
+        .our-voice-slide .slide-wrap.voice>ul>li {
             padding: 14.66vw 7.2vw;
         }
 
-        .our-voice-slide .slide-wrap.voice > ul > li h3 {
+        .our-voice-slide .slide-wrap.voice>ul>li h3 {
             font-size: 10.13vw;
         }
-        .our-voice-slide .slide-wrap.voice > ul > li p {
+
+        .our-voice-slide .slide-wrap.voice>ul>li p {
             font-size: 4.8vw;
             margin-top: 10.13vw;
         }
+
         .our-voice-slide .slide-contorller {
             display: flex;
         }
 
         /*flexes*/
-        .our-voice-slide .slide-wrap.flexes > ul {
+        .our-voice-slide .slide-wrap.flexes>ul {
             padding: 0;
             gap: 0;
             background-color: transparent;
         }
-        .our-voice-slide .slide-wrap.flexes > ul > li {
+
+        .our-voice-slide .slide-wrap.flexes>ul>li {
             padding: 0;
-            border-radius: 10px;
         }
-
-
-        .text-element {
-            border-radius: 10px;
-        }
-        
 
     }
-
 </style>
 <!-- html code -->
 <div class="brand-contents">
@@ -1049,7 +1196,7 @@
                 <div class="slide-wrap voice slideOnlyMo">
                     <ul class="swiper-wrapper">
                         <li class="swiper-slide slide-emotionally">
-                            <!-- <img src="../../../../../src/mocks/BS0008/voice-slide-emotionally.svg" alt=""> -->
+                            <!-- <img src="../../src/mocks/BS0008/voice-slide-emotionally.svg" alt=""> -->
                             <span>Emotionally</span>
                             <h3>
                                 We write with
@@ -1061,7 +1208,7 @@
                             </p>
                         </li>
                         <li class="swiper-slide slide-intelligent">
-                            <!-- <img src="../../../../../src/mocks/BS0008/voice-slide-intelligent.svg" alt=""> -->
+                            <!-- <img src="../../src/mocks/BS0008/voice-slide-intelligent.svg" alt=""> -->
                             <span>Intelligent</span>
                             <h3>
                                 We write with
@@ -1073,7 +1220,7 @@
                             </p>
                         </li>
                         <li class="swiper-slide slide-design">
-                            <!-- <img src="../../../../../src/mocks/BS0008/voice-slide-design.svg" alt=""> -->
+                            <!-- <img src="../../src/mocks/BS0008/voice-slide-design.svg" alt=""> -->
                             <span>Design</span>
                             <h3>
                                 We write with
@@ -1111,27 +1258,27 @@
                 <div id="emotionally" class="tab-container__content tab-container__content--active">
                     <div class="text-element text-element--headline">
                         <picture>
-                            <source media="(min-width: 769px)" srcset="../../../../../src/mocks/BS0008/principles-d-01.png">
-                            <source media="(max-width: 768px)" srcset="../../../../../src/mocks/BS0008/principles-m-01.png">
-                            <img src="../../../../../src/mocks/BS0008/principles-d-01.png" alt="">
+                            <source media="(min-width: 769px)" srcset="../../src/mocks/BS0008/principles-d-01.png">
+                            <source media="(max-width: 768px)" srcset="../../src/mocks/BS0008/principles-m-01.png">
+                            <img src="../../src/mocks/BS0008/principles-d-01.png" alt="">
                         </picture>
                     </div>
                 </div>
                 <div id="intelligent" class="tab-container__content">
                     <div class="text-element text-element--body">
                         <picture>
-                            <source media="(min-width: 769px)" srcset="../../../../../src/mocks/BS0008/principles-d-02.png">
-                            <source media="(max-width: 768px)" srcset="../../../../../src/mocks/BS0008/principles-m-02.png">
-                            <img src="../../../../../src/mocks/BS0008/principles-d-02.png" alt="">
+                            <source media="(min-width: 769px)" srcset="../../src/mocks/BS0008/principles-d-02.png">
+                            <source media="(max-width: 768px)" srcset="../../src/mocks/BS0008/principles-m-02.png">
+                            <img src="../../src/mocks/BS0008/principles-d-02.png" alt="">
                         </picture>
                     </div>
                 </div>
                 <div id="design" class="tab-container__content">
                     <div class="text-element text-element--body">
                         <picture>
-                            <source media="(min-width: 769px)" srcset="../../../../../src/mocks/BS0008/principles-d-03.png">
-                            <source media="(max-width: 768px)" srcset="../../../../../src/mocks/BS0008/principles-m-03.png">
-                            <img src="../../../../../src/mocks/BS0008/principles-d-03.png" alt="">
+                            <source media="(min-width: 769px)" srcset="../../src/mocks/BS0008/principles-d-03.png">
+                            <source media="(max-width: 768px)" srcset="../../src/mocks/BS0008/principles-m-03.png">
+                            <img src="../../src/mocks/BS0008/principles-d-03.png" alt="">
                         </picture>
                     </div>
                 </div>
@@ -1148,28 +1295,28 @@
                         <li class="swiper-slide">
                             <picture>
                                 <source media="(min-width: 769px)"
-                                    srcset="../../../../../src/mocks/BS0008/voice_flexes_slide-01-d.png">
+                                    srcset="../../src/mocks/BS0008/voice_flexes_slide-01-d.png">
                                 <source media="(max-width: 768px)"
-                                    srcset="../../../../../src/mocks/BS0008/voice_flexes_slide-01-m.png">
-                                <img src="../../../../../src/mocks/BS0008/voice_flexes_slide-01-d.png" alt="">
+                                    srcset="../../src/mocks/BS0008/voice_flexes_slide-01-m.png">
+                                <img src="../../src/mocks/BS0008/voice_flexes_slide-01-d.png" alt="">
                             </picture>
                         </li>
                         <li class="swiper-slide">
                             <picture>
                                 <source media="(min-width: 769px)"
-                                    srcset="../../../../../src/mocks/BS0008/voice_flexes_slide-02-d.png">
+                                    srcset="../../src/mocks/BS0008/voice_flexes_slide-02-d.png">
                                 <source media="(max-width: 768px)"
-                                    srcset="../../../../../src/mocks/BS0008/voice_flexes_slide-02-m.png">
-                                <img src="../../../../../src/mocks/BS0008/voice_flexes_slide-01-d.png" alt="">
+                                    srcset="../../src/mocks/BS0008/voice_flexes_slide-02-m.png">
+                                <img src="../../src/mocks/BS0008/voice_flexes_slide-01-d.png" alt="">
                             </picture>
                         </li>
                         <li class="swiper-slide">
                             <picture>
                                 <source media="(min-width: 769px)"
-                                    srcset="../../../../../src/mocks/BS0008/voice_flexes_slide-03-d.png">
+                                    srcset="../../src/mocks/BS0008/voice_flexes_slide-03-d.png">
                                 <source media="(max-width: 768px)"
-                                    srcset="../../../../../src/mocks/BS0008/voice_flexes_slide-03-m.png">
-                                <img src="../../../../../src/mocks/BS0008/voice_flexes_slide-01-d.png" alt="">
+                                    srcset="../../src/mocks/BS0008/voice_flexes_slide-03-m.png">
+                                <img src="../../src/mocks/BS0008/voice_flexes_slide-01-d.png" alt="">
                             </picture>
                         </li>
                     </ul>
@@ -1192,10 +1339,10 @@
                     <div class="text-element text-element--headline">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0008/voice_flexes_tab-01-d.png">
+                                srcset="../../src/mocks/BS0008/voice_flexes_tab-01-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0008/voice_flexes_tab-01-m.png">
-                            <img src="../../../../../src/mocks/BS0008/voice_flexes_tab-01-d.png" alt="">
+                                srcset="../../src/mocks/BS0008/voice_flexes_tab-01-m.png">
+                            <img src="../../src/mocks/BS0008/voice_flexes_tab-01-d.png" alt="">
                         </picture>
                     </div>
                 </div>
@@ -1203,10 +1350,10 @@
                     <div class="text-element text-element--body">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0008/voice_flexes_tab-02-d.png">
+                                srcset="../../src/mocks/BS0008/voice_flexes_tab-02-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0008/voice_flexes_tab-02-m.png">
-                            <img src="../../../../../src/mocks/BS0008/voice_flexes_tab-02-d.png" alt="">
+                                srcset="../../src/mocks/BS0008/voice_flexes_tab-02-m.png">
+                            <img src="../../src/mocks/BS0008/voice_flexes_tab-02-d.png" alt="">
                         </picture>
                     </div>
                 </div>
@@ -1214,10 +1361,10 @@
                     <div class="text-element text-element--body">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0008/voice_flexes_tab-03-d.png">
+                                srcset="../../src/mocks/BS0008/voice_flexes_tab-03-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0008/voice_flexes_tab-03-m.png">
-                            <img src="../../../../../src/mocks/BS0008/voice_flexes_tab-03-d.png" alt="">
+                                srcset="../../src/mocks/BS0008/voice_flexes_tab-03-m.png">
+                            <img src="../../src/mocks/BS0008/voice_flexes_tab-03-d.png" alt="">
                         </picture>
                     </div>
                 </div>
@@ -1236,44 +1383,44 @@
                 <div class="our-identity__slider">
                     <ul class="our-identity__slides swiper-wrapper">
                         <li class="our-identity__slide our-identity__slide--logo swiper-slide">
-                            <a href="../logo/index.html">
+                            <a href="../BS0002/logo.html">
                                 <h3 class="our-identity__item-title">Logo</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--color swiper-slide">
-                            <a href="../color/index.html">
+                            <a href="../BS0003/colors.html">
                                 <h3 class="our-identity__item-title">Color & Gradients</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
-                            <a href="../slogan/index.html">
+                            <a href="../BS0004/slogan.html">
                                 <h3 class="our-identity__item-title">Slogan</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--photography swiper-slide">
-                            <a href="../photography/index.html">
+                            <a href="../BS0005/photography.html">
                                 <h3 class="our-identity__item-title">Photography</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--design swiper-slide">
-                            <a href="../design-system/index.html">
+                            <a href="../BS0006/design-system.html">
                                 <h3 class="our-identity__item-title">Design System</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
 
                         <li class="our-identity__slide our-identity__slide--typo swiper-slide">
-                            <a href="../typography/index.html">
+                            <a href="../BS0007/typography.html">
                                 <h3 class="our-identity__item-title">Typography</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--voice swiper-slide">
-                            <a href="../voice/index.html">
+                            <a href="../BS0008/voice.html">
                                 <h3 class="our-identity__item-title">Voice</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>

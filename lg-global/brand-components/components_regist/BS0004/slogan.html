@@ -1,35 +1,52 @@
 <!-- [code component area start] -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../fontface.css" /> <!-- //실제 등록시엔 삭제 해야 함 -->
 <style>
     /* Common */
+    :root {
+        --border-radius-common: 28px;
+        --border-radius-slide: 20px;
+    }
+
     body {
         overflow-x: hidden;
     }
-    ul,ol {
+
+    ul,
+    ol {
         list-style: none;
         padding: 0px;
         margin: 0px;
     }
+
     li {
         padding: 0px;
         margin: 0px;
     }
-    dl,dt,dd {
+
+    dl,
+    dt,
+    dd {
         margin: 0px;
     }
-    figure,figcaption {
+
+    figure,
+    figcaption {
         padding: 0px;
         margin: 0px;
     }
+
     .brand-container,
     .brand-container * {
         font-family: LGEI Text;
         color: #262626;
     }
+
     .brand-container button {
         cursor: pointer;
         padding: 0px
     }
+
     .brand-contents a,
     .brand-contents a:hover {
         text-decoration: none;
@@ -40,9 +57,6 @@
         width: 100%;
         height: auto;
         font-size: 0;
-    }
-    .swiper-wrapper {
-        height: auto;
     }
 
     /*Common visual*/
@@ -62,6 +76,7 @@
         position: relative;
         z-index: 3;
     }
+
     .brand-contents .download_assets {
         position: absolute;
         bottom: 50px;
@@ -74,12 +89,14 @@
         display: flex;
         align-items: center;
     }
+
     .brand-contents .download_assets__thumb {
         display: block;
         width: 60px;
         height: 60px;
         border-radius: 12px;
     }
+
     .brand-contents .download_assets__title {
         color: #fff;
         font-size: 15px;
@@ -87,11 +104,13 @@
         box-sizing: border-box;
         width: 180px;
     }
+
     .brand-contents .download_assets__title b {
         display: block;
         font-weight: 600;
         color: #fff;
     }
+
     .brand-contents .download_assets__btn {
         position: absolute;
         display: block;
@@ -115,6 +134,7 @@
         z-index: 2;
         text-align: center;
     }
+
     .brand-contents .landing-visual__scrolldown__btn {
         width: 68px;
         height: 96px;
@@ -122,8 +142,7 @@
         overflow: hidden;
         border-width: 0px;
         cursor: pointer;
-        background: url(../../src/mocks/layout/main_visual_scroll_down.svg) no-repeat
-            center center;
+        background: url(../../src/mocks/layout/main_visual_scroll_down.svg) no-repeat center center;
         background-size: cover;
         transform: translateY(0vh);
         animation-duration: 1s;
@@ -136,6 +155,7 @@
         from {
             transform: translateY(-0.5vh);
         }
+
         to {
             transform: translateY(1.5vh);
         }
@@ -145,23 +165,27 @@
     .brand-contents .brand__header {
         margin-bottom: 48px;
     }
+
     .brand-contents .brand__header-title {
         text-align: center;
         color: #262626;
-        font-weight: 700;
+        font-weight: 550;
         font-size: 56px;
         line-height: 1.25;
         letter-spacing: 0.5px;
         margin: 96px 0 24px;
+        font-family: LGEI Headline;
+        letter-spacing: -0.25px;
     }
 
-    .brand-contents .brand__header-title + .brand__header-description {
+    .brand-contents .brand__header-title+.brand__header-description {
         text-align: center;
         color: #4a4946;
         font-size: 20px;
         line-height: 1.4;
-        letter-spacing: 0.08px;
+        letter-spacing: -0.08px;
     }
+
     .brand-contents .brand__content-inner {
         box-sizing: border-box;
         margin: 0 auto 96px;
@@ -170,14 +194,18 @@
     }
 
     /*Common container*/
-    .brand-contents #contents {background-color: #f6f3eb;}
+    .brand-contents #contents {
+        background-color: #f6f3eb;
+    }
+
     .brand-contents .percent-v-box {
         position: relative;
         width: 100%;
-        border-radius: 1.56vw;
-        padding-bottom: 49.4%;
+        border-radius: var(--border-radius-common);
+        padding-bottom: 49.3%;
         overflow: hidden;
     }
+
     .brand-contents .percent-v-box img,
     .brand-contents .percent-v-box picture,
     .brand-contents .percent-v-box video {
@@ -190,22 +218,25 @@
 
     .brand-contents .v-box-bottom {
         position: absolute;
-        bottom: 38px;
+        bottom: 41px;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
         width: 100%;
         color: #262626;
     }
+
     .brand-contents .v-box-bottom.wt {
         color: #fff;
     }
+
     .brand-contents .v-box-bottom p.tit {
         color: inherit;
         font-size: 24px;
         line-height: 1.5;
         margin-bottom: 10px;
     }
+
     .brand-contents .v-box-bottom span.desc {
         color: inherit;
         font-size: 16px;
@@ -216,11 +247,13 @@
     /*tab*/
     .brand-contents .tab-menu__container {
         text-align: center;
-        margin-top: calc(96px + 8px);
+        margin-top: calc(48px + 8px);
     }
-    .brand-contents .brand__header + .brand-contents .tab-menu__container {
+
+    .brand-contents .brand__header+.brand-contents .tab-menu__container {
         margin-top: calc(48px + 9px);
     }
+
     .brand-contents .tab-menu__list {
         position: relative;
         display: inline-flex;
@@ -228,6 +261,7 @@
         align-items: center;
         height: 49px;
     }
+
     .brand-contents .tab-menu__list::before {
         content: "";
         position: absolute;
@@ -252,9 +286,11 @@
         text-decoration: none;
         color: #262626;
     }
+
     .brand-contents .tab-menu__btn--active {
         font-weight: 600;
     }
+
     .brand-contents .tab-menu__bg {
         z-index: 1;
         display: block;
@@ -266,12 +302,15 @@
         background-color: #fff;
         transition: left 0.5s cubic-bezier(0.56, 0, 0.28, 1);
     }
+
     .brand-contents .tab-container {
         margin-top: calc(48px + 8px);
     }
+
     .brand-contents .tab-container__content {
         display: none;
     }
+
     .brand-contents .tab-container__content--active {
         display: block;
     }
@@ -285,21 +324,27 @@
         padding: 78px 0;
         overflow: hidden;
     }
+
     .brand-contents .brand-element__inner {
         position: relative;
         margin: 0px auto;
         max-width: 1440px;
     }
+
     .brand-contents .brand-elements__header-title {
         margin: 0 auto;
-        font-size: 48px;
+        font-size: 44px;
         line-height: 1.16;
-        font-weight: 700;
+        font-weight: 550;
+        font-family: LGEI Headline;
     }
+
     .brand-contents .brand-elements__header-title__sub {
         display: block;
         font-weight: inherit;
+        font-family: inherit;
     }
+
     .brand-contents .brand-elements__controller {
         position: absolute;
         right: 0;
@@ -307,6 +352,7 @@
         display: flex;
         gap: 7px;
     }
+
     .brand-contents .brand-elements__controller__btn {
         position: relative;
         top: unset;
@@ -314,15 +360,16 @@
         right: unset;
         margin: 0;
         display: block;
-        width: 52px;
-        height: 52px;
+        width: 64px;
+        height: 64px;
         background: rgba(255, 255, 255, 0.5);
         border: 1.2px solid rgba(74, 73, 70, 0.3);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 50%;
-        opacity: 1;
+        /* opacity: 1; */
     }
+
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
     .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
         content: "";
@@ -336,28 +383,33 @@
         background-position: center;
         background-size: 100% auto;
     }
+
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after {
         transform: translate(-50%, -50%) rotate(180deg);
     }
+
     .brand-contents .our-identity__slider {
         margin-top: 48px;
     }
+
     .brand-contents .our-identity__slide {
         position: relative;
         width: 590px;
         height: 360px;
-        border-radius: 30px;
+        border-radius: var(--border-radius-slide);
         overflow: hidden;
         box-sizing: border-box;
         z-index: 1;
         background-color: #f6f3eb;
     }
+
     .brand-contents .our-identity__slide a {
-        padding: 24px;
+        padding: 20px;
         display: block;
         width: 100%;
         height: 100%;
     }
+
     .brand-contents .our-identity__slide::before,
     .brand-contents .our-identity__slide::after {
         content: "";
@@ -371,16 +423,20 @@
         position: absolute;
         transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
     }
+
     .brand-contents .our-identity__slide::before {
         z-index: -1;
     }
+
     .brand-contents .our-identity__slide::after {
         z-index: -2;
         opacity: 0;
     }
+
     .brand-contents .our-identity__slide:hover::before {
         opacity: 0;
     }
+
     .brand-contents .our-identity__slide:hover::after {
         opacity: 1;
     }
@@ -389,54 +445,70 @@
         width: 52%;
         height: 62%;
         border-radius: 30px;
-        transform-origin: center center; /* 변환 중심을 가운데로 설정 */
+        transform-origin: center center;
+        /* 변환 중심을 가운데로 설정 */
         transition-property: transform;
     }
+
     .brand-contents .our-identity__slide--photography:hover:before {
         /* width: 100%;
-        height: 100%; */
+                height: 100%; */
         opacity: 1;
         transform: translate(-50%, -50%) scale(2);
     }
+
     .brand-contents .our-identity__slide--photography::after {
         display: none;
     }
+
     .brand-contents .our-identity__slide--logo::before {
         background-image: url(../../src/mocks/layout/brand_slide_logo.png);
     }
+
     .brand-contents .our-identity__slide--logo::after {
         background-image: url(../../src/mocks/layout/brand_slide_logo-hover.png);
     }
+
     .brand-contents .our-identity__slide--color::before {
         background-image: url(../../src/mocks/layout/brand_slide_color.png);
     }
+
     .brand-contents .our-identity__slide--color::after {
         background-image: url(../../src/mocks/layout/brand_slide_color-hover.png);
     }
+
     .brand-contents .our-identity__slide--photography::before {
         background-image: url(../../src/mocks/layout/brand_slide_photo.png);
     }
+
     .brand-contents .our-identity__slide--design::before {
         background-image: url(../../src/mocks/layout/brand_slide_design.png);
     }
+
     .brand-contents .our-identity__slide--design::after {
         background-image: url(../../src/mocks/layout/brand_slide_design-hover.png);
     }
+
     .brand-contents .our-identity__slide--tagline::before {
         background-image: url(../../src/mocks/layout/brand_slide_slogan.png);
     }
+
     .brand-contents .our-identity__slide--tagline::after {
         background-image: url(../../src/mocks/layout/brand_slide_slogan-hover.png);
     }
+
     .brand-contents .our-identity__slide--typo::before {
         background-image: url(../../src/mocks/layout/brand_slide_typo.png);
     }
+
     .brand-contents .our-identity__slide--typo::after {
         background-image: url(../../src/mocks/layout/brand_slide_typo-hover.png);
     }
+
     .brand-contents .our-identity__slide--voice::before {
         background-image: url(../../src/mocks/layout/brand_slide_voice.png);
     }
+
     .brand-contents .our-identity__slide--voice::after {
         background-image: url(../../src/mocks/layout/brand_slide_voice_hover.png);
     }
@@ -451,15 +523,18 @@
     .brand-contents .our-identity__slide:hover .our-identity__item-title {
         color: #fff;
     }
+
     .brand-contents .our-identity__progressbar {
         margin-top: 48px;
         width: 100%;
         height: 2px;
         background-color: #00000033;
     }
+
     .brand-contents .our-identity__progressbar .swiper-scrollbar-drag {
         background: #000;
     }
+
     .brand-contents .our-identity__move-btn {
         position: absolute;
         left: 26px;
@@ -478,6 +553,7 @@
         opacity: 0;
         visibility: hidden;
     }
+
     .brand-contents .our-identity__slide:hover .our-identity__move-btn {
         background-color: #00000099;
         border-color: #cbc8c24d;
@@ -495,21 +571,24 @@
 
     /*tagline slide*/
     .taglien__content {
-        border-radius: 1.5625vw;
-        max-height: 830px;
+        border-radius: var(--border-radius-common);
+        max-height: 710px;
         height: 43.23vw;
         overflow: hidden;
         display: flex;
     }
+
     .taglien__item {
         display: block;
         flex-grow: 1;
         background: no-repeat center;
         background-size: cover;
     }
+
     .taglien__item.taglien__item--text {
         background-image: url(../../src/mocks/BS0004/brand-our-slogan-product-text-d.svg);
     }
+
     .taglien__item.taglien__item--product {
         background-image: url(../../src/mocks/BS0004/brand-our-slogan-product-product-d.png);
     }
@@ -518,36 +597,45 @@
     .btmdot-slide__container {
         position: relative;
     }
+
     .btmdot-slide__slider {
         overflow: hidden;
     }
+
     .btmdot-slide__slide__inner {
-        max-height: 830px;
-        height: 43.23vw;
+        max-height: 747px;
+        height: 51.8vw;
         width: 100%;
         padding: 0;
         margin: 0;
     }
+
     .btmdot-slide__slide {
         background: no-repeat center;
         background-size: cover;
-        border-radius: 1.5625vw;
+        border-radius: var(--border-radius-common);
     }
+
     .btmdot-slide__slide--dark {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-d.png);
     }
+
     .btmdot-slide__slide--light {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-d.png);
     }
+
     .btmdot-slide__slide--light-gra {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-d.png);
     }
+
     .btmdot-slide__slide--dark-gra {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-d.png);
     }
+
     .btmdot-slide__slide--light-img {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-d.png);
     }
+
     .btmdot-slide__slide--dark-img {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-d.png);
     }
@@ -560,12 +648,14 @@
         z-index: 1;
         text-align: center;
     }
+
     .btmdot-slide__pagination {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
     }
+
     .btmdot-slide__pagination__btn {
         position: relative;
         display: block;
@@ -591,21 +681,27 @@
         transform: translate(-50%, -50%);
         border: 2px solid #fff;
     }
+
     .btmdot-slide__pagination__btn--dark {
         background-color: #262626;
     }
+
     .btmdot-slide__pagination__btn--light {
         background-color: #fff;
     }
+
     .btmdot-slide__pagination__btn--light-gra {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-thumb-d.png);
     }
+
     .btmdot-slide__pagination__btn--dark-gra {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-thumb-d.png);
     }
+
     .btmdot-slide__pagination__btn--light-img {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-thumb-d.png);
     }
+
     .btmdot-slide__pagination__btn--dark-img {
         background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-thumb-d.png);
     }
@@ -617,11 +713,12 @@
     }
 
     .btmdot__tag {
-        margin-top: 20px;
-        font-size: 16px;
+        margin-top: 25px;
+        font-size: 18px;
         display: block;
         color: #fff;
     }
+
     [data-type-set="light"] .btmdot__tag,
     [data-type-set="light-gra"] .btmdot__tag,
     [data-type-set="light-img"] .btmdot__tag {
@@ -633,13 +730,15 @@
         display: flex;
         gap: 20px;
     }
+
     .tagline-grid__item {
         background-color: #fff;
-        border-radius: 1.0417vw;
+        border-radius: var(--border-radius-common);
         box-sizing: border-box;
         padding: 24px 35px 34px;
         flex: 1;
     }
+
     .tagline-grid__text-info {
         display: flex;
         align-items: center;
@@ -649,35 +748,45 @@
         color: #262626;
         font-size: 16px;
     }
+
     .tagline-grid__text-info b {
         font-size: 30px;
         font-weight: 400;
     }
+
     .tagline-grid__item img {
         width: 100%;
         height: auto;
-        border-radius: 0.5208vw;
+        border-radius: 12px;
     }
 
 
     /* Tablet */
     @media (max-width: 1500px) {
+        :root {
+            --border-radius-common: 24px;
+        }
+
         /*공통*/
         .brand-contents .brand__header {
             margin-bottom: 46px;
         }
+
         .brand-contents .brand__header-title {
             font-size: 36px;
             margin: 64px 0 16px;
         }
-        .brand-contents .brand__header-title + .brand__header-description {
+
+        .brand-contents .brand__header-title+.brand__header-description {
             font-size: 16px;
             line-height: 1.3;
         }
+
         .brand-contents .brand__content-inner {
             margin-top: 0;
             padding: 0 24px 40px;
         }
+
         .brand-contents .download_assets {
             display: none;
         }
@@ -686,22 +795,22 @@
         .brand-contents .tab-menu__list {
             height: 40px;
         }
+
         .brand-contents .tab-menu__btn {
             width: 162px;
             font-size: 14px;
         }
+
         .brand-contents .tab-menu__bg {
             width: 162px;
         }
 
         .brand-contents .tab-menu__container {
+            text-align: center;
             margin-top: calc(32px + 8px);
         }
-        .brand-contents .tab-menu__container {
-            text-align: center;
-            margin-top: calc(64px + 8px);
-        }
-        .brand-contents .brand__header + .brand-contents .tab-menu__container {
+
+        .brand-contents .brand__header+.brand-contents .tab-menu__container {
             margin-top: calc(40px + 8px);
         }
 
@@ -711,11 +820,13 @@
         .brand-contents .v-box-bottom {
             bottom: 20px;
         }
+
         .brand-contents .v-box-bottom p.tit {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 0;
         }
+
         .brand-contents .v-box-bottom span.desc {
             font-size: 14px;
             line-height: 1.4;
@@ -726,31 +837,37 @@
         .brand-contents .brand-elements {
             padding: 32px 24px 40px;
         }
+
         .brand-contents .brand-elements__header-title {
             font-size: 28px;
             line-height: 36px;
         }
+
         .brand-contents .brand-elements__slider {
             margin: 24px -20px 0;
         }
+
         .brand-contents .brand-elements__controller {
             display: none;
         }
+
         .brand-contents .our-identity__slide {
             width: 291px;
             height: 291px;
-            border-radius: 20px;
         }
 
         .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
             display: none;
         }
+
         .brand-contents .our-identity__slide:hover::before {
             opacity: 1;
         }
+
         .brand-contents .our-identity__slide:hover .our-identity__item-title {
             color: #262626;
         }
+
         .brand-contents .our-identity__slide:hover::before {
             opacity: 1;
         }
@@ -758,29 +875,37 @@
         .brand-contents .our-identity__slide--logo::before {
             background-image: url(../../src/mocks/layout/brand_slide_logo-m.png);
         }
+
         .brand-contents .our-identity__slide--color::before {
             background-image: url(../../src/mocks/layout/brand_slide_color-m.png);
         }
+
         .brand-contents .our-identity__slide--design::before {
             background-image: url(../../src/mocks/layout/brand_slide_design-m.png);
         }
+
         .brand-contents .our-identity__slide--tagline::before {
             background-image: url(../../src/mocks/layout/brand_slide_slogan-m.png);
         }
+
         .brand-contents .our-identity__slide--typo::before {
             background-image: url(../../src/mocks/layout/brand_slide_typo-m.png);
         }
+
         .brand-contents .our-identity__slide--voice::before {
             background-image: url(../../src/mocks/layout/brand_slide_voice-m.png);
         }
+
         .brand-contents .our-identity__item-title {
             font-size: 16px;
             line-height: 24px;
         }
+
         .brand-contents .our-identity__progressbar {
             margin-top: 24px;
             height: 1px;
         }
+
         .brand-contents .our-identity__move-btn {
             width: 48px;
             height: 48px;
@@ -788,14 +913,17 @@
             left: 16px;
             bottom: 16px;
         }
+
         .brand-contents .our-identity__slider {
             margin-top: 32px;
         }
+
         .brand-contents .our-identity__slide--photography::before {
             width: 68%;
             height: 48%;
             border-radius: 14px;
         }
+
         .brand-contents .our-identity__slide--photography:hover:before {
             transform: translate(-50%, -50%) scale(2.2);
         }
@@ -806,17 +934,20 @@
         .tagline-grid {
             gap: 10px;
         }
+
         .tagline-grid__item {
-            border-radius: 10px;
             padding: 14px 17px 18px;
         }
+
         .tagline-grid__text-info {
             margin-bottom: 13px;
             font-size: 13px;
         }
+
         .tagline-grid__text-info b {
             font-size: 18px;
         }
+
         .tagline-grid__item img {
             border-radius: 5px;
         }
@@ -825,34 +956,43 @@
         .btmdot-slide__btm-container {
             bottom: 20px;
         }
+
         .btmdot-slide__pagination__btn {
             width: 24px;
             height: 24px;
         }
+
         .btmdot-slide__pagination__btn--active::before {
             width: 32px;
             height: 32px;
         }
+
         .btmdot__tag {
-            margin-top: 14px;
+            margin-top: 18px;
+            font-size: 12px;
         }
+
         .btmdot-slide__slide__inner {
             height: 46.23vw;
         }
 
         /*tagline slide*/
         .taglien__content {
-            height: 53.23vw;
-            min-height: 336px;
+            /* min-height: 336px; */
         }
     }
 
     /* Mobile */
     @media (max-width: 768px) {
+        :root {
+            --border-radius-common: 20px;
+        }
+
         /*Common visual*/
         .brand-contents .visual__top {
             height: 117.33vw;
         }
+
         /*top visual*/
         #visual-tagline.visual__top {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-m.png);
@@ -862,7 +1002,7 @@
         .brand-contents .download_assets {
             display: none;
         }
-        
+
         /*랜딩비주얼 스크롤다운 버튼*/
         .brand-contents .landing-visual__scrolldown {
             display: none;
@@ -873,24 +1013,27 @@
         .brand-contents .brand__header {
             margin-bottom: 32px;
         }
+
         .brand-contents .brand__header-title {
             margin: 64px 0 16px;
             text-align: center;
         }
-        .brand-contents .brand__header-title + .brand__header-description {
+
+        .brand-contents .brand__header-title+.brand__header-description {
             font-size: 16px;
             line-height: 1.3;
         }
+
         .brand-contents .brand__content-inner {
             padding: 0 19px;
         }
+
         .brand-contents .brand__header-description br:not(.mo) {
             display: none;
         }
 
         /*contents ------*/
         .brand-contents .percent-v-box {
-            border-radius: 10px;
             padding-bottom: 100%;
         }
 
@@ -903,31 +1046,34 @@
         .brand-contents .tab-menu__container {
             text-align: center;
         }
+
         .brand-contents .tab-menu__list {
             width: 100%;
             height: 40px;
         }
+
         .brand-contents .tab-menu__list::before {
             width: calc(100% + 16px);
             height: calc(100% + 16px);
         }
+
         .brand-contents .tab-menu__btn {
             flex: 1;
             font-size: 14px;
         }
+
         .brand-contents .tab-container {
             margin-top: calc(32px + 8px);
         }
 
         .brand-contents .tab-menu__container {
             text-align: center;
-            margin-top: calc(64px + 8px);
-        }
-        .brand-contents .brand__header + .brand-contents .tab-menu__container {
             margin-top: calc(32px + 8px);
         }
 
-
+        .brand-contents .brand__header+.brand-contents .tab-menu__container {
+            margin-top: calc(32px + 8px);
+        }
 
 
         /*contents - color ------*/
@@ -936,31 +1082,36 @@
             flex-direction: column;
             height: auto;
             max-height: unset;
-            border-radius: 10px;
         }
+
         .taglien__item.taglien__item.taglien__item--text {
             height: 89.33vw;
         }
+
         .taglien__item.taglien__item--product {
             height: 103.73vw;
             background-image: url(../../src/mocks/BS0004/brand-our-slogan-product-product-m.png);
         }
+
         /*tagline grid*/
         .tagline-grid {
             flex-direction: column;
             gap: 16px;
         }
+
         .tagline-grid__item {
-            border-radius: 10px;
             padding: 16px;
         }
+
         .tagline-grid__text-info {
             font-size: 12px;
             margin-bottom: 16px;
         }
+
         .tagline-grid__text-info b {
             font-size: 15px;
         }
+
         .tagline-grid__item img {
             border-radius: 8px;
         }
@@ -969,49 +1120,50 @@
         .btmdot-slide__slide__inner {
             height: 90vw;
         }
-        .btmdot-slide__slide {
-            border-radius: 10px;
-        }
+
         .btmdot-slide__slide--dark {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-m.png);
         }
+
         .btmdot-slide__slide--light {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-m.png);
         }
+
         .btmdot-slide__slide--light-gra {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-m.png);
         }
+
         .btmdot-slide__slide--dark-gra {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-m.png);
         }
+
         .btmdot-slide__slide--light-img {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-m.png);
         }
+
         .btmdot-slide__slide--dark-img {
             background-image: url(../../src/mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-m.png);
         }
 
-        .btmdot-slide__btm-container {
-            bottom: 16px;
-        }
         .btmdot-slide__pagination {
             gap: 8px;
         }
+
         .btmdot-slide__pagination__btn {
             width: 24px;
             height: 24px;
         }
+
         .btmdot-slide__pagination__btn--active::before {
             width: 32px;
             height: 32px;
         }
-        .btmdot__tag {
-            margin-top: 9px;
-            font-size: 16px;
-        }
-        
-    }
 
+        .btmdot__tag {
+            font-size: 14px;
+        }
+
+    }
 </style>
 <!-- html code -->
 <div class="brand-contents">
@@ -1022,7 +1174,7 @@
             </div>
             <div class="visual-innner">
                 <div class="download_assets">
-                    <img src="../../../../../src/mocks/BS0004/download_assets_slogan.png" alt
+                    <img src="../../src/mocks/BS0004/download_assets_slogan.png" alt
                         class="download_assets__thumb"></img>
                     <p class="download_assets__title">
                         <b>LG Solgan</b>
@@ -1089,11 +1241,11 @@
                     <div class="tagline-grid">
                         <div class="tagline-grid__item">
                             <p class="tagline-grid__text-info"><b>01</b>Lead message</p>
-                            <img src="../../../../../src/mocks/BS0004/brand-elements-tagline-usage-hide-grids-d-01.png" alt="">
+                            <img src="../../src/mocks/BS0004/brand-elements-tagline-usage-hide-grids-d-01.png" alt="">
                         </div>
                         <div class="tagline-grid__item">
                             <p class="tagline-grid__text-info"><b>02</b>Sign-off</p>
-                            <img src="../../../../../src/mocks/BS0004/brand-elements-tagline-usage-hide-grids-d-02.png" alt="">
+                            <img src="../../src/mocks/BS0004/brand-elements-tagline-usage-hide-grids-d-02.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -1101,11 +1253,11 @@
                     <div class="tagline-grid">
                         <div class="tagline-grid__item">
                             <p class="tagline-grid__text-info"><b>01</b>Lead message</p>
-                            <img src="../../../../../src/mocks/BS0004/brand-elements-tagline-usage-show-grids-d-01.png" alt="">
+                            <img src="../../src/mocks/BS0004/brand-elements-tagline-usage-show-grids-d-01.png" alt="">
                         </div>
                         <div class="tagline-grid__item">
                             <p class="tagline-grid__text-info"><b>02</b>Sign-off</p>
-                            <img src="../../../../../src/mocks/BS0004/brand-elements-tagline-usage-show-grids-d-02.png" alt="">
+                            <img src="../../src/mocks/BS0004/brand-elements-tagline-usage-show-grids-d-02.png" alt="">
                         </div>
                     </div>
 
@@ -1126,44 +1278,44 @@
                 <div class="our-identity__slider">
                     <ul class="our-identity__slides swiper-wrapper">
                         <li class="our-identity__slide our-identity__slide--logo swiper-slide">
-                            <a href="../logo/index.html">
+                            <a href="../BS0002/logo.html">
                                 <h3 class="our-identity__item-title">Logo</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--color swiper-slide">
-                            <a href="../color/index.html">
+                            <a href="../BS0003/colors.html">
                                 <h3 class="our-identity__item-title">Color & Gradients</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
-                            <a href="../slogan/index.html">
+                            <a href="../BS0004/slogan.html">
                                 <h3 class="our-identity__item-title">Slogan</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--photography swiper-slide">
-                            <a href="../photography/index.html">
+                            <a href="../BS0005/photography.html">
                                 <h3 class="our-identity__item-title">Photography</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--design swiper-slide">
-                            <a href="../design-system/index.html">
+                            <a href="../BS0006/design-system.html">
                                 <h3 class="our-identity__item-title">Design System</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
 
                         <li class="our-identity__slide our-identity__slide--typo swiper-slide">
-                            <a href="../typography/index.html">
+                            <a href="../BS0007/typography.html">
                                 <h3 class="our-identity__item-title">Typography</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--voice swiper-slide">
-                            <a href="../voice/index.html">
+                            <a href="../BS0008/voice.html">
                                 <h3 class="our-identity__item-title">Voice</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>

@@ -1,7 +1,13 @@
 <!-- [code component area start] -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../fontface.css" /> <!-- //실제 등록시엔 삭제 해야 함 -->
 <style>
     /* Common */
+    :root {
+        --border-radius-common: 28px;
+        --border-radius-slide: 20px;
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -51,9 +57,6 @@
         width: 100%;
         height: auto;
         font-size: 0;
-    }
-    .swiper-wrapper {
-        height: auto;
     }
 
     /*Common visual*/
@@ -166,11 +169,13 @@
     .brand-contents .brand__header-title {
         text-align: center;
         color: #262626;
-        font-weight: 700;
+        font-weight: 550;
         font-size: 56px;
         line-height: 1.25;
         letter-spacing: 0.5px;
         margin: 96px 0 24px;
+        font-family: LGEI Headline;
+        letter-spacing: -0.25px;
     }
 
     .brand-contents .brand__header-title+.brand__header-description {
@@ -178,7 +183,7 @@
         color: #4a4946;
         font-size: 20px;
         line-height: 1.4;
-        letter-spacing: 0.08px;
+        letter-spacing: -0.08px;
     }
 
     .brand-contents .brand__content-inner {
@@ -197,7 +202,7 @@
         position: relative;
         width: 100%;
         border-radius: 1.56vw;
-        padding-bottom: 49.4%;
+        padding-bottom: 49.3%;
         overflow: hidden;
     }
 
@@ -242,7 +247,7 @@
     /*tab*/
     .brand-contents .tab-menu__container {
         text-align: center;
-        margin-top: calc(96px + 8px);
+        margin-top: calc(48px + 8px);
     }
 
     .brand-contents .brand__header+.brand-contents .tab-menu__container {
@@ -328,14 +333,16 @@
 
     .brand-contents .brand-elements__header-title {
         margin: 0 auto;
-        font-size: 48px;
+        font-size: 44px;
         line-height: 1.16;
-        font-weight: 700;
+        font-weight: 550;
+        font-family: LGEI Headline;
     }
 
     .brand-contents .brand-elements__header-title__sub {
         display: block;
         font-weight: inherit;
+        font-family: inherit;
     }
 
     .brand-contents .brand-elements__controller {
@@ -353,14 +360,14 @@
         right: unset;
         margin: 0;
         display: block;
-        width: 52px;
-        height: 52px;
+        width: 64px;
+        height: 64px;
         background: rgba(255, 255, 255, 0.5);
         border: 1.2px solid rgba(74, 73, 70, 0.3);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 50%;
-        opacity: 1;
+        /* opacity: 1; */
     }
 
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
@@ -389,7 +396,7 @@
         position: relative;
         width: 590px;
         height: 360px;
-        border-radius: 30px;
+        border-radius: var(--border-radius-slide);
         overflow: hidden;
         box-sizing: border-box;
         z-index: 1;
@@ -397,7 +404,7 @@
     }
 
     .brand-contents .our-identity__slide a {
-        padding: 24px;
+        padding: 20px;
         display: block;
         width: 100%;
         height: 100%;
@@ -563,9 +570,9 @@
     }
 
     .percent-view {
-        border-radius: 1.56vw;
+        border-radius: var(--border-radius-common);
         position: relative;
-        padding-bottom: 49.4%;
+        padding-bottom: 49.3%;
         overflow: hidden;
     }
 
@@ -588,6 +595,9 @@
 
     /* Tablet */
     @media (max-width: 1500px) {
+        :root {
+            --border-radius-common: 24px;
+        }
 
         /*공통*/
         .brand-contents .brand__header {
@@ -628,17 +638,14 @@
         }
 
         .brand-contents .tab-menu__container {
-            margin-top: calc(32px + 8px);
-        }
-
-        .brand-contents .tab-menu__container {
             text-align: center;
-            margin-top: calc(64px + 8px);
+            margin-top: calc(32px + 8px);
         }
 
         .brand-contents .brand__header+.brand-contents .tab-menu__container {
             margin-top: calc(40px + 8px);
         }
+
 
 
         /*Common container*/
@@ -679,7 +686,6 @@
         .brand-contents .our-identity__slide {
             width: 291px;
             height: 291px;
-            border-radius: 20px;
         }
 
         .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
@@ -759,6 +765,9 @@
 
     /* Mobile */
     @media (max-width: 768px) {
+        :root {
+            --border-radius-common: 20px;
+        }
 
         /*Common visual*/
         .brand-contents .visual__top {
@@ -805,7 +814,7 @@
 
         /*contents ------*/
         .brand-contents .percent-v-box {
-            border-radius: 10px;
+            border-radius: 20px;
             padding-bottom: 100%;
         }
 
@@ -840,14 +849,12 @@
 
         .brand-contents .tab-menu__container {
             text-align: center;
-            margin-top: calc(64px + 8px);
+            margin-top: calc(32px + 8px);
         }
 
         .brand-contents .brand__header+.brand-contents .tab-menu__container {
             margin-top: calc(32px + 8px);
         }
-
-
 
 
         /*contents - color ------*/
@@ -862,7 +869,6 @@
 
         /*contents ------*/
         .percent-view {
-            border-radius: 10px;
             padding-bottom: 100%;
         }
 
@@ -890,7 +896,7 @@
             </div>
             <div class="percent-view">
                 <img class="all-comes-together__img"
-                    srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-inspired-by-the-form-of-our-products-d.png">
+                    srcset="../../src/mocks/BS0006/brand-elements-design-system-inspired-by-the-form-of-our-products-d.png">
             </div>
 
             <div class="brand__header">
@@ -913,10 +919,10 @@
                     <div class="percent-view">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png">
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-m.svg">
-                            <img src="../../../../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png"
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-m.svg">
+                            <img src="../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png"
                                 alt="">
                         </picture>
                     </div>
@@ -925,10 +931,10 @@
                     <div class="percent-view">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png">
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-m.svg">
-                            <img src="../../../../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png"
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-m.svg">
+                            <img src="../../src/mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png"
                                 alt="">
                         </picture>
 
@@ -955,7 +961,7 @@
             <div class="tab-container" data-tab="mode">
                 <div id="hero-mode" class="tab-container__content tab-container__content--active">
                     <div class="percent-view">
-                        <img src="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-hero-mode-d.png"
+                        <img src="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-hero-mode-d.png"
                             alt="">
                     </div>
                 </div>
@@ -963,10 +969,10 @@
                     <div class="percent-view">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png">
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-m.png">
-                            <img src="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png"
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-m.png">
+                            <img src="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png"
                                 alt="">
                         </picture>
                     </div>
@@ -975,10 +981,10 @@
                     <div class="percent-view percent-view--mo-right">
                         <picture>
                             <source media="(min-width: 769px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png">
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png">
                             <source media="(max-width: 768px)"
-                                srcset="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-m.png">
-                            <img src="../../../../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png"
+                                srcset="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-m.png">
+                            <img src="../../src/mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png"
                                 alt="">
                         </picture>
                     </div>
@@ -1003,18 +1009,17 @@
                 <div id="intelligent" class="tab-container__content tab-container__content--active">
                     <div class="design-system__imagebox design-system__imagebox--intelligent percent-view">
                         <video muted playsinline autoplay loop class="resolutionVideo percent-view__img"
-                            type="video/mp4" src="../../../../../src/mocks/BS0006/the_ei_lens_circle_intelligent_d.mp4"
-                            data-urlpc="../../../../../src/mocks/BS0006/the_ei_lens_circle_intelligent_d.mp4"
-                            data-urlmo="../../../../../src/mocks/BS0006/the_ei_lens_circle_intelligent_m.mp4">
+                            type="video/mp4" src="../../src/mocks/BS0006/the_ei_lens_circle_intelligent_d.mp4"
+                            data-urlpc="../../src/mocks/BS0006/the_ei_lens_circle_intelligent_d.mp4"
+                            data-urlmo="../../src/mocks/BS0006/the_ei_lens_circle_intelligent_m.mp4">
                         </video>
                     </div>
                 </div>
                 <div id="respectful" class="tab-container__content">
                     <div class="design-system__imagebox design-system__imagebox--respectful percent-view">
                         <video muted playsinline autoplay loop class="resolutionVideo percent-view__img"
-                            type="video/mp4"
-                            data-urlpc="../../../../../src/mocks/BS0006/the_ei_lens_square_respectful_d.mp4"
-                            data-urlmo="../../../../../src/mocks/BS0006/the_ei_lens_square_respectful_m.mp4">
+                            type="video/mp4" data-urlpc="../../src/mocks/BS0006/the_ei_lens_square_respectful_d.mp4"
+                            data-urlmo="../../src/mocks/BS0006/the_ei_lens_square_respectful_m.mp4">
                         </video>
                     </div>
                 </div>
@@ -1025,11 +1030,10 @@
             <div class="all-comes-together">
                 <picture>
                     <source media="(min-width: 769px)" class="all-comes-together__img"
-                        srcset="../../../../../src/mocks/BS0006/design_system_how_it_all-d.png">
+                        srcset="../../src/mocks/BS0006/design_system_how_it_all-d.png">
                     <source media="(max-width: 768px)" class="all-comes-together__img"
-                        srcset="../../../../../src/mocks/BS0006/design_system_how_it_all-m.png">
-                    <img class="all-comes-together__img"
-                        srcset="../../../../../src/mocks/BS0006/design_system_how_it_all-d.png">
+                        srcset="../../src/mocks/BS0006/design_system_how_it_all-m.png">
+                    <img class="all-comes-together__img" srcset="../../src/mocks/BS0006/design_system_how_it_all-d.png">
                 </picture>
             </div>
         </div>
@@ -1046,44 +1050,44 @@
                 <div class="our-identity__slider">
                     <ul class="our-identity__slides swiper-wrapper">
                         <li class="our-identity__slide our-identity__slide--logo swiper-slide">
-                            <a href="../logo/index.html">
+                            <a href="../BS0002/logo.html">
                                 <h3 class="our-identity__item-title">Logo</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--color swiper-slide">
-                            <a href="../color/index.html">
+                            <a href="../BS0003/colors.html">
                                 <h3 class="our-identity__item-title">Color & Gradients</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
-                            <a href="../slogan/index.html">
+                            <a href="../BS0004/slogan.html">
                                 <h3 class="our-identity__item-title">Slogan</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--photography swiper-slide">
-                            <a href="../photography/index.html">
+                            <a href="../BS0005/photography.html">
                                 <h3 class="our-identity__item-title">Photography</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--design swiper-slide">
-                            <a href="../design-system/index.html">
+                            <a href="../BS0006/design-system.html">
                                 <h3 class="our-identity__item-title">Design System</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
 
                         <li class="our-identity__slide our-identity__slide--typo swiper-slide">
-                            <a href="../typography/index.html">
+                            <a href="../BS0007/typography.html">
                                 <h3 class="our-identity__item-title">Typography</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>
                         </li>
                         <li class="our-identity__slide our-identity__slide--voice swiper-slide">
-                            <a href="../voice/index.html">
+                            <a href="../BS0008/voice.html">
                                 <h3 class="our-identity__item-title">Voice</h3>
                                 <span class="our-identity__move-btn"></span>
                             </a>

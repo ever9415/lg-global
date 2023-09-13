@@ -1,0 +1,1081 @@
+<!-- [code component area start] -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../fontface.css" /> <!-- //실제 등록시엔 삭제 해야 함 -->
+<style>
+    /* Common */
+    :root {
+        --border-radius-common: 28px;
+        --border-radius-slide: 20px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    li {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    dl,
+    dt,
+    dd {
+        margin: 0px;
+    }
+
+    figure,
+    figcaption {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .brand-container,
+    .brand-container * {
+        font-family: LGEI Text;
+        color: #262626;
+    }
+
+    .brand-container button {
+        cursor: pointer;
+        padding: 0px
+    }
+
+    .brand-contents a,
+    .brand-contents a:hover {
+        text-decoration: none;
+    }
+
+    picture img {
+        display: block;
+        width: 100%;
+        height: auto;
+        font-size: 0;
+    }
+
+    br.mo {
+        display: none;
+    }
+
+    /*Common title*/
+
+    .brand-contents #contents {
+        background-color: #f6f3eb;
+    }
+
+    .brand-contents .brand__content-inner {
+        box-sizing: border-box;
+        margin: 0 auto 96px;
+        padding-top: 96px;
+        max-width: 1440px;
+        background-color: #f6f3eb;
+    }
+
+    /*brand elements 슬라이드*/
+    .brand-contents .brand-elements {
+        background-color: #e6e1d6;
+        padding: 78px 0;
+        overflow: hidden;
+    }
+
+    .brand-contents .brand-element__inner {
+        position: relative;
+        margin: 0px auto;
+        max-width: 1440px;
+    }
+
+    .brand-contents .brand-elements__header-title {
+        margin: 0 auto;
+        font-size: 44px;
+        line-height: 1.16;
+        font-weight: 550;
+        font-family: LGEI Headline;
+    }
+
+    .brand-contents .brand-elements__header-title__sub {
+        display: block;
+        font-weight: inherit;
+        font-family: inherit;
+    }
+
+    .brand-contents .brand-elements__controller {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        display: flex;
+        gap: 7px;
+    }
+
+    .brand-contents .brand-elements__controller__btn {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        margin: 0;
+        display: block;
+        width: 64px;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1.2px solid rgba(74, 73, 70, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 50%;
+        /* opacity: 1; */
+    }
+
+    .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
+    .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        background: no-repeat center url(../../src/mocks/layout/icon-swiper-button-arrow.svg);
+        background-position: center;
+        background-size: 100% auto;
+    }
+
+    .brand-contents .brand-elements__controller__btn.swiper-button-prev::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .brand-contents .our-identity__slider {
+        margin-top: 48px;
+    }
+
+    .brand-contents .our-identity__slide {
+        position: relative;
+        width: 590px;
+        height: 360px;
+        border-radius: var(--border-radius-slide);
+        overflow: hidden;
+        box-sizing: border-box;
+        z-index: 1;
+        background-color: #f6f3eb;
+    }
+
+    .brand-contents .our-identity__slide a {
+        padding: 24px;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .brand-contents .our-identity__slide::before,
+    .brand-contents .our-identity__slide::after {
+        content: "";
+        background: no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .brand-contents .our-identity__slide::before {
+        z-index: -1;
+    }
+
+    .brand-contents .our-identity__slide::after {
+        z-index: -2;
+        opacity: 0;
+    }
+
+    .brand-contents .our-identity__slide:hover::before {
+        opacity: 0;
+    }
+
+    .brand-contents .our-identity__slide:hover::after {
+        opacity: 1;
+    }
+
+    .brand-contents .our-identity__slide--photography::before {
+        width: 52%;
+        height: 62%;
+        border-radius: 30px;
+        transform-origin: center center;
+        /* 변환 중심을 가운데로 설정 */
+        transition-property: transform;
+    }
+
+    .brand-contents .our-identity__slide--photography:hover:before {
+        /* width: 100%;
+                height: 100%; */
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    .brand-contents .our-identity__slide--photography::after {
+        display: none;
+    }
+
+    .brand-contents .our-identity__slide--logo::before {
+        background-image: url(../../src/mocks/layout/brand_slide_logo.png);
+    }
+
+    .brand-contents .our-identity__slide--logo::after {
+        background-image: url(../../src/mocks/layout/brand_slide_logo-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--color::before {
+        background-image: url(../../src/mocks/layout/brand_slide_color.png);
+    }
+
+    .brand-contents .our-identity__slide--color::after {
+        background-image: url(../../src/mocks/layout/brand_slide_color-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--photography::before {
+        background-image: url(../../src/mocks/layout/brand_slide_photo.png);
+    }
+
+    .brand-contents .our-identity__slide--design::before {
+        background-image: url(../../src/mocks/layout/brand_slide_design.png);
+    }
+
+    .brand-contents .our-identity__slide--design::after {
+        background-image: url(../../src/mocks/layout/brand_slide_design-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--tagline::before {
+        background-image: url(../../src/mocks/layout/brand_slide_slogan.png);
+    }
+
+    .brand-contents .our-identity__slide--tagline::after {
+        background-image: url(../../src/mocks/layout/brand_slide_slogan-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--typo::before {
+        background-image: url(../../src/mocks/layout/brand_slide_typo.png);
+    }
+
+    .brand-contents .our-identity__slide--typo::after {
+        background-image: url(../../src/mocks/layout/brand_slide_typo-hover.png);
+    }
+
+    .brand-contents .our-identity__slide--voice::before {
+        background-image: url(../../src/mocks/layout/brand_slide_voice.png);
+    }
+
+    .brand-contents .our-identity__slide--voice::after {
+        background-image: url(../../src/mocks/layout/brand_slide_voice_hover.png);
+    }
+
+    .brand-contents .our-identity__item-title {
+        font-size: 24px;
+        line-height: 1.3;
+        color: #222;
+        transition: color 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .brand-contents .our-identity__slide:hover .our-identity__item-title {
+        color: #fff;
+    }
+
+    .brand-contents .our-identity__progressbar {
+        margin-top: 48px;
+        width: 100%;
+        height: 2px;
+        background-color: #00000033;
+    }
+
+    .brand-contents .our-identity__progressbar .swiper-scrollbar-drag {
+        background: #000;
+    }
+
+    .brand-contents .our-identity__move-btn {
+        position: absolute;
+        left: 26px;
+        bottom: 26px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        backdrop-filter: blur(33px);
+        background: no-repeat center;
+        border: 1px solid #ffffffb2;
+        border-radius: 50%;
+        background-image: url(../../src/mocks/layout/btn_move_to_arrow_wt.svg);
+        background-size: 22px auto;
+        background-color: #fff;
+        transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .brand-contents .our-identity__slide:hover .our-identity__move-btn {
+        background-color: #00000099;
+        border-color: #cbc8c24d;
+        background-image: url(../../src/mocks/layout/btn_move_to_arrow.svg);
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    /*contents -download ------*/
+    .brand-contents .assets-download-tit {
+        font-size: 56px;
+        /* margin-bottom: 64px; */
+        text-align: center;
+        font-weight: 550;
+        font-family: LGEI Headline;
+        line-height: 1.2;
+    }
+
+    .title-exp {
+        color: #646464;
+        font-size: 20px;
+        line-height: 1.37;
+    }
+
+    .brand-contents .assets-download-tit+.title-exp {
+        margin-bottom: 64px;
+        text-align: center;
+    }
+
+    .brand-contents .download-itembox {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 28px;
+        box-sizing: border-box;
+        margin-top: 32px;
+    }
+
+    .brand-contents .download-itembox .download-itembox__head {
+        position: relative;
+        padding-left: calc(350px + 64px);
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .brand-contents .download-itembox .download-itembox__head .img-wrap {
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+        width: 350px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .brand-contents .download-itembox .download-itembox__head .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .brand-contents .add-border {
+        border: 1px solid #CBC8C2;
+    }
+
+    .brand-contents .download-itembox .download-itembox__head h3 {
+        font-size: 48px;
+        font-weight: 550;
+        line-height: 1.16;
+        margin: 0 0 10px;
+        font-family: LGEI Headline;
+    }
+
+
+    .accordion-content {
+        position: relative;
+        max-height: 0;
+        /* height: 0; */
+        overflow: hidden;
+        transition: max-height .5s ease;
+    }
+
+    .accordion-content .accordion-content-close {
+        position: absolute;
+        display: block;
+        bottom: -10px;
+        left: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        width: 18px;
+        height: 18px;
+        background: no-repeat center url(../../src/mocks/BS0009/icon-arrow-bottom.svg);
+        background-size: 100% auto;
+        border: none;
+        cursor: pointer;
+    }
+
+    .brand-contents .btn-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .brand-contents .btn-download {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 48px 0 20px;
+        height: 44px;
+        border-radius: 100px;
+        border: 1px solid #CBC8C2;
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .brand-contents .btn-download::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 16px;
+        height: 16px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: no-repeat center url(../../src/mocks/BS0009/icon-download.svg);
+        background-size: contain;
+    }
+
+    .brand-contents .btn-download.btn-download--accordion {
+        padding-right: 38px;
+    }
+
+    .brand-contents .btn-download.btn-download--accordion::before {
+        width: 12px;
+        height: 12px;
+        background-image: url(../../src/mocks/BS0009/icon-arrow-bottom.svg);
+        transition: transform .32s cubic-bezier(0.56, 0, 0.28, 1);
+    }
+
+    .brand-contents .btn-download.btn-download--accordion.active::before {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .brand-contents .downlist-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px 16px;
+        max-width: 848px;
+        margin: 0 auto;
+        padding: 48px 0 58px;
+    }
+
+    .brand-contents .download-assets-detail {
+        position: relative;
+        width: 200px;
+    }
+
+    .brand-contents .download-assets-detail li.thumb-box {
+        height: 120px;
+        border-radius: 13px;
+        margin-bottom: 24px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .brand-contents .download-assets-detail li.thumb-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .brand-contents .download-assets-detail li+li {
+        margin-top: 10px;
+    }
+
+    .brand-contents .download-assets-detail li .btn-download {
+        width: 100%;
+        font-weight: 400;
+    }
+
+
+    /* Tablet */
+    @media (max-width: 1500px) {
+
+        /*공통*/
+        .brand-contents .brand__content-inner {
+            /* margin-top: 0; */
+            padding: 64px 24px 40px;
+        }
+
+        /*brand elements 슬라이드*/
+        .brand-contents .brand-elements {
+            padding: 32px 24px 40px;
+        }
+
+        .brand-contents .brand-elements__header-title {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        .brand-contents .brand-elements__slider {
+            margin: 24px -20px 0;
+        }
+
+        .brand-contents .brand-elements__controller {
+            display: none;
+        }
+
+        .brand-contents .our-identity__slide {
+            width: 291px;
+            height: 291px;
+        }
+
+        .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
+            display: none;
+        }
+
+        .brand-contents .our-identity__slide:hover::before {
+            opacity: 1;
+        }
+
+        .brand-contents .our-identity__slide:hover .our-identity__item-title {
+            color: #262626;
+        }
+
+        .brand-contents .our-identity__slide:hover::before {
+            opacity: 1;
+        }
+
+        .brand-contents .our-identity__slide--logo::before {
+            background-image: url(../../src/mocks/layout/brand_slide_logo-m.png);
+        }
+
+        .brand-contents .our-identity__slide--color::before {
+            background-image: url(../../src/mocks/layout/brand_slide_color-m.png);
+        }
+
+        .brand-contents .our-identity__slide--design::before {
+            background-image: url(../../src/mocks/layout/brand_slide_design-m.png);
+        }
+
+        .brand-contents .our-identity__slide--tagline::before {
+            background-image: url(../../src/mocks/layout/brand_slide_slogan-m.png);
+        }
+
+        .brand-contents .our-identity__slide--typo::before {
+            background-image: url(../../src/mocks/layout/brand_slide_typo-m.png);
+        }
+
+        .brand-contents .our-identity__slide--voice::before {
+            background-image: url(../../src/mocks/layout/brand_slide_voice-m.png);
+        }
+
+        .brand-contents .our-identity__item-title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .brand-contents .our-identity__progressbar {
+            margin-top: 24px;
+            height: 1px;
+        }
+
+        .brand-contents .our-identity__move-btn {
+            width: 48px;
+            height: 48px;
+            background-size: 24px auto;
+            left: 16px;
+            bottom: 16px;
+        }
+
+        .brand-contents .our-identity__slider {
+            margin-top: 32px;
+        }
+
+        .brand-contents .our-identity__slide--photography::before {
+            width: 68%;
+            height: 48%;
+            border-radius: 14px;
+        }
+
+        .brand-contents .our-identity__slide--photography:hover:before {
+            transform: translate(-50%, -50%) scale(2.2);
+        }
+
+        /*contents -download ------*/
+
+
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        br.mo {
+            display: block;
+        }
+
+        /*공통*/
+        .brand-contents .brand__content-inner {
+            padding: 64px 19px;
+        }
+
+        .brand-contents .assets-download-tit {
+            font-size: 36px;
+            margin-bottom: 32px;
+        }
+
+        .brand-contents .download-itembox {
+            padding: 32px 24px;
+            border-radius: 20px;
+        }
+
+        .brand-contents .download-itembox .download-itembox__head {
+            padding: 39vw 0 0;
+            height: auto;
+            display: block;
+        }
+
+        .brand-contents .download-itembox .download-itembox__head .img-wrap {
+            width: 100%;
+            height: 39vw;
+            border-radius: 16px;
+        }
+
+        .brand-contents .title-exp {
+            font-size: 16px;
+        }
+
+        .brand-contents .download-itembox .download-itembox__head h3 {
+            margin-top: 24px;
+            font-size: 28px;
+            font-weight: 550;
+        }
+
+        .brand-contents .btn-wrap {
+            margin-top: 24px;
+        }
+
+        .brand-contents .downlist-wrap {
+            margin-left: 0;
+        }
+
+        .brand-contents .downlist-wrap {
+            padding: 40px 0 52px;
+            gap: 40px;
+        }
+
+        .brand-contents .download-assets-detail {
+            width: 100%;
+        }
+
+        .brand-contents .download-assets-detail li.thumb-box {
+            height: 39vw;
+            margin-bottom: 16px;
+            border-radius: 16px;
+        }
+
+
+
+    }
+</style>
+<!-- html code -->
+<div class="brand-contents">
+    <div id="contents">
+        <div class="brand__content-inner">
+            <h2 class="assets-download-tit">Brand Resources<br class="mo"> and Guidelines</h2>
+            <p class="title-exp">Download LG most commonly requested assets here.</p>
+            <div class="download-itembox">
+                <div class="download-itembox__head">
+                    <span class="img-wrap add-border"><img
+                            src="../../src/mocks/BS0009/download-assets-item-thumb--logo.png" alt=""></span>
+                    <h3>Our Logo</h3>
+                    <span class="title-exp">Download LG most commonly requested assets here.</span>
+                    <div class="btn-wrap">
+                        <button class="btn-download btn-download--accordion" data-tab-id="logo">Assets</button>
+                        <a href="#" class="btn-download" download>full downloads</a>
+                    </div>
+                </div>
+                <div class="accordion-content" id="logo">
+                    <div class="downlist-wrap">
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--logo-01.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--logo-02.png" alt="">
+                            </li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--logo-03.png" alt="">
+                            </li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--logo-04.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--logo-05.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--logo-06.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--logo-07.png" alt="">
+                            </li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                    </div>
+                    <button class="accordion-content-close"></button>
+                </div>
+            </div>
+            <div class="download-itembox">
+                <div class="download-itembox__head">
+                    <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--slogan.png"
+                            alt=""></span>
+                    <h3>Slogan</h3>
+                    <span class="title-exp">Download LG most commonly requested assets here.</span>
+                    <div class="btn-wrap">
+                        <button class="btn-download btn-download--accordion" data-tab-id="slogan">Assets</button>
+                        <a href="#" class="btn-download" download>full downloads</a>
+                    </div>
+                </div>
+                <div class="accordion-content" id="slogan">
+                    <div class="downlist-wrap">
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--slogan-01.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--slogan-02.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--slogan-03.png"
+                                    alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--slogan-04.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box add-border"><img
+                                    src="../../src/mocks/BS0009/download-detail--slogan-05.png" alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--slogan-06.png"
+                                    alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                    </div>
+                    <button class="accordion-content-close"></button>
+                </div>
+            </div>
+            <div class="download-itembox">
+                <div class="download-itembox__head">
+                    <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--colors.png"
+                            alt=""></span>
+                    <h3>Gradient</h3>
+                    <span class="title-exp">Download LG most commonly requested assets here.</span>
+                    <div class="btn-wrap">
+                        <button class="btn-download btn-download--accordion" data-tab-id="gradient">Assets</button>
+                        <a href="#" class="btn-download" download>full downloads</a>
+                    </div>
+                </div>
+                <div class="accordion-content" id="gradient">
+                    <div class="downlist-wrap">
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--gradient-01.png"
+                                    alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--gradient-02.png"
+                                    alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--gradient-03.png"
+                                    alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--gradient-04.png"
+                                    alt=""></li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                    </div>
+                    <button class="accordion-content-close"></button>
+                </div>
+            </div>
+            <div class="download-itembox">
+                <div class="download-itembox__head">
+                    <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--font.png"
+                            alt=""></span>
+                    <h3>Font</h3>
+                    <span class="title-exp">Download LG most commonly requested assets here.</span>
+                    <div class="btn-wrap">
+                        <button class="btn-download btn-download--accordion" data-tab-id="font">Assets</button>
+                        <a href="#" class="btn-download" download>full downloads</a>
+                    </div>
+                </div>
+                <div class="accordion-content" id="font">
+                    <div class="downlist-wrap">
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--font-01.png" alt="">
+                            </li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                        <ul class="download-assets-detail">
+                            <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--font-02.png" alt="">
+                            </li>
+                            <li><a href="" class="btn-download" download="">All Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
+                            <li><a href="" class="btn-download" download="">Png Downloads</a></li>
+                        </ul>
+                    </div>
+                    <button class="accordion-content-close"></button>
+                </div>
+            </div>
+        </div>
+        <div class="brand-elements">
+            <div class="brand-element__inner">
+                <h2 class="brand-elements__header-title">
+                    What’s next?
+                    <span class="brand-elements__header-title__sub">Explore brand elements</span>
+                </h2>
+                <div class="brand-elements__controller">
+                    <button class="brand-elements__controller__btn swiper-button-prev"></button>
+                    <button class="brand-elements__controller__btn swiper-button-next"></button>
+                </div>
+                <div class="our-identity__slider">
+                    <ul class="our-identity__slides swiper-wrapper">
+                        <li class="our-identity__slide our-identity__slide--logo swiper-slide">
+                            <a href="../BS0002/logo.html">
+                                <h3 class="our-identity__item-title">Logo</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--color swiper-slide">
+                            <a href="../BS0003/colors.html">
+                                <h3 class="our-identity__item-title">Color & Gradients</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
+                            <a href="../BS0004/slogan.html">
+                                <h3 class="our-identity__item-title">Slogan</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--photography swiper-slide">
+                            <a href="../BS0005/photography.html">
+                                <h3 class="our-identity__item-title">Photography</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--design swiper-slide">
+                            <a href="../BS0006/design-system.html">
+                                <h3 class="our-identity__item-title">Design System</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+
+                        <li class="our-identity__slide our-identity__slide--typo swiper-slide">
+                            <a href="../BS0007/typography.html">
+                                <h3 class="our-identity__item-title">Typography</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                        <li class="our-identity__slide our-identity__slide--voice swiper-slide">
+                            <a href="../BS0008/voice.html">
+                                <h3 class="our-identity__item-title">Voice</h3>
+                                <span class="our-identity__move-btn"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="our-identity__progress-container">
+                    <div class="our-identity__progressbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //html code -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../../gsap.min.js"></script>
+
+<script>
+
+    function getElementIndex(element) {
+        return [].indexOf.call(element.parentNode.children, element);
+    }
+    function getSiblingsByClass(element, className) {
+        const siblings = Array.from(element.parentElement.getElementsByClassName(className));
+        const index = siblings.indexOf(element);
+        if (index !== -1) {
+            siblings.splice(index, 1);
+        }
+        return siblings;
+    }
+
+    let winWid = window.innerWidth
+    window.addEventListener('resize', function () { winWid = window.innerWidth })
+
+    const siblings = (el) => { return [...el.parentNode.children].filter((child) => child !== el) }
+    function setClass(el, currentClass) {
+        let element = el
+
+        const getFirstClass = (element) => { return element.classList[0] }
+        const getSibs = siblings(el, getFirstClass(el))
+
+        el.classList.add(currentClass)
+        getSibs.forEach(sib => {
+            sib.classList.remove(currentClass)
+        })
+    }
+
+    /*accordion*/
+    function accordion() {
+        const btnOpen = document.querySelectorAll('.btn-download--accordion')
+        const btnClose = document.querySelectorAll('.accordion-content-close')
+
+        btnOpen.forEach(btn => {
+            let isOpend = false
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation
+
+                !btn.classList.contains('active') ? isOpend = true : isOpend = false
+                setAccodian(isOpend, btn)
+
+            })
+        })
+
+        btnClose.forEach(close => {
+
+            close.addEventListener('click', (e) => {
+
+                let parentTab = close.parentElement
+                let id = parentTab.getAttribute('id')
+
+                let btn = document.querySelector(`[data-tab-id="${id}"]`)
+                btn.classList.remove('active')
+                parentTab.style.maxHeight = null
+            })
+        })
+
+        function setAccodian(isOpen, btn) {
+            let tabID = btn.dataset.tabId
+            let tab = document.querySelector(`#${tabID}`)
+
+            if (isOpen) {
+                btn.classList.add('active')
+                tab.style.maxHeight = `${tab.scrollHeight}px`
+
+            } else {
+                btn.classList.remove('active')
+                tab.style.maxHeight = null
+            }
+
+
+        }
+    }
+
+    function setResize() {
+        window.addEventListener('resize', () => handleResize())
+
+        function handleResize() {
+            const resizeElements = document.querySelectorAll('.accordion-content[style*="max-height"]');
+
+            resizeElements.forEach(element => {
+                element.style.maxHeight = element.scrollHeight + 'px'; // scrollHeight로 업데이트
+            });
+        }
+    }
+
+    function brandElememtsSlider() {
+        const brandElements = document.querySelector('.our-identity__slider')
+        const swiper = new Swiper(brandElements, {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+            navigation: {
+                nextEl: '.brand-elements__controller .swiper-button-next',
+                prevEl: '.brand-elements__controller .swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.our-identity__progressbar',
+                draggable: true
+            },
+            breakpoints: {
+                1279: {
+                    slidesOffsetBefore: 0,
+                    slidesOffsetAfter: 0,
+                },
+
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        accordion()
+        setResize()
+        brandElememtsSlider() //what's next slide
+    })
+
+</script>
+<!-- [//code component area end] -->
