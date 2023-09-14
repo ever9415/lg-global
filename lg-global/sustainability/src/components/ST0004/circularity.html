@@ -90,7 +90,7 @@
     <script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>
     <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
     <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-212ca6ba9ed029e12c51a402a049af04-lc.min.css" type="text/css">
-    <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-8796ff8f61a8277f575142e52e11cc52-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-03a7123793acb5f44ea4ac61c42108f9-lc.min.css" type="text/css">
     <script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/datalayer/v1/clientlibs/core.wcm.components.commons.datalayer.v1.lc-904d3c2f1e821ab45124d66de422b409-lc.min.js"></script>
     <meta name="store-config" content="{&#34;graphqlEndpoint&#34;:&#34;/api/graphql&#34;,&#34;graphqlMethod&#34;:&#34;GET&#34;,&#34;locale&#34;:&#34;en-US&#34;,&#34;storeRootUrl&#34;:&#34;/en/global.html&#34;,&#34;enableClientSidePriceLoading&#34;:false}">
 
@@ -1398,7 +1398,7 @@
             .sustainably-container,
             .sustainably-container * {
                 font-family: LGEI Text;
-                color: #262626;
+                color: #333333;
             }
             .sustainably-container button {
                 cursor: pointer;
@@ -1489,17 +1489,16 @@
             .circularity-about__cont {
                 width: 1440px;
                 margin: 0px auto;
-                padding: 106px 0px;
+                padding: 128px 0px;
                 font-weight: 300;
-                font-size: 44px;
-                line-height: 56px;
-                color: #4A4946;
+                font-size: 36px;
+                line-height: 46px;
             }
             
             /* Sustainability Cycle */
             .st-cycle {
                 padding-top: 60px;
-                height: 1184px;
+                height: 1000px;
                 box-sizing: border-box;
                 text-align: center;
                 background: #4A4946 url(../../mocks/ST0004/bg-st-cycle.png) no-repeat center top;
@@ -1509,28 +1508,28 @@
                 color: white;
             }
             .st-cycle__tit {
+                display: none;
                 font-size: 24px;
                 line-height: 28px;
-            }
-            .st-cycle__intro__txt {
-                margin-top: 16px;
             }
             .st-cycle__intro__txt:first-child {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .st-cycle__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
+                letter-spacing: -0.1px;
             }
             .st-cycle__inner {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 173px auto 0px;
+                margin: 136px auto 0px;
                 width: 1076px;
                 height: 533px;
                 text-align: center;
@@ -1542,10 +1541,10 @@
             }
             .st-cycle__inner__cont__tit {
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px; /* 111.538% */
-                letter-spacing: -0.26px;
+                line-height: 56px; /* 111.538% */
+                letter-spacing: -0.24px;
                 transition: 0.3s ease 0.15s all;
             }
             .st-cycle__inner__cont__tit--active {
@@ -1564,7 +1563,7 @@
             }
             .st-cycle__inner__cont__list--active {
                 visibility: visible;
-                height: 150px;
+                height: 164px;
             }
             .st-cycle__inner__cont__list__item {
                 position: absolute;
@@ -1587,18 +1586,17 @@
             }
             .st-cycle__inner__cont__list__item__tit {
                 font-family: LGEI Headline;
-                font-size: 36px;
-                font-weight: 400;
-                line-height: 40px;
-                letter-spacing: -0.54px;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 transition-delay: 0s;
             }
             .st-cycle__inner__cont__list__item__txt {
-                margin-top: 20px;
+                margin-top: 24px;
                 font-size: 20px;
                 line-height: 28px;
-                text-align: center;
                 transition-delay: 0.1s;
+                letter-spacing: -0.1px;
             }
             .st-cycle__inner__cont__list__item--active .st-cycle__inner__cont__list__item__tit,
             .st-cycle__inner__cont__list__item--active .st-cycle__inner__cont__list__item__txt {
@@ -1688,23 +1686,24 @@
             }
             .e-waste-program__cont {
                 max-width: 1440px;
-                padding: 120px 0px 100px;
+                padding: 48px 0px 100px;
                 margin: 0px auto;
                 text-align: center;
             }
             .e-waste-program__stit {
-                margin-top: 120px;
+                display: none;
+                margin-top: 108px;
                 font-size: 28px;
                 line-height: 34px;
                 font-weight: 600;
                 letter-spacing: -0.12px;
             }
             .e-waste-program__intro1 {
+                margin-top: 108px;
                 font-family: LGEI Headline;
-                font-size: 56px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 60px;
-                margin-top: 16px;
+                line-height: 56px;
             }
             .e-waste-program__intro2 {
                 font-size: 20px;
@@ -1718,11 +1717,12 @@
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 99px;
+                color: black;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 16px;
-                letter-spacing: -0.24px;
-                border: 1px solid #4A4946;
+                letter-spacing: -0.16px;
+                border: 1px solid #262626;
                 background-color: white;
                 transition: 0.3s ease all;
             }
@@ -1763,23 +1763,22 @@
                 padding-bottom: 32px;
             }
             .st-recycling-solutions__cont__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
             }
-            .st-recycling-solutions__cont__intro__txt {
-                margin-top: 16px;
-            }
             .st-recycling-solutions__cont__intro__txt:first-child {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .st-recycling-solutions__cont__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
                 letter-spacing: -0.1px;
+                margin-top: 16px;
             }
             .st-recycling-solutions__cont__learn-more {
                 margin-top: 24px;
@@ -1791,8 +1790,8 @@
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 16px;
-                letter-spacing: -0.24px;
-                border: 1px solid #4A4946;
+                letter-spacing: -0.16px;
+                border: 1px solid #262626;
                 background-color: white;
                 transition: 0.3s ease all;
             }
@@ -1806,7 +1805,7 @@
 
             /* Explore more resources */
             .explore-resources {
-                padding: 60px 0px;
+                padding: 64px 0px;
                 background: url(../../mocks/ST0004/bg-explore-resources.png) no-repeat center center;
                 background-size: cover;
             }
@@ -1816,21 +1815,21 @@
             }
             .explore-resources__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 48px;
-                letter-spacing: -0.44px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 color: white;
             }
             .explore-resources__list {
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
-                gap: 21px;
+                gap: 16px 23px;
                 margin-top: 60px;
             }
             .explore-resources__list__item {
                 overflow: hidden;
-                border-radius: 20px;
+                border-radius: 28px;
             }
             .explore-resources__list__item__anchor {
                 position: relative;
@@ -1854,16 +1853,31 @@
                 color: white;
                 letter-spacing: -0.12px;
             }
+            .explore-resources__list__item__anchor:before,
             .explore-resources__list__item__anchor:after {
                 position: absolute;
                 bottom: 20px;
                 right: 20px;
                 content: '';
                 display: block;
-                width: 48px;
-                height: 48px;
-                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                width: 64px;
+                height: 64px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .explore-resources__list__item__anchor:after {
+                z-index: 1;
+                background-image: url(../../mocks/ST0004/btn-ectk-more.svg);
+            }
+            .explore-resources__list__item__anchor:before {
+                opacity: 0;
+                z-index: 2;
+                background-image: url(../../mocks/ST0004/btn-ectk-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .explore-resources__list__item__anchor:hover:before {
+                opacity: 1;
             }
 
             /* Summary */
@@ -1871,6 +1885,8 @@
                 padding: 80px 0px 140px;
             }
             .summary__cont {
+                display: flex;
+                align-items: center;
                 width: 1440px;
                 height: 720px;
                 border-radius: 30px;
@@ -1879,30 +1895,32 @@
                 background: linear-gradient(238.16deg, rgba(0, 0, 0, 0.4) 5.45%, rgba(0, 0, 0, 0) 69.88%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat right center;
                 background-size: cover;
             }
+            .summary__cont__inner {
+                padding: 64px 90px 64px 986px;
+            }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 57px 80px 57px 1002px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 80px 80px 0px 1002px;
+                margin-bottom: 32px;
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
 
             /* What's Next */
             .whats-next__wrap {
                 overflow: hidden;
-                padding: 80px 0px;
+                padding: 72px 0px 64px;
                 background-color: #E6E1D6;
             }
             .whats-next {
@@ -1912,9 +1930,9 @@
             }
             .whats-next__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
-                line-height: 52px;
-                font-weight: 550;
+                font-size: 48px;
+                line-height: 56px;
+                font-weight: 600;
             }
             .whats-next__menu {
                 margin-top: 64px;
@@ -1929,23 +1947,19 @@
                 display: block;
                 width: 100%;
                 height: 475px;
-                padding: 80px 0px 59px;
-                box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
                 overflow: hidden;
             }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
-                overflow: hidden;
-                transition: 0.3s ease all;
-            }
-            .whats-next__menu__slide1__anchor__photo {
                 top: 80px;
                 left: 100px;
                 right: 100px;
                 bottom: 121px;
+                overflow: hidden;
                 border-radius: 30px;
+                transition: 0.3s ease all;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
                 top: 0px;
@@ -2047,19 +2061,27 @@
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -112px;
+                top: -128px;
                 right: 0px;
                 display: flex;
                 gap: 0px 8px;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 100% 100%;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .whats-next__menu__btn-set__btn:hover {
+                border-color: #262626;
             }
             .whats-next__menu__btn-set__btn__prev {
                 background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
@@ -2070,7 +2092,7 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 64px;
+                margin-top: 48px;
                 height: 2px !important;
                 background-color: rgba(0,0,0,0.2);
             }
@@ -2096,7 +2118,7 @@
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
-                padding: 120px 150px;
+                padding: 128px 168px;
                 box-sizing: border-box;
                 border-radius: 30px;
                 text-align: left;
@@ -2104,34 +2126,32 @@
             }
             .popup-discription__tit {
                 text-align: center;
-                font-weight: 550;
-                font-size: 52px;
-                line-height: 58px;
             }
             .popup-discription__tit--left {
                 text-align: left;
             }
             .popup-discription__tit__preface {
                 font-size: 24px;
-                font-weight: 400;
+                font-weight: 600;
                 line-height: 28px;
                 letter-spacing: -0.12px;
-                font-weight: 400;
             }
             .popup-discription__tit__subject {
-                margin-top: 20px;
+                margin-top: 8px;
                 font-family: LGEI Headline;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                font-weight: 550;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
             .popup-discription__intro {
                 font-size: 20px;
                 line-height: 28px;
-                margin: 20px 0px 0px;
+                margin: 32px 0px 0px;
                 letter-spacing: -0.1px;
             }
             .popup-discription__visual {
-                margin: 60px -150px 0px;
+                margin: 64px -168px 0px;
             }
             .popup-discription__visual__img {
                 width: 100%;
@@ -2143,14 +2163,11 @@
             .popup-discription__cont {
                 font-size: 20px;
                 line-height: 28px;
-                padding: 60px 0px;
-            }
-            .popup-discription__cont:last-child {
-                padding-bottom: 0px;
+                padding-top: 64px;
             }
             .popup-discription__cont__photo {
                 text-align: center;
-                margin: 40px -90px 0px;
+                margin-top: 32px;
             }
             .popup-discription__cont__photo:first-child {
                 margin-top: 0px;
@@ -2160,24 +2177,22 @@
                 height: auto;
             }
             .popup-discription__cont__tit {
-                margin: 40px 0px 20px;
+                margin: 64px 0px 16px;
                 font-family: LGEI Headline;
-                font-size: 36px;
-                line-height: 40px;
-                letter-spacing: -0.54px;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 white-space: nowrap;
             }
             .popup-discription__cont__tit:first-child {
                 margin-top: 0px;
             }
             .popup-discription__cont__txt {
-                margin-top: 32px;
+                margin-top: 16px;
                 font-size: 20px;
                 line-height: 28px;
                 letter-spacing: -0.1px;
-            }
-            .popup-discription__cont__stit + .popup-discription__cont__txt {
-                margin-top: 20px;
             }
             .popup-discription__cont__txt:first-child {
                 margin-top: 0px;
@@ -2186,7 +2201,7 @@
                 font-size: 24px;
                 line-height: 28px;
                 letter-spacing: -0.12px;
-                color: #4A4946;
+                color: black;
             }
             .popup-discription__cont__stit__strong {
                 font-weight: 600;
@@ -2216,8 +2231,8 @@
             }
             .popup-discription__btn-close {
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                top: 32px;
+                right: 32px;
                 width: 48px;
                 height: 48px;
                 box-sizing: border-box;
@@ -2777,9 +2792,6 @@
                     letter-spacing: -0.14px;
                     letter-spacing: -0.5px;
                     white-space: normal;
-                }
-                .popup-discription__cont__photo {
-                    margin: 40px 0px 0px;
                 }
                 .popup-discription__cont__txt {
                     font-size: 16px;
@@ -3348,9 +3360,6 @@
                     letter-spacing: -0.5px;
                     white-space: normal;
                 }
-                .popup-discription__cont__photo {
-                    margin: 40px 0px 0px;
-                }
                 .popup-discription__cont__txt {
                     font-size: 16px;
                     font-weight: 400;
@@ -3698,16 +3707,18 @@
             </div>
             <div class="summary">
                 <div class="summary__cont">
-                    <p class="summary__cont__txt summary__cont__txt--active">
-                        Better for earth. <br />
-                        Better for us.
-                    </p>
-                    <p class="summary__cont__txt">
-                        We're dedicated to being <br />
-                        environmentally responsible and creating <br />
-                        better technologies For the planet. <br />
-                        We hope you support our mission.
-                    </p>
+                    <div class="summary__cont__inner">
+                        <p class="summary__cont__txt summary__cont__txt--active">
+                            Better for earth. <br />
+                            Better for us.
+                        </p>
+                        <p class="summary__cont__txt">
+                            We're dedicated to being <br />
+                            environmentally responsible and creating <br />
+                            better technologies For the planet. <br />
+                            We hope you support our mission.
+                        </p>
+                    </div>
                 </div>
                 <div class="summary__visual"></div>
             </div>
@@ -3966,7 +3977,7 @@
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
                     if(window.innerWidth > 1499) {
-                        return 40
+                        return 32
                     } else {
                         return 20
                     }
@@ -3974,12 +3985,20 @@
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
+                if(document.querySelector(".root.responsivegrid")) {
+                    document.querySelector(".root.responsivegrid").style.position = "relative"
+                    document.querySelector(".root.responsivegrid").style.zIndex = "101"
+                }
                 descPopup.style.display = "block"
 
                 btnClose.onclick = function() {
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    if(document.querySelector(".root.responsivegrid")) {
+                        document.querySelector(".root.responsivegrid").style.position = ""
+                        document.querySelector(".root.responsivegrid").style.zIndex = ""
+                    }
                 }
 
                 descPopup.onscroll = function() {
@@ -4746,10 +4765,11 @@
 </div>
 </div>
 
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-398116cb602d6661807f669aae178af7-lc.min.js"></script>
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-f64e4b4ab53936894f771b13abb8da69-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-6b3c701c887bbc83ccb30a6f3ef04964-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-7e4c54aa12c333a74b4bcf48d517d3eb-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+
 <div data-lazyload-js data-lazyload-attr="src=https://apps.bazaarvoice.com/deployments/lgelectronics-en/main_site/production/en_GB/bv.js async"></div>
 <div data-lazyload-js data-lazyload-attr="src=https://static.youreko.com/js/partners/gb/lg/youreko.energy-review.lg.all.min.js async"></div>
 </body>

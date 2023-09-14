@@ -90,7 +90,7 @@
     <script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>
     <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
     <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-212ca6ba9ed029e12c51a402a049af04-lc.min.css" type="text/css">
-    <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-8796ff8f61a8277f575142e52e11cc52-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-03a7123793acb5f44ea4ac61c42108f9-lc.min.css" type="text/css">
     <script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/datalayer/v1/clientlibs/core.wcm.components.commons.datalayer.v1.lc-904d3c2f1e821ab45124d66de422b409-lc.min.js"></script>
     <meta name="store-config" content="{&#34;graphqlEndpoint&#34;:&#34;/api/graphql&#34;,&#34;graphqlMethod&#34;:&#34;GET&#34;,&#34;locale&#34;:&#34;en-US&#34;,&#34;storeRootUrl&#34;:&#34;/en/global.html&#34;,&#34;enableClientSidePriceLoading&#34;:false}">
 
@@ -1399,7 +1399,7 @@
             .sustainably-container,
             .sustainably-container * {
                 font-family: LGEI Text;
-                color: #262626;
+                color: #333333;
             }
             .sustainably-container button {
                 cursor: pointer;
@@ -1490,39 +1490,37 @@
             .carbon-nautrality-about__cont {
                 width: 1440px;
                 margin: 0px auto;
-                padding: 106px 0px;
+                padding: 128px 0px;
                 font-weight: 300;
-                font-size: 44px;
-                line-height: 56px;
-                color: #4A4946;
+                font-size: 36px;
+                line-height: 46px;
             }
 
             /* Key progress */
             .key-progress {
-                padding-top: 80px;
+                padding-top: 64px;
                 text-align: center;
             }
             .key-progress__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
             }
-            .key-progress__intro__txt {
-                margin-top: 16px;
-            }
             .key-progress__intro__txt:first-child {
-                font-size: 56px;
+                font-size: 48px;
                 font-family: LGEI Headline;
                 font-weight: 550;
-                line-height: 60px;
+                line-height: 56px;
+                color: black;
             }
             .key-progress__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
             }
             .key-progress__goals__wrap {
-                position: relative;
-                margin-top: 60px;
+                margin-top: 64px;
                 box-sizing: border-box;
                 background-image: url(../../mocks/ST0003/bg-key-progress-goals-cont.jpg);
                 background-repeat: no-repeat;
@@ -1531,17 +1529,23 @@
                 background-attachment: fixed;
             }
             .key-progress__goals {
-                width: 1440px;
+                position: relative;
+                width: 1280px;
                 margin: 0px auto;
-                padding: 120px 0px 80px;
+                padding: 64px 0px 32px;
             }
             .key-progress__goals__tit {
-                font-size: 52px;
+                position: absolute;
+                top: 110px;
+                left: 0px;
+                width: 216px;
+                font-size: 48px;
                 font-family: LGEI Headline;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 color: white;
+                text-align: left;
             }
             .key-progress__goals__tit__br {
                 display: none;
@@ -1549,12 +1553,12 @@
             .key-progress__goals__carbon-zero {
                 display: flex;
                 justify-content: space-around;
-                margin-top: 86px;
+                padding-left: 404px;
             }
             .key-progress__goals__carbon-zero__item {
                 position: relative;
-                width: 280px;
-                height: 280px;
+                width: 260px;
+                height: 260px;
             }
             .key-progress__goals__carbon-zero__txt {
                 position: absolute;
@@ -1569,24 +1573,25 @@
                 text-align: center;
             }
             .key-progress__goals__carbon-zero__txt__percentage {
-                font-size: 56px;
+                margin: 18px 0px 27px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 60px;
+                line-height: 56px;
                 letter-spacing: -0.28px;
             }
             .key-progress__goals__carbon-zero__txt__zero {
+                margin-bottom: 3px;
                 color: white;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 42px;
-                letter-spacing: -0.26px;
+                line-height: 50px;
+                letter-spacing: -0.24px;
                 transition: 3s ease color;
             }
             .key-progress__goals__carbon-zero__txt__zero--on {
                 color: #75C66B;
             }
             .key-progress__goals__carbon-zero__txt__year {
-                margin-top: 16px;
                 font-family: LGEI Headline;
                 font-size: 28px;
                 font-weight: 550;
@@ -1614,7 +1619,7 @@
                 transition: 0.3s ease stroke-dashoffset;
             }
             .key-progress__goals__transition-reduce {
-                margin-top: 119px;
+                margin-top: 56px;
             }
             .key-progress__goals__transition-reduce__tab {
                 display: flex;
@@ -1740,67 +1745,64 @@
 
             /* Carbon Emission Reduction */
             .achieve-carbon-neutrality {
-                width: 1260px;
-                padding: 60px 0px;
+                width: 1238px;
+                padding: 64px 0px;
                 margin: 0px auto;
                 text-align: center;
             }
             .achieve-carbon-neutrality__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
             }
-            .achieve-carbon-neutrality__intro__txt {
-                margin-top: 16px;
-            }
             .achieve-carbon-neutrality__intro__txt:first-child {
                 font-family: LGEI Headline;
-                font-size: 56px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 60px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
             .achieve-carbon-neutrality__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
             }
             .achieve-carbon-neutrality__plan {
                 display: flex;
-                gap: 0px 75px;
-                margin-top: 60px;
-                padding: 140px 0px;
+                margin-top: 75px;
                 justify-content: space-between;
             }
             .achieve-carbon-neutrality__plan__item {
                 width: 370px;
                 height: 604px;
-                border-radius: 400px;
                 opacity: 0;
-                transform: translateY(0px);
+                transform: translateY(75px);
                 transition: 0.5s ease transform,0.5s ease opacity;
             }
             .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item {
                 opacity: 1;
-            }
-            .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step1 {
-                transform: translateY(140px);
-            }
-            .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step2 {
                 transform: translateY(0px);
             }
+            .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step1 {
+                transition-delay: 0.1s;
+            }
+            .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step2 {
+                transition-delay: 0.3s;
+            }
             .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step3 {
-                transform: translateY(-140px);
+                transition-delay: 0.5s;
             }
             .achieve-carbon-neutrality__plan__item__btn {
+                overflow: hidden;
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
-                padding: 106px 0px;
-                color: white;
-                font-size: 24px;
-                line-height: 28px;
-                letter-spacing: -0.12px;
-                background-color: black;
+                height: 100%;
+                padding: 98px 0px;
+                border-radius: 400px;
+                background-color: rgba(0, 0, 0, 0.10);
                 background-repeat: no-repeat;
                 background-position: 22% center;
                 background-size: cover;
@@ -1817,25 +1819,49 @@
             .achieve-carbon-neutrality__plan__item__step3__btn {
                 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 79.17%, rgba(0, 0, 0, 0.5) 100%), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan3.jpg);
             }
+            .achieve-carbon-neutrality__plan__item__btn:before {
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(0px);
+            }
+            .achieve-carbon-neutrality__plan__item__btn:hover:before {
+                backdrop-filter: blur(50px);
+            }
             .achieve-carbon-neutrality__plan__item__btn:after {
                 position: absolute;
+                z-index: 2;
                 bottom: 28px;
                 left: calc(50% - 24px);
                 content: '';
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 44px;
+                height: 44px;
                 background: url(../../mocks/ST0003/bullet-discover-more.svg) no-repeat center center;
                 background-size: cover;
+            }
+            .achieve-carbon-neutrality__plan__item__btn__txt {
+                position: relative;
+                z-index: 2;
+                color: white;
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: -0.12px;
             }
 
             /* Home appliances manufacturing factory */
             .home-appliances-manufacturing-factory {
                 position: relative;
-                padding: 60px 0px 750px;
+                padding: 64px 0px 750px;
                 text-align: center;
             }
             .home-appliances-manufacturing-factory__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
@@ -1843,23 +1869,21 @@
             .home-appliances-manufacturing-factory__tit__br {
                 display: none;
             }
-            .home-appliances-manufacturing-factory__intro__txt {
-                margin-top: 16px;
-            }
             .home-appliances-manufacturing-factory__intro__txt:first-child {
                 font-family: LGEI Headline;
-                font-size: 56px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 60px;
+                line-height: 56px;
             }
             .home-appliances-manufacturing-factory__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
             }
             .home-appliances-manufacturing-factory__photos-navi {
                 display: flex;
                 justify-content: center;
-                margin-top: 40px;
+                margin-top: 48px;
             }
             .home-appliances-manufacturing-factory__photos-navi__list {
                 display: flex;
@@ -1899,7 +1923,7 @@
                 left: 0px;
                 width: 100%;
                 height: 750px;
-                padding: 40px 0px 60px;
+                padding: 32px 0px 68px;
                 opacity: 0;
                 transition: 0.3s ease opacity;
             }
@@ -1936,13 +1960,12 @@
             .home-appliances-manufacturing-factory__photos-cont__figure__figcaption {
                 position: absolute;
                 z-index: 3;
-                bottom: 58px;
+                bottom: 47px;
                 left: 40px;
                 color: white;
                 font-size: 24px;
-                line-height: 28px;
-                font-weight: 300;
-                letter-spacing: -0.005em;
+                line-height: 30px;
+                letter-spacing: -0.12px;
             }
             .home-appliances-manufacturing-factory__photos-cont__figure__discover-more {
                 position: absolute;
@@ -1951,20 +1974,39 @@
                 right: 40px;
                 display: flex;
                 align-items: center;
-                font-size: 20px;
+                font-size: 24px;
                 color: white;
+                padding: 0px 52px 0px 0px !important;
                 border-width: 0px;
                 border-color: transparent;
                 background-color: transparent;
             }
+            .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:before,
             .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:after {
+                position: absolute;
+                top: 0px;
+                right: 0px;
                 content: '';
                 display: inline-block;
-                width: 64px;
-                height: 64px;
-                margin-left: 20px;
-                background: url(../../mocks/ST0003/bullet-discover-more.svg) no-repeat center center;
+                width: 44px;
+                height: 44px;
+                margin-left: 8px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:after {
+                z-index: 1;
+                background-image: url(../../mocks/ST0003/bullet-discover-more.svg);
+            }
+            .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:before {
+                opacity: 0;
+                z-index: 2;
+                background-image: url(../../mocks/ST0003/bullet-discover-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:hover:before {
+                opacity: 1;
             }
 
             /* B2B activity */
@@ -2010,58 +2052,81 @@
                 right: 0px;
                 display: flex;
                 align-items: center;
-                font-size: 20px;
+                font-size: 24px;
                 color: white;
-                border-color: transparent;
+                padding: 0px 52px 0px 0px !important;
+                border-width: 0px;
                 background-color: transparent;
             }
+            .b2b-activity__discover-more:before,
             .b2b-activity__discover-more:after {
+                position: absolute;
+                top: 0px;
+                right: 0px;
                 content: '';
                 display: inline-block;
-                width: 64px;
-                height: 64px;
-                margin-left: 20px;
-                background: url(../../mocks/ST0003/bullet-discover-more.svg) no-repeat center center;
+                width: 44px;
+                height: 44px;
+                margin-left: 8px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .b2b-activity__discover-more:after {
+                z-index: 1;
+                background-image: url(../../mocks/ST0003/bullet-discover-more.svg);
+            }
+            .b2b-activity__discover-more:before {
+                opacity: 0;
+                z-index: 2;
+                background-image: url(../../mocks/ST0003/bullet-discover-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .b2b-activity__discover-more:hover:before {
+                opacity: 1;
             }
 
             /* Summary */
             .summary {
-                padding: 80px 0px 140px;
+                padding: 64px 0px 128px;
             }
             .summary__cont {
+                display: flex;
+                align-items: center;
                 width: 1440px;
                 height: 720px;
-                border-radius: 30px;
+                border-radius: 28px;
                 margin: 0px auto;
                 box-sizing: border-box;
                 background: linear-gradient(161deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0003/photo-summary-visual.jpg) no-repeat center center;
                 background-size: cover;
+            }
+            .summary__cont__inner {
+                padding: 64px;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 57px 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 80px 80px 0px;
+                margin-bottom: 32px;
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
 
             /* What's Next */
             .whats-next__wrap {
                 overflow: hidden;
-                padding: 80px 0px;
+                padding: 72px 0px 64px;
                 background-color: #E6E1D6;
             }
             .whats-next {
@@ -2071,9 +2136,9 @@
             }
             .whats-next__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
-                line-height: 52px;
-                font-weight: 550;
+                font-size: 48px;
+                line-height: 56px;
+                font-weight: 600;
             }
             .whats-next__menu {
                 margin-top: 64px;
@@ -2088,23 +2153,19 @@
                 display: block;
                 width: 100%;
                 height: 475px;
-                padding: 80px 0px 59px;
-                box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
                 overflow: hidden;
             }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
-                overflow: hidden;
-                transition: 0.3s ease all;
-            }
-            .whats-next__menu__slide1__anchor__photo {
                 top: 80px;
                 left: 100px;
                 right: 100px;
                 bottom: 121px;
+                overflow: hidden;
                 border-radius: 30px;
+                transition: 0.3s ease all;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
                 top: 0px;
@@ -2206,19 +2267,27 @@
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -112px;
+                top: -128px;
                 right: 0px;
                 display: flex;
                 gap: 0px 8px;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 100% 100%;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .whats-next__menu__btn-set__btn:hover {
+                border-color: #262626;
             }
             .whats-next__menu__btn-set__btn__prev {
                 background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
@@ -2229,8 +2298,8 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 64px;
-                height: 2px;
+                margin-top: 48px;
+                height: 2px !important;
                 background-color: rgba(0,0,0,0.2);
             }
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
@@ -2255,7 +2324,7 @@
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
-                padding: 130px 120px;
+                padding: 128px 168px;
                 box-sizing: border-box;
                 border-radius: 30px;
                 overflow: hidden;
@@ -2263,27 +2332,27 @@
                 background-color: white;
             }
             .popup-discription__tit {
+                font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 52px;
-                line-height: 58px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .popup-discription__tit__preface {
                 font-size: 24px;
-                font-weight: 400;
-                line-height: 28px;
+                font-weight: 600;
+                line-height: 30px;
                 letter-spacing: -0.12px;
-                font-weight: 400;
             }
             .popup-discription__tit__subject {
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
-                margin-top: 20px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
+                margin-top: 8px;
             }
             .popup-discription__visual {
-                margin: 60px -120px 0px;
+                margin: 64px -168px 0px;
             }
             .popup-discription__visual__img {
                 width: 100%;
@@ -2306,10 +2375,10 @@
             .popup-discription__cont1 {
                 font-size: 20px;
                 line-height: 28px;
-                margin-top: 60px;
+                margin-top: 48px;
             }
             .popup-discription__cont1 + .popup-discription__cont1 {
-                margin-top: 20px;
+                margin-top: 16px;
             }
             .popup-discription__cont2 {
                 font-size: 16px;
@@ -2317,63 +2386,74 @@
                 margin-top: 60px;
             }
             .popup-discription__cont3 {
-                font-size: 15px;
+                font-size: 16px;
                 font-weight: 400;
-                line-height: 21px;
-                margin-top: 20px;
+                line-height: 20px;
+                margin-top: 24px;
                 color: #7E7C77;
             }
             .popup-discription__80000tons {
                 display: grid;
-                grid-template-columns: 200px auto;
+                grid-template-columns: 292px auto;
                 gap: 0px 40px;
-                align-items: center;
-                padding-top: 60px;
-                margin-top: 60px;
+                align-items: flex-start;
+                padding-top: 48px;
+                margin-top: 48px;
                 border-top: 1px solid #D0CBC1;
             }
             .popup-discription__80000tons__tit {
                 color: #75C66B;
                 font-family: LGEI Headline;
-                font-size: 56px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 60px;
+                line-height: 56px;
                 letter-spacing: -0.28px;
             }
             .popup-discription__80000tons__txt {
+                color: #1A1A1A;
                 font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
+                line-height: 22px;
                 letter-spacing: -0.08px;
             }
             .popup-discription__read-more {
-                margin-top: 60px;
+                margin-top: 48px;
             }
             .popup-discription__read-more__btn {
                 display: inline-block;
-                padding: 13px 19px 12px;
-                border-radius: 30px;
-                border: 1px solid #898989;
+                padding: 18px 26px;
+                border-radius: 100px;
+                border: 1px solid #333333;
                 color: black;
-                font-size: 16px;
+                font-size: 24px;
                 font-weight: 600;
-                line-height: 16px;
+                line-height: 24px;
+                background-color: white;
+                transition: 0.3s ease all;
             }
-            .popup-discription__read-more__btn:after {
-                content: '';
-                display: inline-block;
-                vertical-align: text-bottom;
+            .popup-discription__read-more__btn:hover {
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
+                text-decoration: none;
+            }
+            .popup-discription__read-more__btn__bullet {
+                width: 15px;
+                height: 14px;
+                vertical-align: middle;
                 position: relative;
-                top: -1px;
-                width: 16px;
-                height: 16px;
-                margin-left: 5px;
-                background: url(../../mocks/ST0007/bullet-pd-learn-more.svg) no-repeat center center;
+                top: -3px;
+            }
+            .popup-discription__read-more__btn__bullet__ico {
+                stroke: #262626;
+                transition: 0.3s ease stroke;
+            }
+            .popup-discription__read-more__btn:hover .popup-discription__read-more__btn__bullet__ico {
+                stroke: white;
             }
             .popup-discription__btn-close {
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                top: 32px;
+                right: 32px;
                 width: 48px;
                 height: 48px;
                 box-sizing: border-box;
@@ -2409,8 +2489,8 @@
             /* Popup Discription - B2B activity */
             .popup-discription__b2b-activity__intro {
                 height: 1000px;
-                margin: -130px -120px 0px;
-                padding: 130px 120px;
+                margin: -128px -168px 0px;
+                padding: 128px 168px;
                 box-sizing: border-box;
                 background: url(../../mocks/ST0003/visual-pdm-net-zero-house.png) no-repeat right top;
                 background-size: cover;
@@ -2421,15 +2501,15 @@
             .popup-discription__b2b-activity__intro__tit {
                 font-size: 24px;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 30px;
                 letter-spacing: -0.12px;
             }
             .popup-discription__b2b-activity__intro__summary {
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 margin-top: 20px;
             }
             .popup-discription__b2b-activity__intro__detail {
@@ -2442,12 +2522,11 @@
                 padding-top: 60px;
             }
             .popup-discription__b2b-activity__desc__tit {
-                margin-top: 120px;
+                margin-top: 64px;
                 font-family: LGEI Headline;
-                font-size: 36px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 40px;
+                font-size: 48px;
+                font-weight: 550;
+                line-height: 56px;
                 letter-spacing: -0.54px;
             }
             .popup-discription__b2b-activity__desc__tit:first-child {
@@ -3200,18 +3279,6 @@
                 }
                 .popup-discription__b2b-activity__desc {
                     padding-top: 60px;
-                }
-                .popup-discription__b2b-activity__desc__tit {
-                    margin-top: 120px;
-                    
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    letter-spacing: -0.54px;
-                }
-                .popup-discription__b2b-activity__desc__tit:first-child {
-                    margin-top: 0px;
                 }
                 .popup-discription__b2b-activity__desc__stit {
                     margin-top: 60px;
@@ -4198,24 +4265,30 @@
                 </div>
                 <ul class="achieve-carbon-neutrality__plan">
                     <li class="achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step1">
-                        <a href="#greenhouse-reduction" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step1__btn">
-                            Reduce greenhouse gas <br />
-                            emissions in production <br />
-                            stage (~2030)
+                        <a href="#greenhouse-reduction" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item__step1__btn">
+                            <p class="achieve-carbon-neutrality__plan__item__btn__txt">
+                                Reduce greenhouse gas <br />
+                                emissions in production <br />
+                                stage (~2030)
+                            </p>
                         </a>
                     </li>
                     <li class="achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step2">
-                        <a href="#renewable-energy" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step2__btn">
-                            Expanding our business <br />
-                            to achieve 100% <br />
-                            renewable energy <br />
-                            (~2050)
+                        <a href="#renewable-energy" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn  achieve-carbon-neutrality__plan__item__step2__btn">
+                            <p class="achieve-carbon-neutrality__plan__item__btn__txt">
+                                Expanding our business <br />
+                                to achieve 100% <br />
+                                renewable energy <br />
+                                (~2050)
+                            </p>
                         </a>
                     </li>
                     <li class="achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step3">
-                        <a href="#emissions-reductions" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step3__btn">
-                            Securing certified <br />
-                            emissions reductions
+                        <a href="#emissions-reductions" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item__step3__btn">
+                            <p class="achieve-carbon-neutrality__plan__item__btn__txt">
+                                Securing certified <br />
+                                emissions reductions
+                            </p>
                         </a>
                     </li>
                 </ul>
@@ -4226,7 +4299,12 @@
                             <dd class="popup-discription__cont1">Our goal is to decrease greenhouse gas emissions during production by 50% compared to 2017 using advanced equipment and devices. Additionally, we'll actively engage in Clean Development Mechanism (CDM*) projects to acquire carbon credits and support developing nations in reducing their emissions. We'll also implement our own solutions, like upgraded refrigerators and Energy Management Systems (EMS), which promote the use of renewable energy.</dd>
                             <dd class="popup-discription__cont3">*CDM: Clean Development Mechanism</dd>
                             <dd class="popup-discription__read-more">
-                                <a href="https://www.lgnewsroom.com/2022/06/lgs-eco-conscious-initiatives-for-a-better-tomorrow/" target="_blank" class="popup-discription__read-more__btn">Read more</a>
+                                <a href="https://www.lgnewsroom.com/2022/06/lgs-eco-conscious-initiatives-for-a-better-tomorrow/" target="_blank" class="popup-discription__read-more__btn">
+                                    Read more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__read-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__read-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -4240,7 +4318,12 @@
                             <dd class="popup-discription__cont1">To realize these goals, LG has formulated a comprehensive long-term plan that takes into account the current regulatory landscape and the state of its business sites in Korea and other countries. The plan encompasses various viable options such as green tariffs for purchasing renewable energy, acquiring Renewable Energy Credits (REC), and engaging in third-party Power Purchase Agreements (PPA).</dd>
                             <dd class="popup-discription__cont1">A notable achievement has been accomplished at LG Smart Park in Changwon, Korea, where the company successfully established the first-ever direct Power Purchase Agreement in the country, securing a robust power generation capacity of 2.3MW. These exceptional efforts not only underscore LG's unwavering dedication to sustainability but also position the company as a frontrunner in the renewable energy industry.</dd>
                             <dd class="popup-discription__read-more">
-                                <a href="https://www.lgnewsroom.com/2023/06/lg-joins-re100-initiative-committing-to-transition-to-renewable-energy/" target="_blank"  class="popup-discription__read-more__btn">Read more</a>
+                                <a href="https://www.lgnewsroom.com/2023/06/lg-joins-re100-initiative-committing-to-transition-to-renewable-energy/" target="_blank"  class="popup-discription__read-more__btn">
+                                    Read more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__read-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__read-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -4254,11 +4337,16 @@
                             <dd class="popup-discription__cont1">We received a carbon emissions allowance from the UNFCCC Executive Committee by producing and providing innovative, high-efficiency fridges in India. The key technology of high-efficiency fridges is the inverter linear compressor. It controls the system more precisely than a typical compressor, operating the motor only when necessary, which improves energy efficiency and performance.</dd>
                             <dd class="popup-discription__cont1">In this way, we're taking eco-friendly action through a virtuous cycle of securing carbon emissions with high-efficiency fridges produced in India, and investing the profits into greenhouse gas reduction projects in Korea.</dd>
                             <dd class="popup-discription__80000tons">
-                                <h4 class="popup-discription__80000tons__tit">800,000 tons</h4>
-                                <p class="popup-discription__80000tons__cont">We secured the right to release 800,000 tons of carbon from 2018 to 2020, and we'll have an additional 1.2 million tons by 2025. This is equivalent to how much carbon we will reduce.</p>
+                                <h4 class="popup-discription__80000tons__tit">800,000tons</h4>
+                                <p class="popup-discription__80000tons__txt">We secured the right to release 800,000 tons of carbon from 2018 to 2020, and we'll have an additional 1.2 million tons by 2025. This is equivalent to how much carbon we will reduce.</p>
                             </dd>
                             <dd class="popup-discription__read-more">
-                                <a href="https://www.lgnewsroom.com/2021/07/lg-pledges-transition-to-100-percent-renewable-energy-by-2050/" target="_blank" class="popup-discription__read-more__btn">Read more</a>
+                                <a href="https://www.lgnewsroom.com/2021/07/lg-pledges-transition-to-100-percent-renewable-energy-by-2050/" target="_blank" class="popup-discription__read-more__btn">
+                                    Read more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__read-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__read-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -4308,8 +4396,8 @@
                             <dt class="popup-discription__tit">
                                 <div class="popup-discription__tit__preface">Carbon emission reduction</div>
                                 <div class="popup-discription__tit__subject">
-                                    First Home <br class="popup-discription__tit__subject__br" />
-                                    appliances lighthouse factory  <br />
+                                    First Home appliances<br class="popup-discription__tit__subject__br" />
+                                    lighthouse factory  <br />
                                     LG Smart Park
                                 </div>
                             </dt>
@@ -4430,17 +4518,19 @@
             </div>
             <div class="summary">
                 <div class="summary__cont">
-                    <p class="summary__cont__txt summary__cont__txt--active">
-                        Tackling the climate <br />
-                        crisis together, <br />
-                        we'll solve it.
-                    </p>
-                    <p class="summary__cont__txt">
-                        The climate crisis is a serious challenge that <br />
-                        requires all of us to work together. We're always <br />
-                        striving to find solutions, and you're welcome to <br />
-                        join us. Together, we can build a brighter future!
-                    </p>
+                    <div class="summary__cont__inner">
+                        <p class="summary__cont__txt summary__cont__txt--active">
+                            Tackling the climate <br />
+                            crisis together, <br />
+                            we'll solve it.
+                        </p>
+                        <p class="summary__cont__txt">
+                            The climate crisis is a serious challenge that <br />
+                            requires all of us to work together. We're always <br />
+                            striving to find solutions, and you're welcome to <br />
+                            join us. Together, we can build a brighter future!
+                        </p>
+                    </div>
                 </div>
                 <div class="summary__visual"></div>
             </div>
@@ -4875,7 +4965,7 @@
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
                     if(window.innerWidth > 1499) {
-                        return 40
+                        return 32
                     } else {
                         return 20
                     }
@@ -5663,10 +5753,11 @@
 </div>
 </div>
 
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-398116cb602d6661807f669aae178af7-lc.min.js"></script>
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-f64e4b4ab53936894f771b13abb8da69-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-6b3c701c887bbc83ccb30a6f3ef04964-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-7e4c54aa12c333a74b4bcf48d517d3eb-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+
 <div data-lazyload-js data-lazyload-attr="src=https://apps.bazaarvoice.com/deployments/lgelectronics-en/main_site/production/en_GB/bv.js async"></div>
 <div data-lazyload-js data-lazyload-attr="src=https://static.youreko.com/js/partners/gb/lg/youreko.energy-review.lg.all.min.js async"></div>
 </body>
