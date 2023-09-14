@@ -1398,7 +1398,7 @@
             .sustainably-container,
             .sustainably-container * {
                 font-family: LGEI Text;
-                color: #262626;
+                color: #333333;
             }
             .sustainably-container button {
                 cursor: pointer;
@@ -1431,7 +1431,7 @@
                 left: 0px;
                 width: 100%;
                 text-align: center;
-                line-height: 76px;
+                line-height: 84px;
                 font-size: 80px;
                 transform: translate(0,-50%);
             }
@@ -1486,36 +1486,32 @@
             .clean-technology-about__cont {
                 width: 1440px;
                 margin: 0px auto;
-                padding: 106px 0px;
+                padding: 128px 0px;
                 font-weight: 300;
-                font-size: 44px;
-                line-height: 56px;
-                color: #4A4946;
+                font-size: 36px;
+                line-height: 46px;
             }
             
             /* ECO-Conscious Technology */
             .eco-conscious-technology {
                 width: 1440px;
-                padding: 60px 0px;
+                padding: 64px 0px;
                 margin: 0px auto;
                 text-align: center;
             }
             .eco-conscious-technology__tit {
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 28px;
+                display: none;
             }
             .eco-conscious-technology__intro__txt {
-                margin-top: 16px;
                 font-family: LGEI Headline;
                 font-weight: 600;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .eco-conscious-technology__kind {
                 position: relative;
-                padding: 72px 0px 48px;
-                margin-top: 32px;
+                padding: 88px 0px 48px;
+                margin-top: 64px;
                 overflow: visible;
             }
             .eco-conscious-technology__kind__slide {
@@ -1539,16 +1535,31 @@
             .eco-conscious-technology__kind__slide__anchor:hover {
                 text-decoration: none;
             }
+            .eco-conscious-technology__kind__slide__anchor:before,
             .eco-conscious-technology__kind__slide__anchor:after {
                 position: absolute;
                 bottom: 32px;
                 right: 32px;
                 content: '';
                 display: block;
-                width: 48px;
-                height: 48px;
-                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                width: 44px;
+                height: 44px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .eco-conscious-technology__kind__slide__anchor:after {
+                z-index: 1;
+                background-image: url(../../mocks/ST0005/btn-ectk-more.svg);
+            }
+            .eco-conscious-technology__kind__slide__anchor:before {
+                z-index: 2;
+                opacity: 0;
+                background-image: url(../../mocks/ST0005/btn-ectk-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .eco-conscious-technology__kind__slide__anchor:hover:before {
+                opacity: 1;
             }
             .eco-conscious-technology__kind__slide__anchor1 {
                 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind1.png);
@@ -1565,18 +1576,20 @@
             .eco-conscious-technology__kind__slide__anchor__preface {
                 font-size: 20px;
                 font-weight: 400;
-                line-height: 24px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
                 color: white;
             }
             .eco-conscious-technology__kind__slide__anchor__subject {
-                font-family: LGEI Headline;
-                font-size: 36px;
-                line-height: 40px;
-                letter-spacing: -0.54px;
                 margin-top: 8px;
+                font-family: LGEI Headline;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 color: white;
             }
             .eco-conscious-technology__kind__pagination {
+                bottom: 0px !important;
                 opacity: 0.5;
                 line-height: 1;
             }
@@ -1599,23 +1612,31 @@
                 gap: 0px 8px;
             }
             .eco-conscious-technology__kind__btn-set__btn {
-                width: 49px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: cover;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .eco-conscious-technology__kind__btn-set__btn:hover {
+                border-color: #262626;
             }
             .eco-conscious-technology__kind__btn-set__btn__prev {
-                background-image: url(../../mocks/ST0005/btn-ectk-prev.svg);
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
             }
             .eco-conscious-technology__kind__btn-set__btn__next {
-                background-image: url(../../mocks/ST0005/btn-ectk-next.svg);
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
             }
 
             /* Recreation of product */
             .recreation-of-product__wrap {
-                padding: 60px 0px;
+                padding: 64px 0px;
             }
             .recreation-of-product {
                 width: 1440px;
@@ -1623,22 +1644,22 @@
                 text-align: center;
             }
             .recreation-of-product__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
             }
-            .recreation-of-product__intro__txt {
-                margin-top: 16px;
-            }
             .recreation-of-product__intro__txt:first-child {
                 font-family: LGEI Headline;
                 font-weight: 600;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .recreation-of-product__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
+                letter-spacing: -0.1px;
             }
             .recreation-of-product__learn-more {
                 margin-top: 24px;
@@ -1647,11 +1668,11 @@
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 99px;
+                color: black;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 16px;
-                letter-spacing: -0.24px;
-                border: 1px solid #4A4946;
+                border: 1px solid #262626;
                 background-color: white;
                 transition: 0.3s ease all;
             }
@@ -1677,15 +1698,15 @@
             .recreation-of-product__type {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
-                gap: 0px 20px;
+                gap: 0px 24px;
                 margin-top: 120px;
             }
             .recreation-of-product__type__item {
                 position: relative;
-                height: 590px;
-                padding: 60px 50px;
+                height: 560px;
+                padding: 32px;
                 box-sizing: border-box;
-                border-radius: 30px;
+                border-radius: 28px;
                 background-color: white;
             }
             .recreation-of-product__type__item__tit,
@@ -1695,16 +1716,16 @@
             .recreation-of-product__type__item__tit {
                 font-size: 24px;
                 font-weight: 600;
-                line-height: 28px;
+                line-height: 30px;
                 letter-spacing: -0.12px;
             }
             .recreation-of-product__type__item__intro {
-                margin-top: 16px;
+                margin-top: 6px;
                 font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 44px;
-                line-height: 48px;
-                letter-spacing: -0.44px;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
             .recreation-of-product__type__item__photo {
                 position: absolute;
@@ -1722,20 +1743,45 @@
                 position: absolute;
                 bottom: 32px;
                 right: 32px;
-                width: 48px;
-                height: 48px;
+                width: 45px;
+                height: 44px;
                 border-width: 0px;
+                text-indent: -9999px;
+                overflow: hidden;
                 background-color: transparent;
             }
-            .recreation-of-product__type__item__more__img {
+            .recreation-of-product__type__item__more:before,
+            .recreation-of-product__type__item__more:after {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
                 width: 100%;
                 height: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .recreation-of-product__type__item__more:before {
+                z-index: 1;
+                background-image: url(../../mocks/ST0005/btn-recreation-of-product-more.svg);
+            }
+            .recreation-of-product__type__item__more:after {
+                z-index: 2;
+                background-image: url(../../mocks/ST0005/btn-recreation-of-product-more-on.svg);
+                opacity: 0;
+                transition: 0.3s ease opacity;
+            }
+            .recreation-of-product__type__item__more:hover:after {
+                opacity: 1;
+                transition: 0.3s ease opacity;
             }
 
             /* Explore more resources */
             .explore-resources {
-                padding: 60px 0px;
-                background: url(../../mocks/ST0005/bg-explore-resources.png) no-repeat center top;
+                padding: 64px 0px;
+                background: url(../../mocks/ST0005/bg-explore-resources.png) no-repeat center center;
                 background-size: cover;
             }
             .explore-resources__inner {
@@ -1744,21 +1790,21 @@
             }
             .explore-resources__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 48px;
-                letter-spacing: -0.44px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 color: white;
             }
             .explore-resources__list {
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
-                gap: 21px;
+                gap: 16px 23px;
                 margin-top: 60px;
             }
             .explore-resources__list__item {
                 overflow: hidden;
-                border-radius: 20px;
+                border-radius: 28px;
             }
             .explore-resources__list__item__anchor {
                 position: relative;
@@ -1782,55 +1828,74 @@
                 color: white;
                 letter-spacing: -0.12px;
             }
+            .explore-resources__list__item__anchor:before,
             .explore-resources__list__item__anchor:after {
                 position: absolute;
                 bottom: 20px;
                 right: 20px;
                 content: '';
                 display: block;
-                width: 48px;
-                height: 48px;
-                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                width: 64px;
+                height: 64px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .explore-resources__list__item__anchor:after {
+                z-index: 1;
+                background-image: url(../../mocks/ST0004/btn-ectk-more.svg);
+            }
+            .explore-resources__list__item__anchor:before {
+                opacity: 0;
+                z-index: 2;
+                background-image: url(../../mocks/ST0004/btn-ectk-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .explore-resources__list__item__anchor:hover:before {
+                opacity: 1;
             }
 
             /* Summary */
             .summary {
-                padding: 80px 0px 140px;
+                padding: 64px 0px 128px;
             }
             .summary__cont {
+                display: flex;
+                align-items: center;
                 width: 1440px;
                 height: 720px;
-                border-radius: 30px;
+                border-radius: 28px;
                 margin: 0px auto;
                 box-sizing: border-box;
                 background: linear-gradient(201deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0005/photo-summary-visual.jpg) no-repeat right center;
                 background-size: cover;
+            }
+            .summary__cont__inner {
+                padding: 64px;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 57px 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 80px 80px 0px;
+                margin-bottom: 32px;
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
 
             /* What's Next */
             .whats-next__wrap {
                 overflow: hidden;
-                padding: 80px 0px;
+                padding: 72px 0px 64px;
                 background-color: #E6E1D6;
             }
             .whats-next {
@@ -1840,13 +1905,9 @@
             }
             .whats-next__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
-                line-height: 52px;
-                font-weight: 550;
-            }
-            .whats-next__tit__strong {
-                
-                font-weight: 550;
+                font-size: 48px;
+                line-height: 56px;
+                font-weight: 600;
             }
             .whats-next__menu {
                 margin-top: 64px;
@@ -1861,23 +1922,19 @@
                 display: block;
                 width: 100%;
                 height: 475px;
-                padding: 80px 0px 59px;
-                box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
                 overflow: hidden;
             }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
-                overflow: hidden;
-                transition: 0.3s ease all;
-            }
-            .whats-next__menu__slide1__anchor__photo {
                 top: 80px;
                 left: 100px;
                 right: 100px;
                 bottom: 121px;
+                overflow: hidden;
                 border-radius: 30px;
+                transition: 0.3s ease all;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
                 top: 0px;
@@ -1979,19 +2036,27 @@
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -112px;
+                top: -128px;
                 right: 0px;
                 display: flex;
                 gap: 0px 8px;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 100% 100%;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .whats-next__menu__btn-set__btn:hover {
+                border-color: #262626;
             }
             .whats-next__menu__btn-set__btn__prev {
                 background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
@@ -2002,8 +2067,8 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 64px;
-                height: 2px;
+                margin-top: 48px;
+                height: 2px !important;
                 background-color: rgba(0,0,0,0.2);
             }
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
@@ -2028,7 +2093,7 @@
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
-                padding: 120px 90px;
+                padding: 128px 88px;
                 box-sizing: border-box;
                 border-radius: 30px;
                 text-align: left;
@@ -2039,8 +2104,8 @@
                 color: black;
                 font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 52px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .popup-discription__tit--left {
                 text-align: left;
@@ -2048,25 +2113,24 @@
             .popup-discription__tit__preface {
                 font-size: 24px;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 30px;
                 letter-spacing: -0.12px;
-                font-weight: 400;
+                font-weight: 600;
             }
             .popup-discription__tit__subject {
-                margin-top: 20px;
+                margin-top: 8px;
                 font-family: LGEI Headline;
-                line-height: 58px;
                 letter-spacing: -0.26px;
             }
             .popup-discription__visual {
-                margin: 60px -90px 0px;
+                margin: 64px -88px 0px;
             }
             .popup-discription__visual__img {
                 width: 100%;
                 height: auto;
             }
             .popup-discription__photo {
-                margin: 60px 0px 0px;
+                margin: 64px 0px 0px;
             }
             .popup-discription__photo__figure {
                 margin: 0px;
@@ -2089,12 +2153,12 @@
             .popup-discription__cont1 {
                 font-size: 20px;
                 line-height: 28px;
-                margin: 60px 0px 0px;
+                margin: 64px 0px 0px;
             }
             .popup-discription__cont2 {
                 font-size: 16px;
                 line-height: 24px;
-                margin: 60px 0px 0px;
+                margin: 64px 0px 0px;
             }
             .popup-discription__cont__grid2 {
                 display: grid;
@@ -2103,8 +2167,8 @@
             }
             .popup-discription__btn-close {
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                top: 32px;
+                right: 32px;
                 width: 48px;
                 height: 48px;
                 box-sizing: border-box;
@@ -2139,36 +2203,33 @@
 
             /* Popup Discription - Recreation of product */
             .popup-discription__recreation__intro {
-                padding: 60px;
+                padding: 64px 80px 32px;
                 font-size: 20px;
                 line-height: 28px;
                 letter-spacing: -0.1px;
             }
             .popup-discription__recreation-product {
-                padding: 60px 0px;
+                padding: 64px 0px;
             }
             .popup-discription__recreation-product:last-child {
                 padding-bottom: 0px;
             }
             .popup-discription__recreation-product__cont {
                 display: flex;
-                gap: 0px 30px;
-                margin: 60px;
+                margin: 32px 80px;
             }
             .popup-discription__recreation-product__cont:first-child {
                 margin-top: 0px;
             }
             .popup-discription__recreation-product__cont__tit {
+                flex-shrink: 0;
+                width: 204px;
                 font-family: LGEI Headline;
-                margin-top: 60px;
-                font-size: 36px;
-                font-weight: 400;
-                line-height: 40px;
-                letter-spacing: -0.54px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 30px;
+                letter-spacing: -0.12px;
                 white-space: nowrap;
-            }
-            .popup-discription__recreation-product__cont__tit:first-child {
-                margin-top: 0px;
             }
             .popup-discription__recreation-product__cont__tit__br {
                 display: none;
@@ -2180,15 +2241,15 @@
             }
             .popup-discription__recreation-product__cont__disclaimer {
                 display: block;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 16px;
+                font-size: 16px;
+                line-height: 20px;
                 color: #7E7C77;
-                margin-top: 20px;
+                margin-top: 8px;
+                letter-spacing: -0.08px;
             }
             .popup-discription__recreation-product__photo {
                 text-align: center;
-                margin: 60px -35px 0px;
+                margin: 32px 0px 0px;
             }
             .popup-discription__recreation-product__photo:first-child {
                 margin-top: 0px;
@@ -3557,7 +3618,7 @@
                     <div class="popup-discription" id="recreation-of-product">
                         <div class="popup-discription__wrap">
                             <dl class="popup-discription--inner">
-                                <dt class="popup-discription__tit popup-discription__tit--left">
+                                <dt class="popup-discription__tit">
                                     <div class="popup-discription__tit__preface">Recreating products</div>
                                     <div class="popup-discription__tit__subject">New cycle-crafted products</div>
                                 </dt>
@@ -3629,7 +3690,7 @@
                                 <img src="../../mocks/ST0005/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
                             </div>
                             <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
-                                <img src="../../mocks/ST0005/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                                Learn more
                             </button>
                         </li>
                         <li class="recreation-of-product__type__item">
@@ -3641,7 +3702,7 @@
                                 <img src="../../mocks/ST0005/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
                             </div>
                             <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
-                                <img src="../../mocks/ST0005/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                                Learn more
                             </button>
                         </li>
                     </ul>
@@ -3673,7 +3734,7 @@
                             <dl class="popup-discription--inner">
                                 <dt class="popup-discription__tit">New uses of packaging <br />materials</dt>
                                 <dd class="popup-discription__cont1 popup-discription__cont__grid2">
-                                    <p class="popup-discription__cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery.<br /><br />We have switched from styrofoam to expanded styrofoam as a buffer material, which reduces environmental pollution and collects and reuses it. Our vacuum cleaner, A9, air conditioner outdoor unit, U60A, and Kimchi refrigerator, Victoria are all packaged with recycled cardboard and pulp mold.</p>
+                                    <p class="popup-discription__cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery.<br />We have switched from styrofoam to expanded styrofoam as a buffer material, which reduces environmental pollution and collects and reuses it. Our vacuum cleaner, A9, air conditioner outdoor unit, U60A, and Kimchi refrigerator, Victoria are all packaged with recycled cardboard and pulp mold.</p>
                                     <p class="popup-discription__cont1--grid2--item">Recycled paper is utilized in wireless speakers, earphones, and soundbars. For all TV goods, including OLED TVs, we employ packaging materials that are free of color ink, and for remote-control packaging, we use bio-materials that degrade when buried in the ground.</p>
                                 </dd>
                                 <dd class="popup-discription__photo">
@@ -3711,18 +3772,20 @@
             </div>
             <div class="summary">
                 <div class="summary__cont">
-                    <p class="summary__cont__txt summary__cont__txt--active">
-                        Clean technology <br />
-                        shapes <br />
-                        a sustainable future
-                    </p>
-                    <p class="summary__cont__txt">
-                        Clean technology is the cornerstone of a <br />
-                        sustainable future. By investing in renewable <br />
-                        energy, carbon reduction, and enhanced <br />
-                        recycling, we secure a world that safeguards life <br />
-                        for future generations.
-                    </p>
+                    <div class="summary__cont__inner">
+                        <p class="summary__cont__txt summary__cont__txt--active">
+                            Clean technology <br />
+                            shapes <br />
+                            a sustainable future
+                        </p>
+                        <p class="summary__cont__txt">
+                            Clean technology is the cornerstone of a <br />
+                            sustainable future. By investing in renewable <br />
+                            energy, carbon reduction, and enhanced <br />
+                            recycling, we secure a world that safeguards life <br />
+                            for future generations.
+                        </p>
+                    </div>
                 </div>
                 <div class="summary__visual"></div>
             </div>
@@ -3885,7 +3948,7 @@
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
                     if(window.innerWidth > 1499) {
-                        return 40
+                        return 32
                     } else {
                         return 20
                     }
@@ -4673,10 +4736,11 @@
 </div>
 </div>
 
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-398116cb602d6661807f669aae178af7-lc.min.js"></script>
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-f64e4b4ab53936894f771b13abb8da69-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-6b3c701c887bbc83ccb30a6f3ef04964-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-7e4c54aa12c333a74b4bcf48d517d3eb-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+
 <div data-lazyload-js data-lazyload-attr="src=https://apps.bazaarvoice.com/deployments/lgelectronics-en/main_site/production/en_GB/bv.js async"></div>
 <div data-lazyload-js data-lazyload-attr="src=https://static.youreko.com/js/partners/gb/lg/youreko.energy-review.lg.all.min.js async"></div>
 </body>
