@@ -1398,7 +1398,7 @@
             .sustainably-container,
             .sustainably-container * {
                 font-family: LGEI Text;
-                color: #262626;
+                color: #333333;
             }
             .sustainably-container button {
                 cursor: pointer;
@@ -1492,11 +1492,10 @@
             .for-people-about__cont {
                 width: 1440px;
                 margin: 0px auto;
-                padding: 106px 0px;
+                padding: 128px 0px;
                 font-weight: 300;
-                font-size: 44px;
-                line-height: 56px;
-                color: #4A4946;
+                font-size: 36px;
+                line-height: 48px;
             }
             
             /* Accessibility */
@@ -1507,31 +1506,31 @@
                 text-align: center;
             }
             .convenient-living__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
             }
-            .convenient-living__intro__txt {
-                margin-top: 16px;
-            }
             .convenient-living__intro__txt:first-child {
                 font-family: LGEI Headline;
                 font-weight: 600;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .convenient-living__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
+                letter-spacing: -0.1px;
             }
             .convenient-living__photo {
                 overflow: hidden;
-                border-radius: 30px;
-                margin: 60px 0px;
+                border-radius: 28px;
+                margin: 64px 0px;
             }
             .convenient-living__solutions {
                 position: relative;
-                padding: 72px 0px 48px;
+                padding: 88px 0px 48px;
                 overflow: visible;
             }
             .convenient-living__solutions__slide {
@@ -1555,16 +1554,31 @@
             .convenient-living__solutions__slide__anchor:hover {
                 text-decoration: none;
             }
+            .convenient-living__solutions__slide__anchor:before,
             .convenient-living__solutions__slide__anchor:after {
                 position: absolute;
                 bottom: 32px;
                 right: 32px;
                 content: '';
                 display: block;
-                width: 48px;
-                height: 48px;
-                background: url(../../mocks/ST0006/btn-convenient-living-more.svg) no-repeat center center;
+                width: 44px;
+                height: 44px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .convenient-living__solutions__slide__anchor:after {
+                z-index: 1;
+                background-image: url(../../mocks/ST0006/btn-convenient-living-more.svg);
+            }
+            .convenient-living__solutions__slide__anchor:before {
+                z-index: 2;
+                opacity: 0;
+                background-image: url(../../mocks/ST0006/btn-convenient-living-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .convenient-living__solutions__slide__anchor:hover:before {
+                opacity: 1;
             }
             .convenient-living__solutions__slide__anchor1 {
                 background-image: url(../../mocks/ST0006/photo-convenient-living-solutions1.png);
@@ -1618,252 +1632,168 @@
                 gap: 0px 8px;
             }
             .convenient-living__solutions__btn-set__btn {
-                width: 49px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: cover;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .convenient-living__solutions__btn-set__btn:hover {
+                border-color: #262626;
             }
             .convenient-living__solutions__btn-set__btn__prev {
-                background-image: url(../../mocks/ST0006/btn-as-prev.svg);
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
             }
             .convenient-living__solutions__btn-set__btn__next {
-                background-image: url(../../mocks/ST0006/btn-as-next.svg);
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
             }
 
             /* Sustainability Efforts */
-            .sustainability-efforts__bg {
-                position: relative;
-                width: 100%;
-                height: 56.25vw;
-                text-align: center;
-                background-color: #262626;
-            }
-            .sustainability-efforts__bg__inner {
-                position: absolute;
-                top: 50%;
-                left: 0px;
-                width: 100%;
-                transform: translateY(-50%);
-            }
-            .sustainability-efforts__bg__tit {
-                font-family: LGEI Headline;
-                font-size: 3.3333vh;
-                color: #F6F3EB;
-                font-weight: 550;
-                line-height: 4.4444vh; /* 133.333% */
-                letter-spacing: 0.6667vh;
-            }
-            sustainability-efforts__bg__tit__br {
-                display: none;
-            }
-            .sustainability-efforts__bg__txt {
-                margin-top: 11.1111vh;
-            }
-            .sustainability-efforts__bg__txt__item {
-                font-family: LGEI Headline;
-                font-size: 7.4074vh;
-                font-weight: 550;
-                line-height: 7.037vh;
-                letter-spacing: 1.4815vh;
-                color: white;
-            }
-            .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
-                margin-top: 11.1111vh;
-            }
-            .sustainability-efforts__card__wrap {
-                position: relative;
-                width: 100%;
-                height: 56.25vw;
-                background: linear-gradient(180deg, #262626 0%, #F6F3EB 100%);
-            }
-            .sustainability-efforts__card__navi {
-                visibility: hidden;
-                position: absolute;
-                z-index: 2;
-                bottom: 0vh;
-                left: calc(50% - 720px);
-                display: flex;
+            .sustainability-efforts {
                 width: 1440px;
-                gap: 0px 22px;
-                transition: 0.1s ease all;
+                padding: 48px 0px 64px;
+                margin: 0px auto;
             }
-            .sustainability-efforts__card__navi--on {
-                visibility: visible;
-                opacity: 1;
-                bottom: 18.5185vh;
-                transition-duration: 0.5s;
-            }
-            .sustainability-efforts__card__navi__item {
-                flex-grow: 1;
-                line-height: 0;
-            }
-            .sustainability-efforts__card__navi__item__anchor {
-                display: block;
-                padding: 40px 36px;
-                text-align: center;
-                line-height: 1;
+            .sustainability-efforts__tit {
+                margin-bottom: 48px;
                 font-family: LGEI Headline;
-                font-size: 28px;
+                font-size: 56px;
                 font-weight: 550;
-                color: white;
-                line-height: 34px;
-                letter-spacing: -0.14px;
-                border: 1px solid rgba(255, 255, 255, 0.60);
-                border-radius: 30px;;
-                background-color: rgba(16, 16, 16, 0.10);
-                backdrop-filter: blur(50px);
-                transition: 0.2s ease background-color;
+                text-align: center;
+                line-height: 60px;
+                letter-spacing: -0.28px;
             }
-            .sustainability-efforts__card__navi__item__anchor:hover,
-            .sustainability-efforts__card__navi__item__anchor:focus {
-                text-decoration: none;
-                background-color: rgba(16, 16, 16, 0.20);;
+            .sustainability-efforts__menu {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 0px 24px;
             }
-            .sustainability-efforts__card {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 1;
-                width: 75%;
-                height: 36.25vw;
-                border-radius: 30px;
+            .sustainability-efforts__menu__item {
+                display: flex;
+                height: 680px;
+                padding: 70px 0px;
+                align-items: flex-end;
+                justify-content: center;
+                border-radius: 28px;
+                text-align: center;
                 overflow: hidden;
-                transform: translate(-50%,-50%);
-                transition: 0.5s ease width,0.5s ease height,0.5s ease border-radius;
-            }
-            .sustainability-efforts__card--on {
-                width: 100%;
-                height: 56.25vw;
-                border-radius: 0px;
-            }
-            .sustainability-efforts__card__item {
-                position: absolute;
-                z-index: 1;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 56.25vw;
-                padding-top: 18.5185vh;
+                backdrop-filter: blur(50px);
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
-                overflow: hidden;
-                visibility: hidden;
-                opacity: 0;
-                transition: 0.3s ease opacity;
             }
-            .sustainability-efforts__card__item--active {
-                z-index: 2;
-                visibility: visible;
-                opacity: 1;
+            .sustainability-efforts__menu__item:hover {
+                align-items: center;
             }
-            .sustainability-efforts__card__item:nth-child(1) {
+            .sustainability-efforts__menu__item__decent-workplace {
                 background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0006/photo-se-card1.jpg);
             }
-            .sustainability-efforts__card__item:nth-child(2) {
+            .sustainability-efforts__menu__item__diversity-inclusion {
                 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0006/photo-se-card2.jpg);
             }
-            .sustainability-efforts__card__item:nth-child(3) {
+            .sustainability-efforts__menu__item__design-for-all {
                 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), url(../../mocks/ST0006/photo-se-card3.jpg);
             }
-            .sustainability-efforts__card__inner {
-                position: relative;
-                z-index: 2;
-                width: 1440px;
-                margin: 0px auto;
-            }
-            .sustainability-efforts__card__tit {
-                display: none;
-            }
-            .sustainability-efforts__card__summary {
-                font-family: LGEI Headline;
-                font-size: 80px;
-                font-style: normal;
-                font-weight: 550;
-                line-height: 76px;
-                letter-spacing: -0.28px;
-                color: white;
-                transform: translateY(80px);
-                opacity: 0;
-                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
-            }
-            .sustainability-efforts__card__detail {
-                margin-top: 16px;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 28px;
-                letter-spacing: -0.1px;
-                color: white;
-                transform: translateY(24px);
-                opacity: 0;
-                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
-            }
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary,
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary {
-                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
-            }
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
-                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
-            }
-            .sustainability-efforts__card__discover {
-                display: none;
-            }
-            .sustainability-efforts__card__video-visual {
+            .sustainability-efforts__menu__item:after {
+                content: '';
+                display: block;
                 position: absolute;
+                z-index: 1;
                 top: 0px;
                 left: 0px;
                 width: 100%;
                 height: 100%;
+                background-color: rgba(0,0,0,0);
+                backdrop-filter: blur(0px);
             }
-            .sustainability-efforts__card__video-visual__video {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+            .sustainability-efforts__menu__item:hover:after {
+                background-color: rgba(0,0,0,0.1);
+                backdrop-filter: blur(50px);
+            }
+            .sustainability-efforts__menu__item__inner {
+                position: relative;
+                z-index: 2;
+            }
+            .sustainability-efforts__menu__item__tit {
+                font-size: 48px;
+                font-weight: 550;
+                color: white;
+                line-height: 56px;
+                letter-spacing: -0.24px;
+            }
+            .sustainability-efforts__menu__item__learn-more {
+                display: none;
+                margin-top: 24px;
+            }
+            .sustainability-efforts__menu__item:hover .sustainability-efforts__menu__item__learn-more {
+                display: block;
+            }
+            .sustainability-efforts__menu__item__learn-more__btn {
+                display: inline-block;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                border: 1px solid #262626;
+                background-color: white;
+                transition: 0.3s ease all;
+            }
+            .sustainability-efforts__menu__item__learn-more__btn:hover,
+            .sustainability-efforts__menu__item__learn-more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
 
             /* Summary */
             .summary {
-                padding: 80px 0px 140px;
+                padding: 64px 0px 128px;
             }
             .summary__cont {
+                display: flex;
+                align-items: center;
                 width: 1440px;
                 height: 720px;
-                border-radius: 40px;
+                border-radius: 28px;
                 margin: 0px auto;
                 box-sizing: border-box;
-                background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0006/photo-summary-visual.jpg) no-repeat center center;
+                background: linear-gradient(125deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0006/photo-summary-visual.jpg) no-repeat right center;
                 background-size: cover;
+            }
+            .summary__cont__inner {
+                padding: 64px;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 57px 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 80px 80px 0px;
+                margin-bottom: 32px;
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
 
             /* What's Next */
             .whats-next__wrap {
                 overflow: hidden;
-                padding: 80px 0px;
+                padding: 72px 0px 64px;
                 background-color: #E6E1D6;
             }
             .whats-next {
@@ -1873,9 +1803,9 @@
             }
             .whats-next__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
-                line-height: 52px;
-                font-weight: 550;
+                font-size: 48px;
+                line-height: 56px;
+                font-weight: 600;
             }
             .whats-next__menu {
                 margin-top: 64px;
@@ -1890,23 +1820,19 @@
                 display: block;
                 width: 100%;
                 height: 475px;
-                padding: 80px 0px 59px;
-                box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
                 overflow: hidden;
             }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
-                overflow: hidden;
-                transition: 0.3s ease all;
-            }
-            .whats-next__menu__slide1__anchor__photo {
                 top: 80px;
                 left: 100px;
                 right: 100px;
                 bottom: 121px;
+                overflow: hidden;
                 border-radius: 30px;
+                transition: 0.3s ease all;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
                 top: 0px;
@@ -2008,19 +1934,27 @@
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -112px;
+                top: -128px;
                 right: 0px;
                 display: flex;
                 gap: 0px 8px;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 100% 100%;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .whats-next__menu__btn-set__btn:hover {
+                border-color: #262626;
             }
             .whats-next__menu__btn-set__btn__prev {
                 background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
@@ -2031,7 +1965,7 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 64px;
+                margin-top: 48px;
                 height: 2px !important;
                 background-color: rgba(0,0,0,0.2);
             }
@@ -2057,20 +1991,21 @@
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
-                padding: 120px 90px;
+                padding: 128px 88px;
                 box-sizing: border-box;
                 border-radius: 30px;
                 text-align: left;
                 background-color: white;
             }
             .popup-discription__tit {
-                margin-top: 120px;
+                margin-top: 64px;
                 text-align: center;
-                color: black;
                 font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 52px;
-                line-height: 58px;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
+                color: black;
             }
             .popup-discription__tit:first-child {
                 margin-top: 0px;
@@ -2081,16 +2016,16 @@
             .popup-discription__tit__preface {
                 font-size: 24px;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 30px;
                 letter-spacing: -0.12px;
-                font-weight: 400;
+                font-weight: 600;
+                color: black;
             }
             .popup-discription__tit__subject {
-                margin-top: 20px;
+                margin-top: 8px;
                 font-family: LGEI Headline;
-                font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                letter-spacing: -0.24px;
+                color: black;
             }
             .popup-discription__stit {
                 font-size: 36px;
@@ -2239,8 +2174,8 @@
             }
             .popup-discription__btn-close {
                 position: absolute;
-                top: 40px;
-                right: 40px;
+                top: 32px;
+                right: 32px;
                 width: 48px;
                 height: 48px;
                 box-sizing: border-box;
@@ -3746,73 +3681,33 @@
                 </div>
             </div>
             <div class="sustainability-efforts">
-                <div class="sustainability-efforts__bg">
-                    <div class="sustainability-efforts__bg__inner">
-                        <h3 class="sustainability-efforts__bg__tit">Our commitment to people</h3>
-                        <ul class="sustainability-efforts__bg__txt">
-                            <li class="sustainability-efforts__bg__txt__item">Decent workplace</li>
-                            <li class="sustainability-efforts__bg__txt__item">Diversity &amp; inclusion</li>
-                            <li class="sustainability-efforts__bg__txt__item">Design for all</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sustainability-efforts__card__wrap">
-                    <ul class="sustainability-efforts__card__navi">
-                        <li class="sustainability-efforts__card__navi__item"><a href="#enhancing-workplace-safety" onclick="popupDiscription('#production-site-future-value'); return false" class="sustainability-efforts__card__navi__item__anchor sustainability-efforts__card__navi__item__anchor--active">Discover decent workplace</a></li>
-                        <li class="sustainability-efforts__card__navi__item"><a href="#valuing-diversity-inclusion" onclick="popupDiscription('#diversity-engagement'); return false" class="sustainability-efforts__card__navi__item__anchor">Discover diversity &amp; inclusion</a></li>
-                        <li class="sustainability-efforts__card__navi__item"><a href="#design-for-all" onclick="popupDiscription('#disabled-advisory-board'); return false" class="sustainability-efforts__card__navi__item__anchor">Discover design for all</a></li>
-                    </ul>
-                    <ul class="sustainability-efforts__card">
-                        <li class="sustainability-efforts__card__item sustainability-efforts__card__item--active" id="enhancing-workplace-safety">
-                            <div class="sustainability-efforts__card__inner">
-                                <h3 class="sustainability-efforts__card__tit">Decent workplace</h3>
-                                <div class="sustainability-efforts__card__cont">
-                                    <p class="sustainability-efforts__card__summary">
-                                        Decent workplace
-                                    </p>
-                                    <p class="sustainability-efforts__card__detail">
-                                        Enhancing workplace safety
-                                    </p>
-                                </div>
+                <h3 class="sustainability-efforts__tit">Our commitment to people</h3>
+                <ul class="sustainability-efforts__menu">
+                    <li class="sustainability-efforts__menu__item sustainability-efforts__menu__item__decent-workplace">
+                        <div class="sustainability-efforts__menu__item__inner">
+                            <h4 class="sustainability-efforts__menu__item__tit">Decent workplace</h4>
+                            <div class="sustainability-efforts__menu__item__learn-more">
+                                <a href="#enhancing-workplace-safety" onclick="popupDiscription('#production-site-future-value'); return false" class="sustainability-efforts__menu__item__learn-more__btn">Learn more</a>
                             </div>
-                            <div class="sustainability-efforts__card__discover">
-                                <a href="javascript:popupDiscription('#production-site-future-value')" class="sustainability-efforts__card__discover__btn">Discover decent workplace</a>
+                        </div>
+                    </li>
+                    <li class="sustainability-efforts__menu__item sustainability-efforts__menu__item__diversity-inclusion">
+                        <div class="sustainability-efforts__menu__item__inner">
+                            <h4 class="sustainability-efforts__menu__item__tit">Diversity &amp; inclusion</h4>
+                            <div class="sustainability-efforts__menu__item__learn-more">
+                                <a href="#valuing-diversity-inclusion" onclick="popupDiscription('#diversity-engagement'); return false" class="sustainability-efforts__menu__item__learn-more__btn">Learn more</a>
                             </div>
-                        </li>
-                        <li class="sustainability-efforts__card__item" id="valuing-diversity-inclusion">
-                            <div class="sustainability-efforts__card__inner">
-                                <h3 class="sustainability-efforts__card__tit">Diversity &amp; Inclusion</h3>
-                                <div class="sustainability-efforts__card__cont">
-                                    <p class="sustainability-efforts__card__summary">
-                                        Diversity &amp; Inclusion
-                                    </p>
-                                    <p class="sustainability-efforts__card__detail">
-                                        Valuing diversity and inclusion
-                                    </p>
-                                </div>
+                        </div>
+                    </li>
+                    <li class="sustainability-efforts__menu__item sustainability-efforts__menu__item__design-for-all">
+                        <div class="sustainability-efforts__menu__item__inner">
+                            <h4 class="sustainability-efforts__menu__item__tit">Design for all</h4>
+                            <div class="sustainability-efforts__menu__item__learn-more">
+                                <a href="#design-for-all" onclick="popupDiscription('#disabled-advisory-board'); return false" class="sustainability-efforts__menu__item__learn-more__btn">Learn more</a>
                             </div>
-                            <div class="sustainability-efforts__card__discover">
-                                <a href="javascript:popupDiscription('#diversity-engagement')" class="sustainability-efforts__card__discover__btn">Discover diversity &amp; inclusion</a>
-                            </div>
-                        </li>
-                        <li class="sustainability-efforts__card__item" id="design-for-all">
-                            <div class="sustainability-efforts__card__inner">
-                                <h3 class="sustainability-efforts__card__tit">Design for all</h3>
-                                <div class="sustainability-efforts__card__cont">
-                                    <p class="sustainability-efforts__card__summary">
-                                        Design for all
-                                    </p>
-                                    <p class="sustainability-efforts__card__detail">
-                                        Sustainable effort to tackle discomfort
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="sustainability-efforts__card__discover">
-                                <a href="javascript:popupDiscription('#disabled-advisory-board')" class="sustainability-efforts__card__discover__btn">Discover design for all</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
                 <div class="popup-discription" id="production-site-future-value">
                     <div class="popup-discription__wrap">
                         <dl class="popup-discription__inner">
@@ -3885,16 +3780,18 @@
             </div>
             <div class="summary">
                 <div class="summary__cont">
-                    <p class="summary__cont__txt summary__cont__txt--active">
-                        Together, <br />
-                        we create value <br />
-                        in society.
-                    </p>
-                    <p class="summary__cont__txt">
-                        Through active promotion of fairness and <br />
-                        equality, we can tackle inequality and build a <br />
-                        society where everyone can thrive.
-                    </p>
+                    <div class="summary__cont__inner">
+                        <p class="summary__cont__txt summary__cont__txt--active">
+                            Together, <br />
+                            we create value <br />
+                            in society.
+                        </p>
+                        <p class="summary__cont__txt">
+                            Through active promotion of fairness and <br />
+                            equality, we can tackle inequality and build a <br />
+                            society where everyone can thrive.
+                        </p>
+                    </div>
                 </div>
                 <div class="summary__visual"></div>
             </div>
@@ -4011,53 +3908,6 @@
                         },
                     });
                 },
-                sustainabilityEfforts:function() {
-                    let sustainabilityEfforts = document.querySelector(".sustainability-efforts");
-                    let scNavi = document.querySelector(".sustainability-efforts__card__navi");
-                    let scNaviItem = scNavi.querySelectorAll(".sustainability-efforts__card__navi__item");
-                    let sCardWrap = document.querySelector(".sustainability-efforts__card__wrap");
-                    let sCard = document.querySelector(".sustainability-efforts__card");
-                    let scItem = sCard.querySelectorAll(".sustainability-efforts__card__item");
-
-                    gsap.to(sCardWrap, {
-                        scrollTrigger: {
-                            trigger: ".sustainability-efforts__card__wrap",
-                            start: "top 1%",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                scNavi.classList.add("sustainability-efforts__card__navi--on")
-                                sCard.classList.add("sustainability-efforts__card--on")
-                                scItem.forEach(function(sci,a) {
-                                    sci.querySelector(".sustainability-efforts__card__inner").classList.add("sustainability-efforts__card__inner--on")
-                                })
-                            },
-                            onLeaveBack: function() {
-                                scNavi.classList.remove("sustainability-efforts__card__navi--on")
-                                sCard.classList.remove("sustainability-efforts__card--on")
-                                scItem.forEach(function(sci,b) {
-                                    sci.querySelector(".sustainability-efforts__card__inner").classList.remove("sustainability-efforts__card__inner--on")
-                                })
-                            }
-                        }
-                    });
-
-                    scNaviItem.forEach(function(scnItem,i) {
-                        scnItem.querySelector("a").onmouseenter = function() {
-                            scNaviItem.forEach(function(rItem,r) {
-                                rItem.querySelector("a").classList.remove("sustainability-efforts__card__navi__item__anchor--active")
-                            })
-                            this.classList.add("sustainability-efforts__card__navi__item__anchor--active")
-
-                            scItem.forEach(function(rItem,a) {
-                                rItem.classList.remove("sustainability-efforts__card__item--active")
-                            })
-                            //console.log(this.href.split("#")[1])
-                            document.querySelector("#"+this.href.split("#")[1]).classList.add("sustainability-efforts__card__item--active")
-
-                            return false
-                        }
-                    })
-                },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
                         breakpoints: {
@@ -4094,7 +3944,6 @@
             }
             forPeople.visualScrollDown();
             forPeople.convenientLivingSolutions();
-            forPeople.sustainabilityEfforts();
             forPeople.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
@@ -4106,7 +3955,7 @@
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
                 var bcSpaceTop = function() {
                     if(window.innerWidth > 1499) {
-                        return 40
+                        return 32
                     } else {
                         return 20
                     }
@@ -4910,10 +4759,11 @@
 </div>
 </div>
 
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-398116cb602d6661807f669aae178af7-lc.min.js"></script>
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-f64e4b4ab53936894f771b13abb8da69-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-6b3c701c887bbc83ccb30a6f3ef04964-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-7e4c54aa12c333a74b4bcf48d517d3eb-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+
 <div data-lazyload-js data-lazyload-attr="src=https://apps.bazaarvoice.com/deployments/lgelectronics-en/main_site/production/en_GB/bv.js async"></div>
 <div data-lazyload-js data-lazyload-attr="src=https://static.youreko.com/js/partners/gb/lg/youreko.energy-review.lg.all.min.js async"></div>
 </body>

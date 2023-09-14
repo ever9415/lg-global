@@ -1398,7 +1398,7 @@
             .sustainably-container,
             .sustainably-container * {
                 font-family: LGEI Text;
-                color: #262626;
+                color: #333333;
             }
             .sustainably-container button {
                 cursor: pointer;
@@ -1413,21 +1413,21 @@
             .social-contribution-about__tit {
                 font-family: LGEI Headline;
                 font-size: 80px;
-                font-weight: 400;
-                line-height: 76px;
+                font-weight: 550;
+                line-height: 84px;
                 font-weight: 550;
                 letter-spacing: -0.4px;
             }
             .social-contribution-about__intro {
-                margin-top: 40px;
-                font-size: 44px;
-                font-weight: 100;
-                line-height: 56px; /* 127.273% */
-                letter-spacing: -0.44px;
+                margin-top: 48px;
+                font-size: 36px;
+                font-weight: 300;
+                line-height: 46px;
+                letter-spacing: -0.18px;
             }
             .social-contribution-about__visual {
-                margin-top: 60px;
-                height: 580px;
+                margin-top: 128px;
+                height: 584px;
                 background: url(../../mocks/ST0007/bg-social-contribution-about-visual.png) no-repeat center center;
                 background-size: cover;
             }
@@ -1435,31 +1435,31 @@
             /* Engagement */
             .engagement {
                 width: 1440px;
-                padding: 60px 0px;
+                padding: 64px 0px;
                 margin: 0px auto;
                 text-align: center;
             }
             .engagement__tit {
+                display: none;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 28px;
             }
-            .engagement__intro__txt {
-                margin-top: 16px;
-            }
             .engagement__intro__txt:first-child {
+                color: black;
                 font-family: LGEI Headline;
                 font-weight: 600;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 48px;
+                line-height: 56px;
             }
             .engagement__intro__txt:last-child {
                 font-size: 20px;
                 line-height: 28px;
+                margin-top: 16px;
             }
             .engagement__activities {
                 position: relative;
-                padding: 72px 0px 48px;
+                padding: 88px 0px 48px;
                 overflow: visible;
             }
             .engagement__activities__slide {
@@ -1483,16 +1483,31 @@
             .engagement__activities__slide__anchor:hover {
                 text-decoration: none;
             }
+            .engagement__activities__slide__anchor:before,
             .engagement__activities__slide__anchor:after {
                 position: absolute;
                 bottom: 32px;
                 right: 32px;
                 content: '';
                 display: block;
-                width: 48px;
-                height: 48px;
-                background: url(../../mocks/ST0007/btn-engagement-more.svg) no-repeat center center;
+                width: 44px;
+                height: 44px;
+                background-repeat: no-repeat;
+                background-position: center center;
                 background-size: cover;
+            }
+            .engagement__activities__slide__anchor:before {
+                z-index: 1;
+                background-image: url(../../mocks/ST0007/btn-engagement-more.svg);
+            }
+            .engagement__activities__slide__anchor:after {
+                z-index: 2;
+                opacity: 0;
+                background-image: url(../../mocks/ST0007/btn-engagement-more-on.svg);
+                transition: 0.3s ease opacity;
+            }
+            .engagement__activities__slide__anchor:hover:after {
+                opacity: 1;
             }
             .engagement__activities__slide__anchor1-1 {
                 background-image: url(../../mocks/ST0007/photo-engagement-activities1-1.png);
@@ -1520,9 +1535,9 @@
             }
             .engagement__activities__slide__anchor__subject {
                 font-family: LGEI Headline;
-                font-size: 36px;
-                line-height: 40px;
-                letter-spacing: -0.54px;
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
                 color: white;
             }
             .engagement__activities__pagination {
@@ -1549,57 +1564,69 @@
                 gap: 0px 8px;
             }
             .engagement__activities__btn-set__btn {
-                width: 49px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: cover;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .engagement__activities__btn-set__btn:hover {
+                border-color: #262626;
             }
             .engagement__activities__btn-set__btn__prev {
-                background-image: url(../../mocks/ST0006/btn-as-prev.svg);
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
             }
             .engagement__activities__btn-set__btn__next {
-                background-image: url(../../mocks/ST0006/btn-as-next.svg);
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
             }
 
             /* Summary */
             .summary {
-                padding: 80px 0px 140px;
+                padding: 64px 0px 128px;
             }
             .summary__cont {
+                display: flex;
+                align-items: center;
                 width: 1440px;
                 height: 720px;
-                border-radius: 30px;
+                border-radius: 28px;
                 margin: 0px auto;
                 box-sizing: border-box;
-                background: linear-gradient(201deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0007/photo-summary-visual.png) no-repeat right top;
+                background: linear-gradient(238deg, rgba(0, 0, 0, 0.40) 5.45%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0007/photo-summary-visual.png) no-repeat right top;
                 background-size: cover;
+            }
+            .summary__cont__inner {
+                padding: 64px 96px 64px 986px;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 57px 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 80px 80px 0px;
+                margin-bottom: 32px;
                 font-family: LGEI Headline;
-                font-size: 52px;
+                font-size: 48px;
                 font-weight: 550;
-                line-height: 58px;
-                letter-spacing: -0.26px;
+                line-height: 56px;
+                letter-spacing: -0.24px;
             }
 
             /* What's Next */
             .whats-next__wrap {
                 overflow: hidden;
-                padding: 80px 0px;
+                padding: 72px 0px 64px;
                 background-color: #E6E1D6;
             }
             .whats-next {
@@ -1609,9 +1636,9 @@
             }
             .whats-next__tit {
                 font-family: LGEI Headline;
-                font-size: 44px;
-                line-height: 52px;
-                font-weight: 550;
+                font-size: 48px;
+                line-height: 56px;
+                font-weight: 600;
             }
             .whats-next__menu {
                 margin-top: 64px;
@@ -1626,23 +1653,19 @@
                 display: block;
                 width: 100%;
                 height: 475px;
-                padding: 80px 0px 59px;
-                box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
                 overflow: hidden;
             }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
-                overflow: hidden;
-                transition: 0.3s ease all;
-            }
-            .whats-next__menu__slide1__anchor__photo {
                 top: 80px;
                 left: 100px;
                 right: 100px;
                 bottom: 121px;
+                overflow: hidden;
                 border-radius: 30px;
+                transition: 0.3s ease all;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
                 top: 0px;
@@ -1744,19 +1767,27 @@
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -112px;
+                top: -128px;
                 right: 0px;
                 display: flex;
                 gap: 0px 8px;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
+                border: 1px solid #CBC8C2;
+                border-radius: 50%;
+                backdrop-filter: blur(7.5px);
+                background-color: rgba(255, 255, 255, 0.30);
                 background-repeat: no-repeat;
                 background-position: center center;
-                background-size: 100% 100%;
+                background-size: 12px 22px;
                 cursor: pointer;
+                transition: 0.3s ease border-color;
+            }
+            .whats-next__menu__btn-set__btn:hover {
+                border-color: #262626;
             }
             .whats-next__menu__btn-set__btn__prev {
                 background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
@@ -1767,8 +1798,8 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 64px;
-                height: 2px;
+                margin-top: 48px;
+                height: 2px !important;
                 background-color: rgba(0,0,0,0.2);
             }
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
@@ -2670,8 +2701,7 @@
                         <div class="swiper-slide engagement__activities__slide">
                             <a href="#global-it-challenge" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor1-2">
                                 <p class="engagement__activities__slide__anchor__subject">
-                                    Global IT Challenge for youth with <br class="engagement__activities__slide__anchor__subject__br" />
-                                    disabilities
+                                    Global IT Challenge for youth with disabilities
                                 </p>
                             </a>
                         </div>
@@ -2852,17 +2882,19 @@
             </div>
             <div class="summary">
                 <div class="summary__cont">
-                    <p class="summary__cont__txt summary__cont__txt--active">
-                        Ideal change starts <br />
-                        with what we <br />
-                        believe in
-                    </p>
-                    <p class="summary__cont__txt">
-                        With ongoing Social contributions, we are <br />
-                        dedicated to enriching lives and making a <br />
-                        positive impact on individuals and <br />
-                        communities.
-                    </p>
+                    <div class="summary__cont__inner">
+                        <p class="summary__cont__txt summary__cont__txt--active">
+                            Ideal change <br />
+                            starts with what <br />
+                            we believe in
+                        </p>
+                        <p class="summary__cont__txt">
+                            With ongoing Social contributions, we are <br />
+                            dedicated to enriching lives and making a <br />
+                            positive impact on individuals and <br />
+                            communities.
+                        </p>
+                    </div>
                 </div>
                 <div class="summary__visual"></div>
             </div>
@@ -3815,10 +3847,11 @@
 </div>
 </div>
 
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-398116cb602d6661807f669aae178af7-lc.min.js"></script>
-<script src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-f64e4b4ab53936894f771b13abb8da69-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
-<script async src="https://publish-p86205-e734304.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge-support-repo/clientlibs/clientlib-lg-support-shared.lc-6b3c701c887bbc83ccb30a6f3ef04964-lc.min.js"></script>
+<script src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-7e4c54aa12c333a74b4bcf48d517d3eb-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+<script async src="https://www.lg.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-c1d1da68926c0fee0d8aa105997297f4-lc.min.js"></script>
+
 <div data-lazyload-js data-lazyload-attr="src=https://apps.bazaarvoice.com/deployments/lgelectronics-en/main_site/production/en_GB/bv.js async"></div>
 <div data-lazyload-js data-lazyload-attr="src=https://static.youreko.com/js/partners/gb/lg/youreko.energy-review.lg.all.min.js async"></div>
 </body>
