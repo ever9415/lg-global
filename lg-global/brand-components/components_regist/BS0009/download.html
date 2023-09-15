@@ -1,74 +1,56 @@
 <!-- [code component area start] -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<link rel="stylesheet" href="../../../../../fontface.css" /> <!-- //실제 등록시엔 삭제 해야 함 -->
 <style>
     /* Common */
     :root {
         --border-radius-common: 28px;
         --border-radius-slide: 20px;
     }
-
     body {
         overflow-x: hidden;
     }
-
-    ul,
-    ol {
+    ul,ol {
         list-style: none;
         padding: 0px;
         margin: 0px;
     }
-
     li {
         padding: 0px;
         margin: 0px;
     }
-
-    dl,
-    dt,
-    dd {
+    dl,dt,dd {
         margin: 0px;
     }
-
-    figure,
-    figcaption {
+    figure,figcaption {
         padding: 0px;
         margin: 0px;
     }
-
     .brand-container,
     .brand-container * {
         font-family: LGEI Text;
         color: #262626;
     }
-
     .brand-container button {
         cursor: pointer;
         padding: 0px
     }
-
     .brand-contents a,
     .brand-contents a:hover {
         text-decoration: none;
     }
-
     picture img {
         display: block;
         width: 100%;
         height: auto;
         font-size: 0;
     }
-
     br.mo {
         display: none;
     }
 
     /*Common title*/
-
-    .brand-contents #contents {
-        background-color: #f6f3eb;
-    }
-
+    
+    .brand-contents #contents {background-color: #f6f3eb;}
     .brand-contents .brand__content-inner {
         box-sizing: border-box;
         margin: 0 auto 96px;
@@ -83,13 +65,11 @@
         padding: 78px 0;
         overflow: hidden;
     }
-
     .brand-contents .brand-element__inner {
         position: relative;
         margin: 0px auto;
         max-width: 1440px;
     }
-
     .brand-contents .brand-elements__header-title {
         margin: 0 auto;
         font-size: 44px;
@@ -97,13 +77,11 @@
         font-weight: 550;
         font-family: LGEI Headline;
     }
-
     .brand-contents .brand-elements__header-title__sub {
         display: block;
         font-weight: inherit;
         font-family: inherit;
     }
-
     .brand-contents .brand-elements__controller {
         position: absolute;
         right: 0;
@@ -111,7 +89,6 @@
         display: flex;
         gap: 7px;
     }
-
     .brand-contents .brand-elements__controller__btn {
         position: relative;
         top: unset;
@@ -128,7 +105,6 @@
         border-radius: 50%;
         /* opacity: 1; */
     }
-
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after,
     .brand-contents .brand-elements__controller__btn.swiper-button-next::after {
         content: "";
@@ -138,19 +114,16 @@
         transform: translate(-50%, -50%);
         width: 24px;
         height: 24px;
-        background: no-repeat center url(../../../../../src/mocks/layout/icon-swiper-button-arrow.svg);
+        background: no-repeat center url(../../src/mocks/layout/icon-swiper-button-arrow.svg);
         background-position: center;
         background-size: 100% auto;
     }
-
     .brand-contents .brand-elements__controller__btn.swiper-button-prev::after {
         transform: translate(-50%, -50%) rotate(180deg);
     }
-
     .brand-contents .our-identity__slider {
         margin-top: 48px;
     }
-
     .brand-contents .our-identity__slide {
         position: relative;
         width: 590px;
@@ -161,14 +134,12 @@
         z-index: 1;
         background-color: #f6f3eb;
     }
-
     .brand-contents .our-identity__slide a {
         padding: 24px;
         display: block;
         width: 100%;
         height: 100%;
     }
-
     .brand-contents .our-identity__slide::before,
     .brand-contents .our-identity__slide::after {
         content: "";
@@ -182,20 +153,16 @@
         position: absolute;
         transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
     }
-
     .brand-contents .our-identity__slide::before {
         z-index: -1;
     }
-
     .brand-contents .our-identity__slide::after {
         z-index: -2;
         opacity: 0;
     }
-
     .brand-contents .our-identity__slide:hover::before {
         opacity: 0;
     }
-
     .brand-contents .our-identity__slide:hover::after {
         opacity: 1;
     }
@@ -204,72 +171,56 @@
         width: 52%;
         height: 62%;
         border-radius: 30px;
-        transform-origin: center center;
-        /* 변환 중심을 가운데로 설정 */
+        transform-origin: center center; /* 변환 중심을 가운데로 설정 */
         transition-property: transform;
     }
-
     .brand-contents .our-identity__slide--photography:hover:before {
         /* width: 100%;
-                height: 100%; */
+        height: 100%; */
         opacity: 1;
         transform: translate(-50%, -50%) scale(2);
     }
-
     .brand-contents .our-identity__slide--photography::after {
         display: none;
     }
-
     .brand-contents .our-identity__slide--logo::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_logo.png);
+        background-image: url(../../src/mocks/layout/brand_slide_logo.png);
     }
-
     .brand-contents .our-identity__slide--logo::after {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_logo-hover.png);
+        background-image: url(../../src/mocks/layout/brand_slide_logo-hover.png);
     }
-
     .brand-contents .our-identity__slide--color::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_color.png);
+        background-image: url(../../src/mocks/layout/brand_slide_color.png);
     }
-
     .brand-contents .our-identity__slide--color::after {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_color-hover.png);
+        background-image: url(../../src/mocks/layout/brand_slide_color-hover.png);
     }
-
     .brand-contents .our-identity__slide--photography::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_photo.png);
+        background-image: url(../../src/mocks/layout/brand_slide_photo.png);
     }
-
     .brand-contents .our-identity__slide--design::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_design.png);
+        background-image: url(../../src/mocks/layout/brand_slide_design.png);
     }
-
     .brand-contents .our-identity__slide--design::after {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_design-hover.png);
+        background-image: url(../../src/mocks/layout/brand_slide_design-hover.png);
     }
-
     .brand-contents .our-identity__slide--tagline::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_slogan.png);
+        background-image: url(../../src/mocks/layout/brand_slide_slogan.png);
     }
-
     .brand-contents .our-identity__slide--tagline::after {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_slogan-hover.png);
+        background-image: url(../../src/mocks/layout/brand_slide_slogan-hover.png);
     }
-
     .brand-contents .our-identity__slide--typo::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_typo.png);
+        background-image: url(../../src/mocks/layout/brand_slide_typo.png);
     }
-
     .brand-contents .our-identity__slide--typo::after {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_typo-hover.png);
+        background-image: url(../../src/mocks/layout/brand_slide_typo-hover.png);
     }
-
     .brand-contents .our-identity__slide--voice::before {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_voice.png);
+        background-image: url(../../src/mocks/layout/brand_slide_voice.png);
     }
-
     .brand-contents .our-identity__slide--voice::after {
-        background-image: url(../../../../../src/mocks/layout/brand_slide_voice_hover.png);
+        background-image: url(../../src/mocks/layout/brand_slide_voice_hover.png);
     }
 
     .brand-contents .our-identity__item-title {
@@ -282,18 +233,15 @@
     .brand-contents .our-identity__slide:hover .our-identity__item-title {
         color: #fff;
     }
-
     .brand-contents .our-identity__progressbar {
         margin-top: 48px;
         width: 100%;
         height: 2px;
         background-color: #00000033;
     }
-
     .brand-contents .our-identity__progressbar .swiper-scrollbar-drag {
         background: #000;
     }
-
     .brand-contents .our-identity__move-btn {
         position: absolute;
         left: 26px;
@@ -305,18 +253,17 @@
         background: no-repeat center;
         border: 1px solid #ffffffb2;
         border-radius: 50%;
-        background-image: url(../../../../../src/mocks/layout/btn_move_to_arrow_wt.svg);
+        background-image: url(../../src/mocks/layout/btn_move_to_arrow_wt.svg);
         background-size: 22px auto;
         background-color: #fff;
         transition: 0.5s cubic-bezier(0.56, 0, 0.28, 1);
         opacity: 0;
         visibility: hidden;
     }
-
     .brand-contents .our-identity__slide:hover .our-identity__move-btn {
         background-color: #00000099;
         border-color: #cbc8c24d;
-        background-image: url(../../../../../src/mocks/layout/btn_move_to_arrow.svg);
+        background-image: url(../../src/mocks/layout/btn_move_to_arrow.svg);
         display: block;
         opacity: 1;
         visibility: visible;
@@ -326,20 +273,18 @@
     /*contents -download ------*/
     .brand-contents .assets-download-tit {
         font-size: 56px;
-        /* margin-bottom: 64px; */
+        margin-bottom: 64px;
         text-align: center;
         font-weight: 550;
         font-family: LGEI Headline;
         line-height: 1.2;
     }
-
     .title-exp {
         color: #646464;
         font-size: 20px;
         line-height: 1.37;
     }
-
-    .brand-contents .assets-download-tit+.title-exp {
+    .brand-contents .assets-download-tit + .title-exp {
         margin-bottom: 64px;
         text-align: center;
     }
@@ -360,7 +305,6 @@
         justify-content: center;
         flex-direction: column;
     }
-
     .brand-contents .download-itembox .download-itembox__head .img-wrap {
         display: block;
         position: absolute;
@@ -372,23 +316,25 @@
         height: 100%;
         overflow: hidden;
     }
-
     .brand-contents .download-itembox .download-itembox__head .img-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
-
     .brand-contents .add-border {
         border: 1px solid #CBC8C2;
     }
-
     .brand-contents .download-itembox .download-itembox__head h3 {
         font-size: 48px;
         font-weight: 550;
         line-height: 1.16;
-        margin: 0 0 10px;
         font-family: LGEI Headline;
+    }
+    .brand-contents .download-itembox .download-itembox__head h3 + .title-exp {
+        margin-top: 10px;
     }
 
 
@@ -399,7 +345,6 @@
         overflow: hidden;
         transition: max-height .5s ease;
     }
-
     .accordion-content .accordion-content-close {
         position: absolute;
         display: block;
@@ -408,7 +353,7 @@
         transform: translateY(-50%) rotate(180deg);
         width: 18px;
         height: 18px;
-        background: no-repeat center url(../../../../../src/mocks/BS0009/icon-arrow-bottom.svg);
+        background: no-repeat center url(../../src/mocks/BS0009/icon-arrow-bottom.svg);
         background-size: 100% auto;
         border: none;
         cursor: pointer;
@@ -435,7 +380,6 @@
         margin: 0;
         background-color: transparent;
     }
-
     .brand-contents .btn-download::before {
         content: '';
         position: absolute;
@@ -445,21 +389,18 @@
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
-        background: no-repeat center url(../../../../../src/mocks/BS0009/icon-download.svg);
+        background: no-repeat center url(../../src/mocks/BS0009/icon-download.svg);
         background-size: contain;
     }
-
     .brand-contents .btn-download.btn-download--accordion {
         padding-right: 38px;
     }
-
     .brand-contents .btn-download.btn-download--accordion::before {
         width: 12px;
         height: 12px;
-        background-image: url(../../../../../src/mocks/BS0009/icon-arrow-bottom.svg);
+        background-image: url(../../src/mocks/BS0009/icon-arrow-bottom.svg);
         transition: transform .32s cubic-bezier(0.56, 0, 0.28, 1);
     }
-
     .brand-contents .btn-download.btn-download--accordion.active::before {
         transform: translateY(-50%) rotate(180deg);
     }
@@ -467,68 +408,68 @@
     .brand-contents .downlist-wrap {
         display: flex;
         flex-wrap: wrap;
-        gap: 32px 16px;
-        max-width: 848px;
-        margin: 0 auto;
-        padding: 48px 0 58px;
+        gap: 32px 20px;
+        max-width: 860px;
+        margin-left: 350px;
+        margin-top: 48px;
+    }
+    .brand-contents .downlist-wrap + .downlist-wrap {
+        margin-top: 32px;
+    }
+    .accordion-content > .downlist-wrap:last-of-type {
+        margin-bottom: 58px;
     }
 
     .brand-contents .download-assets-detail {
         position: relative;
         width: 200px;
     }
-
     .brand-contents .download-assets-detail li.thumb-box {
-        height: 120px;
+        /* height: 120px; */
         border-radius: 13px;
         margin-bottom: 24px;
         overflow: hidden;
         box-sizing: border-box;
+        position: relative;
+        /* padding-bottom: 120px; */
+        padding-bottom: 60%;
     }
-
     .brand-contents .download-assets-detail li.thumb-box img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: absolute;
     }
-
-    .brand-contents .download-assets-detail li+li {
+    .brand-contents .download-assets-detail li + li {
         margin-top: 10px;
     }
-
     .brand-contents .download-assets-detail li .btn-download {
         width: 100%;
         font-weight: 400;
     }
-
+    
 
     /* Tablet */
     @media (max-width: 1500px) {
-
         /*공통*/
         .brand-contents .brand__content-inner {
             /* margin-top: 0; */
             padding: 64px 24px 40px;
         }
-
         /*brand elements 슬라이드*/
         .brand-contents .brand-elements {
             padding: 32px 24px 40px;
         }
-
         .brand-contents .brand-elements__header-title {
             font-size: 28px;
             line-height: 36px;
         }
-
         .brand-contents .brand-elements__slider {
             margin: 24px -20px 0;
         }
-
         .brand-contents .brand-elements__controller {
             display: none;
         }
-
         .brand-contents .our-identity__slide {
             width: 291px;
             height: 291px;
@@ -537,53 +478,42 @@
         .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
             display: none;
         }
-
         .brand-contents .our-identity__slide:hover::before {
             opacity: 1;
         }
-
         .brand-contents .our-identity__slide:hover .our-identity__item-title {
             color: #262626;
         }
-
         .brand-contents .our-identity__slide:hover::before {
             opacity: 1;
         }
 
         .brand-contents .our-identity__slide--logo::before {
-            background-image: url(../../../../../src/mocks/layout/brand_slide_logo-m.png);
+            background-image: url(../../src/mocks/layout/brand_slide_logo-m.png);
         }
-
         .brand-contents .our-identity__slide--color::before {
-            background-image: url(../../../../../src/mocks/layout/brand_slide_color-m.png);
+            background-image: url(../../src/mocks/layout/brand_slide_color-m.png);
         }
-
         .brand-contents .our-identity__slide--design::before {
-            background-image: url(../../../../../src/mocks/layout/brand_slide_design-m.png);
+            background-image: url(../../src/mocks/layout/brand_slide_design-m.png);
         }
-
         .brand-contents .our-identity__slide--tagline::before {
-            background-image: url(../../../../../src/mocks/layout/brand_slide_slogan-m.png);
+            background-image: url(../../src/mocks/layout/brand_slide_slogan-m.png);
         }
-
         .brand-contents .our-identity__slide--typo::before {
-            background-image: url(../../../../../src/mocks/layout/brand_slide_typo-m.png);
+            background-image: url(../../src/mocks/layout/brand_slide_typo-m.png);
         }
-
         .brand-contents .our-identity__slide--voice::before {
-            background-image: url(../../../../../src/mocks/layout/brand_slide_voice-m.png);
+            background-image: url(../../src/mocks/layout/brand_slide_voice-m.png);
         }
-
         .brand-contents .our-identity__item-title {
             font-size: 16px;
             line-height: 24px;
         }
-
         .brand-contents .our-identity__progressbar {
             margin-top: 24px;
             height: 1px;
         }
-
         .brand-contents .our-identity__move-btn {
             width: 48px;
             height: 48px;
@@ -591,23 +521,48 @@
             left: 16px;
             bottom: 16px;
         }
-
         .brand-contents .our-identity__slider {
             margin-top: 32px;
         }
-
         .brand-contents .our-identity__slide--photography::before {
             width: 68%;
             height: 48%;
             border-radius: 14px;
         }
-
         .brand-contents .our-identity__slide--photography:hover:before {
             transform: translate(-50%, -50%) scale(2.2);
         }
 
         /*contents -download ------*/
+        .brand-contents .assets-download-tit {
+            margin-bottom: 32px;
+            font-size: 36px;
+        }
+        .brand-contents .download-itembox {
+            border-radius: 24px;
+        }
+        .brand-contents .download-itembox .download-itembox__head {
+            height: 140px;
+            padding-left: calc(270px + 40px);
+        }
+        .brand-contents .download-itembox .download-itembox__head .img-wrap {
+            width: 270px;
+        }
+        .brand-contents .download-itembox .download-itembox__head h3 {
+            font-size: 36px;
+        }
+        .brand-contents .btn-wrap {
+            margin-top: 24px;
+        }
 
+        .brand-contents .downlist-wrap {
+            max-width: unset;
+            margin-left: 0;
+        }
+
+        .brand-contents .download-assets-detail {
+            /* width: calc((100% - 40px) / 3); */
+        }
 
     }
 
@@ -621,78 +576,65 @@
         .brand-contents .brand__content-inner {
             padding: 64px 19px;
         }
-
-        .brand-contents .assets-download-tit {
-            font-size: 36px;
-            margin-bottom: 32px;
-        }
-
         .brand-contents .download-itembox {
             padding: 32px 24px;
             border-radius: 20px;
         }
-
         .brand-contents .download-itembox .download-itembox__head {
-            padding: 39vw 0 0;
+            padding: 48.445% 0 0;
             height: auto;
             display: block;
         }
-
         .brand-contents .download-itembox .download-itembox__head .img-wrap {
             width: 100%;
-            height: 39vw;
+            padding-bottom: 48.445%;
             border-radius: 16px;
+            height: unset;
         }
-
         .brand-contents .title-exp {
             font-size: 16px;
         }
-
+        
         .brand-contents .download-itembox .download-itembox__head h3 {
             margin-top: 24px;
             font-size: 28px;
             font-weight: 550;
         }
-
         .brand-contents .btn-wrap {
             margin-top: 24px;
         }
-
         .brand-contents .downlist-wrap {
             margin-left: 0;
         }
-
-        .brand-contents .downlist-wrap {
-            padding: 40px 0 52px;
+        .brand-contents .downlist-wrap,
+        .brand-contents .downlist-wrap + .downlist-wrap {
             gap: 40px;
+            margin-top: 40px;
         }
-
         .brand-contents .download-assets-detail {
             width: 100%;
         }
-
         .brand-contents .download-assets-detail li.thumb-box {
-            height: 39vw;
             margin-bottom: 16px;
             border-radius: 16px;
+            padding-bottom: 48.445%;
         }
 
 
 
     }
+
 </style>
 <!-- html code -->
 <div class="brand-contents">
     <div id="contents">
         <div class="brand__content-inner">
-            <h2 class="assets-download-tit">Brand Resources<br class="mo"> and Guidelines</h2>
-            <p class="title-exp">Download LG most commonly requested assets here.</p>
+            <h2 class="assets-download-tit">Brand Assets</h2>
             <div class="download-itembox">
                 <div class="download-itembox__head">
                     <span class="img-wrap add-border"><img
                             src="../../../../../src/mocks/BS0009/download-assets-item-thumb--logo.png" alt=""></span>
-                    <h3>Our Logo</h3>
-                    <span class="title-exp">Download LG most commonly requested assets here.</span>
+                    <h3>Logo</h3>
                     <div class="btn-wrap">
                         <button class="btn-download btn-download--accordion" data-tab-id="logo">Assets</button>
                         <a href="#" class="btn-download" download>full downloads</a>
@@ -728,6 +670,8 @@
                             <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
                             <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                         </ul>
+                    </div>
+                    <div class="downlist-wrap">
                         <ul class="download-assets-detail">
                             <li class="thumb-box add-border"><img
                                     src="../../../../../src/mocks/BS0009/download-detail--logo-05.png" alt=""></li>
@@ -743,8 +687,8 @@
                             <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                         </ul>
                         <ul class="download-assets-detail">
-                            <li class="thumb-box"><img src="../../../../../src/mocks/BS0009/download-detail--logo-07.png" alt="">
-                            </li>
+                            <li class="thumb-box add-border"><img
+                                    src="../../../../../src/mocks/BS0009/download-detail--logo-07.png" alt=""></li>
                             <li><a href="" class="btn-download" download="">All Downloads</a></li>
                             <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
                             <li><a href="" class="btn-download" download="">Png Downloads</a></li>
@@ -758,7 +702,6 @@
                     <span class="img-wrap"><img src="../../../../../src/mocks/BS0009/download-assets-item-thumb--slogan.png"
                             alt=""></span>
                     <h3>Slogan</h3>
-                    <span class="title-exp">Download LG most commonly requested assets here.</span>
                     <div class="btn-wrap">
                         <button class="btn-download btn-download--accordion" data-tab-id="slogan">Assets</button>
                         <a href="#" class="btn-download" download>full downloads</a>
@@ -787,6 +730,8 @@
                             <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
                             <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                         </ul>
+                    </div>
+                    <div class="downlist-wrap">
                         <ul class="download-assets-detail">
                             <li class="thumb-box add-border"><img
                                     src="../../../../../src/mocks/BS0009/download-detail--slogan-04.png" alt=""></li>
@@ -817,7 +762,6 @@
                     <span class="img-wrap"><img src="../../../../../src/mocks/BS0009/download-assets-item-thumb--colors.png"
                             alt=""></span>
                     <h3>Gradient</h3>
-                    <span class="title-exp">Download LG most commonly requested assets here.</span>
                     <div class="btn-wrap">
                         <button class="btn-download btn-download--accordion" data-tab-id="gradient">Assets</button>
                         <a href="#" class="btn-download" download>full downloads</a>
@@ -862,7 +806,6 @@
                     <span class="img-wrap"><img src="../../../../../src/mocks/BS0009/download-assets-item-thumb--font.png"
                             alt=""></span>
                     <h3>Font</h3>
-                    <span class="title-exp">Download LG most commonly requested assets here.</span>
                     <div class="btn-wrap">
                         <button class="btn-download btn-download--accordion" data-tab-id="font">Assets</button>
                         <a href="#" class="btn-download" download>full downloads</a>
@@ -956,7 +899,6 @@
 <!-- //html code -->
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="../../../../../gsap.min.js"></script>
 
 <script>
 
