@@ -1649,7 +1649,7 @@
             /*contents -download ------*/
             .brand-contents .assets-download-tit {
                 font-size: 56px;
-                /* margin-bottom: 64px; */
+                margin-bottom: 64px;
                 text-align: center;
                 font-weight: 550;
                 font-family: LGEI Headline;
@@ -1704,8 +1704,10 @@
                 font-size: 48px;
                 font-weight: 550;
                 line-height: 1.16;
-                margin: 0 0 10px;
                 font-family: LGEI Headline;
+            }
+            .brand-contents .download-itembox .download-itembox__head h3 + .title-exp {
+                margin-top: 10px;
             }
 
 
@@ -1779,10 +1781,16 @@
             .brand-contents .downlist-wrap {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 32px 16px;
-                max-width: 848px;
-                margin: 0 auto;
-                padding: 48px 0 58px;
+                gap: 32px 20px;
+                max-width: 860px;
+                margin-left: 350px;
+                margin-top: 48px;
+            }
+            .brand-contents .downlist-wrap + .downlist-wrap {
+                margin-top: 32px;
+            }
+            .accordion-content > .downlist-wrap:last-of-type {
+                margin-bottom: 58px;
             }
 
             .brand-contents .download-assets-detail {
@@ -1790,16 +1798,20 @@
                 width: 200px;
             }
             .brand-contents .download-assets-detail li.thumb-box {
-                height: 120px;
+                /* height: 120px; */
                 border-radius: 13px;
                 margin-bottom: 24px;
                 overflow: hidden;
                 box-sizing: border-box;
+                position: relative;
+                /* padding-bottom: 120px; */
+                padding-bottom: 60%;
             }
             .brand-contents .download-assets-detail li.thumb-box img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                position: absolute;
             }
             .brand-contents .download-assets-detail li + li {
                 margin-top: 10px;
@@ -1895,7 +1907,35 @@
                 }
 
                 /*contents -download ------*/
+                .brand-contents .assets-download-tit {
+                    margin-bottom: 32px;
+                    font-size: 36px;
+                }
+                .brand-contents .download-itembox {
+                    border-radius: 24px;
+                }
+                .brand-contents .download-itembox .download-itembox__head {
+                    height: 140px;
+                    padding-left: calc(270px + 40px);
+                }
+                .brand-contents .download-itembox .download-itembox__head .img-wrap {
+                    width: 270px;
+                }
+                .brand-contents .download-itembox .download-itembox__head h3 {
+                    font-size: 36px;
+                }
+                .brand-contents .btn-wrap {
+                    margin-top: 24px;
+                }
 
+                .brand-contents .downlist-wrap {
+                    max-width: unset;
+                    margin-left: 0;
+                }
+
+                .brand-contents .download-assets-detail {
+                    /* width: calc((100% - 40px) / 3); */
+                }
 
             }
 
@@ -1930,6 +1970,7 @@
                 .brand-contents .title-exp {
                     font-size: 16px;
                 }
+                
                 .brand-contents .download-itembox .download-itembox__head h3 {
                     margin-top: 24px;
                     font-size: 28px;
@@ -1941,17 +1982,18 @@
                 .brand-contents .downlist-wrap {
                     margin-left: 0;
                 }
-                .brand-contents .downlist-wrap {
-                    padding: 40px 0 52px;
+                .brand-contents .downlist-wrap,
+                .brand-contents .downlist-wrap + .downlist-wrap {
                     gap: 40px;
+                    margin-top: 40px;
                 }
                 .brand-contents .download-assets-detail {
                     width: 100%;
                 }
                 .brand-contents .download-assets-detail li.thumb-box {
-                    height: 39vw;
                     margin-bottom: 16px;
                     border-radius: 16px;
+                    padding-bottom: 48.445%;
                 }
 
 
@@ -1963,13 +2005,11 @@
         <div class="brand-contents">
             <div id="contents">
                 <div class="brand__content-inner">
-                    <h2 class="assets-download-tit">Brand Resources<br class="mo"> and Guidelines</h2>
-                    <p class="title-exp">Download LG most commonly requested assets here.</p>
+                    <h2 class="assets-download-tit">Brand Assets</h2>
                     <div class="download-itembox">
                         <div class="download-itembox__head">
                             <span class="img-wrap add-border"><img src="../../src/mocks/BS0009/download-assets-item-thumb--logo.png" alt=""></span>
-                            <h3>Our Logo</h3>
-                            <span class="title-exp">Download LG most commonly requested assets here.</span>
+                            <h3>Logo</h3>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="logo">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
@@ -2001,6 +2041,8 @@
                                     <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
+                            </div>
+                            <div class="downlist-wrap">
                                 <ul class="download-assets-detail">
                                     <li class="thumb-box add-border"><img src="../../src/mocks/BS0009/download-detail--logo-05.png" alt=""></li>
                                     <li><a href="" class="btn-download" download="">All Downloads</a></li>
@@ -2014,7 +2056,7 @@
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
                                 <ul class="download-assets-detail">
-                                    <li class="thumb-box"><img src="../../src/mocks/BS0009/download-detail--logo-07.png" alt=""></li>
+                                    <li class="thumb-box add-border"><img src="../../src/mocks/BS0009/download-detail--logo-07.png" alt=""></li>
                                     <li><a href="" class="btn-download" download="">All Downloads</a></li>
                                     <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
@@ -2027,7 +2069,6 @@
                         <div class="download-itembox__head">
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--slogan.png" alt=""></span>
                             <h3>Slogan</h3>
-                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="slogan">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
@@ -2053,6 +2094,8 @@
                                     <li><a href="" class="btn-download" download="">Ai Downloads</a></li>
                                     <li><a href="" class="btn-download" download="">Png Downloads</a></li>
                                 </ul>
+                            </div>
+                            <div class="downlist-wrap">
                                 <ul class="download-assets-detail">
                                     <li class="thumb-box add-border"><img src="../../src/mocks/BS0009/download-detail--slogan-04.png" alt=""></li>
                                     <li><a href="" class="btn-download" download="">All Downloads</a></li>
@@ -2079,7 +2122,6 @@
                         <div class="download-itembox__head">
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--colors.png" alt=""></span>
                             <h3>Gradient</h3>
-                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="gradient">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
@@ -2119,7 +2161,6 @@
                         <div class="download-itembox__head">
                             <span class="img-wrap"><img src="../../src/mocks/BS0009/download-assets-item-thumb--font.png" alt=""></span>
                             <h3>Font</h3>
-                            <span class="title-exp">Download LG most commonly requested assets here.</span>
                             <div class="btn-wrap">
                                 <button class="btn-download btn-download--accordion" data-tab-id="font">Assets</button>
                                 <a href="#" class="btn-download" download >full downloads</a>
