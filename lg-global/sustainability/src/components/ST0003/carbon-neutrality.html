@@ -1774,11 +1774,48 @@
                 justify-content: space-between;
             }
             .achieve-carbon-neutrality__plan__item {
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
                 width: 370px;
                 height: 604px;
+                padding: 28px 0px;
                 opacity: 0;
+                border-radius: 400px;
+                background-color: rgba(0, 0, 0, 0.10);
+                background-repeat: no-repeat;
+                background-position: 22% center;
+                background-size: cover;
                 transform: translateY(75px);
                 transition: 0.5s ease transform,0.5s ease opacity;
+            }
+            .achieve-carbon-neutrality__plan__item:hover {
+                text-decoration: none;
+            }
+            .achieve-carbon-neutrality__plan__item:before {
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(0px);
+            }
+            .achieve-carbon-neutrality__plan__item:hover:before {
+                backdrop-filter: blur(50px);
+            }
+            .achieve-carbon-neutrality__plan__item__step1 {
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan1.png);
+            }
+            .achieve-carbon-neutrality__plan__item__step2 {
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan2.png);
+            }
+            .achieve-carbon-neutrality__plan__item__step3 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 79.17%, rgba(0, 0, 0, 0.5) 100%), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan3.jpg);
             }
             .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item {
                 opacity: 1;
@@ -1793,65 +1830,53 @@
             .achieve-carbon-neutrality--active .achieve-carbon-neutrality__plan__item__step3 {
                 transition-delay: 0.5s;
             }
-            .achieve-carbon-neutrality__plan__item__btn {
-                overflow: hidden;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                height: 100%;
-                padding: 98px 0px;
-                border-radius: 400px;
-                background-color: rgba(0, 0, 0, 0.10);
-                background-repeat: no-repeat;
-                background-position: 22% center;
-                background-size: cover;
-            }
-            .achieve-carbon-neutrality__plan__item__btn:hover {
-                text-decoration: none;
-            }
-            .achieve-carbon-neutrality__plan__item__step1__btn {
-                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan1.png);
-            }
-            .achieve-carbon-neutrality__plan__item__step2__btn {
-                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan2.png);
-            }
-            .achieve-carbon-neutrality__plan__item__step3__btn {
-                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 79.17%, rgba(0, 0, 0, 0.5) 100%), url(../../mocks/ST0003/photo-achieve-carbon-neutrality-plan3.jpg);
-            }
-            .achieve-carbon-neutrality__plan__item__btn:before {
-                position: absolute;
-                z-index: 1;
-                top: 0px;
-                left: 0px;
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                backdrop-filter: blur(0px);
-            }
-            .achieve-carbon-neutrality__plan__item__btn:hover:before {
-                backdrop-filter: blur(50px);
-            }
-            .achieve-carbon-neutrality__plan__item__btn:after {
-                position: absolute;
-                z-index: 2;
-                bottom: 28px;
-                left: calc(50% - 24px);
-                content: '';
-                display: block;
-                width: 44px;
-                height: 44px;
-                background: url(../../mocks/ST0003/bullet-discover-more.svg) no-repeat center center;
-                background-size: cover;
-            }
-            .achieve-carbon-neutrality__plan__item__btn__txt {
+            .achieve-carbon-neutrality__plan__item__txt {
                 position: relative;
                 z-index: 2;
                 color: white;
                 font-size: 24px;
                 line-height: 30px;
                 letter-spacing: -0.12px;
+            }
+            .achieve-carbon-neutrality__plan__item__learn-more {
+                text-align: center;
+                line-height: 0;
+                margin-top: 26px;
+            }
+            .achieve-carbon-neutrality__plan__item__learn-more__btn {
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                text-indent: -9999px;
+                overflow: hidden;
+            }
+            .achieve-carbon-neutrality__plan__item__learn-more__btn:before,
+            .achieve-carbon-neutrality__plan__item__learn-more__btn:after {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .achieve-carbon-neutrality__plan__item__learn-more__btn:before {
+                z-index: 1;
+                background-image: url(../../mocks/ST0003/bullet-discover-more.svg);
+            }
+            .achieve-carbon-neutrality__plan__item__learn-more__btn:after {
+                z-index: 2;
+                background-image: url(../../mocks/ST0003/bullet-discover-more-on.svg);
+                opacity: 0;
+                transition: 0.3s ease opacity;
+            }
+            .achieve-carbon-neutrality__plan__item__learn-more__btn:hover:after {
+                opacity: 1;
             }
 
             /* Home appliances manufacturing factory */
@@ -2420,7 +2445,7 @@
             }
             .popup-discription__read-more__btn {
                 display: inline-block;
-                padding: 18px 26px;
+                padding: 18px 26px 20px;
                 border-radius: 100px;
                 border: 1px solid #333333;
                 color: black;
@@ -3175,7 +3200,7 @@
                 .popup-discription__visual {
                     margin: 40px -110px;
                 }
-                .popup-discription--intro-summary {
+                .popup-discription__intro-summary {
                     padding-left: 0px;
                     margin-top: 40px;
                 }
@@ -3934,7 +3959,7 @@
                 .popup-discription__visual__img--mo {
                     display: block;
                 }
-                .popup-discription--intro-summary {
+                .popup-discription__intro-summary {
                     padding-left: 0px;
                     margin-top: 40px;
                 }
@@ -4265,36 +4290,51 @@
                 </div>
                 <ul class="achieve-carbon-neutrality__plan">
                     <li class="achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step1">
-                        <a href="#greenhouse-reduction" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item__step1__btn">
-                            <p class="achieve-carbon-neutrality__plan__item__btn__txt">
+                        <div class="achieve-carbon-neutrality__plan__item__inner">
+                            <p class="achieve-carbon-neutrality__plan__item__txt">
                                 Reduce greenhouse gas <br />
                                 emissions in production <br />
                                 stage (~2030)
                             </p>
-                        </a>
+                            <div class="achieve-carbon-neutrality__plan__item__learn-more">
+                                <a href="#greenhouse-reduction" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__learn-more__btn">
+                                    Learn more
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li class="achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step2">
-                        <a href="#renewable-energy" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn  achieve-carbon-neutrality__plan__item__step2__btn">
-                            <p class="achieve-carbon-neutrality__plan__item__btn__txt">
+                        <div class="achieve-carbon-neutrality__plan__item__inner">
+                            <p class="achieve-carbon-neutrality__plan__item__txt">
                                 Expanding our business <br />
                                 to achieve 100% <br />
                                 renewable energy <br />
                                 (~2050)
                             </p>
-                        </a>
+                            <div class="achieve-carbon-neutrality__plan__item__learn-more">
+                                <a href="#renewable-energy" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__learn-more__btn">
+                                    Learn more
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li class="achieve-carbon-neutrality__plan__item achieve-carbon-neutrality__plan__item__step3">
-                        <a href="#emissions-reductions" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__btn achieve-carbon-neutrality__plan__item__step3__btn">
-                            <p class="achieve-carbon-neutrality__plan__item__btn__txt">
+                        <div class="achieve-carbon-neutrality__plan__item__inner">
+                            <p class="achieve-carbon-neutrality__plan__item__txt">
                                 Securing certified <br />
                                 emissions reductions
                             </p>
-                        </a>
+                            <div class="achieve-carbon-neutrality__plan__item__learn-more">
+                                <a href="#emissions-reductions" onclick="popupDiscription(this.href); return false" class="achieve-carbon-neutrality__plan__item__learn-more__btn">
+                                    Learn more
+                                </a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <div class="popup-discription" id="greenhouse-reduction">
                     <div class="popup-discription__wrap">
-                        <dl class="popup-discription--inner">
+                        <dl class="popup-discription__inner">
                             <dt class="popup-discription__tit">Reduction of greenhouse gas emissions during the production stage (~2030)</dt>
                             <dd class="popup-discription__cont1">Our goal is to decrease greenhouse gas emissions during production by 50% compared to 2017 using advanced equipment and devices. Additionally, we'll actively engage in Clean Development Mechanism (CDM*) projects to acquire carbon credits and support developing nations in reducing their emissions. We'll also implement our own solutions, like upgraded refrigerators and Energy Management Systems (EMS), which promote the use of renewable energy.</dd>
                             <dd class="popup-discription__cont3">*CDM: Clean Development Mechanism</dd>
@@ -4312,7 +4352,7 @@
                 </div>
                 <div class="popup-discription" id="renewable-energy">
                     <div class="popup-discription__wrap">
-                        <dl class="popup-discription--inner">
+                        <dl class="popup-discription__inner">
                             <dt class="popup-discription__tit">Expanding business to achieve 100% renewable energy (~2050)</dt>
                             <dd class="popup-discription__cont1">LG Electronics is making impressive strides in its renewable energy endeavors, with a strong focus on expanding its business in this sector.In 2022, the U.S. production/sales subsidiaries and logistics, as well as the production subsidiaries in Brazil, underwent a complete transition to 100% renewable energy. Noteworthy progress has already been made, as LG has procured 58,961MWh of Renewable Energy Credit in the US and secured 31,946MWh of renewable energy through hydroelectric power contracts in Brazil.</dd>
                             <dd class="popup-discription__cont1">To realize these goals, LG has formulated a comprehensive long-term plan that takes into account the current regulatory landscape and the state of its business sites in Korea and other countries. The plan encompasses various viable options such as green tariffs for purchasing renewable energy, acquiring Renewable Energy Credits (REC), and engaging in third-party Power Purchase Agreements (PPA).</dd>
@@ -4331,7 +4371,7 @@
                 </div>
                 <div class="popup-discription" id="emissions-reductions">
                     <div class="popup-discription__wrap">
-                        <dl class="popup-discription--inner">
+                        <dl class="popup-discription__inner">
                             <dt class="popup-discription__tit">Securing certified emissions reductions</dt>
                             <dd class="popup-discription__cont1">A certain amount of carbon emissions is inevitable. To balance this, we reduce carbon emissions in other areas to stay carbon neutral and keep our carbon emissions at zero. We strives to develop high-efficiency products that only emit as much carbon as they can reduce.</dd>
                             <dd class="popup-discription__cont1">We received a carbon emissions allowance from the UNFCCC Executive Committee by producing and providing innovative, high-efficiency fridges in India. The key technology of high-efficiency fridges is the inverter linear compressor. It controls the system more precisely than a typical compressor, operating the motor only when necessary, which improves energy efficiency and performance.</dd>
@@ -4392,7 +4432,7 @@
                 </div>
                 <div class="popup-discription" id="achieve-carbon-neutrality-changwon">
                     <div class="popup-discription__wrap">
-                        <dl class="popup-discription--inner">
+                        <dl class="popup-discription__inner">
                             <dt class="popup-discription__tit">
                                 <div class="popup-discription__tit__preface">Carbon emission reduction</div>
                                 <div class="popup-discription__tit__subject">
@@ -4420,7 +4460,7 @@
                 </div>
                 <div class="popup-discription" id="achieve-carbon-neutrality-tennessee">
                     <div class="popup-discription__wrap">
-                        <dl class="popup-discription--inner">
+                        <dl class="popup-discription__inner">
                             <dt class="popup-discription__tit">
                                 <div class="popup-discription__tit__preface">Carbon emission reduction</div>
                                 <div class="popup-discription__tit__subject">
@@ -4465,7 +4505,7 @@
                 </div>
                 <div class="popup-discription" id="net-zero-house">
                     <div class="popup-discription__wrap">
-                        <dl class="popup-discription--inner popup-discription__b2b-activity">
+                        <dl class="popup-discription__inner popup-discription__b2b-activity">
                             <div class="popup-discription__b2b-activity__intro">
                                 <dt class="popup-discription__b2b-activity__intro__tit">B2B activity</dt>
                                 <dd class="popup-discription__b2b-activity__intro__summary">

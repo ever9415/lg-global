@@ -1824,7 +1824,7 @@
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
-                padding: 120px 90px 100px;
+                padding: 120px 128px 100px;
                 box-sizing: border-box;
                 border-radius: 30px;
                 text-align: left;
@@ -1833,12 +1833,11 @@
             .popup-discription__tit {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                font-size: 52px;
-                line-height: 58px;
-                text-align: center;
+                font-size: 48px;
+                line-height: 56px;
             }
             .popup-discription__visual {
-                margin: 60px -90px;
+                margin: 64px -128px;
             }
             .popup-discription__visual__img {
                 width: 100%;
@@ -1849,21 +1848,21 @@
                 display: none;
             }
             .popup-discription__cont1 {
-                margin-top: 20px;
+                margin-top: 16px;
                 font-family: LGEI Headline;
-                font-size: 28px;
+                font-size: 24px;
                 font-weight: 550;
-                line-height: 38px;
+                line-height: 30px;
                 letter-spacing: -0.14px;
             }
             .popup-discription__cont2 {
+                margin-top: 16px;
                 font-size: 20px;
                 line-height: 28px;
                 letter-spacing: -0.1px;
-                margin-top: 20px;
             }
             .popup-discription__photo {
-                margin-top: 60px;
+                margin-top: 64px;
                 width: 100%;
             }
             .popup-discription__photo__img {
@@ -1871,35 +1870,48 @@
                 height: auto;
             }
             .popup-discription__video {
-                margin: 60px 0px 0px;
+                margin: 64px 0px 0px;
+                line-height: 1;
             }
             .popup-discription__video__player {
                 width: 100%;
-                height: 454px;
+                height: 364px;
             }
             .popup-discription__learn-more {
                 text-align: center;
-                margin-top: 40px;
+                margin-top: 64px;
             }
             .popup-discription__learn-more__btn {
-                padding: 13px 19px 12px;
-                border-radius: 30px;
-                border: 1px solid #898989;
-                color: black;
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 16px;
-            }
-            .popup-discription__learn-more__btn:after {
-                content: '';
                 display: inline-block;
-                vertical-align: text-bottom;
+                padding: 18px 26px 20px;
+                border-radius: 100px;
+                border: 1px solid #333333;
+                color: black;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 24px;
+                background-color: white;
+                transition: 0.3s ease all;
+            }
+            .popup-discription__learn-more__btn:hover {
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
+                text-decoration: none;
+            }
+            .popup-discription__learn-more__btn__bullet {
+                width: 15px;
+                height: 14px;
+                vertical-align: middle;
                 position: relative;
-                top: -1px;
-                width: 16px;
-                height: 16px;
-                margin-left: 5px;
-                background: url(../../mocks/ST0007/bullet-pd-learn-more.svg) no-repeat center center;
+                top: -3px;
+            }
+            .popup-discription__learn-more__btn__bullet__ico {
+                stroke: #262626;
+                transition: 0.3s ease stroke;
+            }
+            .popup-discription__learn-more__btn:hover .popup-discription__learn-more__btn__bullet__ico {
+                stroke: white;
             }
             .popup-discription__btn-close {
                 position: absolute;
@@ -2228,7 +2240,7 @@
                 .popup-discription__visual {
                     margin: 40px -110px;
                 }
-                .popup-discription--intro-summary {
+                .popup-discription__intro-summary {
                     padding-left: 0px;
                     margin-top: 40px;
                 }
@@ -2595,7 +2607,7 @@
                 .popup-discription__visual__img--mo {
                     display: block;
                 }
-                .popup-discription--intro-summary {
+                .popup-discription__intro-summary {
                     padding-left: 0px;
                     margin-top: 40px;
                 }
@@ -2726,7 +2738,12 @@
                                 <img src="../../mocks/ST0007/photo-lg-koica-tvet.png" alt=""  class="popup-discription__photo__img" />
                             </dd>
                             <dd class="popup-discription__learn-more">
-                                <a href="https://www.lgnewsroom.com/2022/07/better-life-story-how-yimenus-passion-for-technology-led-him-to-lg/" target="_blank" class="popup-discription__learn-more__btn">Learn more</a>
+                                <a href="https://www.lgnewsroom.com/2022/07/better-life-story-how-yimenus-passion-for-technology-led-him-to-lg/" target="_blank" class="popup-discription__learn-more__btn">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__learn-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__learn-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -2746,7 +2763,12 @@
                                 <iframe width="800" height="454" src="https://www.youtube.com/embed/4TCwL966FLM?version=3&amp;enablejsapi=1" id="youtube_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
                             </dd>
                             <dd class="popup-discription__learn-more">
-                                <a href="https://www.lgnewsroom.com/2022/11/lg-supports-young-technology-leaders-with-disabilities-through-2022-global-it-challenge/" target="_blank" class="popup-discription__learn-more__btn">Learn more</a>
+                                <a href="https://www.lgnewsroom.com/2022/11/lg-supports-young-technology-leaders-with-disabilities-through-2022-global-it-challenge/" target="_blank" class="popup-discription__learn-more__btn">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__learn-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__learn-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -2814,7 +2836,12 @@
                             </dd>
                             <dd class="popup-discription__learn-more">
                                 <a href="https://www.lgnewsroom.com/2021/05/local-initiatives-global-benefits/ 
-                                " target="_blank" class="popup-discription__learn-more__btn">Learn more</a>
+                                " target="_blank" class="popup-discription__learn-more__btn">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__learn-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__learn-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -2834,7 +2861,12 @@
                                 <img src="../../mocks/ST0007/photo-improve-housing.png" alt=""  class="popup-discription__photo__img" />
                             </dd>
                             <dd class="popup-discription__learn-more">
-                                <a href="https://www.lgnewsroom.com/2021/10/thanking-korean-war-veterans-in-africa/" target="_blank" class="popup-discription__learn-more__btn">Learn more</a>
+                                <a href="https://www.lgnewsroom.com/2021/10/thanking-korean-war-veterans-in-africa/" target="_blank" class="popup-discription__learn-more__btn">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__learn-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__learn-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -2856,7 +2888,12 @@
                                 <img src="../../mocks/ST0007/photo-lg-social-campus.png" alt=""  class="popup-discription__photo__img" />
                             </dd>
                             <dd class="popup-discription__learn-more">
-                                <a href="https://www.lgnewsroom.com/2017/04/students-bring-fresh-perspective-on-innovation-in-lgs-hr-garage-program/" target="_blank" class="popup-discription__learn-more__btn">Learn more</a>
+                                <a href="https://www.lgnewsroom.com/2017/04/students-bring-fresh-perspective-on-innovation-in-lgs-hr-garage-program/" target="_blank" class="popup-discription__learn-more__btn">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" class="popup-discription__learn-more__btn__bullet">
+                                        <path d="M1.5 13L13.5 1M13.5 1H3.21429M13.5 1V11.2857" stroke-width="1.5" class="popup-discription__learn-more__btn__bullet__ico" />
+                                    </svg>
+                                </a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
