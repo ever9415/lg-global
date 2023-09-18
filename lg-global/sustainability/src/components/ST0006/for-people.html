@@ -1400,6 +1400,10 @@
                 font-family: LGEI Text;
                 color: #333333;
             }
+            .sustainably-container *[class*="tit"],
+            .sustainably-container *[class*="stit"] {
+                color: black;
+            }
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
@@ -1438,7 +1442,7 @@
             .for-people-visual__tit__txt {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                color: white;
+                color: white !important;
             }
             .for-people-visual__tit__txt__br {
                 display: none;
@@ -1516,6 +1520,7 @@
                 font-weight: 600;
                 font-size: 48px;
                 line-height: 56px;
+                color: black;
             }
             .convenient-living__intro__txt:last-child {
                 font-size: 20px;
@@ -1604,6 +1609,7 @@
             .convenient-living__solutions__slide__anchor__subject {
                 font-family: LGEI Headline;
                 font-size: 36px;
+                font-weight: 550;
                 line-height: 40px;
                 letter-spacing: -0.54px;
                 color: white;
@@ -1721,9 +1727,10 @@
                 z-index: 2;
             }
             .sustainability-efforts__menu__item__tit {
+                font-family: LGEI Headline;
                 font-size: 48px;
                 font-weight: 550;
-                color: white;
+                color: white !important;
                 line-height: 56px;
                 letter-spacing: -0.24px;
             }
@@ -1741,6 +1748,7 @@
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 16px;
+                color: black;
                 border: 1px solid #262626;
                 background-color: white;
                 transition: 0.3s ease all;
@@ -1985,7 +1993,7 @@
                 overflow-x: hidden;
                 overflow-y: auto;
                 background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(27px);
+                backdrop-filter: blur(100px);
             }
             .popup-discription__wrap {
                 position: relative;
@@ -1993,7 +2001,7 @@
                 margin: 90px auto;
                 padding: 128px 88px;
                 box-sizing: border-box;
-                border-radius: 30px;
+                border-radius: 28px;
                 text-align: left;
                 background-color: white;
             }
@@ -2004,7 +2012,6 @@
                 font-size: 48px;
                 line-height: 56px;
                 letter-spacing: -0.24px;
-                color: black;
             }
             .popup-discription__tit:first-child {
                 margin-top: 0px;
@@ -2015,18 +2022,15 @@
                 line-height: 30px;
                 letter-spacing: -0.12px;
                 font-weight: 600;
-                color: black;
             }
             .popup-discription__tit__subject {
                 margin-top: 8px;
                 font-family: LGEI Headline;
                 letter-spacing: -0.24px;
-                color: black;
             }
             .popup-discription__stit {
                 margin-top: 64px;
                 font-size: 24px;
-                font-family: LGEI Headline;
                 font-weight: 600;
                 line-height: 30px;
                 letter-spacing: -0.12px;
@@ -2085,13 +2089,6 @@
             .popup-discription__video__player {
                 width: 100%;
                 height: 454px;
-            }
-            .popup-discription--stit {
-                margin-top: 64px;
-                font-family: LGEI Headline;
-                font-size: 36px;
-                line-height: 40px;
-                letter-spacing: -0.54px;
             }
             .popup-discription__intro-detail {
                 display: grid;
@@ -3958,7 +3955,7 @@
                         next4PhotoImg.src = chSrc
                     }
 
-                    next4PhotoImg.onmouseleave = function() {
+                    next4Anchor.onmouseleave = function() {
                         chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
                         next4PhotoImg.src = chSrc
                     }

@@ -1400,6 +1400,10 @@
                 font-family: LGEI Text;
                 color: #333333;
             }
+            .sustainably-container *[class*="tit"],
+            .sustainably-container *[class*="stit"] {
+                color: black;
+            }
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
@@ -1538,7 +1542,6 @@
 	            font-family: LGEI Headline;
                 font-size: 56px;
                 font-weight: 550;
-                color: black;
                 line-height: 60px;
                 letter-spacing: -0.28px;
                 margin-bottom: 48px;
@@ -1633,6 +1636,7 @@
                 font-size: 48px;
                 line-height: 56px;
                 font-weight: 550;
+                color: black;
             }
             .core-value__txt__item__small {
                 font-size: 24px;
@@ -1771,6 +1775,7 @@
                 line-height: 56px;
                 letter-spacing: -0.28px;
                 margin-top: 16px;
+                color: black;
             }
             .menu-introduce__cont__detail {
                 margin-top: 24px;
@@ -1788,7 +1793,8 @@
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 16px;
-                border: 1px solid #4A4946;
+                color: black;
+                border: 1px solid #262626;
                 background-color: white;
                 transition: 0.3s ease all;
             }
@@ -1886,14 +1892,18 @@
 
             /* Digital Library */
             .digital-library {
-                padding: 7.4074vh 12.5vw;
+                padding: 64px 0px;
                 box-sizing: border-box;
                 height: 700px;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
                 background-size: cover;
             }
+            .digital-library__inner {
+                width: 1440px;
+                margin: 0px auto;
+            }
             .digital-library__tit {
-                color: white;
+                color: white !important;
                 font-size: 24px;
                 line-height: 30px;
             }
@@ -1915,7 +1925,8 @@
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 1;
-                border: 1px solid #4A4946;
+                color: black;
+                border: 1px solid #262626;
                 background-color: white;
                 transition: 0.3s ease all;
             }
@@ -1946,6 +1957,7 @@
                 font-weight: 550;
                 line-height: 56px;
                 letter-spacing: -0.24px;
+                color: black;
             }
             .latest-stories__detail {
                 margin-top: 16px;
@@ -1967,7 +1979,7 @@
                 font-weight: 600;
                 line-height: 1;
                 letter-spacing: -0.24px;
-                border: 1px solid #4A4946;
+                border: 1px solid #333333;
                 background-color: white;
                 transition: 0.3s ease all;
             }
@@ -3391,13 +3403,15 @@
                 </div>
             </div>
             <div class="digital-library">
-                <h3 class="digital-library__tit">Digital library</h3>
-                <p class="digital-library__summary">
-                    Sharing our sustainability <br />
-                    strategy and performance
-                </p>
-                <div class="digital-library__learn-more">
-                    <a href="../ST0000/digital-library.html" class="digital-library__learn-more__link">Learn more</a>
+                <div class="digital-library__inner">
+                    <h3 class="digital-library__tit">Digital library</h3>
+                    <p class="digital-library__summary">
+                        Sharing our sustainability <br />
+                        strategy and performance
+                    </p>
+                    <div class="digital-library__learn-more">
+                        <a href="../ST0000/digital-library.html" class="digital-library__learn-more__link">Learn more</a>
+                    </div>
                 </div>
             </div>
             <div class="latest-stories">
@@ -3805,7 +3819,7 @@
                         next4PhotoImg.src = chSrc
                     }
 
-                    next4PhotoImg.onmouseleave = function() {
+                    next4Anchor.onmouseleave = function() {
                         chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
                         next4PhotoImg.src = chSrc
                     }

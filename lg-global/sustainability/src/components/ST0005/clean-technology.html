@@ -1400,6 +1400,10 @@
                 font-family: LGEI Text;
                 color: #333333;
             }
+            .sustainably-container *[class*="tit"],
+            .sustainably-container *[class*="stit"] {
+                color: black;
+            }
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
@@ -1438,7 +1442,7 @@
             .clean-technology-visual__tit__txt {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                color: white;
+                color: white !important;
             }
             .clean-technology-visual__video {
                 position: relative;
@@ -1504,6 +1508,7 @@
             }
             .eco-conscious-technology__intro__txt {
                 font-family: LGEI Headline;
+                color: black;
                 font-weight: 600;
                 font-size: 48px;
                 line-height: 56px;
@@ -1584,6 +1589,7 @@
                 margin-top: 8px;
                 font-family: LGEI Headline;
                 font-size: 48px;
+                font-weight: 550;
                 line-height: 56px;
                 letter-spacing: -0.24px;
                 color: white;
@@ -1651,6 +1657,7 @@
             }
             .recreation-of-product__intro__txt:first-child {
                 font-family: LGEI Headline;
+                color: black;
                 font-weight: 600;
                 font-size: 48px;
                 line-height: 56px;
@@ -1728,6 +1735,7 @@
                 font-size: 48px;
                 line-height: 56px;
                 letter-spacing: -0.24px;
+                color: black;
             }
             .recreation-of-product__type__item__photo {
                 position: absolute;
@@ -1797,7 +1805,7 @@
                 font-weight: 550;
                 line-height: 56px;
                 letter-spacing: -0.24px;
-                color: white;
+                color: white !important;
             }
             .explore-resources__list {
                 display: grid;
@@ -2090,7 +2098,7 @@
                 overflow-x: hidden;
                 overflow-y: auto;
                 background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(27px);
+                backdrop-filter: blur(100px);
             }
             .popup-discription__wrap {
                 position: relative;
@@ -2098,7 +2106,7 @@
                 margin: 90px auto;
                 padding: 128px 88px;
                 box-sizing: border-box;
-                border-radius: 30px;
+                border-radius: 28px;
                 text-align: left;
                 background-color: white;
             }
@@ -3931,7 +3939,7 @@
                         next4PhotoImg.src = chSrc
                     }
 
-                    next4PhotoImg.onmouseleave = function() {
+                    next4Anchor.onmouseleave = function() {
                         chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
                         next4PhotoImg.src = chSrc
                     }

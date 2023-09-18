@@ -1400,6 +1400,10 @@
                 font-family: LGEI Text;
                 color: #333333;
             }
+            .sustainably-container *[class*="tit"],
+            .sustainably-container *[class*="stit"] {
+                color: black;
+            }
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
@@ -1818,7 +1822,7 @@
                 overflow-x: hidden;
                 overflow-y: auto;
                 background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(27px);
+                backdrop-filter: blur(100px);
             }
             .popup-discription__wrap {
                 position: relative;
@@ -1826,7 +1830,7 @@
                 margin: 90px auto;
                 padding: 120px 128px 100px;
                 box-sizing: border-box;
-                border-radius: 30px;
+                border-radius: 28px;
                 text-align: left;
                 background-color: white;
             }
@@ -3060,7 +3064,7 @@
                         next4PhotoImg.src = chSrc
                     }
 
-                    next4PhotoImg.onmouseleave = function() {
+                    next4Anchor.onmouseleave = function() {
                         chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
                         next4PhotoImg.src = chSrc
                     }

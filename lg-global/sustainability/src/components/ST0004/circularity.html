@@ -1400,6 +1400,10 @@
                 font-family: LGEI Text;
                 color: #333333;
             }
+            .sustainably-container *[class*="tit"],
+            .sustainably-container *[class*="stit"] {
+                color: black;
+            }
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
@@ -1438,7 +1442,7 @@
             .circularity-visual__tit__txt {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                color: white;
+                color: white !important;
             }
             .circularity-visual__tit__txt__br {
                 display: none;
@@ -1505,7 +1509,7 @@
                 background-size: cover;
             }
             .st-cycle * {
-                color: white;
+                color: white !important;
             }
             .st-cycle__tit {
                 display: none;
@@ -1586,6 +1590,7 @@
             }
             .st-cycle__inner__cont__list__item__tit {
                 font-family: LGEI Headline;
+                font-weight: 550;
                 font-size: 48px;
                 line-height: 56px;
                 letter-spacing: -0.24px;
@@ -1704,6 +1709,7 @@
                 font-size: 48px;
                 font-weight: 550;
                 line-height: 56px;
+                color: black !important;
             }
             .e-waste-program__intro2 {
                 font-size: 20px;
@@ -1773,6 +1779,7 @@
                 font-weight: 550;
                 font-size: 48px;
                 line-height: 56px;
+                color: black;
             }
             .st-recycling-solutions__cont__intro__txt:last-child {
                 font-size: 20px;
@@ -1819,7 +1826,7 @@
                 font-weight: 550;
                 line-height: 56px;
                 letter-spacing: -0.24px;
-                color: white;
+                color: white !important;
             }
             .explore-resources__list {
                 display: grid;
@@ -2112,7 +2119,7 @@
                 overflow-x: hidden;
                 overflow-y: auto;
                 background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(27px);
+                backdrop-filter: blur(100px);
             }
             .popup-discription__wrap {
                 position: relative;
@@ -2120,7 +2127,7 @@
                 margin: 90px auto;
                 padding: 128px 168px;
                 box-sizing: border-box;
-                border-radius: 30px;
+                border-radius: 28px;
                 text-align: left;
                 background-color: white;
             }
@@ -3958,7 +3965,7 @@
                         next4PhotoImg.src = chSrc
                     }
 
-                    next4PhotoImg.onmouseleave = function() {
+                    next4Anchor.onmouseleave = function() {
                         chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
                         next4PhotoImg.src = chSrc
                     }

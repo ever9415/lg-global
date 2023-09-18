@@ -1401,6 +1401,10 @@
                 font-family: LGEI Text;
                 color: #333333;
             }
+            .sustainably-container *[class*="tit"],
+            .sustainably-container *[class*="stit"] {
+                color: black;
+            }
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
@@ -1439,7 +1443,7 @@
             .carbon-nautrality-visual__tit__txt {
                 font-family: LGEI Headline;
                 font-weight: 550;
-                color: white;
+                color: white !important;
             }
             .carbon-nautrality-visual__tit__txt__br {
                 display: none;
@@ -1544,7 +1548,7 @@
                 font-weight: 550;
                 line-height: 56px;
                 letter-spacing: -0.24px;
-                color: white;
+                color: white !important;
                 text-align: left;
             }
             .key-progress__goals__tit__br {
@@ -1762,6 +1766,7 @@
                 font-weight: 550;
                 line-height: 56px;
                 letter-spacing: -0.24px;
+                color: black;
             }
             .achieve-carbon-neutrality__intro__txt:last-child {
                 font-size: 20px;
@@ -1899,6 +1904,7 @@
                 font-size: 48px;
                 font-weight: 550;
                 line-height: 56px;
+                color: black;
             }
             .home-appliances-manufacturing-factory__intro__txt:last-child {
                 font-size: 20px;
@@ -2050,7 +2056,7 @@
                 margin: 0px auto;
             }
             .b2b-activity__tit {
-                color: white;
+                color: white !important;
                 letter-spacing: -0.005em;
                 font-size: 24px;
                 font-weight: 600;
@@ -2343,7 +2349,7 @@
                 overflow-x: hidden;
                 overflow-y: auto;
                 background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(27px);
+                backdrop-filter: blur(100px);
             }
             .popup-discription__wrap {
                 position: relative;
@@ -2351,7 +2357,7 @@
                 margin: 90px auto;
                 padding: 128px 168px;
                 box-sizing: border-box;
-                border-radius: 30px;
+                border-radius: 28px;
                 overflow: hidden;
                 text-align: left;
                 background-color: white;
@@ -2528,6 +2534,7 @@
                 font-weight: 400;
                 line-height: 30px;
                 letter-spacing: -0.12px;
+                color: white !important;
             }
             .popup-discription__b2b-activity__intro__summary {
                 font-family: LGEI Headline;
@@ -4984,7 +4991,7 @@
                         next4PhotoImg.src = chSrc
                     }
 
-                    next4PhotoImg.onmouseleave = function() {
+                    next4Anchor.onmouseleave = function() {
                         chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
                         next4PhotoImg.src = chSrc
                     }
