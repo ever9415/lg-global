@@ -1450,13 +1450,31 @@
                 right: 0;
                 bottom: 0;
             }
-            .btn-play {
+
+            .bisual-play-wrap {
                 position: absolute;
                 left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: 120px;
-                height: 120px;
+                bottom: 29.53vh;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                gap: 16px;
+                width: 91.82vw;
+                z-index: 5;
+            }
+            .bisual-play-wrap span {
+                font-size: 28px;
+                color: #F6F3EB;
+                letter-spacing: 0.11px;
+            }
+            .bisual-play-wrap .btn-play {
+                margin-right: 6.77%;
+            }
+            
+            .btn-play {
+                width: 64px;
+                height: 64px;
                 border-radius: 50%;
                 background-color: #ffffff66;
                 backdrop-filter: blur(45px);
@@ -1472,8 +1490,8 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 25%;
-                height: 25%;
+                width: 30%;
+                height: 30%;
                 background: url(../../src/mocks/layout/btn-video-play.svg) no-repeat center;
                 background-size: contain;
             }
@@ -2045,6 +2063,25 @@
             /* Tablet */
             @media (max-width: 1500px) {
 
+                .brand-visual-film {
+                    height: 56.25vw;
+                }
+                .bisual-play-wrap {
+                    bottom: 15vw;
+                    width: 87.4vw;
+                }
+                .bisual-play-wrap span {
+                    font-size: 18px;
+                }
+                .bisual-play-wrap button {
+                    margin-right: 5.8vw;
+                }
+                
+                .btn-play {
+                    width: 32px;
+                    height: 32px;
+                }
+
                 /*랜딩비주얼 스크롤다운 버튼*/
                 .brand-contents .landing-visual__scrolldown {
                     position: absolute;
@@ -2222,16 +2259,27 @@
             @media (max-width: 768px) {
                 br.mo {display: block;}
 
-                /*랜딩비주얼 스크롤다운 버튼*/
-                .brand-contents .landing-visual__scrolldown {
-                    display: none;
+                .brand-visual-film {
+                    height: 100vh;
                 }
+                .bisual-play-wrap {
+                    
+                    bottom: 122px;
+                    width: 100%;
+                    justify-content: center;
+                }
+                .bisual-play-wrap span {
+                    font-size: 18px;
+                }
+                .bisual-play-wrap button {
+                    margin: 0;
+                }
+
+                /*랜딩비주얼 스크롤다운 버튼*/
+
 
                 /*visual video*/
                 .btn-play {
-                    position: absolute;
-                    width: 64px;
-                    height: 64px;
                 }
 
                 .brand-visual-film::after {
@@ -2430,7 +2478,10 @@
                             <source src="../../src/mocks/BS0001/lifes-good-lg-video-m.mp4" type="video/mp4">
                         </video>
         
-                        <button class="btn-play"></button>
+                        <div class="bisual-play-wrap">
+                            <span>Identity introduction video</span>
+                            <button class="btn-play"></button>
+                        </div>
                         <div class="landing-visual__scrolldown">
                             <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                         </div>
