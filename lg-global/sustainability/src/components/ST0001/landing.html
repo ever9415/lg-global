@@ -621,7 +621,7 @@
                                                                                             
                                                                                             <ul class="cmp-navigation__group c-gnb__group c-gnb__group--depth3">
                                                                                                 <li class="cmp-navigation__item cmp-navigation__item--level-2 c-gnb__item c-gnb__item--depth3">
-                                                                                                    <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth3" href="../ST0000/digital-library.html">Reports</a>
+                                                                                                    <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth3" href="../ST0000/reports.html">Reports</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
@@ -1104,7 +1104,7 @@
                                                                         </li>
                                                                         <!-- /* without child page */ -->
                                                                         <li class="cmp-navigation__item cmp-navigation__item--level-1 c-gnb__item c-gnb__item--depth2">
-                                                                            <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth2 " href="../ST0000/digital-library.html">Reports</a>
+                                                                            <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth2 " href="../ST0000/reports.html">Reports</a>
                                                                         </li>
                                                                     </li>
                                                                 </ul>
@@ -1412,35 +1412,34 @@
             /* Landing Visual */
             .landing-visual {
                 position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
                 width: 100%;
                 height: 100vh;
                 background: url(../../mocks/ST0001/sustainability-kv.jpg) no-repeat center center;
                 background-size: cover;
-                text-align: center;
+            }
+            .landing-visual__inner {
+                transform: translateY(-80px)
             }
             .landing-visual__tit {
-                position: absolute;
-                bottom: calc(41.7593vh + 80px);
-                left: 0px;
-                width: 100%;
+                margin-bottom: 32px;
             }
             .landing-visual__tit__img--pc {
-                width: auto;
-                height: 20.7407vh;
+                width: 1399px;
+                height: 224px;
             }
             .landing-visual__tit__img--mo {
                 display: none;
             }
             .landing-visual__txt {
-                position: absolute;
-                bottom: calc(33.2407vh + 80px);
-                left: 0px;
-                width: 100%;
                 color: white;
 	            font-family: LGEI Headline;
-                font-size: 5.1852vh;
+                font-size: 56px;
                 font-weight: 600;
-                line-height: 5.5556vh;
+                line-height: 60px;
                 letter-spacing: -0.28px;
             }
             .landing-visual__scrolldown {
@@ -1891,23 +1890,23 @@
             }
 
             /* Reports */
-            .digital-library {
+            .reports {
                 padding: 64px 0px;
                 box-sizing: border-box;
                 height: 700px;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
                 background-size: cover;
             }
-            .digital-library__inner {
+            .reports__inner {
                 width: 1440px;
                 margin: 0px auto;
             }
-            .digital-library__tit {
+            .reports__tit {
                 color: white !important;
                 font-size: 24px;
                 line-height: 30px;
             }
-            .digital-library__summary {
+            .reports__summary {
                 color: white;
 	            font-family: LGEI Headline;
                 font-weight: 550;
@@ -1915,10 +1914,10 @@
                 line-height: 56px;
                 margin-top: 16px;
             }
-            .digital-library__learn-more {
+            .reports__learn-more {
                 margin-top: 24px;
             }
-            .digital-library__learn-more__link {
+            .reports__learn-more__link {
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 100px;
@@ -1930,8 +1929,8 @@
                 background-color: white;
                 transition: 0.3s ease all;
             }
-            .digital-library__learn-more__link:hover,
-            .digital-library__learn-more__link:focus {
+            .reports__learn-more__link:hover,
+            .reports__learn-more__link:focus {
                 text-decoration: none;
                 color: white;
                 border-color: #EA1917;
@@ -2475,24 +2474,24 @@
                     height: 2px;
                 }
 
-                /* digital-library */
-                .digital-library {
+                /* reports */
+                .reports {
                     padding: 60px 24px;
                     box-sizing: border-box;
                     height: 500px;
                 }
-                .digital-library__tit {
+                .reports__tit {
                     font-size: 18px;
                     line-height: 21px;
                 }
-                .digital-library__summary {
+                .reports__summary {
                     color: white;
                     font-weight: 400;
                     font-size: 36px;
                     line-height: 40px;
                     margin-top: 10px;
                 }
-                .digital-library__learn-more {
+                .reports__learn-more {
                     margin-top: 30px;
                 }
 
@@ -2931,17 +2930,17 @@
                     height: 2px;
                 }
 
-                /* digital-library */
-                .digital-library {
+                /* reports */
+                .reports {
                     padding: 60px 16px;
                     box-sizing: border-box;
                     height: 576px;
                 }
-                .digital-library__tit {
+                .reports__tit {
                     font-size: 18px;
                     line-height: 21px;
                 }
-                .digital-library__summary {
+                .reports__summary {
                     color: white;
                     
                     font-weight: 400;
@@ -2949,7 +2948,7 @@
                     line-height: 40px;
                     margin-top: 10px;
                 }
-                .digital-library__learn-more {
+                .reports__learn-more {
                     margin-top: 30px;
                 }
 
@@ -3176,13 +3175,15 @@
         <!-- html code -->
         <div class="sustainably-container">
             <div class="landing-visual visual__top">
-                <h2 class="landing-visual__tit">
-                    <img src="../../mocks/ST0001/tagline.png" alt="Life's Good." class="landing-visual__tit__img landing-visual__tit__img--pc" />
-                    <img src="../../mocks/ST0001/tagline-m.png" alt="Life's Good." class="landing-visual__tit__img landing-visual__tit__img--mo" />
-                </h2>
-                <p class="landing-visual__txt">
-                    When we create a better life for all.
-                </p>
+                <div class="landing-visual__inner">
+                    <h2 class="landing-visual__tit">
+                        <img src="../../mocks/ST0001/tagline.png" alt="Life's Good." class="landing-visual__tit__img landing-visual__tit__img--pc" />
+                        <img src="../../mocks/ST0001/tagline-m.png" alt="Life's Good." class="landing-visual__tit__img landing-visual__tit__img--mo" />
+                    </h2>
+                    <p class="landing-visual__txt">
+                        When we create a better life for all.
+                    </p>
+                </div>
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                 </div>
@@ -3402,15 +3403,15 @@
                     </div>
                 </div>
             </div>
-            <div class="digital-library">
-                <div class="digital-library__inner">
-                    <h3 class="digital-library__tit">Reports</h3>
-                    <p class="digital-library__summary">
+            <div class="reports">
+                <div class="reports__inner">
+                    <h3 class="reports__tit">Reports</h3>
+                    <p class="reports__summary">
                         Sharing our sustainability <br />
                         strategy and performance
                     </p>
-                    <div class="digital-library__learn-more">
-                        <a href="../ST0000/digital-library.html" class="digital-library__learn-more__link">Learn more</a>
+                    <div class="reports__learn-more">
+                        <a href="../ST0000/reports.html" class="reports__learn-more__link">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -4013,7 +4014,7 @@
 
                                                 <li class="c-footer__item">
                                                     <div class="c-footer__name">
-                                                        <a href="../ST0000/digital-library.html">Reports</a>
+                                                        <a href="../ST0000/reports.html">Reports</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -4211,7 +4212,7 @@
 
                                                 <li class="c-footer__item">
                                                     <div class="c-footer__name">
-                                                        <a href="../ST0000/digital-library.html">Reports</a>
+                                                        <a href="../ST0000/reports.html">Reports</a>
                                                     </div>
                                                 </li>
                                             </ul>
