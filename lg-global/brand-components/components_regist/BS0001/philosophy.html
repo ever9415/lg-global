@@ -6,41 +6,64 @@
     body {
         overflow-x: hidden;
     }
-    ul,ol {
+
+    ul,
+    ol {
         list-style: none;
         padding: 0px;
         margin: 0px;
     }
+
     li {
         padding: 0px;
         margin: 0px;
     }
-    dl,dt,dd {
+
+    dl,
+    dt,
+    dd {
         margin: 0px;
     }
-    figure,figcaption {
+
+    figure,
+    figcaption {
         padding: 0px;
         margin: 0px;
     }
+
     .brand-contents,
     .brand-contents * {
         font-family: LGEI Text;
         color: #262626;
     }
+
     .brand-contents button {
         cursor: pointer;
         padding: 0px
     }
-    .brand-contents a,
-    .brand-contents a:hover {text-decoration: none;}
 
-    .video-only-pc {display: block;}
-    .video-only-mo {display: none;}
+    .brand-contents a,
+    .brand-contents a:hover {
+        text-decoration: none;
+    }
+
+    .video-only-pc {
+        display: block;
+    }
+
+    .video-only-mo {
+        display: none;
+    }
 
 
     /*content*/
-    .brand-contents {background-color: #262626;}
-    br.mo {display: none;}
+    .brand-contents {
+        background-color: #262626;
+    }
+
+    br.mo {
+        display: none;
+    }
 
     /*visual video*/
     .brand-visual-film {
@@ -49,6 +72,7 @@
         overflow: hidden;
         position: relative;
     }
+
     .brand-visual-film::after {
         content: '';
         position: absolute;
@@ -62,7 +86,13 @@
         background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lifes-good-lg-video-cover-m.svg);
         display: none;
     }
-    .brand-visual-film__video {width: 100%; height: 100%; border-radius: unset;}
+
+    .brand-visual-film__video {
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+    }
+
     .brand-visual-film video,
     .brand-visual-film__video img {
         width: 100%;
@@ -75,49 +105,30 @@
         bottom: 0;
     }
 
-    .bisual-play-wrap {
+    .brand-contents .btn-play {
+        display: block;
         position: absolute;
+        bottom: 200px;
         left: 50%;
-        bottom: 29.53vh;
         transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        gap: 16px;
-        width: 91.82vw;
-        z-index: 5;
-    }
-    .bisual-play-wrap span {
-        font-size: 28px;
-        color: #F6F3EB;
-        letter-spacing: 0.11px;
-    }
-    .bisual-play-wrap .btn-play {
-        position: relative;
-        margin-right: 6.77%;
-    }
-    
-    .btn-play {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        background-color: #ffffff66;
-        backdrop-filter: blur(45px);
-        -webkit-backdrop-filter: blur(45px);
-        border: 1px solid #CBC8C280;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+        padding-left: 36px;
         cursor: pointer;
-        transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-        z-index: 3;
+        z-index: 10;
     }
-    .btn-play::before {
+
+    .brand-contents .btn-play::before {
         content: '';
         position: absolute;
-        left: 50%;
+        left: 0;
         top: 50%;
-        transform: translate(-50%, -50%);
-        width: 30%;
-        height: 30%;
-        background: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/btn-video-play.svg) no-repeat center;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 28px;
+        background: no-repeat center url(../../../../../../src/mocks/layout/btn-play-wt.svg);
         background-size: contain;
     }
 
@@ -131,6 +142,7 @@
         z-index: 2;
         text-align: center;
     }
+
     .landing-visual__scrolldown__btn {
         width: 68px;
         height: 96px;
@@ -146,18 +158,22 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
     }
+
     @keyframes sd-dounce {
         from {
             transform: translateY(-0.5vh);
         }
+
         to {
             transform: translateY(1.5vh);
         }
     }
+
     .brand-story-content {
         margin: 200px auto 0;
         max-width: 1440px;
     }
+
     /*info text*/
     .intro-text {
         font-family: LGEI Headline;
@@ -177,6 +193,7 @@
         height: 61.22vw;
         max-height: 1179px;
     }
+
     .imotionally-design__headline {
         position: absolute;
         z-index: 1;
@@ -191,10 +208,12 @@
         max-height: 1080px;
 
     }
+
     .imotionally-design__headline ul {
         display: flex;
         gap: 16px;
     }
+
     .imotionally-design__headline li {
         position: relative;
         font-size: 90px;
@@ -205,6 +224,7 @@
         transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
         font-family: LGEI Headline;
     }
+
     .imotionally-design__headline li p {
         position: absolute;
         bottom: 0;
@@ -213,6 +233,7 @@
         white-space: nowrap;
         font-family: LGEI Headline;
     }
+
     .imotionally-design__headline li p::before {
         content: '';
         position: absolute;
@@ -225,6 +246,7 @@
         opacity: 0;
         transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
     }
+
     .imotionally-design__headline li span {
         display: block;
         transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
@@ -232,20 +254,34 @@
         transform: translateY(50px);
         color: #F6F3EB;
     }
-    .imotionally-design__headline li:nth-child(1) p {right: 40px;}
-    .imotionally-design__headline li:nth-child(2) p {left: 20px;}
-    .imotionally-design__headline li:nth-child(3) p {left: 50%; transform: translateX(-50%);}
+
+    .imotionally-design__headline li:nth-child(1) p {
+        right: 40px;
+    }
+
+    .imotionally-design__headline li:nth-child(2) p {
+        left: 20px;
+    }
+
+    .imotionally-design__headline li:nth-child(3) p {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .imotionally-design__headline li.active {
         color: #F6F3EB;
     }
+
     .imotionally-design__headline li.active span {
         opacity: 1;
         transform: translateY(0);
     }
+
     .imotionally-design__headline li.active p::before {
         transform: translate(-50%, -100%);
         opacity: 1;
     }
+
     .imotionally-design__headline p.for-mobile {
         display: none;
         color: #F6F3EB;
@@ -253,22 +289,26 @@
         line-height: 1.4;
 
     }
+
     .imotionally-design__imgwrap {
         position: relative;
         height: 100%;
         max-width: 1920px;
         margin: 0 auto;
     }
+
     .imotionally-design__item {
         border-radius: 20px;
         position: absolute;
         overflow: hidden;
         transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
     }
+
     .addMotion .imotionally-design__item {
         transform: translateY(100px);
         opacity: 0;
     }
+
     .addMotion .imotionally-design__item.animated {
         transform: translateY(0);
         opacity: 1;
@@ -338,7 +378,7 @@
     }
 
 
-    .imotionally-design__item img, 
+    .imotionally-design__item img,
     .imotionally-design__item video {
         position: absolute;
         width: 100%;
@@ -355,14 +395,17 @@
         border-radius: 16px;
         overflow: hidden;
     }
+
     .looping-video-content video {
         position: absolute;
-        left: 50%; top: 50%;
+        left: 50%;
+        top: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
     .looping-video-multi {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -370,6 +413,7 @@
         max-width: 1680px;
         margin: 0 auto;
     }
+
     .looping-video-multi li {
         position: relative;
         border-radius: 20px;
@@ -377,6 +421,7 @@
         padding-bottom: 100%;
         overflow: hidden;
     }
+
     .looping-video-multi li video,
     .looping-video-multi li img {
         position: absolute;
@@ -392,6 +437,7 @@
     .brand-element__title {
         text-align: center;
     }
+
     .brand-element__title__desc {
         display: block;
         font-size: 28px;
@@ -399,6 +445,7 @@
         line-height: 1.3;
         margin-bottom: 32px;
     }
+
     .brand-element__title__text {
         color: #F6F3EB;
         font-size: 56px;
@@ -414,13 +461,21 @@
         padding: 270px 0 72px;
         overflow: hidden;
     }
+
     .brand-element__inner {
         position: relative;
         margin: 0px auto;
         max-width: 1440px;
     }
-    .our-identity__slider { margin-top: 64px;}
-    .our-identity__slides {height: auto;}
+
+    .our-identity__slider {
+        margin-top: 64px;
+    }
+
+    .our-identity__slides {
+        height: auto;
+    }
+
     .our-identity__slide {
         position: relative;
         width: 596px;
@@ -430,12 +485,14 @@
         box-sizing: border-box;
         z-index: 1;
     }
+
     .our-identity__slide a {
         display: block;
         padding: 26px;
         width: 100%;
         height: 100%;
     }
+
     .our-identity__slide::before,
     .our-identity__slide::after {
         content: '';
@@ -443,42 +500,103 @@
         background-size: cover;
         width: 100%;
         height: 100%;
-        top: 50%; left: 50%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         position: absolute;
         transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
     }
-    .our-identity__slide::before {z-index: -1; opacity: 1;}
-    .our-identity__slide::after {z-index: -2; opacity: 0;}
-    .our-identity__slide:hover::before {opacity: 0;}
-    .our-identity__slide:hover::after {opacity: 1;}
 
-    .our-identity__slide--photography {background-color: #F6F3EB;}
+    .our-identity__slide::before {
+        z-index: -1;
+        opacity: 1;
+    }
+
+    .our-identity__slide::after {
+        z-index: -2;
+        opacity: 0;
+    }
+
+    .our-identity__slide:hover::before {
+        opacity: 0;
+    }
+
+    .our-identity__slide:hover::after {
+        opacity: 1;
+    }
+
+    .our-identity__slide--photography {
+        background-color: #F6F3EB;
+    }
+
     .our-identity__slide--photography::before {
         width: 52%;
         height: 62%;
         border-radius: 30px;
     }
+
     .our-identity__slide--photography:hover:before {
         width: 100%;
         height: 100%;
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.1);
     }
-    .our-identity__slide--photography::after {display: none;}
-    .our-identity__slide--logo::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_logo.png);}
-    .our-identity__slide--logo::after {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_logo-hover.png);}
-    .our-identity__slide--color::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_color.png);}
-    .our-identity__slide--color::after {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_color-hover.png);}
-    .our-identity__slide--photography::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_photo.png);}
-    .our-identity__slide--design::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_design.png);}
-    .our-identity__slide--design::after {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_design-hover.png);}
-    .our-identity__slide--tagline::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_slogan.png);}
-    .our-identity__slide--tagline::after {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_slogan-hover.png);}
-    .our-identity__slide--typo::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_typo.png);}
-    .our-identity__slide--typo::after {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_typo-hover.png);}
-    .our-identity__slide--voice::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_voice.png);}
-    .our-identity__slide--voice::after {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_voice_hover.png);}
+
+    .our-identity__slide--photography::after {
+        display: none;
+    }
+
+    .our-identity__slide--logo::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_logo.png);
+    }
+
+    .our-identity__slide--logo::after {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_logo-hover.png);
+    }
+
+    .our-identity__slide--color::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_color.png);
+    }
+
+    .our-identity__slide--color::after {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_color-hover.png);
+    }
+
+    .our-identity__slide--photography::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_photo.png);
+    }
+
+    .our-identity__slide--design::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_design.png);
+    }
+
+    .our-identity__slide--design::after {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_design-hover.png);
+    }
+
+    .our-identity__slide--tagline::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_slogan.png);
+    }
+
+    .our-identity__slide--tagline::after {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_slogan-hover.png);
+    }
+
+    .our-identity__slide--typo::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_typo.png);
+    }
+
+    .our-identity__slide--typo::after {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_typo-hover.png);
+    }
+
+    .our-identity__slide--voice::before {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_voice.png);
+    }
+
+    .our-identity__slide--voice::after {
+        background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_voice_hover.png);
+    }
 
     .our-identity__item-title {
         font-size: 24px;
@@ -486,16 +604,22 @@
         color: #222;
         transition: color .5s cubic-bezier(0.56, 0, 0.28, 1);
     }
-    .our-identity__slide:hover .our-identity__item-title {color: #fff;}
+
+    .our-identity__slide:hover .our-identity__item-title {
+        color: #fff;
+    }
+
     .our-identity__progressbar {
         margin-top: 32px;
         width: 100%;
         height: 2px;
         background-color: #7E7C77;
     }
+
     .our-identity__progressbar .swiper-scrollbar-drag {
         background: #F6F3EB;
     }
+
     .our-identity__move-btn {
         position: absolute;
         left: 26px;
@@ -514,6 +638,7 @@
         opacity: 0;
         visibility: hidden;
     }
+
     .our-identity__slide:hover .our-identity__move-btn {
         background-color: #00000099;
         border-color: #cbc8c24d;
@@ -529,6 +654,7 @@
         height: 100vh;
         overflow: hidden;
     }
+
     .btn-circle--close {
         width: 48px;
         height: 48px;
@@ -536,6 +662,7 @@
         right: 20px;
         background-size: 24px auto;
     }
+
     .popup-in-action {
         position: fixed;
         top: 0;
@@ -547,6 +674,7 @@
         z-index: 100;
         display: none;
     }
+
     .pop-inner {
         width: 100%;
         height: 100%;
@@ -557,10 +685,12 @@
         width: 100%;
         height: 100%;
     }
-    .video-wrapper > div {
+
+    .video-wrapper>div {
         width: inherit;
         height: inherit;
     }
+
     .video-wrapper video {
         width: 100%;
         height: 100%;
@@ -569,7 +699,7 @@
 
     /*video controller style*/
     /*controll bar*/
-    .vjs-has-started .vjs-control-bar, 
+    .vjs-has-started .vjs-control-bar,
     .vjs-audio-only-mode .vjs-control-bar {
         background-color: transparent;
         margin: 54px;
@@ -594,6 +724,7 @@
         cursor: pointer;
         z-index: 3;
     }
+
     .btn-circle--close {
         position: absolute;
         top: 40px;
@@ -601,23 +732,27 @@
         background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/ico-btn-close.svg);
     }
 
-    .video-wrapper .video-js .vjs-button > .vjs-icon-placeholder:before {
+    .video-wrapper .video-js .vjs-button>.vjs-icon-placeholder:before {
         content: '';
         width: 100%;
         height: 100%;
         background: no-repeat center;
         background-size: 30px auto;
     }
-    .video-wrapper .video-js .vjs-button.vjs-mute-control > .vjs-icon-placeholder:before {
+
+    .video-wrapper .video-js .vjs-button.vjs-mute-control>.vjs-icon-placeholder:before {
         background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/ico-btn-sound-on.svg);
     }
-    .video-wrapper .video-js .vjs-button.vjs-play-control > .vjs-icon-placeholder:before {
+
+    .video-wrapper .video-js .vjs-button.vjs-play-control>.vjs-icon-placeholder:before {
         background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/ico-btn-play.svg);
     }
-    .video-wrapper .video-js .vjs-button.vjs-mute-control.vjs-vol-0 > .vjs-icon-placeholder:before {
+
+    .video-wrapper .video-js .vjs-button.vjs-mute-control.vjs-vol-0>.vjs-icon-placeholder:before {
         background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/ico-btn-sound-off.svg);
     }
-    .video-wrapper .video-js .vjs-button.vjs-play-control.vjs-paused > .vjs-icon-placeholder:before {
+
+    .video-wrapper .video-js .vjs-button.vjs-play-control.vjs-paused>.vjs-icon-placeholder:before {
         background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/ico-btn-pause.svg);
     }
 
@@ -630,20 +765,25 @@
         margin-left: 35px;
         min-width: unset;
     }
+
     .video-wrapper .video-js .vjs-play-progress {
         background-color: #FD312E;
     }
+
     .video-wrapper .video-js .vjs-play-progress:before {
         display: none;
     }
+
     .video-wrapper .video-js .vjs-progress-control .vjs-progress-holder {
         margin: 0;
         background-color: #F6F3EB4D;
         height: inherit;
     }
+
     .video-wrapper .video-js .vjs-slider .vjs-icon-placeholder {
         height: inherit;
     }
+
     .video-wrapper .video-js .vjs-load-progress,
     .video-wrapper .video-js .vjs-load-progress div {
         background-color: #F6F3EB4D;
@@ -654,6 +794,7 @@
         height: auto;
         width: unset;
     }
+
     .video-wrapper .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
         position: absolute !important;
         left: 50% !important;
@@ -664,13 +805,16 @@
         width: auto;
         height: auto;
     }
+
     .video-wrapper .vjs-slider-vertical .vjs-volume-level {
         width: 100%;
         background-color: #FD312E;
     }
+
     .video-wrapper .vjs-slider-vertical .vjs-volume-level:before {
         display: none;
     }
+
     .video-wrapper .video-wrapper .vjs-volume-bar.vjs-slider-vertical {
         margin: 0;
         width: 6px;
@@ -679,7 +823,7 @@
     }
 
     /*tooltip*/
-    .video-wrapper .video-js .vjs-time-tooltip ,
+    .video-wrapper .video-js .vjs-time-tooltip,
     .video-wrapper .video-js .vjs-progress-control .vjs-mouse-display {
         display: none !important;
     }
@@ -688,23 +832,18 @@
     /* Tablet */
     @media (max-width: 1500px) {
 
+
         .brand-visual-film {
             height: 56.25vw;
         }
-        .bisual-play-wrap {
-            bottom: 15vw;
-            width: 87.4vw;
+        .brand-contents .btn-play {
+            bottom: 49px;
+            font-size: 20px;
+            padding-left: 32px;
         }
-        .bisual-play-wrap span {
-            font-size: 18px;
-        }
-        .bisual-play-wrap button {
-            margin-right: 5.8vw;
-        }
-        
-        .btn-play {
-            width: 32px;
-            height: 32px;
+        .brand-contents .btn-play::before {
+            width: 24px;
+            height: 24px;
         }
 
         /*랜딩비주얼 스크롤다운 버튼*/
@@ -713,7 +852,9 @@
             bottom: 30px;
             left: 0px;
             width: 100%;
+            display: none;
         }
+
         .brand-contents .landing-visual__scrolldown__btn {
             width: 50px;
             height: 70px;
@@ -731,13 +872,16 @@
             max-width: 500px;
         }
 
-        .intro-text br {display: none;}
+        .intro-text br {
+            display: none;
+        }
 
         /*imotionally-design*/
         .imotionally-design {
             height: 108.7vw;
             max-height: unset;
         }
+
         .imotionally-design__headline {
             display: flex;
             flex-direction: column;
@@ -745,28 +889,45 @@
             margin-top: 32.72vw;
             height: auto;
         }
+
         .imotionally-design__headline ul {
             flex-wrap: wrap;
             justify-content: center;
             gap: 6px;
         }
-        .imotionally-design__headline p.for-mobile{display: block; margin-top: 20px;}
 
-        .imotionally-design__headline li {font-size: 48px;}
+        .imotionally-design__headline p.for-mobile {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .imotionally-design__headline li {
+            font-size: 48px;
+        }
+
         .imotionally-design__headline li,
         .imotionally-design__headline li.active {
             padding-bottom: 0;
             text-align: center;
             color: #fff;
         }
-        .imotionally-design__headline li:nth-child(1) {width: 100%;}
+
+        .imotionally-design__headline li:nth-child(1) {
+            width: 100%;
+        }
+
         .imotionally-design__headline li p {
             display: none;
         }
-        .imotionally-design{margin: 0 -24px;}
+
+        .imotionally-design {
+            margin: 0 -24px;
+        }
+
         .imotionally-design__imgwrap {
             max-width: 100%;
         }
+
         .imotionally-design__item {
             border-radius: 16px;
         }
@@ -777,36 +938,42 @@
             top: 1.43%;
             left: 2.47%;
         }
+
         .imotionally-design__item:nth-child(2) {
             width: 22.08vw;
             height: 12.73vw;
             top: 12.78%;
             left: 38.96%;
         }
+
         .imotionally-design__item:nth-child(3) {
             width: 27.27vw;
             height: 16.23vw;
             top: 9.56%;
             left: 69.48%;
         }
+
         .imotionally-design__item:nth-child(4) {
             width: 30.78vw;
             height: 20.78vw;
             top: 46.73%;
             left: 75.58%;
         }
+
         .imotionally-design__item:nth-child(5) {
             width: 16.88vw;
             height: 16.88vw;
             top: 51.97%;
             left: 2.47%;
         }
+
         .imotionally-design__item:nth-child(6) {
             width: 37.27vw;
             height: 20.91vw;
             top: 71.68%;
             left: 10%;
         }
+
         .imotionally-design__item:nth-child(7) {
             width: 40.39vw;
             height: 25.97vw;
@@ -819,50 +986,89 @@
         }
 
 
-        
+
         /*brand elements 슬라이드*/
         .brand-elements {
             padding: 128px 24px 72px;
         }
+
         .brand-elements__slider {
             margin: 24px 0 0;
         }
+
         .brand-element__title__desc {
             font-size: 20px;
             margin-bottom: 16px;
         }
+
         .brand-element__title__text {
             font-size: 48px;
             margin-bottom: 60px;
         }
-        .brand-element__title__text br {display: block;}
+
+        .brand-element__title__text br {
+            display: block;
+        }
 
         .our-identity__slide {
             width: 291px;
             height: 291px;
         }
+
         .our-identity__slide a {
             padding: 16px;
         }
-        .our-identity__slide:not(.our-identity__slide--photography)::after {display: none;}
-        .our-identity__slide:hover::before {opacity: 1;}
-        .our-identity__slide:hover .our-identity__item-title {color: #262626;}
-        .our-identity__slide:hover::before {opacity: 1;}
 
-        .our-identity__slide--logo::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_logo-m.png);}
-        .our-identity__slide--color::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_color-m.png);}
-        .our-identity__slide--design::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_design-m.png);}
-        .our-identity__slide--tagline::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_slogan-m.png);}
-        .our-identity__slide--typo::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_typo-m.png);}
-        .our-identity__slide--voice::before {background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_voice-m.png);}
+        .our-identity__slide:not(.our-identity__slide--photography)::after {
+            display: none;
+        }
+
+        .our-identity__slide:hover::before {
+            opacity: 1;
+        }
+
+        .our-identity__slide:hover .our-identity__item-title {
+            color: #262626;
+        }
+
+        .our-identity__slide:hover::before {
+            opacity: 1;
+        }
+
+        .our-identity__slide--logo::before {
+            background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_logo-m.png);
+        }
+
+        .our-identity__slide--color::before {
+            background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_color-m.png);
+        }
+
+        .our-identity__slide--design::before {
+            background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_design-m.png);
+        }
+
+        .our-identity__slide--tagline::before {
+            background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_slogan-m.png);
+        }
+
+        .our-identity__slide--typo::before {
+            background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_typo-m.png);
+        }
+
+        .our-identity__slide--voice::before {
+            background-image: url(../../../../../../content/dam/lge/global/our-brand/src/mocks/layout/brand_slide_voice-m.png);
+        }
+
         .our-identity__item-title {
             font-size: 16px;
             line-height: 24px;
         }
+
         .our-identity__progressbar {
             margin-top: 24px;
             height: 1px;
         }
+
         .our-identity__move-btn {
             width: 48px;
             height: 48px;
@@ -870,9 +1076,11 @@
             left: 16px;
             bottom: 16px;
         }
+
         .our-identity__slider {
             margin-top: 32px;
         }
+
         .our-identity__slide--photography::before {
             width: 68%;
             height: 48%;
@@ -882,34 +1090,29 @@
 
     /* Mobile */
     @media (max-width: 768px) {
-        br.mo {display: block;}
+        br.mo {
+            display: block;
+        }
 
         .brand-visual-film {
             height: 100vh;
         }
-        .bisual-play-wrap {
-            
-            bottom: 122px;
-            width: 100%;
-            justify-content: center;
-        }
-        .bisual-play-wrap span {
-            font-size: 18px;
-        }
-        .bisual-play-wrap button {
-            margin: 0;
-        }
+
 
         /*랜딩비주얼 스크롤다운 버튼*/
-
-
-        /*visual video*/
-        .btn-play {
+        .brand-contents .landing-visual__scrolldown {
+            display: block;
         }
 
+        /*visual video*/
+        .brand-contents .btn-play {
+            bottom: 130px;
+        }
+        
         .brand-visual-film::after {
             display: block;
         }
+
         .video-only-pc {
             display: none;
         }
@@ -917,22 +1120,28 @@
         .video-only-mo {
             display: block;
         }
+
         .brand-story-content {
             margin: 120px 0 0;
             padding: 0 16px;
         }
+
         /*info text*/
         .intro-text {
             margin: 80px auto;
             font-size: 24px;
         }
-        .intro-text br:not(.mo) {display: none;}
+
+        .intro-text br:not(.mo) {
+            display: none;
+        }
 
         /*imotionally-design*/
         .imotionally-design {
             height: 254.67vw;
             margin: 0 -16px;
         }
+
         .imotionally-design__headline {
             margin-top: 82.56vw;
         }
@@ -940,9 +1149,11 @@
         .imotionally-design__headline li {
             font-size: 40px;
         }
+
         .imotionally-design__headline li p {
             display: none;
         }
+
         .imotionally-design__headline p.for-mobile {
             font-size: 18px;
             margin-top: 24px;
@@ -954,36 +1165,42 @@
             top: 0%;
             left: 50.67%;
         }
+
         .imotionally-design__item:nth-child(2) {
             width: 37.33vw;
             height: 21.33vw;
             top: 19.68%;
             left: 54.40%;
         }
+
         .imotionally-design__item:nth-child(3) {
             width: 42.93vw;
             height: 30.40vw;
             top: 9.74%;
             left: -10.13%;
         }
+
         .imotionally-design__item:nth-child(4) {
             width: 33.87vw;
             height: 27.73vw;
             top: 73.72%;
             left: 66.93%;
         }
+
         .imotionally-design__item:nth-child(5) {
             width: 24.00vw;
             height: 24.00vw;
             top: 56.23%;
             left: 69.33%;
         }
+
         .imotionally-design__item:nth-child(6) {
             width: 53.33vw;
             height: 29.87vw;
             top: 88.27%;
             left: 10.67%;
         }
+
         .imotionally-design__item:nth-child(7) {
             width: 65.07vw;
             height: 41.87vw;
@@ -1000,6 +1217,7 @@
         .looping-video-multi {
             grid-template-columns: repeat(1, 1fr);
         }
+
         .looping-video-multi li {
             width: 100%;
             padding-bottom: 74.63%;
@@ -1009,6 +1227,7 @@
             font-size: 18px;
             margin-bottom: 16px;
         }
+
         .brand-element__title__text {
             font-size: 36px;
             letter-spacing: 0.3px;
@@ -1016,25 +1235,30 @@
             margin-bottom: 48px;
         }
 
-        
+
         /*brand elements 슬라이드*/
         .brand-elements {
             padding: 144px 16px 40px;
         }
+
         .brand-elements__slider {
             margin: 24px -20px 0;
         }
+
         .brand-elements__controller {
             display: none;
         }
+
         .our-identity__item-title {
             font-size: 16px;
             line-height: 24px;
         }
+
         .our-identity__progressbar {
             margin-top: 24px;
             height: 1px;
         }
+
         .our-identity__move-btn {
             width: 48px;
             height: 48px;
@@ -1042,9 +1266,11 @@
             left: 16px;
             bottom: 16px;
         }
+
         .our-identity__slider {
             margin-top: 48px;
         }
+
         .our-identity__slide--photography::before {
             width: 72%;
             height: 52%;
@@ -1068,13 +1294,15 @@
 
         /*video controller style*/
         /*controll bar*/
-        .vjs-has-started .vjs-control-bar, 
+        .vjs-has-started .vjs-control-bar,
         .vjs-audio-only-mode .vjs-control-bar {
             margin: 0;
         }
+
         .video-wrapper .video-js button {
             display: none;
         }
+
         /*progress bar*/
         .video-wrapper .vjs-progress-control {
             margin-left: 0;
@@ -1095,10 +1323,14 @@
         <div id="brand-contents">
             <div class="brand-visual-film visual__top">
                 <video muted playsinline autoplay loop class="video-only-pc">
-                    <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lifes-good-lg-video.mp4" type="video/mp4">
+                    <source
+                        src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lifes-good-lg-video.mp4"
+                        type="video/mp4">
                 </video>
                 <video muted playsinline autoplay loop class="video-only-mo">
-                    <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lifes-good-lg-video-m.mp4" type="video/mp4">
+                    <source
+                        src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lifes-good-lg-video-m.mp4"
+                        type="video/mp4">
                 </video>
 
                 <div class="bisual-play-wrap">
@@ -1140,40 +1372,47 @@
                     <ul class="imotionally-design__imgwrap">
                         <li class="imotionally-design__item">
                             <video muted playsinline loop autoplay>
-                                <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_01.mp4"
+                                <source
+                                    src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_01.mp4"
                                     type="video/mp4" />
                             </video>
                         </li>
                         <li class="imotionally-design__item">
                             <video muted playsinline loop autoplay>
-                                <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_07.mp4"
+                                <source
+                                    src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_07.mp4"
                                     type="video/mp4" />
                             </video>
                         </li>
                         <li class="imotionally-design__item">
                             <video muted playsinline loop autoplay>
-                                <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_02.mp4"
+                                <source
+                                    src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_02.mp4"
                                     type="video/mp4" />
                             </video>
                         </li>
                         <li class="imotionally-design__item">
-                            <img src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_03.png" alt="">
+                            <img src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_03.png"
+                                alt="">
                         </li>
                         <li class="imotionally-design__item">
                             <video muted playsinline loop autoplay>
-                                <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_04.mp4"
-                                    type="video/mp4" />
-                            </video>
-                        </li>
-                        <li class="imotionally-design__item">
-                            <video muted playsinline loop autoplay>
-                                <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_05.mp4"
+                                <source
+                                    src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_04.mp4"
                                     type="video/mp4" />
                             </video>
                         </li>
                         <li class="imotionally-design__item">
                             <video muted playsinline loop autoplay>
-                                <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_06.mp4"
+                                <source
+                                    src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_05.mp4"
+                                    type="video/mp4" />
+                            </video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay>
+                                <source
+                                    src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/emotionally_intelligent_item_06.mp4"
                                     type="video/mp4" />
                             </video>
                         </li>
@@ -1186,7 +1425,9 @@
                 </p>
                 <div class="looping-video-content">
                     <video muted playsinline loop autoplay>
-                        <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-content.mp4" type="video/mp4">
+                        <source
+                            src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-content.mp4"
+                            type="video/mp4">
                     </video>
                 </div>
                 <p class="intro-text">
@@ -1194,9 +1435,24 @@
                     It means every experience we create can help people feel Life’s Good.
                 </p>
                 <ul class="looping-video-multi">
-                    <li><video muted playsinline loop autoplay><source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-multi-01.mp4" type="video/mp4"></source></video></li>
-                    <li><video muted playsinline loop autoplay><source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-multi-02.mp4" type="video/mp4"></source></video></li>
-                    <li><video muted playsinline loop autoplay><source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-multi-03.mp4" type="video/mp4"></source></video></li>
+                    <li><video muted playsinline loop autoplay>
+                            <source
+                                src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-multi-01.mp4"
+                                type="video/mp4">
+                            </source>
+                        </video></li>
+                    <li><video muted playsinline loop autoplay>
+                            <source
+                                src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-multi-02.mp4"
+                                type="video/mp4">
+                            </source>
+                        </video></li>
+                    <li><video muted playsinline loop autoplay>
+                            <source
+                                src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/looping-video-multi-03.mp4"
+                                type="video/mp4">
+                            </source>
+                        </video></li>
                 </ul>
             </div>
             <div class="brand-elements">
@@ -1263,7 +1519,9 @@
         <div class="pop-inner">
             <div class="video-wrapper">
                 <video id="video-item" controls class="vjs-matrix video-js" preload="auto">
-                    <source src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lg_brandfilmmaster.mp4" type="video/mp4">
+                    <source
+                        src="../../../../../../content/dam/lge/global/our-brand/src/mocks/bs0001/lg_brandfilmmaster.mp4"
+                        type="video/mp4">
                 </video>
             </div>
         </div>

@@ -1451,49 +1451,29 @@
                 bottom: 0;
             }
 
-            .bisual-play-wrap {
+            .brand-contents .btn-play {
+                display: block;
                 position: absolute;
+                bottom: 200px;
                 left: 50%;
-                bottom: 29.53vh;
                 transform: translateX(-50%);
-                display: flex;
-                align-items: center;
-                justify-content: right;
-                gap: 16px;
-                width: 91.82vw;
-                z-index: 5;
-            }
-            .bisual-play-wrap span {
-                font-size: 28px;
-                color: #F6F3EB;
-                letter-spacing: 0.11px;
-            }
-            .bisual-play-wrap .btn-play {
-                position: relative;
-                margin-right: 6.77%;
-            }
-            
-            .btn-play {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                background-color: #ffffff66;
-                backdrop-filter: blur(45px);
-                -webkit-backdrop-filter: blur(45px);
-                border: 1px solid #CBC8C280;
+                color: #fff;
+                background-color: transparent;
+                border: none;
+                font-size: 22px;
+                padding-left: 36px;
                 cursor: pointer;
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-                z-index: 3;
+                z-index: 10;
             }
-            .btn-play::before {
+            .brand-contents .btn-play::before {
                 content: '';
                 position: absolute;
-                left: 50%;
+                left: 0;
                 top: 50%;
-                transform: translate(-50%, -50%);
-                width: 30%;
-                height: 30%;
-                background: url(../../src/mocks/layout/btn-video-play.svg) no-repeat center;
+                transform: translateY(-50%);
+                width: 28px;
+                height: 28px;
+                background: no-repeat center url(../../src/mocks/layout/btn-play-wt.svg);
                 background-size: contain;
             }
 
@@ -2067,20 +2047,14 @@
                 .brand-visual-film {
                     height: 56.25vw;
                 }
-                .bisual-play-wrap {
-                    bottom: 15vw;
-                    width: 87.4vw;
+                .brand-contents .btn-play {
+                    bottom: 49px;
+                    font-size: 20px;
+                    padding-left: 32px;
                 }
-                .bisual-play-wrap span {
-                    font-size: 18px;
-                }
-                .bisual-play-wrap button {
-                    margin-right: 5.8vw;
-                }
-                
-                .btn-play {
-                    width: 32px;
-                    height: 32px;
+                .brand-contents .btn-play::before {
+                    width: 24px;
+                    height: 24px;
                 }
 
                 /*랜딩비주얼 스크롤다운 버튼*/
@@ -2089,6 +2063,7 @@
                     bottom: 30px;
                     left: 0px;
                     width: 100%;
+                    display: none;
                 }
                 .brand-contents .landing-visual__scrolldown__btn {
                     width: 50px;
@@ -2263,24 +2238,15 @@
                 .brand-visual-film {
                     height: 100vh;
                 }
-                .bisual-play-wrap {
-                    
-                    bottom: 122px;
-                    width: 100%;
-                    justify-content: center;
-                }
-                .bisual-play-wrap span {
-                    font-size: 18px;
-                }
-                .bisual-play-wrap button {
-                    margin: 0;
-                }
 
                 /*랜딩비주얼 스크롤다운 버튼*/
-
+                .brand-contents .landing-visual__scrolldown {
+                    display: block;
+                }
 
                 /*visual video*/
-                .btn-play {
+                .brand-contents .btn-play {
+                    bottom: 130px;
                 }
 
                 .brand-visual-film::after {
@@ -2479,10 +2445,7 @@
                             <source src="../../src/mocks/BS0001/lifes-good-lg-video-m.mp4" type="video/mp4">
                         </video>
         
-                        <div class="bisual-play-wrap">
-                            <span>Identity introduction video</span>
-                            <button class="btn-play"></button>
-                        </div>
+                        <button class="btn-play">Watch the film</button>
                         <div class="landing-visual__scrolldown">
                             <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                         </div>
