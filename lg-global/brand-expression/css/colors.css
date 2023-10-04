@@ -169,17 +169,17 @@
 [data-color-chart="chart-02"] .color-chip__item--04 {width: 9.89%;}
 [data-color-chart="chart-02"] .color-chip__item--05 {width: 4.21%;}
 
-[data-color-chart="chart-03"] .color-chip__item--01 {width: 18%;}
-[data-color-chart="chart-03"] .color-chip__item--02 {width: 10.07%;}
-[data-color-chart="chart-03"] .color-chip__item--03 {width: 57.68%;}
-[data-color-chart="chart-03"] .color-chip__item--04 {width: 10.04%;}
-[data-color-chart="chart-03"] .color-chip__item--05 {width: 4.21%;}
-
-[data-color-chart="chart-04"] .color-chip__item--01 {width: 70.7%;}
+[data-color-chart="chart-04"] .color-chip__item--01 {width: 18%;}
 [data-color-chart="chart-04"] .color-chip__item--02 {width: 10.07%;}
-[data-color-chart="chart-04"] .color-chip__item--03 {width: 10.07%;}
-[data-color-chart="chart-04"] .color-chip__item--04 {width: 4.95%;}
+[data-color-chart="chart-04"] .color-chip__item--03 {width: 57.68%;}
+[data-color-chart="chart-04"] .color-chip__item--04 {width: 10.04%;}
 [data-color-chart="chart-04"] .color-chip__item--05 {width: 4.21%;}
+
+[data-color-chart="chart-03"] .color-chip__item--01 {width: 70.7%;}
+[data-color-chart="chart-03"] .color-chip__item--02 {width: 10.07%;}
+[data-color-chart="chart-03"] .color-chip__item--03 {width: 10.07%;}
+[data-color-chart="chart-03"] .color-chip__item--04 {width: 4.95%;}
+[data-color-chart="chart-03"] .color-chip__item--05 {width: 4.21%;}
 
 .colour-system__slide-controller {
     display: flex;
